@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowUp } from "lucide-react"
+import Link from "next/link"
 
 export function Footer() {
   const scrollToTop = () => {
@@ -14,10 +15,15 @@ export function Footer() {
         <div className="mb-16">
           <div className="mb-8">
             <p className="text-sm text-muted-foreground mb-4">What are you waiting for?</p>
-            <Button className="gap-2">
-              Get In Touch
-              <span>→</span>
-            </Button>
+            <Link href="/#contact">
+              <Button
+                style={{ backgroundColor: "#EDEBD4", color: "#0f0f0f" }}
+                className="gap-2 hover:opacity-90 rounded-full px-6"
+              >
+                Get In Touch
+                <span>→</span>
+              </Button>
+            </Link>
           </div>
 
           <div className="flex flex-col lg:flex-row gap-8">

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Rocket } from "lucide-react"
+import Link from "next/link"
 
 export function Sponsorships() {
   return (
@@ -13,10 +14,16 @@ export function Sponsorships() {
         <h2 className="text-5xl font-bold mb-4">LET&apos;S TALK ABOUT SPONSORSHIPS</h2>
         <p className="text-muted-foreground mb-8">Become a Sponsor</p>
 
-        <Button size="lg" className="gap-2">
-          Learn more about Sponsorship
-          <span>→</span>
-        </Button>
+        <Link href="/events" className="block">
+          <Button
+            size="lg"
+            style={{ backgroundColor: "#1F1F1F", color: "#ffffff" }}
+            className="gap-2 hover:opacity-90 rounded-full px-6 w-full"
+          >
+            Learn more about Sponsorship
+            <span>→</span>
+          </Button>
+        </Link>
       </div>
     </section>
   )

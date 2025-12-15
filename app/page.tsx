@@ -1,4 +1,5 @@
 import { Hero } from "@/components/hero"
+import { LogoMotto } from "@/components/logo-motto"
 import { Sponsors } from "@/components/sponsors"
 import { About } from "@/components/about"
 import { Stats } from "@/components/stats"
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       <Hero />
+      <LogoMotto />
       <Sponsors />
       <About />
       <Stats />
