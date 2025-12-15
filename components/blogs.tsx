@@ -21,7 +21,7 @@ export function Blogs() {
           </div>
         </Card>
 
-        <Button variant="secondary" className="gap-2">
+        <Button variant="secondary" className="gap-2 rounded-full px-6 w-full">
           View All Blogs
           <span>→</span>
         </Button>

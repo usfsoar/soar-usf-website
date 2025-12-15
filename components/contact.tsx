@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Mail, Instagram, MessageCircle, Linkedin, Feather } from "lucide-react"
+import { Mail, Instagram, MessageCircle, Linkedin, Feather, ExternalLink } from "lucide-react"
 
 export function Contact() {
   return (
-    <section className="py-24 px-6 bg-background">
+    <section id="contact" className="py-24 px-6 bg-background scroll-mt-20">
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-2 gap-16">
           <div>
@@ -52,7 +52,11 @@ export function Contact() {
                 />
               </div>
 
-              <Button type="submit" className="w-auto">
+              <Button
+                type="submit"
+                style={{ backgroundColor: "#D0C495", color: "#0f0f0f" }}
+                className="w-auto hover:opacity-90 rounded-full px-6 shadow-[0_0_20px_rgba(208,196,149,0.5)] hover:shadow-[0_0_30px_rgba(208,196,149,0.7)] transition-all"
+              >
                 Submit
               </Button>
             </form>
@@ -61,47 +65,59 @@ export function Contact() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
           <a
-            href="#"
-            className="flex items-center gap-3 p-4 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors"
+            href="https://www.instagram.com/usfsoar/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 p-4 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors group"
           >
             <Instagram className="h-5 w-5" />
-            <div>
+            <div className="flex-1">
               <div className="font-semibold">@usfsoar</div>
               <div className="text-xs text-muted-foreground">1.3k+ Followers</div>
             </div>
+            <ExternalLink className="h-4 w-4" style={{ color: "#D0C495" }} />
           </a>
 
           <a
-            href="#"
-            className="flex items-center gap-3 p-4 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors"
+            href="https://discord.gg/Y9tbUE2f"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 p-4 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors group"
           >
             <MessageCircle className="h-5 w-5" />
-            <div>
+            <div className="flex-1">
               <div className="font-semibold">USF SOAR</div>
               <div className="text-xs text-muted-foreground">600+ Members</div>
             </div>
+            <ExternalLink className="h-4 w-4" style={{ color: "#D0C495" }} />
           </a>
 
           <a
-            href="#"
-            className="flex items-center gap-3 p-4 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors"
+            href="https://www.linkedin.com/company/usfsoar/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 p-4 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors group"
           >
             <Linkedin className="h-5 w-5" />
-            <div>
+            <div className="flex-1">
               <div className="font-semibold">@USF SOAR</div>
               <div className="text-xs text-muted-foreground">300+ Followers</div>
             </div>
+            <ExternalLink className="h-4 w-4" style={{ color: "#D0C495" }} />
           </a>
 
           <a
-            href="#"
-            className="flex items-center gap-3 p-4 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors"
+            href="https://bullsconnect.usf.edu/feeds?type=club&type_id=58509&tab=about"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 p-4 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors group"
           >
             <Feather className="h-5 w-5" />
-            <div>
-              <div className="font-semibold">Builticonnect</div>
+            <div className="flex-1">
+              <div className="font-semibold">BullsConnect</div>
               <div className="text-xs text-muted-foreground">500+ Members</div>
             </div>
+            <ExternalLink className="h-4 w-4" style={{ color: "#D0C495" }} />
           </a>
         </div>
       </div>
