@@ -1,6 +1,6 @@
-import { Rocket } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
 
 export function LogoMotto() {
   return (
@@ -22,9 +22,7 @@ export function LogoMotto() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
             {/* Logo */}
             <div className="relative flex-shrink-0">
-              <div className="w-24 h-24 md:w-32 md:h-32 flex items-center justify-center bg-transparent border-2 border-white rounded-none">
-                <Rocket className="w-12 h-12 md:w-16 md:h-16 text-white" strokeWidth={1.5} />
-              </div>
+              <Image src="/White Logo.svg" alt="SOAR Logo" width={128} height={128} className="w-24 h-24 md:w-32 md:h-32" />
             </div>
 
             {/* Divider */}

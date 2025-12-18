@@ -8,9 +8,9 @@ export function TRACertifications() {
     <section id="tra" className="py-16 md:py-24 px-4 md:px-6 bg-background scroll-mt-20">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-8 md:mb-12">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Rocket className="h-4 w-4 text-muted-foreground" />
-            <span className="text-xs md:text-sm text-muted-foreground">Current Projects</span>
+          <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-6">
+            <Image src="/Color Logo.svg" alt="SOAR Logo" width={20} height={20} className="w-5 h-5" />
+            <span className="text-sm font-medium tracking-wide uppercase" style={{ color: "#EDEBD4" }}>Current Projects</span>
           </div>
 
           <h2 className="text-2xl md:text-5xl font-bold mb-4 md:mb-6 text-balance max-w-4xl mx-auto">
@@ -60,19 +60,17 @@ export function TRACertifications() {
                 <div className="text-xs md:text-sm text-muted-foreground">2013</div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div className="mt-8">
-          <Link href="/current-projects#tra" className="block">
-            <Button
-              style={{ backgroundColor: "#1F1F1F", color: "#ffffff" }}
-              className="gap-2 text-sm md:text-base hover:opacity-90 rounded-full px-6 w-full"
-            >
-              Learn more about TRA Certifications
-              <span>→</span>
-            </Button>
-          </Link>
+            <Link href="/current-projects#tra" className="block">
+              <Button
+                style={{ backgroundColor: "#1F1F1F", color: "#ffffff" }}
+                className="gap-2 text-sm md:text-base hover:opacity-90 rounded-full px-6 w-full"
+              >
+                Learn more about TRA Certifications
+                <span>→</span>
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
