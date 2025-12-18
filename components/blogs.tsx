@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Rocket } from "lucide-react"
+import Image from "next/image"
 
 export function Blogs() {
   return (
     <section className="py-24 px-6 bg-background">
       <div className="container mx-auto max-w-4xl text-center">
-        <div className="flex items-center justify-center gap-2 mb-4">
-          <Rocket className="h-4 w-4 text-muted-foreground" />
-          <span className="text-sm text-muted-foreground">Our Blogs</span>
+        <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-4">
+          <Image src="/Color Logo.svg" alt="SOAR Logo" width={20} height={20} className="w-5 h-5" />
+          <span className="text-sm font-medium tracking-wide" style={{ color: "#EDEBD4" }}>Our Blogs</span>
         </div>
 
         <h2 className="text-5xl font-bold mb-4 text-balance">SOAR UPDATES</h2>
