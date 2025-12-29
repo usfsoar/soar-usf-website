@@ -37,14 +37,23 @@ export function LogoMotto() {
             </div>
           </div>
 
-          <div className="flex justify-center mt-8">
-            <Link href="/events">
+          <div className="flex flex-row justify-center items-center gap-4 mt-8">
+            <Link href="/#sponsors">
               <Button
                 size="lg"
                 style={{ backgroundColor: "#D0C495", color: "#0f0f0f" }}
                 className="rounded-full px-8 py-6 text-base font-medium hover:opacity-90"
               >
                 Support Us!
+              </Button>
+            </Link>
+            <Link href="/#contact">
+              <Button
+                size="lg"
+                style={{ backgroundColor: "#D0C495", color: "#0f0f0f" }}
+                className="rounded-full px-8 py-6 text-base font-medium hover:opacity-90"
+              >
+                Contact Us
               </Button>
             </Link>
           </div>
