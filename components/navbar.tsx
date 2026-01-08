@@ -10,32 +10,74 @@ import { usePathname } from "next/navigation"
 export function Navbar() {
   const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [aboutOpen, setAboutOpen] = useState(false)
   const [currentProjectsOpen, setCurrentProjectsOpen] = useState(false)
   const [pastProjectsOpen, setPastProjectsOpen] = useState(false)
   
   const isActive = (path: string) => pathname === path
 
   return (
-    <nav className="absolute top-4 left-4 right-4 z-20 px-8 py-4 flex items-center justify-between bg-black/30 backdrop-blur-sm rounded-full">
+    <nav className="absolute top-4 left-1/2 -translate-x-1/2 z-20 px-8 py-4 flex items-center justify-between bg-black/30 backdrop-blur-sm rounded-full min-w-[900px]">
       {/* Logo */}
-      <Link href="/" className="flex items-center">
+      <Link href="/" className="flex items-center flex-shrink-0 cursor-pointer">
         <Image src="/White Logo.svg" alt="SOAR Logo" width={32} height={32} className="w-8 h-8" />
       </Link>
 
       {/* Desktop Navigation Links */}
       <div className="hidden lg:flex items-center gap-8">
-        <Link href="/" className={`text-sm font-medium transition-colors ${isActive('/') ? 'text-[#D0C495]' : 'text-white hover:text-[#D0C495]'}`}>
+        <Link href="/" className={`text-sm font-medium transition-colors cursor-pointer ${isActive('/') ? 'text-[#cfc493]' : 'text-white hover:text-[#cfc493]'}`}>
           Home
         </Link>
-        <Link href="/about" className={`text-sm font-medium transition-colors ${isActive('/about') ? 'text-[#D0C495]' : 'text-white hover:text-[#D0C495]'}`}>
-          About
-        </Link>
+        <div
+          className="relative"
+          onMouseEnter={() => setAboutOpen(true)}
+          onMouseLeave={() => setAboutOpen(false)}
+        >
+          <button className={`flex items-center gap-1 text-sm font-medium transition-colors py-2 cursor-pointer ${isActive('/about') ? 'text-[#cfc493]' : 'text-white hover:text-[#cfc493]'}`}>
+            About
+            <ChevronDown className="w-4 h-4" />
+          </button>
+          {aboutOpen && (
+            <div className="absolute top-full left-0 pt-0 bg-zinc-900 border border-white/10 rounded-md shadow-lg py-2 min-w-[160px]">
+              <Link
+                href="/about#eboard"
+                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+              >
+                Eboard
+              </Link>
+              <Link
+                href="/about#sponsorship"
+                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+              >
+                Sponsorship
+              </Link>
+              <Link
+                href="/about#media"
+                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+              >
+                Media + Pics
+              </Link>
+              <Link
+                href="/about#branding"
+                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+              >
+                Branding
+              </Link>
+              <Link
+                href="/about#shop"
+                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+              >
+                The Shop
+              </Link>
+            </div>
+          )}
+        </div>
         <div
           className="relative"
           onMouseEnter={() => setCurrentProjectsOpen(true)}
           onMouseLeave={() => setCurrentProjectsOpen(false)}
         >
-          <button className={`flex items-center gap-1 text-sm font-medium transition-colors py-2 ${isActive('/current-projects') ? 'text-[#D0C495]' : 'text-white hover:text-[#D0C495]'}`}>
+          <button className={`flex items-center gap-1 text-sm font-medium transition-colors py-2 cursor-pointer ${isActive('/current-projects') ? 'text-[#cfc493]' : 'text-white hover:text-[#cfc493]'}`}>
             Current Projects
             <ChevronDown className="w-4 h-4" />
           </button>
@@ -43,21 +85,21 @@ export function Navbar() {
             <div className="absolute top-full left-0 pt-0 bg-zinc-900 border border-white/10 rounded-md shadow-lg py-2 min-w-[160px]">
               <Link
                 href="/current-projects#irec"
-                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#D0C495] transition-colors"
+                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
                 IREC
               </Link>
               <Link
                 href="/current-projects#torito"
-                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#D0C495] transition-colors"
+                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
                 Torito
               </Link>
               <Link
-                href="/current-projects#tra"
-                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#D0C495] transition-colors"
+                href="/current-projects#certifications"
+                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
-                TRA
+                Certifications
               </Link>
             </div>
           )}
@@ -67,31 +109,43 @@ export function Navbar() {
           onMouseEnter={() => setPastProjectsOpen(true)}
           onMouseLeave={() => setPastProjectsOpen(false)}
         >
-          <button className={`flex items-center gap-1 text-sm font-medium transition-colors py-2 ${isActive('/past-projects') ? 'text-[#D0C495]' : 'text-white hover:text-[#D0C495]'}`}>
+          <button className={`flex items-center gap-1 text-sm font-medium transition-colors py-2 cursor-pointer ${isActive('/past-projects') ? 'text-[#cfc493]' : 'text-white hover:text-[#cfc493]'}`}>
             Past Projects
             <ChevronDown className="w-4 h-4" />
           </button>
           {pastProjectsOpen && (
             <div className="absolute top-full left-0 pt-0 bg-zinc-900 border border-white/10 rounded-md shadow-lg py-2 min-w-[160px]">
               <Link
-                href="/past-projects#past-irec"
-                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#D0C495] transition-colors"
+                href="/past-projects#irec"
+                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
-                Past IREC
+                IREC
+              </Link>
+              <Link
+                href="/past-projects#nsl"
+                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+              >
+                Past NSL
+              </Link>
+              <Link
+                href="/past-projects#hybrid"
+                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+              >
+                Hybrid
               </Link>
             </div>
           )}
         </div>
-        <Link href="/events" className={`text-sm font-medium transition-colors ${isActive('/events') ? 'text-[#D0C495]' : 'text-white hover:text-[#D0C495]'}`}>
+        <Link href="/events" className={`text-sm font-medium transition-colors cursor-pointer ${isActive('/events') ? 'text-[#cfc493]' : 'text-white hover:text-[#cfc493]'}`}>
           Events
         </Link>
-        <Link href="/positions" className={`text-sm font-medium transition-colors ${isActive('/positions') ? 'text-[#D0C495]' : 'text-white hover:text-[#D0C495]'}`}>
+        <Link href="/positions" className={`text-sm font-medium transition-colors cursor-pointer ${isActive('/positions') ? 'text-[#cfc493]' : 'text-white hover:text-[#cfc493]'}`}>
           Positions
         </Link>
-        <Link href="/#contact">
+        <Link href="/#contact" className="cursor-pointer">
           <Button
             style={{ backgroundColor: "#D0C495", color: "#0f0f0f" }}
-            className="hidden lg:flex font-medium px-6 py-2 rounded-full text-sm hover:opacity-90"
+            className="hidden lg:flex font-medium px-6 py-2 rounded-full text-sm hover:opacity-90 cursor-pointer"
           >
             Contact Us
           </Button>
@@ -123,49 +177,49 @@ export function Navbar() {
             <div className="py-2">
               <Link
                 href="/"
-                className={`block px-6 py-2.5 text-sm transition-colors ${isActive('/') ? 'text-[#D0C495] bg-black/20' : 'text-white hover:bg-black/20'}`}
+                className={`block px-6 py-2.5 text-sm transition-colors cursor-pointer ${isActive('/') ? 'text-[#cfc493] bg-black/20' : 'text-white hover:bg-black/20'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className={`block px-6 py-2.5 text-sm transition-colors ${isActive('/about') ? 'text-[#D0C495] bg-black/20' : 'text-white hover:bg-black/20'}`}
+                className={`block px-6 py-2.5 text-sm transition-colors cursor-pointer ${isActive('/about') ? 'text-[#cfc493] bg-black/20' : 'text-white hover:bg-black/20'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
               </Link>
               <Link
                 href="/current-projects"
-                className={`block px-6 py-2.5 text-sm transition-colors ${isActive('/current-projects') ? 'text-[#D0C495] bg-black/20' : 'text-white hover:bg-black/20'}`}
+                className={`block px-6 py-2.5 text-sm transition-colors cursor-pointer ${isActive('/current-projects') ? 'text-[#cfc493] bg-black/20' : 'text-white hover:bg-black/20'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Current Projects
               </Link>
               <Link
                 href="/past-projects"
-                className={`block px-6 py-2.5 text-sm transition-colors ${isActive('/past-projects') ? 'text-[#D0C495] bg-black/20' : 'text-white hover:bg-black/20'}`}
+                className={`block px-6 py-2.5 text-sm transition-colors cursor-pointer ${isActive('/past-projects') ? 'text-[#cfc493] bg-black/20' : 'text-white hover:bg-black/20'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Past Projects
               </Link>
               <Link
                 href="/events"
-                className={`block px-6 py-2.5 text-sm transition-colors ${isActive('/events') ? 'text-[#D0C495] bg-black/20' : 'text-white hover:bg-black/20'}`}
+                className={`block px-6 py-2.5 text-sm transition-colors cursor-pointer ${isActive('/events') ? 'text-[#cfc493] bg-black/20' : 'text-white hover:bg-black/20'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Events
               </Link>
               <Link
                 href="/positions"
-                className={`block px-6 py-2.5 text-sm transition-colors ${isActive('/positions') ? 'text-[#D0C495] bg-black/20' : 'text-white hover:bg-black/20'}`}
+                className={`block px-6 py-2.5 text-sm transition-colors cursor-pointer ${isActive('/positions') ? 'text-[#cfc493] bg-black/20' : 'text-white hover:bg-black/20'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Positions
               </Link>
               <Link
                 href="/#contact"
-                className="block px-6 py-2.5 text-white text-sm hover:bg-black/20 transition-colors"
+                className="block px-6 py-2.5 text-white text-sm hover:bg-black/20 transition-colors cursor-pointer"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
