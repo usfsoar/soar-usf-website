@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import Image from "next/image"
+import Link from "next/link"
 
 export function Blogs() {
   return (
@@ -8,7 +9,7 @@ export function Blogs() {
       <div className="container mx-auto max-w-4xl text-center">
         <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-4">
           <Image src="/Color Logo.svg" alt="SOAR Logo" width={20} height={20} className="w-5 h-5" />
-          <span className="text-sm font-medium tracking-wide" style={{ color: "#EDEBD4" }}>Our Blogs</span>
+          <span className="text-sm font-medium tracking-wide" style={{ color: "#cfc493" }}>Our Blogs</span>
         </div>
 
         <h2 className="text-5xl font-bold mb-4 text-balance">SOAR UPDATES</h2>
@@ -21,10 +22,12 @@ export function Blogs() {
           </div>
         </Card>
 
-        <Button variant="secondary" className="gap-2 rounded-full px-6 w-full">
-          View All Blogs
-          <span>→</span>
-        </Button>
+        <Link href="/events#blogs" className="cursor-pointer">
+          <Button variant="secondary" style={{ backgroundColor: "#303434", color: "#ffffff" }} className="gap-2 rounded-full px-6 w-full cursor-pointer hover:opacity-90">
+            View All Events
+            <span>→</span>
+          </Button>
+        </Link>
       </div>
     </section>
   )

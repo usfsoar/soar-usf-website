@@ -15,10 +15,10 @@ export function Footer() {
         <div className="mb-16">
           <div className="mb-8">
             <p className="text-sm text-muted-foreground mb-4">What are you waiting for?</p>
-            <Link href="/#contact">
+            <Link href="/#contact" className="cursor-pointer">
               <Button
-                style={{ backgroundColor: "#EDEBD4", color: "#0f0f0f" }}
-                className="gap-2 hover:opacity-90 rounded-full px-6"
+                style={{ backgroundColor: "#f5f5f5", color: "#0f0f0f" }}
+                className="gap-2 hover:opacity-90 rounded-full px-6 cursor-pointer"
               >
                 Get In Touch
                 <span>→</span>
@@ -71,13 +71,15 @@ export function Footer() {
                 </div>
               </div>
 
-              <Button
-                variant="secondary"
-                size="sm"
-                className="w-full mt-3 bg-green-600 hover:bg-green-700 text-white text-xs"
-              >
-                Join Discord
-              </Button>
+              <a href="https://discord.gg/7qjAHzrnHz" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+                <Button
+                  variant="secondary"
+                  size="sm"
+                  className="w-full mt-3 bg-green-600 hover:bg-green-700 text-white text-xs cursor-pointer"
+                >
+                  Join Discord
+                </Button>
+              </a>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 flex-1">
@@ -85,101 +87,71 @@ export function Footer() {
                 <h3 className="font-bold mb-4">About</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>
-                    <a href="#" className="hover:text-foreground transition-colors">
-                      Home
-                    </a>
+                    <Link href="/about#eboard" className="hover:text-foreground transition-colors cursor-pointer">
+                      Eboard
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-foreground transition-colors">
-                      Blogs
-                    </a>
+                    <Link href="/about#sponsorship" className="hover:text-foreground transition-colors cursor-pointer">
+                      Sponsorship
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-foreground transition-colors">
-                      Works
-                    </a>
+                    <Link href="/about#media" className="hover:text-foreground transition-colors cursor-pointer">
+                      Media + Pics
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-foreground transition-colors">
-                      Contact
-                    </a>
+                    <Link href="/about#branding" className="hover:text-foreground transition-colors cursor-pointer">
+                      Branding
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-foreground transition-colors">
-                      404
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-foreground transition-colors">
-                      Privacy Policy
-                    </a>
+                    <Link href="/about#shop" className="hover:text-foreground transition-colors cursor-pointer">
+                      The Shop
+                    </Link>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="font-bold mb-4">Projects</h3>
+                <h3 className="font-bold mb-4">Current Projects</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>
-                    <a href="#" className="hover:text-foreground transition-colors">
-                      Why Us
-                    </a>
+                    <Link href="/current-projects#irec" className="hover:text-foreground transition-colors cursor-pointer">
+                      IREC
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-foreground transition-colors">
-                      Expertise
-                    </a>
+                    <Link href="/current-projects#torito" className="hover:text-foreground transition-colors cursor-pointer">
+                      Torito
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-foreground transition-colors">
-                      Services
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-foreground transition-colors">
-                      Benefits
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-foreground transition-colors">
-                      Features
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-foreground transition-colors">
-                      Pricing
-                    </a>
+                    <Link href="/current-projects#certifications" className="hover:text-foreground transition-colors cursor-pointer">
+                      Certifications
+                    </Link>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="font-bold mb-4">Past</h3>
+                <h3 className="font-bold mb-4">Past Projects</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>
-                    <a href="#" className="hover:text-foreground transition-colors">
-                      Values
-                    </a>
+                    <Link href="/past-projects#irec" className="hover:text-foreground transition-colors cursor-pointer">
+                      IREC
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-foreground transition-colors">
-                      FAQs
-                    </a>
+                    <Link href="/past-projects#nsl" className="hover:text-foreground transition-colors cursor-pointer">
+                      Past NSL
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-foreground transition-colors">
-                      Testimonials
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-foreground transition-colors">
-                      Blogs
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-foreground transition-colors">
-                      Our Team
-                    </a>
+                    <Link href="/past-projects#hybrid" className="hover:text-foreground transition-colors cursor-pointer">
+                      Hybrid
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -188,14 +160,24 @@ export function Footer() {
                 <h3 className="font-bold mb-4">Other</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>
-                    <a href="#" className="hover:text-foreground transition-colors">
-                      Our Story
-                    </a>
+                    <Link href="/" className="hover:text-foreground transition-colors cursor-pointer">
+                      Home
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-foreground transition-colors">
-                      Our Culture
-                    </a>
+                    <Link href="/events" className="hover:text-foreground transition-colors cursor-pointer">
+                      Events
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/positions" className="hover:text-foreground transition-colors cursor-pointer">
+                      Positions
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/#contact" className="hover:text-foreground transition-colors cursor-pointer">
+                      Contact
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -205,7 +187,7 @@ export function Footer() {
 
         <button
           onClick={scrollToTop}
-          className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
         >
           Back to top
           <ArrowUp className="h-4 w-4" />

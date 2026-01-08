@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
 
 export default function PositionsPage() {
   return (
@@ -12,6 +13,8 @@ export default function PositionsPage() {
         <h1 className="text-4xl md:text-6xl font-bold text-white text-center mb-8">Positions</h1>
         <p className="text-zinc-400 text-center max-w-2xl mx-auto">Content coming soon...</p>
       </div>
+
+      <Footer />
     </div>
   )
 }

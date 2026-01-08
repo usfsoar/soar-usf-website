@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
 
 export default function PastProjectsPage() {
   return (
@@ -17,6 +18,8 @@ export default function PastProjectsPage() {
           <p className="text-zinc-400 max-w-3xl">Content coming soon...</p>
         </div>
       </div>
+
+      <Footer />
     </div>
   )
 }

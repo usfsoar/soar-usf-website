@@ -10,7 +10,7 @@ export function TRACertifications() {
         <div className="text-center mb-8 md:mb-12">
           <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-6">
             <Image src="/Color Logo.svg" alt="SOAR Logo" width={20} height={20} className="w-5 h-5" />
-            <span className="text-sm font-medium tracking-wide uppercase" style={{ color: "#EDEBD4" }}>Current Projects</span>
+            <span className="text-sm font-medium tracking-wide" style={{ color: "#cfc493" }}>Current Projects</span>
           </div>
 
           <h2 className="text-2xl md:text-5xl font-bold mb-4 md:mb-6 text-balance max-w-4xl mx-auto">

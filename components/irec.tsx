@@ -36,7 +36,7 @@ export function IREC() {
         <div className="text-center mb-12 md:mb-16">
           <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-6">
             <Image src="/Color Logo.svg" alt="SOAR Logo" width={20} height={20} className="w-5 h-5" />
-            <span className="text-sm font-medium tracking-wide uppercase" style={{ color: "#EDEBD4" }}>Current Projects</span>
+            <span className="text-sm font-medium tracking-wide" style={{ color: "#cfc493" }}>Current Projects</span>
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">LEARN ABOUT IREC</h2>
@@ -46,24 +46,82 @@ export function IREC() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-8 lg:gap-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-8">
+          {/* Join Card - Left Side on Desktop */}
+          <div className="lg:w-[380px] flex-shrink-0">
+            <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 sticky top-24">
+              <h3 className="text-xl font-bold mb-4">Join our teams!</h3>
+              <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                The competition requires nearly 1,000 pages of reports and documentation, and three team presentations to
+                NASA prior to launch week.
+              </p>
+
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center gap-2">
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#D0C495]/20 flex items-center justify-center">
+                    <svg className="w-3 h-3 text-[#D0C495]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="text-sm font-medium">Learn How to Build a Rocket</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#D0C495]/20 flex items-center justify-center">
+                    <svg className="w-3 h-3 text-[#D0C495]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="text-sm font-medium">Technical Skills</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#D0C495]/20 flex items-center justify-center">
+                    <svg className="w-3 h-3 text-[#D0C495]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="text-sm font-medium">Leadership Opportunities</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#D0C495]/20 flex items-center justify-center">
+                    <svg className="w-3 h-3 text-[#D0C495]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="text-sm font-medium">Go to Huntsville with us!</span>
+                </div>
+              </div>
+
+              <Link href="/current-projects#irec" className="block">
+                <Button
+                  style={{ backgroundColor: "#303434", color: "#ffffff" }}
+                  className="w-full gap-2 hover:opacity-90 rounded-full px-4 py-5 text-sm font-medium cursor-pointer"
+                >
+                  Learn more about IREC
+                  <span>→</span>
+                </Button>
+              </Link>
+            </div>
+          </div>
+
+          {/* Team Cards - Right Side on Desktop */}
+          <div className="flex-1">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {mainTeams.map((team, index) => (
                 <div
                   key={index}
-                  className="border border-zinc-800 rounded-xl p-6 hover:border-[#D0C495] transition-colors"
+                  className="border border-zinc-800 rounded-xl p-6 hover:border-[#cfc493] transition-colors"
                 >
                   <div className="w-14 h-14 bg-zinc-900 rounded-xl flex items-center justify-center mb-4">
-                    <team.icon className="h-7 w-7 text-[#D0C495]" />
+                    <team.icon className="h-7 w-7 text-[#cfc493]" />
                   </div>
                   <h4 className="text-lg font-bold mb-3">{team.title}</h4>
                   <p className="text-sm text-muted-foreground leading-relaxed">{team.description}</p>
                 </div>
               ))}
 
-            <div className="border border-zinc-800 rounded-xl p-6 hover:border-[#D0C495] transition-colors">
+            <div className="border border-zinc-800 rounded-xl p-6 hover:border-[#cfc493] transition-colors">
               <div className="w-14 h-14 bg-zinc-900 rounded-xl flex items-center justify-center mb-4">
-                <PackageOpen className="h-7 w-7 text-[#D0C495]" />
+                <PackageOpen className="h-7 w-7 text-[#cfc493]" />
               </div>
               <h4 className="text-lg font-bold mb-3">Recovery Team</h4>
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -71,61 +129,9 @@ export function IREC() {
               </p>
             </div>
           </div>
-
-          <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
-            <h3 className="text-xl font-bold mb-4">Join our teams!</h3>
-            <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-              The competition requires nearly 1,000 pages of reports and documentation, and three team presentations to
-              NASA prior to launch week.
-            </p>
-
-            <div className="flex flex-wrap justify-between gap-y-4 gap-x-2 mb-6">
-              <div className="flex items-center gap-2">
-                <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#D0C495]/20 flex items-center justify-center">
-                  <svg className="w-3 h-3 text-[#D0C495]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span className="text-sm font-medium">Learn How to Build a Rocket</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#D0C495]/20 flex items-center justify-center">
-                  <svg className="w-3 h-3 text-[#D0C495]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span className="text-sm font-medium">Technical Skills</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#D0C495]/20 flex items-center justify-center">
-                  <svg className="w-3 h-3 text-[#D0C495]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span className="text-sm font-medium">Leadership Opportunities</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#D0C495]/20 flex items-center justify-center">
-                  <svg className="w-3 h-3 text-[#D0C495]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span className="text-sm font-medium">Go to Huntsville with us!</span>
-              </div>
-            </div>
-
-            <Link href="/current-projects#irec" className="block">
-              <Button
-                style={{ backgroundColor: "#1F1F1F", color: "#ffffff" }}
-                className="w-full gap-2 hover:opacity-90 rounded-full px-4 py-5 text-sm font-medium"
-              >
-                Learn more about IREC
-                <span>→</span>
-              </Button>
-            </Link>
-          </div>
         </div>
       </div>
+    </div>
     </section>
   )
 }
