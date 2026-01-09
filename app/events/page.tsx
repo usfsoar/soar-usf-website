@@ -1,3 +1,5 @@
+"use client"
+
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -29,13 +31,20 @@ export default function EventsPage() {
       {/* Google Calendar Section */}
       <section className="container mx-auto px-6 pb-20">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl overflow-hidden">
-            <iframe
-              src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23000000&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&mode=MONTH"
-              className="w-full h-[600px]"
-              frameBorder="0"
-              scrolling="no"
-            />
+          <div className="bg-zinc-900/50 border-2 border-[#cfc493]/20 rounded-xl overflow-hidden">
+            <style jsx>{`
+              .calendar-container iframe {
+                filter: sepia(0.15) hue-rotate(15deg) brightness(0.95);
+              }
+            `}</style>
+            <div className="calendar-container">
+              <iframe
+                src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23000000&showTitle=0&showNav=1&showDate=1&showPrint=1&showTabs=1&showCalendars=0&mode=MONTH"
+                className="w-full h-[600px]"
+                frameBorder="0"
+                scrolling="no"
+              />
+            </div>
           </div>
         </div>
       </section>

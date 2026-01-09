@@ -17,7 +17,7 @@ export function Navbar() {
   const isActive = (path: string) => pathname === path
 
   return (
-    <nav className="absolute top-4 left-1/2 -translate-x-1/2 z-20 px-8 py-4 flex items-center justify-between bg-black/30 backdrop-blur-sm rounded-full min-w-[900px]">
+    <nav className="absolute top-4 left-1/2 -translate-x-1/2 z-20 px-4 md:px-8 py-3 md:py-4 flex items-center justify-between bg-black/30 backdrop-blur-sm rounded-full w-[95vw] max-w-[900px]">
       {/* Logo */}
       <Link href="/" className="flex items-center flex-shrink-0 cursor-pointer">
         <Image src="/White Logo.svg" alt="SOAR Logo" width={32} height={32} className="w-8 h-8" />
@@ -33,7 +33,7 @@ export function Navbar() {
           onMouseEnter={() => setAboutOpen(true)}
           onMouseLeave={() => setAboutOpen(false)}
         >
-          <button className={`flex items-center gap-1 text-sm font-medium transition-colors py-2 cursor-pointer ${isActive('/about') ? 'text-[#cfc493]' : 'text-white hover:text-[#cfc493]'}`}>
+          <button className={`flex items-center gap-1 text-sm font-medium transition-colors py-2 ${isActive('/about') ? 'text-[#cfc493]' : 'text-white hover:text-[#cfc493]'}`}>
             About
             <ChevronDown className="w-4 h-4" />
           </button>
@@ -77,7 +77,7 @@ export function Navbar() {
           onMouseEnter={() => setCurrentProjectsOpen(true)}
           onMouseLeave={() => setCurrentProjectsOpen(false)}
         >
-          <button className={`flex items-center gap-1 text-sm font-medium transition-colors py-2 cursor-pointer ${isActive('/current-projects') ? 'text-[#cfc493]' : 'text-white hover:text-[#cfc493]'}`}>
+          <button className={`flex items-center gap-1 text-sm font-medium transition-colors py-2 ${isActive('/current-projects') ? 'text-[#cfc493]' : 'text-white hover:text-[#cfc493]'}`}>
             Current Projects
             <ChevronDown className="w-4 h-4" />
           </button>
@@ -109,7 +109,7 @@ export function Navbar() {
           onMouseEnter={() => setPastProjectsOpen(true)}
           onMouseLeave={() => setPastProjectsOpen(false)}
         >
-          <button className={`flex items-center gap-1 text-sm font-medium transition-colors py-2 cursor-pointer ${isActive('/past-projects') ? 'text-[#cfc493]' : 'text-white hover:text-[#cfc493]'}`}>
+          <button className={`flex items-center gap-1 text-sm font-medium transition-colors py-2 ${isActive('/past-projects') ? 'text-[#cfc493]' : 'text-white hover:text-[#cfc493]'}`}>
             Past Projects
             <ChevronDown className="w-4 h-4" />
           </button>
@@ -131,7 +131,7 @@ export function Navbar() {
                 href="/past-projects#hybrid"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
-                Hybrid
+                Hybird
               </Link>
             </div>
           )}

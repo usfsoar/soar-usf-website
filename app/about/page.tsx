@@ -109,16 +109,16 @@ function EboardCard({ member }: { member: EboardMember }) {
         </div>
 
         {/* Right side - Info */}
-        <div className="flex-1">
+        <div className="flex-1 min-w-0">
           {/* Header with profile picture */}
           <div className="flex items-start gap-3 mb-4">
-            <div className="w-28 h-28 rounded-lg bg-zinc-700/50 flex items-center justify-center text-zinc-500 text-xs flex-shrink-0">
+            <div className="w-20 h-20 md:w-28 md:h-28 rounded-lg bg-zinc-700/50 flex items-center justify-center text-zinc-500 text-xs flex-shrink-0">
               Profile
             </div>
-            <div>
-              <div className="flex items-center gap-3 mb-2">
-                <h3 className="text-2xl font-bold">{member.name}</h3>
-                <span className="bg-zinc-800 text-zinc-300 text-xs px-3 py-1 rounded-full">{member.title}</span>
+            <div className="flex-1 min-w-0">
+              <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-2">
+                <h3 className="text-xl md:text-2xl font-bold">{member.name}</h3>
+                <span className="bg-zinc-800 text-zinc-300 text-xs px-3 py-1 rounded-full whitespace-nowrap">{member.title}</span>
               </div>
               <p className="text-zinc-300 text-sm leading-relaxed">{member.description}</p>
             </div>
@@ -204,6 +204,48 @@ export default function AboutPage() {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">HALL OF FAME</h2>
           <p className="text-zinc-400 text-lg">Former Eboard [PENDING]</p>
+        </div>
+      </section>
+
+      {/* Media + Pics Section */}
+      <section id="media" className="container mx-auto px-6 pb-20">
+        <div className="mb-12 text-center">
+          <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-6">
+            <svg className="w-5 h-5 text-[#cfc493]" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+            </svg>
+            <span className="text-sm font-medium tracking-wide text-[#cfc493]">Gallery</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">MEDIA + PICS</h2>
+          <p className="text-zinc-400 text-lg">Coming Soon</p>
+        </div>
+      </section>
+
+      {/* Branding Section */}
+      <section id="branding" className="container mx-auto px-6 pb-20">
+        <div className="mb-12 text-center">
+          <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-6">
+            <svg className="w-5 h-5 text-[#cfc493]" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.5 11H19V7c0-1.1-.9-2-2-2h-4V3.5C13 2.12 11.88 1 10.5 1S8 2.12 8 3.5V5H4c-1.1 0-1.99.9-1.99 2v3.8H3.5c1.49 0 2.7 1.21 2.7 2.7s-1.21 2.7-2.7 2.7H2V20c0 1.1.9 2 2 2h3.8v-1.5c0-1.49 1.21-2.7 2.7-2.7 1.49 0 2.7 1.21 2.7 2.7V22H17c1.1 0 2-.9 2-2v-4h1.5c1.38 0 2.5-1.12 2.5-2.5S21.88 11 20.5 11z"/>
+            </svg>
+            <span className="text-sm font-medium tracking-wide text-[#cfc493]">Brand Identity</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">BRANDING</h2>
+          <p className="text-zinc-400 text-lg">Coming Soon</p>
+        </div>
+      </section>
+
+      {/* The Shop Section */}
+      <section id="shop" className="container mx-auto px-6 pb-20">
+        <div className="mb-12 text-center">
+          <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-6">
+            <svg className="w-5 h-5 text-[#cfc493]" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+            </svg>
+            <span className="text-sm font-medium tracking-wide text-[#cfc493]">Merchandise</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">THE SHOP</h2>
+          <p className="text-zinc-400 text-lg">Coming Soon</p>
         </div>
       </section>
 
