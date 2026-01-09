@@ -14,7 +14,7 @@ export default function PastNSLPage() {
       {/* Hero Image */}
       <div className="relative w-full h-[400px] md:h-[500px]">
         <Image 
-          src="/pastnslhero.jpg" 
+          src="/pastnslhero.JPG" 
           alt="Past NSL Projects" 
           fill
           className="object-cover"
