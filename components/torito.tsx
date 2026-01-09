@@ -92,10 +92,10 @@ export function Torito() {
               <Link href="/current-projects#torito" className="block">
                 <Button
                   style={{ backgroundColor: "#303434", color: "#ffffff" }}
-                  className="w-full gap-2 hover:opacity-90 rounded-full px-4 py-5 text-sm font-medium"
+                  className="w-full gap-2 hover:opacity-90 rounded-full px-4 py-5 text-sm font-medium cursor-pointer group"
                 >
                   Learn more about Torito
-                  <span>→</span>
+                  <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
                 </Button>
               </Link>
             </div>
