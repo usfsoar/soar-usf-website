@@ -14,7 +14,7 @@ export default function HybridPage() {
       {/* Hero Image */}
       <div className="relative w-full h-[400px] md:h-[500px]">
         <Image 
-          src="/hybridhero.jpg" 
+          src="/hybridhero.JPG" 
           alt="Hybrid Rocket Project" 
           fill
           className="object-cover"

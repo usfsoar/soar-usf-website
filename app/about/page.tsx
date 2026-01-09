@@ -14,7 +14,7 @@ export default function AboutPage() {
       {/* Hero Image */}
       <div className="relative w-full h-[400px] md:h-[500px]">
         <Image 
-          src="/abouthero.jpg" 
+          src="/abouthero.JPG" 
           alt="About SOAR" 
           fill
           className="object-cover"
