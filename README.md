@@ -1,6 +1,7 @@
 # SOAR USF Website
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+<img width="1894" height="823" alt="image" src="https://github.com/user-attachments/assets/5b132a8d-a7a5-4cb8-b519-8e5f6ed02c2b" />
+
 
 [![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://usfsoar.vercel.app/)
 
