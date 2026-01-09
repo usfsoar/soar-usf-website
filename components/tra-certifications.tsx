@@ -9,7 +9,7 @@ export function TRACertifications() {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-8 md:mb-12">
           <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-6">
-            <Image src="/Color Logo.svg" alt="SOAR Logo" width={20} height={20} className="w-5 h-5" />
+            <Image src="/Color Logo.svg" alt="SOAR Logo" width={20} height={20} className="w-5 h-5" style={{ filter: "brightness(0) saturate(100%) invert(82%) sepia(13%) saturate(743%) hue-rotate(3deg) brightness(92%) contrast(85%)" }} />
             <span className="text-sm font-medium tracking-wide" style={{ color: "#cfc493" }}>Current Projects</span>
           </div>
 
@@ -21,7 +21,7 @@ export function TRACertifications() {
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
             <Image
-              src="/rocket-assembly.jpg"
+              src="/tra.jpg"
               alt="Team member working on rocket assembly"
               fill
               className="object-cover"
@@ -30,7 +30,7 @@ export function TRACertifications() {
 
           <div>
             <div className="flex items-center gap-3 mb-4 md:mb-6">
-              <Rocket className="h-5 w-5 md:h-6 md:w-6" />
+              <Rocket className="h-5 w-5 md:h-6 md:w-6 text-[#cfc493]" />
               <h3 className="text-xl md:text-2xl font-bold">TRA Certifications</h3>
             </div>
 
@@ -64,10 +64,10 @@ export function TRACertifications() {
             <Link href="/current-projects#tra" className="block">
               <Button
                 style={{ backgroundColor: "#1F1F1F", color: "#ffffff" }}
-                className="gap-2 text-sm md:text-base hover:opacity-90 rounded-full px-6 w-full"
+                className="gap-2 text-sm md:text-base hover:opacity-90 rounded-full px-6 w-full cursor-pointer group"
               >
                 Learn more about TRA Certifications
-                <span>→</span>
+                <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
               </Button>
             </Link>
           </div>

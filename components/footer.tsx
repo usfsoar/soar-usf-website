@@ -18,10 +18,10 @@ export function Footer() {
             <Link href="/#contact" className="cursor-pointer">
               <Button
                 style={{ backgroundColor: "#f5f5f5", color: "#0f0f0f" }}
-                className="gap-2 hover:opacity-90 rounded-full px-6 cursor-pointer"
+                className="gap-2 hover:opacity-90 hover:scale-105 transition-all duration-200 rounded-full px-6 cursor-pointer"
               >
                 Get In Touch
-                <span>→</span>
+                <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
               </Button>
             </Link>
           </div>
@@ -32,8 +32,6 @@ export function Footer() {
                 src="https://discord.com/widget?id=974767181717995580&theme=dark"
                 width="100%"
                 height="320"
-                allowTransparency={true}
-                frameBorder="0"
                 sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
               />
             </div>
@@ -43,27 +41,32 @@ export function Footer() {
                 <h3 className="font-bold mb-4">About</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>
-                    <Link href="/about#eboard" className="hover:text-foreground transition-colors cursor-pointer">
+                    <Link href="/about" className="hover:text-foreground transition-colors cursor-pointer">
+                      About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/eboard" className="hover:text-foreground transition-colors cursor-pointer">
                       Eboard
                     </Link>
                   </li>
                   <li>
-                    <Link href="/about#sponsorship" className="hover:text-foreground transition-colors cursor-pointer">
+                    <Link href="/sponsorships" className="hover:text-foreground transition-colors cursor-pointer">
                       Sponsorship
                     </Link>
                   </li>
                   <li>
-                    <Link href="/about#media" className="hover:text-foreground transition-colors cursor-pointer">
+                    <Link href="/media" className="hover:text-foreground transition-colors cursor-pointer">
                       Media + Pics
                     </Link>
                   </li>
                   <li>
-                    <Link href="/about#branding" className="hover:text-foreground transition-colors cursor-pointer">
+                    <Link href="/branding" className="hover:text-foreground transition-colors cursor-pointer">
                       Branding
                     </Link>
                   </li>
                   <li>
-                    <Link href="/about#shop" className="hover:text-foreground transition-colors cursor-pointer">
+                    <Link href="/shop" className="hover:text-foreground transition-colors cursor-pointer">
                       The Shop
                     </Link>
                   </li>
@@ -74,17 +77,17 @@ export function Footer() {
                 <h3 className="font-bold mb-4">Current Projects</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>
-                    <Link href="/current-projects#irec" className="hover:text-foreground transition-colors cursor-pointer">
+                    <Link href="/current-projects/irec" className="hover:text-foreground transition-colors cursor-pointer">
                       IREC
                     </Link>
                   </li>
                   <li>
-                    <Link href="/current-projects#torito" className="hover:text-foreground transition-colors cursor-pointer">
+                    <Link href="/current-projects/torito" className="hover:text-foreground transition-colors cursor-pointer">
                       Torito
                     </Link>
                   </li>
                   <li>
-                    <Link href="/current-projects#certifications" className="hover:text-foreground transition-colors cursor-pointer">
+                    <Link href="/current-projects/certifications" className="hover:text-foreground transition-colors cursor-pointer">
                       Certifications
                     </Link>
                   </li>
@@ -95,17 +98,17 @@ export function Footer() {
                 <h3 className="font-bold mb-4">Past Projects</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>
-                    <Link href="/past-projects#irec" className="hover:text-foreground transition-colors cursor-pointer">
+                    <Link href="/past-projects/irec" className="hover:text-foreground transition-colors cursor-pointer">
                       IREC
                     </Link>
                   </li>
                   <li>
-                    <Link href="/past-projects#nsl" className="hover:text-foreground transition-colors cursor-pointer">
+                    <Link href="/past-projects/past-nsl" className="hover:text-foreground transition-colors cursor-pointer">
                       Past NSL
                     </Link>
                   </li>
                   <li>
-                    <Link href="/past-projects#hybrid" className="hover:text-foreground transition-colors cursor-pointer">
+                    <Link href="/past-projects/hybrid" className="hover:text-foreground transition-colors cursor-pointer">
                       Hybrid
                     </Link>
                   </li>

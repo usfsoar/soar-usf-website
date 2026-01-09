@@ -13,11 +13,14 @@ export function Navbar() {
   const [aboutOpen, setAboutOpen] = useState(false)
   const [currentProjectsOpen, setCurrentProjectsOpen] = useState(false)
   const [pastProjectsOpen, setPastProjectsOpen] = useState(false)
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false)
+  const [mobileCurrentProjectsOpen, setMobileCurrentProjectsOpen] = useState(false)
+  const [mobilePastProjectsOpen, setMobilePastProjectsOpen] = useState(false)
   
   const isActive = (path: string) => pathname === path
 
   return (
-    <nav className="absolute top-4 left-1/2 -translate-x-1/2 z-20 px-4 md:px-8 py-3 md:py-4 flex items-center justify-between bg-black/30 backdrop-blur-sm rounded-full w-[95vw] max-w-[900px]">
+    <nav className="absolute top-4 left-1/2 -translate-x-1/2 z-20 px-4 md:px-8 py-4 md:py-5 flex items-center justify-between bg-black/30 backdrop-blur-sm rounded-full w-[95vw] max-w-[1000px]">
       {/* Logo */}
       <Link href="/" className="flex items-center flex-shrink-0 cursor-pointer">
         <Image src="/White Logo.svg" alt="SOAR Logo" width={32} height={32} className="w-8 h-8" />
@@ -40,31 +43,37 @@ export function Navbar() {
           {aboutOpen && (
             <div className="absolute top-full left-0 pt-0 bg-zinc-900 border border-white/10 rounded-md shadow-lg py-2 min-w-[160px]">
               <Link
-                href="/about#eboard"
+                href="/about"
+                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+              >
+                About Us
+              </Link>
+              <Link
+                href="/eboard"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
                 Eboard
               </Link>
               <Link
-                href="/about#sponsorship"
+                href="/sponsorships"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
                 Sponsorship
               </Link>
               <Link
-                href="/about#media"
+                href="/media"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
                 Media + Pics
               </Link>
               <Link
-                href="/about#branding"
+                href="/branding"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
                 Branding
               </Link>
               <Link
-                href="/about#shop"
+                href="/shop"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
                 The Shop
@@ -84,19 +93,19 @@ export function Navbar() {
           {currentProjectsOpen && (
             <div className="absolute top-full left-0 pt-0 bg-zinc-900 border border-white/10 rounded-md shadow-lg py-2 min-w-[160px]">
               <Link
-                href="/current-projects#irec"
+                href="/current-projects/irec"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
                 IREC
               </Link>
               <Link
-                href="/current-projects#torito"
+                href="/current-projects/torito"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
                 Torito
               </Link>
               <Link
-                href="/current-projects#certifications"
+                href="/current-projects/certifications"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
                 Certifications
@@ -116,28 +125,31 @@ export function Navbar() {
           {pastProjectsOpen && (
             <div className="absolute top-full left-0 pt-0 bg-zinc-900 border border-white/10 rounded-md shadow-lg py-2 min-w-[160px]">
               <Link
-                href="/past-projects#irec"
+                href="/past-projects/irec"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
                 IREC
               </Link>
               <Link
-                href="/past-projects#nsl"
+                href="/past-projects/past-nsl"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
                 Past NSL
               </Link>
               <Link
-                href="/past-projects#hybrid"
+                href="/past-projects/hybrid"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
-                Hybird
+                Hybrid
               </Link>
             </div>
           )}
         </div>
         <Link href="/events" className={`text-sm font-medium transition-colors cursor-pointer ${isActive('/events') ? 'text-[#cfc493]' : 'text-white hover:text-[#cfc493]'}`}>
           Events
+        </Link>
+        <Link href="/blogs" className={`text-sm font-medium transition-colors cursor-pointer ${isActive('/blogs') ? 'text-[#cfc493]' : 'text-white hover:text-[#cfc493]'}`}>
+          Blogs
         </Link>
         <Link href="/positions" className={`text-sm font-medium transition-colors cursor-pointer ${isActive('/positions') ? 'text-[#cfc493]' : 'text-white hover:text-[#cfc493]'}`}>
           Positions
@@ -182,33 +194,149 @@ export function Navbar() {
               >
                 Home
               </Link>
-              <Link
-                href="/about"
-                className={`block px-6 py-2.5 text-sm transition-colors cursor-pointer ${isActive('/about') ? 'text-[#cfc493] bg-black/20' : 'text-white hover:bg-black/20'}`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                About
-              </Link>
-              <Link
-                href="/current-projects"
-                className={`block px-6 py-2.5 text-sm transition-colors cursor-pointer ${isActive('/current-projects') ? 'text-[#cfc493] bg-black/20' : 'text-white hover:bg-black/20'}`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Current Projects
-              </Link>
-              <Link
-                href="/past-projects"
-                className={`block px-6 py-2.5 text-sm transition-colors cursor-pointer ${isActive('/past-projects') ? 'text-[#cfc493] bg-black/20' : 'text-white hover:bg-black/20'}`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Past Projects
-              </Link>
+              
+              {/* About Dropdown */}
+              <div>
+                <button
+                  className="w-full flex items-center justify-between px-6 py-2.5 text-sm text-white hover:bg-black/20 transition-colors"
+                  onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
+                >
+                  About
+                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileAboutOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {mobileAboutOpen && (
+                  <div className="bg-black/20">
+                    <Link
+                      href="/about"
+                      className="block px-8 py-2 text-sm text-white hover:bg-black/20 transition-colors cursor-pointer"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      About Us
+                    </Link>
+                    <Link
+                      href="/eboard"
+                      className="block px-8 py-2 text-sm text-white hover:bg-black/20 transition-colors cursor-pointer"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Eboard
+                    </Link>
+                    <Link
+                      href="/sponsorships"
+                      className="block px-8 py-2 text-sm text-white hover:bg-black/20 transition-colors cursor-pointer"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Sponsorship
+                    </Link>
+                    <Link
+                      href="/media"
+                      className="block px-8 py-2 text-sm text-white hover:bg-black/20 transition-colors cursor-pointer"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Media + Pics
+                    </Link>
+                    <Link
+                      href="/branding"
+                      className="block px-8 py-2 text-sm text-white hover:bg-black/20 transition-colors cursor-pointer"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Branding
+                    </Link>
+                    <Link
+                      href="/shop"
+                      className="block px-8 py-2 text-sm text-white hover:bg-black/20 transition-colors cursor-pointer"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      The Shop
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* Current Projects Dropdown */}
+              <div>
+                <button
+                  className="w-full flex items-center justify-between px-6 py-2.5 text-sm text-white hover:bg-black/20 transition-colors"
+                  onClick={() => setMobileCurrentProjectsOpen(!mobileCurrentProjectsOpen)}
+                >
+                  Current Projects
+                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileCurrentProjectsOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {mobileCurrentProjectsOpen && (
+                  <div className="bg-black/20">
+                    <Link
+                      href="/current-projects/irec"
+                      className="block px-8 py-2 text-sm text-white hover:bg-black/20 transition-colors cursor-pointer"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      IREC
+                    </Link>
+                    <Link
+                      href="/current-projects/torito"
+                      className="block px-8 py-2 text-sm text-white hover:bg-black/20 transition-colors cursor-pointer"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Torito
+                    </Link>
+                    <Link
+                      href="/current-projects/certifications"
+                      className="block px-8 py-2 text-sm text-white hover:bg-black/20 transition-colors cursor-pointer"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Certifications
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* Past Projects Dropdown */}
+              <div>
+                <button
+                  className="w-full flex items-center justify-between px-6 py-2.5 text-sm text-white hover:bg-black/20 transition-colors"
+                  onClick={() => setMobilePastProjectsOpen(!mobilePastProjectsOpen)}
+                >
+                  Past Projects
+                  <ChevronDown className={`w-4 h-4 transition-transform ${mobilePastProjectsOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {mobilePastProjectsOpen && (
+                  <div className="bg-black/20">
+                    <Link
+                      href="/past-projects/irec"
+                      className="block px-8 py-2 text-sm text-white hover:bg-black/20 transition-colors cursor-pointer"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      IREC
+                    </Link>
+                    <Link
+                      href="/past-projects/past-nsl"
+                      className="block px-8 py-2 text-sm text-white hover:bg-black/20 transition-colors cursor-pointer"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Past NSL
+                    </Link>
+                    <Link
+                      href="/past-projects/hybrid"
+                      className="block px-8 py-2 text-sm text-white hover:bg-black/20 transition-colors cursor-pointer"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Hybrid
+                    </Link>
+                  </div>
+                )}
+              </div>
+
               <Link
                 href="/events"
                 className={`block px-6 py-2.5 text-sm transition-colors cursor-pointer ${isActive('/events') ? 'text-[#cfc493] bg-black/20' : 'text-white hover:bg-black/20'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Events
+              </Link>
+              <Link
+                href="/blogs"
+                className={`block px-6 py-2.5 text-sm transition-colors cursor-pointer ${isActive('/blogs') ? 'text-[#cfc493] bg-black/20' : 'text-white hover:bg-black/20'}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Blogs
               </Link>
               <Link
                 href="/positions"

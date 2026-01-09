@@ -16,7 +16,7 @@ export function LogoMotto() {
           </div>
 
           <div className="flex flex-row justify-center items-center gap-4 mt-8">
-            <Link href="/about#sponsorship">
+            <Link href="/sponsorships">
               <Button
                 size="lg"
                 style={{ backgroundColor: "#cfc493", color: "#0f0f0f" }}

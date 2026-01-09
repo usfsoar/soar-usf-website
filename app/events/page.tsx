@@ -14,8 +14,20 @@ export default function EventsPage() {
         <Navbar />
       </div>
 
+      {/* Hero Image */}
+      <div className="relative w-full h-[400px] md:h-[500px]">
+        <Image 
+          src="/eventshero.jpg" 
+          alt="SOAR Events" 
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
+
       {/* Events Header */}
-      <section className="container mx-auto px-6 pt-32 pb-12">
+      <section className="container mx-auto px-6 pt-20 pb-12">
         <div className="text-center">
           <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-6">
             <svg className="w-5 h-5 text-[#edebd1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -39,7 +51,7 @@ export default function EventsPage() {
             `}</style>
             <div className="calendar-container">
               <iframe
-                src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23000000&showTitle=0&showNav=1&showDate=1&showPrint=1&showTabs=1&showCalendars=0&mode=MONTH"
+                src="https://calendar.google.com/calendar/embed?src=942jatunguv08jrcr3ver7t9kc%40group.calendar.google.com&ctz=America%2FNew_York"
                 className="w-full h-[600px]"
                 frameBorder="0"
                 scrolling="no"
@@ -48,28 +60,6 @@ export default function EventsPage() {
           </div>
         </div>
       </section>
-
-      {/* Blogs Section */}
-      <section id="blogs" className="py-24 px-6 bg-background scroll-mt-20">
-        <div className="container mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-4">
-            <Image src="/Color Logo.svg" alt="SOAR Logo" width={20} height={20} className="w-5 h-5" />
-            <span className="text-sm font-medium tracking-wide" style={{ color: "#cfc493" }}>Our Blogs</span>
-          </div>
-
-          <h2 className="text-5xl font-bold mb-4 text-balance">SOAR UPDATES</h2>
-          <p className="text-muted-foreground mb-12">Be updated on all things SOAR.</p>
-
-          <Card className="bg-[#1a3a52] border-none p-12 mb-8">
-            <div className="text-center">
-              <h3 className="text-xl font-semibold mb-2">Collection List</h3>
-              <p className="text-sm text-muted-foreground">No items added Collection</p>
-            </div>
-          </Card>
-
-        </div>
-      </section>
-
       <Footer />
     </div>
   )

@@ -7,7 +7,7 @@ export function Sponsors() {
     { name: "Five Star Pizza", logo: "/5starpizza.webp" },
     { name: "Joe Kegister", logo: "/joekegister.png" },
     { name: "Aevex Aerospace", logo: "/aevex.png" },
-    { name: "CAE", logo: "/cae.svg" },
+    { name: "CAE", logo: "/cae.png" },
     { name: "Monster Energy", logo: "/monster.png" },
     { name: "Ansys", logo: "/ansys.png" },
     { name: "JBS", logo: "/jbs.png" }
