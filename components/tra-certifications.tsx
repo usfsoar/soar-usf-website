@@ -61,7 +61,7 @@ export function TRACertifications() {
               </div>
             </div>
 
-            <Link href="/current-projects#tra" className="block">
+            <Link href="/current-projects/certifications" className="block">
               <Button
                 style={{ backgroundColor: "#1F1F1F", color: "#ffffff" }}
                 className="gap-2 text-sm md:text-base hover:opacity-90 rounded-full px-6 w-full cursor-pointer group"

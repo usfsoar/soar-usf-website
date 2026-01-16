@@ -91,7 +91,7 @@ export function IREC() {
                 </div>
               </div>
 
-              <Link href="/current-projects#irec" className="block">
+              <Link href="/current-projects/irec" className="block">
                 <Button
                   style={{ backgroundColor: "#303434", color: "#ffffff" }}
                   className="w-full gap-2 hover:opacity-90 rounded-full px-4 py-5 text-sm font-medium cursor-pointer group"
