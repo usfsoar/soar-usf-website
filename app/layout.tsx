@@ -8,7 +8,9 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 const robotoMono = Roboto_Mono({ 
   subsets: ["latin"],
-  variable: "--font-roboto-mono"
+  variable: "--font-roboto-mono",
+  display: "swap",
+  preload: true
 })
 
 export const metadata: Metadata = {
@@ -28,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${robotoMono.variable} font-sans antialiased`}>
+      <body className={`${robotoMono.variable} font-sans antialiased`} suppressHydrationWarning>
         {children}
         <Analytics />
       </body>
