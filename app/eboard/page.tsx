@@ -81,7 +81,7 @@ const eboardMembers: EboardMember[] = [
     title: "Secretary",
     description: "Serving as the Secretary, Conner is a Junior in Aerospace Engineering.",
     dates: "August 2025 - Present",
-    involvement: "I am currently pursuing my Bachelor's of Science in Aerospace Engineering, and am considering graduate school afterwards. As Secretary, it's my job to keep notes, keep tabs on what we need to get done, manage our calendars, monitor our BullsConnect page, and maintain the general organization of our files.",
+    involvement: "I'm a third-year Aerospace Engineering student, and joined SOAR last fall. As Secretary, it's my job to keep notes, keep tabs on what we need to get done, manage our calendars, monitor our BullsConnect page, and maintain the general organization of our files.",
     link: "https://www.linkedin.com/in/conner-schilaty-474452337/"
   }
 ]
