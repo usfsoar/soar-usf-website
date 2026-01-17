@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { ChevronDown, X } from "lucide-react"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 
@@ -16,11 +16,34 @@ export function Navbar() {
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false)
   const [mobileCurrentProjectsOpen, setMobileCurrentProjectsOpen] = useState(false)
   const [mobilePastProjectsOpen, setMobilePastProjectsOpen] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
   
   const isActive = (path: string) => pathname === path
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      
+      // Show navbar when scrolling up, hide when scrolling down
+      if (currentScrollY < lastScrollY || currentScrollY < 10) {
+        setIsVisible(true)
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false)
+      }
+      
+      setLastScrollY(currentScrollY)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [lastScrollY])
+
   return (
-    <nav className="absolute top-4 left-1/2 -translate-x-1/2 z-20 px-4 md:px-8 py-4 md:py-5 flex items-center justify-between bg-black/30 backdrop-blur-sm rounded-full w-[95vw] max-w-[1000px]">
+    <nav className={`fixed top-4 left-1/2 -translate-x-1/2 z-20 px-4 md:px-8 py-4 md:py-5 flex items-center justify-between bg-black/30 backdrop-blur-sm rounded-full w-[95vw] max-w-[1000px] transition-transform duration-300 ease-in-out ${
+      isVisible ? 'translate-y-0' : '-translate-y-[calc(100%+2rem)]'
+    }`}>
       {/* Logo */}
       <Link href="/" className="flex items-center flex-shrink-0 cursor-pointer">
         <Image src="/White Logo.svg" alt="SOAR Logo" width={32} height={32} className="w-8 h-8" />
