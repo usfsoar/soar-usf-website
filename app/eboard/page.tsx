@@ -89,12 +89,13 @@ const eboardMembers: EboardMember[] = [
 function EboardCard({ member }: { member: EboardMember }) {
   const [selectedImage, setSelectedImage] = useState(0)
 
-  // Define images for Emily Ho
-  const emilyImages = member.name === "Emily Ho" ? [
-    "/emily1.jpg",
-    "/emily2.jpg",
-    "/emily3.png"
-  ] : null
+  // Define images for members with galleries
+  const memberImages: { [key: string]: string[] } = {
+    "Emily Ho": ["/emily1.jpg", "/emily2.jpg", "/emily3.png"],
+    "Drew Brickell": ["/drew1.jpg", "/drew2.jpg", "/drew3.jpg"]
+  }
+
+  const images = memberImages[member.name] || null
 
   // Define profile images for each member
   const profileImages: { [key: string]: string } = {
@@ -122,9 +123,9 @@ function EboardCard({ member }: { member: EboardMember }) {
         <div className="lg:w-[280px] flex flex-col flex-shrink-0">
           {/* Main image placeholder with overlaid thumbnails */}
           <div className="relative aspect-[3/4] bg-zinc-700/50 rounded-lg mb-3 flex items-center justify-center text-zinc-500 overflow-hidden">
-            {emilyImages ? (
+            {images ? (
               <Image
-                src={emilyImages[selectedImage]}
+                src={images[selectedImage]}
                 alt={`${member.name} - Image ${selectedImage + 1}`}
                 fill
                 className="object-cover"
@@ -145,9 +146,9 @@ function EboardCard({ member }: { member: EboardMember }) {
                   selectedImage === 0 ? 'bg-zinc-600 border-2 border-zinc-500' : 'bg-zinc-700/50 border-2 border-zinc-700'
                 } hover:bg-zinc-600`}
               >
-                {emilyImages && (
+                {images && (
                   <Image
-                    src={emilyImages[0]}
+                    src={images[0]}
                     alt="Thumbnail 1"
                     fill
                     className="object-cover"
@@ -163,9 +164,9 @@ function EboardCard({ member }: { member: EboardMember }) {
                   selectedImage === 1 ? 'bg-zinc-600 border-2 border-zinc-500' : 'bg-zinc-700/50 border-2 border-zinc-700'
                 } hover:bg-zinc-600`}
               >
-                {emilyImages && (
+                {images && (
                   <Image
-                    src={emilyImages[1]}
+                    src={images[1]}
                     alt="Thumbnail 2"
                     fill
                     className="object-cover"
@@ -182,9 +183,9 @@ function EboardCard({ member }: { member: EboardMember }) {
                   selectedImage === 2 ? 'bg-zinc-600 border-2 border-zinc-500' : 'bg-zinc-700/50 border-2 border-zinc-700'
                 } hover:bg-zinc-600`}
               >
-                {emilyImages && (
+                {images && (
                   <Image
-                    src={emilyImages[2]}
+                    src={images[2]}
                     alt="Thumbnail 3"
                     fill
                     className="object-cover"
