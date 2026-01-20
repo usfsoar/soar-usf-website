@@ -47,9 +47,9 @@ const eboardMembers: EboardMember[] = [
   {
     name: "Cesar Briones",
     title: "IREC Chief Engineer",
-    description: "Cesar's role description will go here.",
-    dates: "May 2023 - Present",
-    involvement: "Cesar's involvement description will go here.",
+    description: "Serving as the IREC Chief Engineer, Cesar is currently a Senior in Mechanical Engineering.",
+    dates: "August 2022 - Present",
+    involvement: "I first joined SOAR in Fall 2022 and I have loved every single moment of it. I have been the Aerostructures Lead for the 2023 and 2024 season. I lead the design of the first airbrakes system, and pushed for more in house CNC metal manufacturing. Now I am the Chief Engineer for the IREC team. Additionally, I have been working on developing a bipropellant liquid engine.",
     link: "https://www.linkedin.com/in/cesar-briones-aranda/"
   },
   {
@@ -100,6 +100,7 @@ function EboardCard({ member }: { member: EboardMember }) {
   // Define profile images for each member
   const profileImages: { [key: string]: string } = {
     "Emily Ho": "/emilyheadshot.jpg",
+    "Cesar Briones": "/cesarheadshot.jpg",
     "Kyle Shum": "/kyleheadshot.jpeg",
     "Drew Brickell": "/drewheadshot.jpg",
     "Sage Bundhund": "/sageheadshot.jpg",
