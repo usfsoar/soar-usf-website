@@ -88,7 +88,8 @@ export default function SponsorshipsPage() {
                 { name: "CAE", logo: "/cae.png" },
                 { name: "Monster Energy", logo: "/monster.png" },
                 { name: "Ansys", logo: "/ansys.png" },
-                { name: "JBS", logo: "/jbs.png" }
+                { name: "JBS", logo: "/jbs.png" },
+                { name: "Kenesto", logo: "/Kenesto.png"}
               ].map((sponsor, index) => (
                 <div key={`first-${index}`} className="flex-shrink-0 opacity-90">
                   <img src={sponsor.logo} alt={sponsor.name} className="h-12 w-auto object-contain" />
@@ -102,7 +103,8 @@ export default function SponsorshipsPage() {
                 { name: "CAE", logo: "/cae.png" },
                 { name: "Monster Energy", logo: "/monster.png" },
                 { name: "Ansys", logo: "/ansys.png" },
-                { name: "JBS", logo: "/jbs.png" }
+                { name: "JBS", logo: "/jbs.png" },
+                { name: "Kenesto", logo: "/Kenesto.png"}
               ].map((sponsor, index) => (
                 <div key={`second-${index}`} className="flex-shrink-0 opacity-90">
                   <img src={sponsor.logo} alt={sponsor.name} className="h-12 w-auto object-contain" />

@@ -10,7 +10,8 @@ export function Sponsors() {
     { name: "CAE", logo: "/cae.png" },
     { name: "Monster Energy", logo: "/monster.png" },
     { name: "Ansys", logo: "/ansys.png" },
-    { name: "JBS", logo: "/jbs.png" }
+    { name: "JBS", logo: "/jbs.png" },
+    { name: "Kenesto", logo: "/Kenesto.png"}
   ]
 
   const scrollRef = useRef<HTMLDivElement>(null)
