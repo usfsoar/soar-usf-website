@@ -37,6 +37,42 @@ export default function IRECPage() {
             </div>
 
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold mb-4">Rocket Specifications</h3>
+              <div className="overflow-x-auto">
+                <table className="w-full text-left">
+                  <thead>
+                    <tr className="border-b border-zinc-700">
+                      <th className="py-3 px-4 font-semibold text-white">Specification</th>
+                      <th className="py-3 px-4 font-semibold text-white">Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-zinc-800">
+                      <td className="py-3 px-4 text-zinc-400">Mass</td>
+                      <td className="py-3 px-4 text-white">62.3 lb</td>
+                    </tr>
+                    <tr className="border-b border-zinc-800">
+                      <td className="py-3 px-4 text-zinc-400">Height</td>
+                      <td className="py-3 px-4 text-white">114 in</td>
+                    </tr>
+                    <tr className="border-b border-zinc-800">
+                      <td className="py-3 px-4 text-zinc-400">Payload</td>
+                      <td className="py-3 px-4 text-white">Deployable Rover</td>
+                    </tr>
+                    <tr className="border-b border-zinc-800">
+                      <td className="py-3 px-4 text-zinc-400">Altitude</td>
+                      <td className="py-3 px-4 text-white">10,000 ft</td>
+                    </tr>
+                    <tr>
+                      <td className="py-3 px-4 text-zinc-400">Max Velocity</td>
+                      <td className="py-3 px-4 text-white">0.92 Mach</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">
               <h3 className="text-2xl font-bold mb-4">Project Goals</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="flex items-start gap-3">
