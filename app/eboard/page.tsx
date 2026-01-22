@@ -92,10 +92,19 @@ function EboardCard({ member }: { member: EboardMember }) {
   // Define images for members with galleries
   const memberImages: { [key: string]: string[] } = {
     "Emily Ho": ["/emily1.jpg", "/emily2.jpg", "/emily3.png"],
-    "Drew Brickell": ["/drew1.jpg", "/drew2.jpg", "/drew3.jpg"]
+    "Drew Brickell": ["/drew1.jpg", "/drew2.jpg", "/drew3.jpg"],
+    "Cesar Briones": ["/cesar1.jpg", "/cesar2.jpg", ""],
+    "Kyle Shum": ["/kyle1.jpg", "/kyle2.jpg", "/kyle3.jpg"]
   }
 
-  const images = memberImages[member.name] || null
+  const imagesRaw: string[] = memberImages[member.name] || []
+  const images: string[] = imagesRaw.filter(Boolean)
+
+  useEffect(() => {
+    if (images.length > 0 && selectedImage >= images.length) {
+      setSelectedImage(0)
+    }
+  }, [images.length, selectedImage])
 
   // Define profile images for each member
   const profileImages: { [key: string]: string } = {
@@ -117,6 +126,14 @@ function EboardCard({ member }: { member: EboardMember }) {
   const profileImage = profileImages[member.name] || null
   const profileImagePosition = profileImagePositions[member.name]
 
+  const mainImageObjectPosition = member.name === "Kyle Shum" && selectedImage === 0
+    ? { objectPosition: '70% center' }
+    : selectedImage === 1
+    ? { objectPosition: '70% center' }
+    : selectedImage === 2
+    ? { objectPosition: '70% center' }
+    : undefined
+
   return (
     <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl overflow-hidden">
       <div className="flex flex-col lg:flex-row gap-6 p-6">
@@ -124,13 +141,13 @@ function EboardCard({ member }: { member: EboardMember }) {
         <div className="lg:w-[280px] flex flex-col flex-shrink-0">
           {/* Main image placeholder with overlaid thumbnails */}
           <div className="relative aspect-[3/4] bg-zinc-700/50 rounded-lg mb-3 flex items-center justify-center text-zinc-500 overflow-hidden">
-            {images ? (
+            {images.length > 0 && images[selectedImage] ? (
               <Image
                 src={images[selectedImage]}
                 alt={`${member.name} - Image ${selectedImage + 1}`}
                 fill
                 className="object-cover"
-                style={selectedImage === 1 ? { objectPosition: '70% center' } : selectedImage === 2 ? { objectPosition: '85% center' } : undefined}
+                style={mainImageObjectPosition}
                 sizes="(max-width: 1024px) 100vw, 280px"
                 quality={80}
                 loading="lazy"
@@ -138,7 +155,7 @@ function EboardCard({ member }: { member: EboardMember }) {
             ) : (
               <span>Image {selectedImage + 1}</span>
             )}
-            
+
             {/* Image selector thumbnails overlaid at bottom */}
             <div className="absolute bottom-3 left-3 right-3 flex gap-2">
               <button
@@ -147,7 +164,7 @@ function EboardCard({ member }: { member: EboardMember }) {
                   selectedImage === 0 ? 'bg-zinc-600 border-2 border-zinc-500' : 'bg-zinc-700/50 border-2 border-zinc-700'
                 } hover:bg-zinc-600`}
               >
-                {images && (
+                {images[0] && (
                   <Image
                     src={images[0]}
                     alt="Thumbnail 1"
@@ -165,7 +182,7 @@ function EboardCard({ member }: { member: EboardMember }) {
                   selectedImage === 1 ? 'bg-zinc-600 border-2 border-zinc-500' : 'bg-zinc-700/50 border-2 border-zinc-700'
                 } hover:bg-zinc-600`}
               >
-                {images && (
+                {images[1] && (
                   <Image
                     src={images[1]}
                     alt="Thumbnail 2"
@@ -184,7 +201,7 @@ function EboardCard({ member }: { member: EboardMember }) {
                   selectedImage === 2 ? 'bg-zinc-600 border-2 border-zinc-500' : 'bg-zinc-700/50 border-2 border-zinc-700'
                 } hover:bg-zinc-600`}
               >
-                {images && (
+                {images[2] && (
                   <Image
                     src={images[2]}
                     alt="Thumbnail 3"
