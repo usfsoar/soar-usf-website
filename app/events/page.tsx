@@ -15,15 +15,25 @@ export default function EventsPage() {
       </div>
 
       {/* Hero Image */}
-      <div className="relative w-full h-[400px] md:h-[500px]">
+      <div className="relative h-screen">
         <Image 
           src="/eventshero.jpg" 
           alt="SOAR Events" 
           fill
-          className="object-cover"
+          className="object-cover opacity-40"
           priority
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-[#006747]/30" />
+        
+        {/* Hero Content */}
+        <div className="relative z-10 h-full flex items-center justify-center px-6">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">EVENTS AND MEETINGS</h1>
+            <p className="text-zinc-200 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-lg">
+              I know what WE'RE doing today, tomorrow, in fact, for the whole year.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Events Header */}
@@ -35,7 +45,7 @@ export default function EventsPage() {
             </svg>
             <span className="text-sm font-medium tracking-wide text-[#cfc493]">SOAR Calendar</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">EVENTS AND MEETINGS</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">CALENDAR</h2>
           <p className="text-zinc-400 text-lg">I know what WE'RE doing today, tomorrow, in fact, for the whole year.</p>
         </div>
       </section>

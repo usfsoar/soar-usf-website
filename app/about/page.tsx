@@ -12,29 +12,30 @@ export default function AboutPage() {
       </div>
 
       {/* Hero Image */}
-      <div className="relative w-full h-[400px] md:h-[500px]">
+      <div className="relative h-screen">
         <Image 
           src="/abouthero.JPG" 
           alt="About SOAR" 
           fill
-          className="object-cover"
+          className="object-cover opacity-40"
           priority
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-[#006747]/30" />
+        
+        {/* Hero Content */}
+        <div className="relative z-10 h-full flex items-center justify-center px-6">
+          <div className="text-center">
+            
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">ABOUT SOAR</h1>
+            <p className="text-zinc-200 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-lg">
+              Learn more about our organization, mission, and vision.
+            </p>
+          </div>
+        </div>
       </div>
 
       <section className="container mx-auto px-6 pt-20 pb-20">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-6">
-              <Image src="/Color Logo.svg" alt="SOAR Logo" width={24} height={24} className="w-6 h-6" />
-              <span className="text-sm font-medium tracking-wide text-[#cfc493]">About Us</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">ABOUT SOAR</h2>
-            <p className="text-zinc-400 text-lg">
-              Learn more about our organization, mission, and vision.
-            </p>
-          </div>
 
           <div className="space-y-8">
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">

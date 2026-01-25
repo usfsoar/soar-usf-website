@@ -2,6 +2,7 @@
 
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import Image from "next/image"
 
 export default function ToritoPage() {
   return (
@@ -10,20 +11,36 @@ export default function ToritoPage() {
         <Navbar />
       </div>
 
-      <section className="container mx-auto px-6 pt-32 pb-20">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-6">
+      {/* Hero Image */}
+      <div className="relative h-screen">
+        <Image 
+          src="/drew1.jpg" 
+          alt="Torito" 
+          fill
+          className="object-cover opacity-40"
+          priority
+        />
+        <div className="absolute inset-0 bg-[#006747]/30" />
+        
+        {/* Hero Content */}
+        <div className="relative z-10 h-full flex items-center justify-center px-6">
+          <div className="text-center">
+            <div className="inline-flex items-center gap-3 bg-zinc-900/80 rounded-full px-6 py-3 mb-6">
               <svg className="w-5 h-5 text-[#cfc493]" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/>
               </svg>
               <span className="text-sm font-medium tracking-wide text-[#cfc493]">Current Project</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">TORITO</h2>
-            <p className="text-zinc-400 text-lg">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">TORITO</h1>
+            <p className="text-zinc-200 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-lg">
               Liquid Propulsion Research Project
             </p>
           </div>
+        </div>
+      </div>
+
+      <section className="container mx-auto px-6 py-20">
+        <div className="max-w-4xl mx-auto">
 
           <div className="space-y-8">
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">

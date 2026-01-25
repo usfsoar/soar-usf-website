@@ -12,23 +12,31 @@ export default function BlogsPage() {
         <Navbar />
       </div>
 
-      {/* Blogs Section with Coming Soon Overlay */}
-      <section className="py-24 px-6 bg-background pt-32">
-        <div className="container mx-auto max-w-6xl relative">
-          {/* Coming Soon Overlay - At the top */}
-          <div className="flex items-center justify-center mb-12">
-            <div className="text-center">
-              <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-6">
-                <Image src="/Color Logo.svg" alt="SOAR Logo" width={20} height={20} className="w-5 h-5" />
-                <span className="text-sm font-medium tracking-wide text-[#cfc493]">Blogs</span>
-              </div>
-              <h1 className="text-6xl md:text-7xl font-bold mb-4 text-white">COMING SOON</h1>
-              <p className="text-zinc-400 text-xl max-w-2xl mx-auto">
-                We're working hard to bring you insightful content. Stay tuned!
-              </p>
-            </div>
+      {/* Hero Image */}
+      <div className="relative h-screen">
+        <Image 
+          src="/bloghero.JPG" 
+          alt="Blogs" 
+          fill
+          className="object-cover opacity-40"
+          priority
+        />
+        <div className="absolute inset-0 bg-[#006747]/30" />
+        
+        {/* Hero Content */}
+        <div className="relative z-10 h-full flex items-center justify-center px-6">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">BLOGS</h1>
+            <p className="text-zinc-200 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-lg">
+              We're working hard to bring you insightful content. Stay tuned!
+            </p>
           </div>
+        </div>
+      </div>
 
+      {/* Blogs Section with Coming Soon Overlay */}
+      <section className="py-24 px-6 bg-background">
+        <div className="container mx-auto max-w-6xl relative">
           {/* Blurred Content */}
           <div className="filter blur-sm pointer-events-none select-none">
             {/* Hero Section */}
