@@ -31,12 +31,6 @@ export default function MediaPage() {
         {/* Hero Content */}
         <div className="relative z-10 h-full flex items-center justify-center px-6">
           <div className="text-center">
-            <div className="inline-flex items-center gap-3 bg-zinc-900/80 rounded-full px-6 py-3 mb-6">
-              <svg className="w-5 h-5 text-[#cfc493]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <span className="text-sm font-medium tracking-wide text-[#cfc493]">Media + Pics</span>
-            </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">MEDIA + PICS</h1>
             <p className="text-zinc-200 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-lg">
               Explore our photo gallery and social media content.
@@ -48,25 +42,36 @@ export default function MediaPage() {
       {/* Photo Gallery Section */}
       <section className="container mx-auto px-6 py-20">
         <div className="text-center">
-          {/* 3D Photo Slideshow */}
+          {/* Simple Photo Slider */}
           <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 max-w-5xl mx-auto">
             <h3 className="text-2xl font-bold mb-8">Photo Gallery</h3>
-            <div className="slideshow-3d">
-              <div className="slideshow-content">
-                <div className="slider-content">
-                  <figure className="shadow"><Image src="/pic1.JPG" alt="Photo 1" width={180} height={120} /></figure>
-                  <figure className="shadow"><Image src="/pic2.JPG" alt="Photo 2" width={180} height={120} /></figure>
-                  <figure className="shadow"><Image src="/pic3.JPG" alt="Photo 3" width={180} height={120} /></figure>
-                  <figure className="shadow"><Image src="/pic4.JPG" alt="Photo 4" width={180} height={120} /></figure>
-                  <figure className="shadow"><Image src="/pic5.JPG" alt="Photo 5" width={180} height={120} /></figure>
-                  <figure className="shadow"><Image src="/pic6.JPG" alt="Photo 6" width={180} height={120} /></figure>
-                  <figure className="shadow"><Image src="/pic7.JPG" alt="Photo 7" width={180} height={120} /></figure>
-                  <figure className="shadow"><Image src="/pic8.JPG" alt="Photo 8" width={180} height={120} /></figure>
-                  <figure className="shadow"><Image src="/pic9.JPG" alt="Photo 9" width={180} height={120} /></figure>
-                  <figure className="shadow"><Image src="/pic10.JPG" alt="Photo 10" width={180} height={120} /></figure>
-                  <figure className="shadow"><Image src="/pic11.JPG" alt="Photo 11" width={180} height={120} /></figure>
-                  <figure className="shadow"><Image src="/pic12.JPG" alt="Photo 12" width={180} height={120} /></figure>
-                </div>
+            <div className="slideshow-container">
+              <div className="slider-track">
+                <div className="slide"><Image src="/pic1.JPG" alt="Photo 1" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic2.JPG" alt="Photo 2" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic3.JPG" alt="Photo 3" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic4.JPG" alt="Photo 4" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic5.JPG" alt="Photo 5" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic6.JPG" alt="Photo 6" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic7.JPG" alt="Photo 7" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic8.JPG" alt="Photo 8" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic9.JPG" alt="Photo 9" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic10.JPG" alt="Photo 10" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic11.JPG" alt="Photo 11" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic12.JPG" alt="Photo 12" width={300} height={200} /></div>
+                {/* Duplicate slides for seamless loop */}
+                <div className="slide"><Image src="/pic1.JPG" alt="Photo 1" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic2.JPG" alt="Photo 2" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic3.JPG" alt="Photo 3" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic4.JPG" alt="Photo 4" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic5.JPG" alt="Photo 5" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic6.JPG" alt="Photo 6" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic7.JPG" alt="Photo 7" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic8.JPG" alt="Photo 8" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic9.JPG" alt="Photo 9" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic10.JPG" alt="Photo 10" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic11.JPG" alt="Photo 11" width={300} height={200} /></div>
+                <div className="slide"><Image src="/pic12.JPG" alt="Photo 12" width={300} height={200} /></div>
               </div>
             </div>
             
@@ -112,6 +117,7 @@ export default function MediaPage() {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
+              
             </a>
           </div>
 
@@ -144,115 +150,56 @@ export default function MediaPage() {
       <Footer />
 
       <style jsx>{`
-        .slideshow-3d {
-          margin: 0 auto;
-          padding-top: 50px;
-          height: 400px;
-          perspective: 1500px;
-        }
-        
-        .slideshow-content {
-          margin: auto;
-          width: 150px;
-          perspective: 1500px;
-          position: relative;
-          padding-top: 40px;
-          transform-style: preserve-3d;
-        }
-        
-        .slider-content {
+        .slideshow-container {
           width: 100%;
-          position: absolute;
-          float: right;
-          animation: rotate 120s infinite linear;
-          transform-style: preserve-3d;
+          height: 250px;
+          overflow: hidden;
+          position: relative;
+          margin: 0 auto;
         }
         
-        .slider-content:hover {
-          cursor: pointer;
+        .slider-track {
+          display: flex;
+          gap: 20px;
+          animation: scroll 90s linear infinite;
+        }
+        
+        @media (max-width: 768px) {
+          .slider-track {
+            animation: scroll 60s linear infinite;
+          }
+        }
+        
+        .slider-track:hover {
           animation-play-state: paused;
         }
         
-        .slider-content figure {
-          width: 180px;
-          height: 120px;
-          border: 1px solid #555;
+        .slide {
+          flex-shrink: 0;
+          width: 300px;
+          height: 200px;
+          border-radius: 8px;
           overflow: hidden;
-          position: absolute;
-          backface-visibility: hidden;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
         
-        .slider-content :global(img) {
-          transition: all 300ms;
+        .slide :global(img) {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          transition: transform 300ms;
         }
         
-        .slider-content :global(img:hover) {
-          transform: scale(1.2);
-          transition: all 300ms;
+        .slide:hover :global(img) {
+          transform: scale(1.1);
         }
         
-        .shadow {
-          position: absolute;
-          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
-        }
-        
-        .slider-content figure:nth-child(1) {
-          transform: rotateY(0deg) translateZ(400px);
-        }
-        
-        .slider-content figure:nth-child(2) {
-          transform: rotateY(30deg) translateZ(400px);
-        }
-        
-        .slider-content figure:nth-child(3) {
-          transform: rotateY(60deg) translateZ(400px);
-        }
-        
-        .slider-content figure:nth-child(4) {
-          transform: rotateY(90deg) translateZ(400px);
-        }
-        
-        .slider-content figure:nth-child(5) {
-          transform: rotateY(120deg) translateZ(400px);
-        }
-        
-        .slider-content figure:nth-child(6) {
-          transform: rotateY(150deg) translateZ(400px);
-        }
-        
-        .slider-content figure:nth-child(7) {
-          transform: rotateY(180deg) translateZ(400px);
-        }
-        
-        .slider-content figure:nth-child(8) {
-          transform: rotateY(210deg) translateZ(400px);
-        }
-        
-        .slider-content figure:nth-child(9) {
-          transform: rotateY(240deg) translateZ(400px);
-        }
-        
-        .slider-content figure:nth-child(10) {
-          transform: rotateY(270deg) translateZ(400px);
-        }
-        
-        .slider-content figure:nth-child(11) {
-          transform: rotateY(300deg) translateZ(400px);
-        }
-        
-        .slider-content figure:nth-child(12) {
-          transform: rotateY(330deg) translateZ(400px);
-        }
-        
-        @keyframes rotate {
-          from {
-            transform: rotateY(0deg);
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
           }
-          to {
-            transform: rotateY(360deg);
+          100% {
+            transform: translateX(calc(-320px * 12));
           }
         }
       `}</style>

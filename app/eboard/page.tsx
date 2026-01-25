@@ -287,31 +287,31 @@ export default function EboardPage() {
       </div>
 
       {/* Hero Image */}
-      <div className="relative w-full h-[400px] md:h-[500px]">
+      <div className="relative h-screen">
         <Image 
           src="/emily2.jpg" 
           alt="SOAR Eboard" 
           fill
-          className="object-cover"
+          className="object-cover opacity-40"
           priority
           sizes="100vw"
           quality={85}
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-[#006747]/30" />
+        
+        {/* Hero Content */}
+        <div className="relative z-10 h-full flex items-center justify-center px-6">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">EXECUTIVE BOARD</h1>
+            <p className="text-zinc-200 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-lg">
+              Meet the leaders driving SOAR's mission forward.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Eboard Section */}
       <section className="container mx-auto px-6 pt-20 pb-20">
-        <div className="mb-12 text-center">
-          <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-6">
-            <svg className="w-5 h-5 text-[#cfc493]" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
-            </svg>
-            <span className="text-sm font-medium tracking-wide text-[#cfc493]">Executive Board</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">INTRODUCING OUR EBOARD</h2>
-          <p className="text-zinc-400 text-lg">Leadership behind SOAR.</p>
-        </div>
 
         <div className="space-y-8 max-w-5xl mx-auto">
           {eboardMembers.map((member, index) => (

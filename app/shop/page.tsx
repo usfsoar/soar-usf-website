@@ -2,6 +2,7 @@
 
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import Image from "next/image"
 
 export default function ShopPage() {
   return (
@@ -10,18 +11,30 @@ export default function ShopPage() {
         <Navbar />
       </div>
 
-      <section className="container mx-auto px-6 pt-32 pb-20">
-        <div className="text-center">
-          <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-6">
-            <svg className="w-5 h-5 text-[#cfc493]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-            </svg>
-            <span className="text-sm font-medium tracking-wide text-[#cfc493]">The Shop</span>
+      {/* Hero Image */}
+      <div className="relative h-screen">
+        <Image 
+          src="/shophero.png" 
+          alt="The Shop" 
+          fill
+          className="object-cover opacity-40"
+          priority
+        />
+        <div className="absolute inset-0 bg-[#006747]/30" />
+        
+        {/* Hero Content */}
+        <div className="relative z-10 h-full flex items-center justify-center px-6">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">THE SHOP</h1>
+            <p className="text-zinc-200 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-lg">
+              Check back soon for exclusive SOAR merchandise.
+            </p>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">THE SHOP</h2>
-          <p className="text-zinc-400 text-lg max-w-2xl mx-auto mb-12">
-            Check back soon for exclusive SOAR merchandise.
-          </p>
+        </div>
+      </div>
+
+      <section className="container mx-auto px-6 py-20">
+        <div className="text-center">
 
           <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-12 max-w-2xl mx-auto">
             <div className="text-6xl mb-6">🛒</div>

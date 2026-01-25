@@ -205,7 +205,7 @@ export function Navbar() {
 
       {/* Mobile Menu Popup */}
       {mobileMenuOpen && (
-        <div className="absolute top-[76px] right-0 z-50 lg:hidden w-[200px]">
+        <div className="absolute top-[76px] left-1/2 -translate-x-1/2 z-50 lg:hidden w-[200px]">
           {/* Menu Content */}
           <div className="bg-[#3d3d3d] rounded-lg shadow-lg overflow-hidden">
             {/* Menu Items */}
