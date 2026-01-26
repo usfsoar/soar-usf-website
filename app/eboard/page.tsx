@@ -93,7 +93,7 @@ function EboardCard({ member }: { member: EboardMember }) {
   const memberImages: { [key: string]: string[] } = {
     "Emily Ho": ["/emily1.jpg", "/emily2.jpg", "/emily3.png"],
     "Drew Brickell": ["/drew1.jpg", "/drew2.jpg", "/drew3.jpg"],
-    "Cesar Briones": ["/cesar1.jpg", "/cesar2.jpg", "/cesar3.JPG"],
+    "Cesar Briones": ["/cesar1.JPG", "/cesar2.JPG", "/cesar3.JPG"],
     "Kyle Shum": ["/kyle1.jpg", "/kyle2.jpg", "/kyle3.jpg"]
   }
 
@@ -130,6 +130,8 @@ function EboardCard({ member }: { member: EboardMember }) {
     ? { objectPosition: '70% center' }
     : member.name === "Cesar Briones" && selectedImage === 2
     ? { objectPosition: '5% center' }
+    : member.name === "Emily Ho" && selectedImage === 2
+    ? { objectPosition: '90% center' }
     : selectedImage === 1
     ? { objectPosition: '70% center' }
     : selectedImage === 2
@@ -209,7 +211,7 @@ function EboardCard({ member }: { member: EboardMember }) {
                     alt="Thumbnail 3"
                     fill
                     className="object-cover"
-                    style={{ objectPosition: '85% center' }}
+                    style={{ objectPosition: '90% center' }}
                     sizes="80px"
                     quality={60}
                     loading="lazy"

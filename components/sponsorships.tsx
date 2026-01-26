@@ -18,7 +18,7 @@ export function Sponsorships() {
           <Button
             size="lg"
             style={{ backgroundColor: "#303434", color: "#ffffff" }}
-            className="gap-2 hover:opacity-90 rounded-full px-6 w-full cursor-pointer group"
+            className="gap-2 hover:opacity-90 rounded-full px-15 py-3 w-96 cursor-pointer group"
           >
             Learn more about Sponsorship
             <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
