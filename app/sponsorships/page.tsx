@@ -182,12 +182,6 @@ export default function SponsorshipsPage() {
                 </svg>
               </a>
 
-              <a href="/USF SOAR Sponsorship Packet 2024-2025.pdf" target="_blank" rel="noopener noreferrer" className="w-full bg-zinc-900 hover:bg-zinc-800 text-white rounded-lg py-3 md:py-4 px-4 md:px-6 flex items-center justify-center gap-2 transition-colors group cursor-pointer text-sm md:text-base">
-                <span className="font-medium text-center">View and Download the Sponsorship Form</span>
-                <svg className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
 
               <a href="https://bullsconnect.usf.edu/student_community?club_id=58509" target="_blank" rel="noopener noreferrer" className="w-full bg-zinc-900 hover:bg-zinc-800 text-white rounded-lg py-3 md:py-4 px-4 md:px-6 flex items-center justify-center gap-2 transition-colors group cursor-pointer text-sm md:text-base">
                 <span className="font-medium text-center">Sponsor Us at USF Foundations</span>

@@ -22,19 +22,29 @@ export function Blogs() {
           </div>
         </Card>
 
-        <Link href="/events" className="cursor-pointer">
-          <Button variant="secondary" style={{ backgroundColor: "#303434", color: "#ffffff" }} className="gap-2 rounded-full px-6 w-full cursor-pointer hover:opacity-90 group">
-            View All Events
-            <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
-          </Button>
-        </Link>
-        <div className="h-3"></div>
-        <Link href="/blogs" className="cursor-pointer">
-          <Button variant="secondary" style={{ backgroundColor: "#303434", color: "#ffffff" }} className="gap-2 rounded-full px-6 w-full cursor-pointer hover:opacity-90 group">
-            View All Blogs
-            <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
-          </Button>
-        </Link>
+        <div className="flex justify-center items-center gap-4">
+          <Link href="/events" className="cursor-pointer">
+            <Button
+              variant="secondary"
+              style={{ backgroundColor: "#303434", color: "#ffffff" }}
+              className="gap-2 rounded-full px-10 py-3w-48 cursor-pointer hover:opacity-90 group"
+            >
+              View All Events
+              <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
+            </Button>
+          </Link>
+
+          <Link href="/blogs" className="cursor-pointer">
+            <Button
+              variant="secondary"
+              style={{ backgroundColor: "#303434", color: "#ffffff" }}
+              className="gap-2 rounded-full px-10 py-3 w-48 cursor-pointer hover:opacity-90 group"
+            >
+              View All Blogs
+              <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
+            </Button>
+          </Link>
+        </div>
       </div>
     </section>
   )
