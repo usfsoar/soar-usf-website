@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export function Blogs() {
   return (
-    <section className="py-24 px-6 bg-background">
+    <section className="py-16 md:py-24 px-4 md:px-6 bg-background">
       <div className="container mx-auto max-w-4xl text-center">
         <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-4">
           <Image src="/Color Logo.svg" alt="SOAR Logo" width={20} height={20} className="w-5 h-5" />
@@ -22,23 +22,23 @@ export function Blogs() {
           </div>
         </Card>
 
-        <div className="flex justify-center items-center gap-4">
-          <Link href="/events" className="cursor-pointer">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <Link href="/events" className="cursor-pointer w-full sm:w-auto">
             <Button
               variant="secondary"
               style={{ backgroundColor: "#303434", color: "#ffffff" }}
-              className="gap-2 rounded-full px-10 py-3w-48 cursor-pointer hover:opacity-90 group"
+              className="gap-2 rounded-full px-10 py-3 w-full sm:w-48 cursor-pointer hover:opacity-90 group"
             >
               View All Events
               <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
             </Button>
           </Link>
 
-          <Link href="/blogs" className="cursor-pointer">
+          <Link href="/blogs" className="cursor-pointer w-full sm:w-auto">
             <Button
               variant="secondary"
               style={{ backgroundColor: "#303434", color: "#ffffff" }}
-              className="gap-2 rounded-full px-10 py-3 w-48 cursor-pointer hover:opacity-90 group"
+              className="gap-2 rounded-full px-10 py-3 w-full sm:w-48 cursor-pointer hover:opacity-90 group"
             >
               View All Blogs
               <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
