@@ -25,12 +25,6 @@ export default function CertificationsPage() {
         {/* Hero Content */}
         <div className="relative z-10 h-full flex items-center justify-center px-6">
           <div className="text-center">
-            <div className="inline-flex items-center gap-3 bg-zinc-900/80 rounded-full px-6 py-3 mb-6">
-              <svg className="w-5 h-5 text-[#cfc493]" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/>
-              </svg>
-              <span className="text-sm font-medium tracking-wide text-[#cfc493]">Member Development</span>
-            </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">TRA CERTIFICATIONS</h1>
             <p className="text-zinc-200 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-lg">
               Tripoli Rocketry Association High-Power Certifications
