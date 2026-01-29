@@ -10,7 +10,7 @@ export function Footer() {
   }
 
   return (
-    <footer className="py-16 px-6 bg-background border-t border-secondary">
+    <footer className="py-16 px-4 md:px-6 bg-background border-t border-secondary">
       <div className="container mx-auto max-w-7xl">
         <div className="mb-16">
           <div className="mb-8">
