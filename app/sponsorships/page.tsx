@@ -2,38 +2,23 @@
 
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { useState, useEffect, useRef } from "react"
+import { useState } from "react"
 import { Rocket } from "lucide-react"
 import Image from "next/image"
 
 export default function SponsorshipsPage() {
   const [showBenefits, setShowBenefits] = useState(false)
-  const scrollRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    const scrollElement = scrollRef.current
-    if (!scrollElement) return
-
-    let animationId: number
-    let position = 0
-    const speed = 0.5
-
-    const animate = () => {
-      position -= speed
-      const maxScroll = scrollElement.scrollWidth / 2
-
-      if (Math.abs(position) >= maxScroll) {
-        position = 0
-      }
-
-      scrollElement.style.transform = `translateX(${position}px)`
-      animationId = requestAnimationFrame(animate)
-    }
-
-    animationId = requestAnimationFrame(animate)
-
-    return () => cancelAnimationFrame(animationId)
-  }, [])
+  const sponsors = [
+    { name: "Five Star Pizza", logo: "/5starpizza.webp", url: "https://www.fivestarpizza.com/" },
+    { name: "Joe Register", logo: "/joeregister.png", url: "https://www.linkedin.com/in/joeregister/" },
+    { name: "Aevex Aerospace", logo: "/aevex.png", url: "https://aevex.com/" },
+    { name: "CAE", logo: "/cae.png", url: "https://www.cae.com/" },
+    { name: "Monster Energy", logo: "/monster.png", url: "https://www.monsterenergy.com/" },
+    { name: "Ansys", logo: "/ansys.png", url: "https://www.ansys.com/" },
+    { name: "JBS", logo: "/jbs.png", url: "https://jimsbodyshop.com/" },
+    { name: "Kenesto", logo: "/Kenesto.png", url: "https://kenesto.com/" }
+  ]
 
   return (
     <div className="min-h-screen bg-background">
@@ -80,45 +65,35 @@ export default function SponsorshipsPage() {
           </div>
 
           {/* Scrolling sponsor logos */}
-          <div className="relative overflow-hidden">
+          <div className="sponsor-slider-container">
             {/* Gradient masks on the edges */}
             <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-zinc-950 to-transparent z-10 pointer-events-none" />
             <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-zinc-950 to-transparent z-10 pointer-events-none" />
             
-            <div 
-              ref={scrollRef}
-              className="flex items-center gap-16"
-              style={{ width: 'max-content' }}
-            >
+            <div className="sponsor-slider-track">
               {/* First set */}
-              {[
-                { name: "Five Star Pizza", logo: "/5starpizza.webp" },
-                { name: "Joe Kegister", logo: "/joekegister.png" },
-                { name: "Aevex Aerospace", logo: "/aevex.png" },
-                { name: "CAE", logo: "/cae.png" },
-                { name: "Monster Energy", logo: "/monster.png" },
-                { name: "Ansys", logo: "/ansys.png" },
-                { name: "JBS", logo: "/jbs.png" },
-                { name: "Kenesto", logo: "/Kenesto.png"}
-              ].map((sponsor, index) => (
-                <div key={`first-${index}`} className="flex-shrink-0 opacity-90">
-                  <img src={sponsor.logo} alt={sponsor.name} className="h-12 w-auto object-contain" />
-                </div>
+              {sponsors.map((sponsor, index) => (
+                <a
+                  key={`first-${index}`}
+                  href={sponsor.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="sponsor-slide"
+                >
+                  <img src={sponsor.logo} alt={sponsor.name} />
+                </a>
               ))}
               {/* Second set for seamless loop */}
-              {[
-                { name: "Five Star Pizza", logo: "/5starpizza.webp" },
-                { name: "Joe Kegister", logo: "/joekegister.png" },
-                { name: "Aevex Aerospace", logo: "/aevex.png" },
-                { name: "CAE", logo: "/cae.png" },
-                { name: "Monster Energy", logo: "/monster.png" },
-                { name: "Ansys", logo: "/ansys.png" },
-                { name: "JBS", logo: "/jbs.png" },
-                { name: "Kenesto", logo: "/Kenesto.png"}
-              ].map((sponsor, index) => (
-                <div key={`second-${index}`} className="flex-shrink-0 opacity-90">
-                  <img src={sponsor.logo} alt={sponsor.name} className="h-12 w-auto object-contain" />
-                </div>
+              {sponsors.map((sponsor, index) => (
+                <a
+                  key={`second-${index}`}
+                  href={sponsor.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="sponsor-slide"
+                >
+                  <img src={sponsor.logo} alt={sponsor.name} />
+                </a>
               ))}
             </div>
           </div>
@@ -173,17 +148,32 @@ export default function SponsorshipsPage() {
               </div>
             </div>
 
-            {/* Buttons spanning full width */}
-            <div className="space-y-3">
-              <a href="https://www.canva.com/design/DAGpJ3F9dUA/S9FSMYHr-4xPUul7PPdXmg/view?utm_content=DAGpJ3F9dUA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6462622fbe" target="_blank" rel="noopener noreferrer" className="w-full bg-zinc-900 hover:bg-zinc-800 text-white rounded-lg py-3 md:py-4 px-4 md:px-6 flex items-center justify-center gap-2 transition-colors group cursor-pointer text-sm md:text-base">
-                <span className="font-medium text-center">View the Sponsorship Packet</span>
-                <svg className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
+            {/* PDF Preview and Download Section */}
+            <div className="space-y-6 mt-8">
+              {/* PDF Preview */}
+              <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg overflow-hidden">
+                <div className="p-4 border-b border-zinc-800 flex items-center justify-between">
+                  <h3 className="text-lg font-semibold">Sponsorship Packet Preview</h3>
+                  <a 
+                    href="/SOAR 2025-26 Sponsorship Packet.pdf" 
+                    download="SOAR 2025-26 Sponsorship Packet.pdf"
+                    className="inline-flex items-center gap-2 bg-[#cfc493] hover:bg-[#b8ae7d] text-black rounded-lg py-2 px-4 transition-colors font-medium text-sm"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Download PDF
+                  </a>
+                </div>
+                <iframe 
+                  src="/SOAR 2025-26 Sponsorship Packet.pdf#toolbar=0"
+                  className="w-full h-[600px] md:h-[800px]"
+                  title="Sponsorship Packet"
+                />
+              </div>
 
-
-              <a href="https://bullsconnect.usf.edu/student_community?club_id=58509" target="_blank" rel="noopener noreferrer" className="w-full bg-zinc-900 hover:bg-zinc-800 text-white rounded-lg py-3 md:py-4 px-4 md:px-6 flex items-center justify-center gap-2 transition-colors group cursor-pointer text-sm md:text-base">
+              {/* Sponsor Button */}
+              <a href="https://giving.usf.edu/online/gift/f/220111/" target="_blank" rel="noopener noreferrer" className="w-full bg-zinc-900 hover:bg-zinc-800 text-white rounded-full py-3 md:py-4 px-4 md:px-6 flex items-center justify-center gap-2 transition-colors group cursor-pointer text-sm md:text-base">
                 <span className="font-medium text-center">Sponsor Us at USF Foundations</span>
                 <svg className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -202,7 +192,7 @@ export default function SponsorshipsPage() {
             <div className="inline-flex items-center bg-zinc-900 rounded-full p-1">
               <button
                 onClick={() => setShowBenefits(false)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
+                className={`px-6 py-2 rounded-full text-sm font-medium cursor-pointer transition-colors ${
                   !showBenefits ? 'bg-white text-black' : 'text-white hover:text-zinc-300'
                 }`}
               >
@@ -210,7 +200,7 @@ export default function SponsorshipsPage() {
               </button>
               <button
                 onClick={() => setShowBenefits(true)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
+                className={`px-6 py-2 rounded-full text-sm font-medium cursor-pointer transition-colors ${
                   showBenefits ? 'bg-[#cfc493] text-black' : 'text-white hover:text-zinc-300'
                 }`}
               >
@@ -257,7 +247,7 @@ export default function SponsorshipsPage() {
                     <span className="text-sm">Branding Opportunities</span>
                   </div>
                 </div>
-                <a href="https://bullsconnect.usf.edu/student_community?club_id=58509" target="_blank" rel="noopener noreferrer" className="w-full bg-zinc-800 hover:bg-zinc-700 text-white rounded-full py-3 px-6 text-center font-medium transition-colors group flex items-center justify-center gap-2">
+                <a href="https://giving.usf.edu/online/gift/f/220111/" target="_blank" rel="noopener noreferrer" className="w-full bg-zinc-800 hover:bg-zinc-700 text-white rounded-full py-3 px-6 text-center font-medium transition-colors group flex items-center justify-center gap-2">
                   Get Started
                   <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
                 </a>
@@ -304,7 +294,7 @@ export default function SponsorshipsPage() {
                     <span className="text-sm">Branding Opportunities</span>
                   </div>
                 </div>
-                <a href="https://bullsconnect.usf.edu/student_community?club_id=58509" target="_blank" rel="noopener noreferrer" className="w-full bg-zinc-800 hover:bg-zinc-700 text-white rounded-full py-3 px-6 text-center font-medium transition-colors group flex items-center justify-center gap-2">
+                <a href="https://giving.usf.edu/online/gift/f/220111/" target="_blank" rel="noopener noreferrer" className="w-full bg-zinc-800 hover:bg-zinc-700 text-white rounded-full py-3 px-6 text-center font-medium transition-colors group flex items-center justify-center gap-2">
                   Get Started
                   <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
                 </a>
@@ -363,7 +353,7 @@ export default function SponsorshipsPage() {
                     <span className="text-sm">Branding Opportunities</span>
                   </div>
                 </div>
-                <a href="https://bullsconnect.usf.edu/student_community?club_id=58509" target="_blank" rel="noopener noreferrer" className="w-full bg-zinc-800 hover:bg-zinc-700 text-white rounded-full py-3 px-6 text-center font-medium transition-colors group flex items-center justify-center gap-2">
+                <a href="https://giving.usf.edu/online/gift/f/220111/" target="_blank" rel="noopener noreferrer" className="w-full bg-zinc-800 hover:bg-zinc-700 text-white rounded-full py-3 px-6 text-center font-medium transition-colors group flex items-center justify-center gap-2">
                   Get Started
                   <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
                 </a>
@@ -422,7 +412,7 @@ export default function SponsorshipsPage() {
                     <span className="text-sm">Branding Opportunities</span>
                   </div>
                 </div>
-                <a href="https://bullsconnect.usf.edu/student_community?club_id=58509" target="_blank" rel="noopener noreferrer" className="w-full bg-[#cfc493] hover:bg-[#b8ae82] text-black rounded-full py-3 px-6 text-center font-medium transition-colors group flex items-center justify-center gap-2">
+                <a href="https://giving.usf.edu/online/gift/f/220111/" target="_blank" rel="noopener noreferrer" className="w-full bg-[#cfc493] hover:bg-[#b8ae82] text-black rounded-full py-3 px-6 text-center font-medium transition-colors group flex items-center justify-center gap-2">
                   Get Started
                   <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
                 </a>
@@ -476,7 +466,7 @@ export default function SponsorshipsPage() {
                   <p className="text-zinc-400 text-xs">+ SMALL logo on rocket</p>
                   <p className="text-zinc-400 text-xs">+ Mid-Year Shout-out</p>
                 </div>
-                <a href="https://bullsconnect.usf.edu/student_community?club_id=58509" target="_blank" rel="noopener noreferrer" className="w-full bg-zinc-800 hover:bg-zinc-700 text-white rounded-full py-3 px-6 text-center font-medium transition-colors group flex items-center justify-center gap-2">
+                <a href="https://giving.usf.edu/online/gift/f/220111/" target="_blank" rel="noopener noreferrer" className="w-full bg-zinc-800 hover:bg-zinc-700 text-white rounded-full py-3 px-6 text-center font-medium transition-colors group flex items-center justify-center gap-2">
                   Get Started
                   <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
                 </a>
@@ -527,7 +517,7 @@ export default function SponsorshipsPage() {
                   <p className="text-zinc-400 text-xs">+ SMALL logo on rocket</p>
                   <p className="text-zinc-400 text-xs">+ Mid-Year Shout-out</p>
                 </div>
-                <a href="https://bullsconnect.usf.edu/student_community?club_id=58509" target="_blank" rel="noopener noreferrer" className="w-full bg-zinc-800 hover:bg-zinc-700 text-white rounded-full py-3 px-6 text-center font-medium transition-colors group flex items-center justify-center gap-2">
+                <a href="https://giving.usf.edu/online/gift/f/220111/" target="_blank" rel="noopener noreferrer" className="w-full bg-zinc-800 hover:bg-zinc-700 text-white rounded-full py-3 px-6 text-center font-medium transition-colors group flex items-center justify-center gap-2">
                   Get Started
                   <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
                 </a>
@@ -584,7 +574,7 @@ export default function SponsorshipsPage() {
                   <p className="text-zinc-400 text-xs">+ MEDIUM logo on rocket</p>
                   <p className="text-zinc-400 text-xs">+ Mid-Year Shout-out</p>
                 </div>
-                <a href="https://bullsconnect.usf.edu/student_community?club_id=58509" target="_blank" rel="noopener noreferrer" className="w-full bg-zinc-800 hover:bg-zinc-700 text-white rounded-full py-3 px-6 text-center font-medium transition-colors group flex items-center justify-center gap-2">
+                <a href="https://giving.usf.edu/online/gift/f/220111/" target="_blank" rel="noopener noreferrer" className="w-full bg-zinc-800 hover:bg-zinc-700 text-white rounded-full py-3 px-6 text-center font-medium transition-colors group flex items-center justify-center gap-2">
                   Get Started
                   <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
                 </a>
@@ -643,7 +633,7 @@ export default function SponsorshipsPage() {
                   <p className="text-zinc-400 text-xs">+ Mid-Year Shout-out</p>
                   <p className="text-zinc-400 text-xs">+ Solo Company Spotlight</p>
                 </div>
-                <a href="https://bullsconnect.usf.edu/student_community?club_id=58509" target="_blank" rel="noopener noreferrer" className="w-full bg-[#cfc493] hover:bg-[#b8ae82] text-black rounded-full py-3 px-6 text-center font-medium transition-colors group flex items-center justify-center gap-2">
+                <a href="https://giving.usf.edu/online/gift/f/220111/" target="_blank" rel="noopener noreferrer" className="w-full bg-[#cfc493] hover:bg-[#b8ae82] text-black rounded-full py-3 px-6 text-center font-medium transition-colors group flex items-center justify-center gap-2">
                   Get Started
                   <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
                 </a>
@@ -654,6 +644,57 @@ export default function SponsorshipsPage() {
       </section>
 
       <Footer />
+
+      <style jsx>{`
+        .sponsor-slider-container {
+          width: 100%;
+          height: 80px;
+          overflow: hidden;
+          position: relative;
+        }
+        
+        .sponsor-slider-track {
+          display: flex;
+          gap: 64px;
+          animation: sponsorScroll 25s linear infinite;
+        }
+        
+        .sponsor-slider-track:hover {
+          animation-play-state: paused;
+        }
+        
+        .sponsor-slide {
+          flex-shrink: 0;
+          width: 140px;
+          height: 48px;
+          opacity: 0.9;
+          transition: opacity 300ms, transform 300ms;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .sponsor-slide:hover {
+          opacity: 1;
+          transform: scale(1.1);
+        }
+        
+        .sponsor-slide :global(img) {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+        
+        @keyframes sponsorScroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(calc(-204px * 8));
+          }
+        }
+      `}</style>
     </div>
   )
 }
