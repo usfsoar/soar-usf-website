@@ -14,7 +14,7 @@ export function Sponsorships() {
         <h2 className="text-3xl md:text-5xl font-bold mb-4">LET&apos;S TALK ABOUT SPONSORSHIPS</h2>
         <p className="text-muted-foreground mb-8">Become a Sponsor</p>
 
-        <Link href="/about#sponsorship" className="block cursor-pointer">
+        <Link href="/sponsorships" className="block cursor-pointer">
           <Button
             size="lg"
             style={{ backgroundColor: "#303434", color: "#ffffff" }}
