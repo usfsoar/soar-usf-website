@@ -25,7 +25,7 @@ export default function CertificationsPage() {
         {/* Hero Content */}
         <div className="relative z-10 h-full flex items-center justify-center px-6">
           <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">TRA CERTIFICATIONS</h1>
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg whitespace-normal break-words leading-tight">TRA CERTIFICATIONS</h1>
             <p className="text-zinc-200 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-lg">
               Tripoli Rocketry Association High-Power Certifications
             </p>

@@ -45,7 +45,7 @@ export function Navbar() {
     <>
       {/* Original Navbar - Hidden when mobile menu is open */}
       {!mobileMenuOpen && (
-        <nav className={`fixed top-4 left-1/2 -translate-x-1/2 z-20 px-4 md:px-8 py-4 md:py-5 flex items-center justify-between bg-black/30 backdrop-blur-sm rounded-full w-[calc(100vw-2rem)] sm:w-[95vw] max-w-[1000px] transition-transform duration-300 ease-in-out ${
+        <nav className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 px-4 md:px-8 py-4 md:py-5 flex items-center justify-between bg-black/30 backdrop-blur-sm rounded-full w-[calc(100vw-2rem)] sm:w-[95vw] max-w-[1000px] transition-transform duration-300 ease-in-out ${
           isVisible ? 'translate-y-0' : '-translate-y-[calc(100%+2rem)]'
         }`}>
           {/* Logo */}
