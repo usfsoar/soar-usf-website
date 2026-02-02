@@ -160,13 +160,40 @@ function EboardCard({ member }: { member: EboardMember }) {
               <span>Image {selectedImage + 1}</span>
             )}
 
+            {/* Left / Right arrow buttons for cycling images */}
+            {images.length > 1 && (
+              <>
+                <button
+                  aria-label="Previous image"
+                  onClick={() => setSelectedImage((selectedImage - 1 + images.length) % images.length)}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-zinc-800/40 hover:bg-zinc-800 text-white cursor-pointer rounded-full p-2 z-10"
+                >
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+
+                <button
+                  aria-label="Next image"
+                  onClick={() => setSelectedImage((selectedImage + 1) % images.length)}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-zinc-800/40 hover:bg-zinc-800 text-white cursor-pointer rounded-full p-2 z-10"
+                >
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </>
+            )}
+
             {/* Image selector thumbnails overlaid at bottom */}
             <div className="absolute bottom-3 left-3 right-3 flex gap-2">
               <button
                 onClick={() => setSelectedImage(0)}
+                aria-pressed={selectedImage === 0}
                 className={`relative flex-1 aspect-video rounded-md transition-colors cursor-pointer overflow-hidden ${
-                  selectedImage === 0 ? 'bg-zinc-600 border-2 border-zinc-500' : 'bg-zinc-700/50 border-2 border-zinc-700'
+                  selectedImage === 0 ? 'bg-zinc-600 border-4 border-[#cfc493]' : 'bg-zinc-700/50 border-2 border-zinc-700'
                 } hover:bg-zinc-600`}
+                style={selectedImage === 0 ? { boxShadow: '0 6px 18px rgba(207,196,147,0.18), 0 0 0 6px rgba(207,196,147,0.10)' } : undefined}
               >
                 {images[0] && (
                   <Image
@@ -182,9 +209,11 @@ function EboardCard({ member }: { member: EboardMember }) {
               </button>
               <button
                 onClick={() => setSelectedImage(1)}
+                aria-pressed={selectedImage === 1}
                 className={`relative flex-1 aspect-video rounded-md transition-colors cursor-pointer overflow-hidden ${
-                  selectedImage === 1 ? 'bg-zinc-600 border-2 border-zinc-500' : 'bg-zinc-700/50 border-2 border-zinc-700'
+                  selectedImage === 1 ? 'bg-zinc-600 border-4 border-[#cfc493]' : 'bg-zinc-700/50 border-2 border-zinc-700'
                 } hover:bg-zinc-600`}
+                style={selectedImage === 1 ? { boxShadow: '0 6px 18px rgba(207,196,147,0.18), 0 0 0 6px rgba(207,196,147,0.10)' } : undefined}
               >
                 {images[1] && (
                   <Image
@@ -201,9 +230,11 @@ function EboardCard({ member }: { member: EboardMember }) {
               </button>
               <button
                 onClick={() => setSelectedImage(2)}
+                aria-pressed={selectedImage === 2}
                 className={`relative flex-1 aspect-video rounded-md transition-colors cursor-pointer overflow-hidden ${
-                  selectedImage === 2 ? 'bg-zinc-600 border-2 border-zinc-500' : 'bg-zinc-700/50 border-2 border-zinc-700'
+                  selectedImage === 2 ? 'bg-zinc-600 border-4 border-[#cfc493]' : 'bg-zinc-700/50 border-2 border-zinc-700'
                 } hover:bg-zinc-600`}
+                style={selectedImage === 2 ? { boxShadow: '0 6px 18px rgba(207,196,147,0.18), 0 0 0 6px rgba(207,196,147,0.10)' } : undefined}
               >
                 {images[2] && (
                   <Image
