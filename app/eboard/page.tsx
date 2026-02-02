@@ -94,7 +94,8 @@ function EboardCard({ member }: { member: EboardMember }) {
     "Emily Ho": ["/emily1.jpg", "/emily2.jpg", "/emily3.png"],
     "Drew Brickell": ["/drew1.jpg", "/drew2.jpg", "/drew3.jpg"],
     "Cesar Briones": ["/cesar1.JPG", "/cesar2.JPG", "/cesar3.JPG"],
-    "Kyle Shum": ["/kyle1.jpg", "/kyle2.jpg", "/kyle3.jpg"]
+    "Kyle Shum": ["/kyle1.jpg", "/kyle2.jpg", "/kyle3.jpg"],
+    "Sage Bundhund": ["/sage1.png", "/sage2.png", "/sage3.png"],
   }
 
   const imagesRaw: string[] = memberImages[member.name] || []
@@ -127,6 +128,8 @@ function EboardCard({ member }: { member: EboardMember }) {
   const profileImagePosition = profileImagePositions[member.name]
 
   const mainImageObjectPosition = member.name === "Kyle Shum" && selectedImage === 0
+    ? { objectPosition: '70% center' }
+    : member.name === "Sage Bundhund" && selectedImage === 0
     ? { objectPosition: '70% center' }
     : member.name === "Cesar Briones" && selectedImage === 2
     ? { objectPosition: '5% center' }

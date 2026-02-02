@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -8,6 +9,39 @@ import { Mail, ExternalLink } from "lucide-react"
 import Image from "next/image"
 
 export function Contact() {
+  const [result, setResult] = useState("")
+  const [loading, setLoading] = useState(false)
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setResult("Sending...")
+    setLoading(true)
+
+    const form = e.currentTarget
+    const formData = new FormData(form)
+
+    try {
+      const res = await fetch(`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+
+      if (res.ok) {
+        setResult("Form Submitted Successfully ✅")
+        form.reset()
+      } else {
+        setResult("Something went wrong ❌")
+      }
+    } catch (err) {
+      console.error("Error submitting form:", err)
+      setResult("Server error ❌")
+    } finally {
+      setLoading(false)
+    }
+  }
   return (
     <section id="contact" className="py-16 md:py-24 px-4 md:px-6 bg-background scroll-mt-20">
       <div className="container mx-auto max-w-6xl">
@@ -26,19 +60,19 @@ export function Contact() {
           </div>
 
           <div className="max-w-2xl mx-auto w-full">
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={onSubmit}>
               <div>
                 <Label htmlFor="name" className="sr-only">
                   Name
                 </Label>
-                <Input id="name" placeholder="Name" className="bg-secondary/50 border-secondary" />
+                <Input id="name" name="name" placeholder="Name" className="bg-secondary/50 border-secondary" />
               </div>
 
               <div>
                 <Label htmlFor="email" className="sr-only">
                   E-mail
                 </Label>
-                <Input id="email" type="email" placeholder="E-mail" className="bg-secondary/50 border-secondary" />
+                <Input id="email" name="email" type="email" placeholder="E-mail" className="bg-secondary/50 border-secondary" />
               </div>
 
               <div>
@@ -47,6 +81,7 @@ export function Contact() {
                 </Label>
                 <Textarea
                   id="message"
+                  name="message"
                   placeholder="Message"
                   rows={5}
                   className="bg-secondary/50 border-secondary resize-y"
@@ -56,12 +91,18 @@ export function Contact() {
               <div className="flex justify-center">
                 <Button
                   type="submit"
+                  disabled={loading}
                   style={{ backgroundColor: "#D0C495", color: "#0f0f0f" }}
                   className="w-full sm:w-auto hover:opacity-90 rounded-full px-12 shadow-[0_0_20px_rgba(208,196,149,0.5)] hover:shadow-[0_0_30px_rgba(208,196,149,0.7)] transition-all cursor-pointer"
                 >
-                  Submit
+                  {loading ? 'Sending...' : 'Submit'}
                 </Button>
               </div>
+              {result && (
+                <div className="text-center mt-4">
+                  <p className="font-medium">{result}</p>
+                </div>
+              )}
             </form>
           </div>
         </div>
