@@ -3,6 +3,7 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
+import { PageHeader } from "@/components/page-header"
 
 export default function CertificationsPage() {
   return (
@@ -11,27 +12,7 @@ export default function CertificationsPage() {
         <Navbar />
       </div>
 
-      {/* Hero Image */}
-      <div className="relative h-screen">
-        <Image 
-          src="/certificationshero.JPG" 
-          alt="TRA Certifications" 
-          fill
-          className="object-cover opacity-40"
-          priority
-        />
-        <div className="absolute inset-0 bg-[#006747]/30" />
-        
-        {/* Hero Content */}
-        <div className="relative z-10 h-full flex items-center justify-center px-6">
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg whitespace-normal break-words leading-tight">TRA CERTIFICATIONS</h1>
-            <p className="text-zinc-200 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-lg">
-              Tripoli Rocketry Association High-Power Certifications
-            </p>
-          </div>
-        </div>
-      </div>
+      <PageHeader title="TRA CERTIFICATIONS" subtitle="Tripoli Rocketry Association High-Power Certifications" />
 
       <section className="container mx-auto px-6 py-20">
         <div className="max-w-4xl mx-auto">

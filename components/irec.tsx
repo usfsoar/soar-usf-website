@@ -52,8 +52,7 @@ export function IREC() {
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 sticky top-24">
               <h3 className="text-xl font-bold mb-4">Join our teams!</h3>
               <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-                The competition requires nearly 1,000 pages of reports and documentation, and three team presentations to
-                NASA prior to launch week.
+              This team designs, builds, and launches high‑powered rockets to meet altitude targets and demonstrate reliable recovery systems.
               </p>
 
               <div className="space-y-3 mb-6">
@@ -87,7 +86,7 @@ export function IREC() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-sm font-medium">Go to Huntsville with us!</span>
+                  <span className="text-sm font-medium">Go to Midland, TX with us!</span>
                 </div>
               </div>
 

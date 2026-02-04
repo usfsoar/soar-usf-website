@@ -57,37 +57,60 @@ function Counter({ end, duration = 2000 }: { end: number; duration?: number }) {
 }
 
 export function Stats() {
+  const [instagramCount] = useState(2100)
+  const [discordCount, setDiscordCount] = useState<number>(1000)
+  const [registeredCount] = useState(450)
+  const [linkedinCount] = useState(400)
+
+  useEffect(() => {
+    let mounted = true
+    async function loadDiscord() {
+      try {
+        const res = await fetch('/api/socials/discord')
+        if (!res.ok) return
+        const data = await res.json()
+        if (mounted && typeof data.members === 'number') {
+          setDiscordCount(data.members)
+        }
+      } catch (e) {
+        // ignore, keep fallback
+      }
+    }
+    loadDiscord()
+    return () => { mounted = false }
+  }, [])
+
   return (
     <section className="bg-zinc-950 py-12 md:py-16 px-4 md:px-6 pb-16 md:pb-24">
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {/* Instagram Stats */}
-          <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-6 md:p-8 text-center hover:border-zinc-700 transition-colors">
-            <Counter end={1900} />
+          <a href="https://www.instagram.com/usfsoar/" target="_blank" rel="noopener noreferrer" className="block bg-zinc-900/50 border border-zinc-800 rounded-lg p-6 md:p-8 text-center hover:border-zinc-700 transition-colors">
+            <Counter end={instagramCount} />
             <p className="text-sm md:text-base text-zinc-400 mb-3 md:mb-4">Instagram Followers</p>
             <Image src="/instagram.png" alt="Instagram" width={32} height={32} className="w-6 h-6 md:w-8 md:h-8 mx-auto" />
-          </div>
+          </a>
 
           {/* Discord Stats */}
-          <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-6 md:p-8 text-center hover:border-zinc-700 transition-colors">
-            <Counter end={800} />
+          <a href="https://discord.gg/7qjAHzrnHz" target="_blank" rel="noopener noreferrer" className="block bg-zinc-900/50 border border-zinc-800 rounded-lg p-6 md:p-8 text-center hover:border-zinc-700 transition-colors">
+            <Counter end={discordCount} />
             <p className="text-sm md:text-base text-zinc-400 mb-3 md:mb-4">Discord Members</p>
             <Image src="/discord.png" alt="Discord" width={32} height={32} className="w-6 h-6 md:w-8 md:h-8 mx-auto" />
-          </div>
+          </a>
 
-          {/* Registered Members */}
-          <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-6 md:p-8 text-center hover:border-zinc-700 transition-colors">
-            <Counter end={500} />
+          {/* Registered Members (BullsConnect) */}
+          <a href="https://bullsconnect.usf.edu/feeds?type=club&type_id=58509&tab=about" target="_blank" rel="noopener noreferrer" className="block bg-zinc-900/50 border border-zinc-800 rounded-lg p-6 md:p-8 text-center hover:border-zinc-700 transition-colors">
+            <Counter end={registeredCount} />
             <p className="text-sm md:text-base text-zinc-400 mb-3 md:mb-4">Registered Members</p>
             <Users className="w-6 h-6 md:w-8 md:h-8 mx-auto" style={{ color: "#D0C495" }} />
-          </div>
+          </a>
 
           {/* LinkedIn Stats */}
-          <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-6 md:p-8 text-center hover:border-zinc-700 transition-colors">
-            <Counter end={300} />
+          <a href="https://www.linkedin.com/company/usfsoar/" target="_blank" rel="noopener noreferrer" className="block bg-zinc-900/50 border border-zinc-800 rounded-lg p-6 md:p-8 text-center hover:border-zinc-700 transition-colors">
+            <Counter end={linkedinCount} />
             <p className="text-sm md:text-base text-zinc-400 mb-3 md:mb-4">LinkedIn Followers</p>
             <Image src="/linkedin.png" alt="LinkedIn" width={32} height={32} className="w-6 h-6 md:w-8 md:h-8 mx-auto" />
-          </div>
+          </a>
         </div>
       </div>
     </section>

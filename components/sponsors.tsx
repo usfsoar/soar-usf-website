@@ -8,8 +8,8 @@ export function Sponsors() {
     { name: "CAE", logo: "/cae.png", url: "https://www.cae.com/", width: 100 },
     { name: "Monster Energy", logo: "/monster.png", url: "https://www.monsterenergy.com/", width: 47 },
     { name: "Ansys", logo: "/ansys.png", url: "https://www.ansys.com/", width: 135 },
-    { name: "JBS", logo: "/jbs.png", url: "https://jimsbodyshop.com/", width: 137 },
-    { name: "Five Star Pizza", logo: "/5starpizza.webp", url: "https://www.fivestarpizza.com/", width: 120 },
+    { name: "JBS", logo: "/jbs.png", url: "https://jimsbodyshop.com/", width: 100 },
+    { name: "EPSILON3", logo: "/epsilon3.png", url: "https://www.epsilon3.io/", width: 100 },
     { name: "Kenesto", logo: "/Kenesto.png", url: "https://kenesto.com/", width: 130 },
   ]
 

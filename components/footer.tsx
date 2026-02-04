@@ -143,6 +143,11 @@ export function Footer() {
                       Contact
                     </Link>
                   </li>
+                  <li>
+                    <Link href="https://giving.usf.edu/online/gift/f/220111/" className="hover:text-foreground transition-colors cursor-pointer">
+                      Donate
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>

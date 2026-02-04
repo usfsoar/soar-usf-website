@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -11,6 +11,39 @@ import Image from "next/image"
 export function Contact() {
   const [result, setResult] = useState("")
   const [loading, setLoading] = useState(false)
+  const [instagramCount, setInstagramCount] = useState<number>(2100)
+  const [discordCount, setDiscordCount] = useState<number>(800)
+  const [linkedinCount, setLinkedinCount] = useState<number>(400)
+  const [registeredCount, setRegisteredCount] = useState<number>(450)
+
+  function formatCount(n: number) {
+    if (!Number.isFinite(n) || n < 1000) return `${n}`
+    const remainder = n % 1000
+    const k = Math.floor(n / 1000)
+    // If within the first 100 of the next thousand, show 'Xk+' (per spec: 1000-1099 -> 1k+)
+    if (remainder < 100) return `${k}k+`
+    // Otherwise show 1 decimal precision based on hundreds (e.g., 1150 -> 1.1k)
+    const tenths = Math.floor(n / 100) / 10
+    return `${tenths.toFixed(1)}k`
+  }
+
+  useEffect(() => {
+    let mounted = true
+    async function loadDiscord() {
+      try {
+        const res = await fetch('/api/socials/discord')
+        if (!res.ok) return
+        const data = await res.json()
+        if (mounted && typeof data.members === 'number') {
+          setDiscordCount(data.members)
+        }
+      } catch (err) {
+        // keep fallback
+      }
+    }
+    loadDiscord()
+    return () => { mounted = false }
+  }, [])
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -120,7 +153,7 @@ export function Contact() {
             </div>
             <div className="flex-1">
               <div className="font-normal">@usfsoar</div>
-              <div className="text-xs text-muted-foreground">1.9k+ Followers</div>
+              <div className="text-xs text-muted-foreground">{formatCount(instagramCount)} Followers</div>
             </div>
             <ExternalLink className="h-4 w-4" style={{ color: "#cfc493" }} />
           </a>
@@ -136,7 +169,7 @@ export function Contact() {
             </div>
             <div className="flex-1">
               <div className="font-normal">USF SOAR</div>
-              <div className="text-xs text-muted-foreground">800+ Members</div>
+              <div className="text-xs text-muted-foreground">{formatCount(discordCount)} Members</div>
             </div>
             <ExternalLink className="h-4 w-4" style={{ color: "#cfc493" }} />
           </a>
@@ -152,7 +185,7 @@ export function Contact() {
             </div>
             <div className="flex-1">
               <div className="font-normal">@USF SOAR</div>
-              <div className="text-xs text-muted-foreground">300+ Followers</div>
+              <div className="text-xs text-muted-foreground">{formatCount(linkedinCount)} Followers</div>
             </div>
             <ExternalLink className="h-4 w-4" style={{ color: "#cfc493" }} />
           </a>
@@ -168,7 +201,7 @@ export function Contact() {
             </div>
             <div className="flex-1">
               <div className="font-normal">Bullsconnect</div>
-              <div className="text-xs text-muted-foreground">500+ Members</div>
+              <div className="text-xs text-muted-foreground">{formatCount(registeredCount)} Members</div>
             </div>
             <ExternalLink className="h-4 w-4" style={{ color: "#cfc493" }} />
           </a>
