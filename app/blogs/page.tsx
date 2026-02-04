@@ -4,6 +4,7 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { PageHeader } from "@/components/page-header"
 
 export default function BlogsPage() {
   return (
@@ -12,27 +13,7 @@ export default function BlogsPage() {
         <Navbar />
       </div>
 
-      {/* Hero Image */}
-      <div className="relative h-screen">
-        <Image 
-          src="/bloghero.JPG" 
-          alt="Blogs" 
-          fill
-          className="object-cover opacity-40"
-          priority
-        />
-        <div className="absolute inset-0 bg-[#006747]/30" />
-        
-        {/* Hero Content */}
-        <div className="relative z-10 h-full flex items-center justify-center px-6">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">BLOGS</h1>
-            <p className="text-zinc-200 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-lg">
-              We're working hard to bring you insightful content. Stay tuned!
-            </p>
-          </div>
-        </div>
-      </div>
+      <PageHeader title="BLOGS" subtitle="We're working hard to bring you insightful content. Stay tuned!" />
 
       {/* Blogs Section with Coming Soon Overlay */}
       <section className="py-24 px-6 bg-background">

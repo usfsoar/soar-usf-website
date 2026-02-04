@@ -3,6 +3,7 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
+import { PageHeader } from "@/components/page-header"
 
 export default function BrandingPage() {
   return (
@@ -11,27 +12,7 @@ export default function BrandingPage() {
         <Navbar />
       </div>
 
-      {/* Hero Image */}
-      <div className="relative h-screen">
-        <Image 
-          src="/brandinghero.png" 
-          alt="Branding" 
-          fill
-          className="object-cover opacity-40"
-          priority
-        />
-        <div className="absolute inset-0 bg-[#006747]/30" />
-        
-        {/* Hero Content */}
-        <div className="relative z-10 h-full flex items-center justify-center px-6">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">BRANDING</h1>
-            <p className="text-zinc-200 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-lg">
-              Download our comprehensive branding guide to learn about our visual identity, logo usage, and brand standards.
-            </p>
-          </div>
-        </div>
-      </div>
+      <PageHeader title="BRANDING" subtitle="Download our comprehensive branding guide to learn about our visual identity, logo usage, and brand standards." />
 
       <section className="container mx-auto px-6 py-20">
         <div className="text-center">

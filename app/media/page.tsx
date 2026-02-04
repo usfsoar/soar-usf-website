@@ -3,41 +3,15 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
+import { PageHeader } from "@/components/page-header"
 
 export default function MediaPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Video Background */}
-      <div className="relative h-screen">
-        {/* Video Background */}
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-        >
-          <source src="/soar_promo.mp4" type="video/mp4" />
-        </video>
-        
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/50 pointer-events-none"></div>
-        
-        {/* Navbar */}
-        <div className="relative z-50">
-          <Navbar />
-        </div>
-        
-        {/* Hero Content */}
-        <div className="relative z-10 h-full flex items-center justify-center px-6">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">MEDIA + PICS</h1>
-            <p className="text-zinc-200 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-lg">
-              Explore our photo gallery and social media content.
-            </p>
-          </div>
-        </div>
+      <div className="relative">
+        <Navbar />
       </div>
+      <PageHeader title="MEDIA + PICS" subtitle="Explore our photo gallery and social media content." />
 
       {/* Photo Gallery Section */}
       <section className="container mx-auto px-6 py-20">

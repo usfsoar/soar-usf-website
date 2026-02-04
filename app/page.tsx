@@ -1,6 +1,5 @@
 import { Hero } from "@/components/hero"
 import { LogoMotto } from "@/components/logo-motto"
-import { Sponsors } from "@/components/sponsors"
 import { About } from "@/components/about"
 import dynamic from "next/dynamic"
 
@@ -19,7 +18,6 @@ export default function Home() {
     <main className="min-h-screen bg-background overflow-x-hidden">
       <Hero />
       <LogoMotto />
-      <Sponsors />
       <About />
       <Stats />
       <IREC />
