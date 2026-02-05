@@ -13,6 +13,20 @@ export default function MediaPage() {
       </div>
       <PageHeader title="MEDIA + PICS" subtitle="Explore our photo gallery and social media content." />
 
+      {/* Promo Video Section */}
+      <section className="container mx-auto px-6 py-12">
+        <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 max-w-5xl mx-auto">
+          <h3 className="text-2xl font-bold mb-4">SOAR Promo</h3>
+          <p className="text-zinc-400 mb-6">Watch our promo video to learn more about SOAR.</p>
+          <div className="w-full rounded-lg overflow-hidden">
+            <video controls loop muted playsInline className="w-full h-auto bg-black">
+              <source src="/soar_promo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
       {/* Photo Gallery Section */}
       <section className="container mx-auto px-6 py-20">
         <div className="text-center">

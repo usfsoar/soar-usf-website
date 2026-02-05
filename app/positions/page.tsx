@@ -4,7 +4,7 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
 import { PageHeader } from "@/components/page-header"
-import { Users, Rocket, Zap, Megaphone } from "lucide-react"
+import { Users, Rocket, Zap, Megaphone, Wrench } from "lucide-react"
 
 // Position data structure
 const positions = {
@@ -46,6 +46,10 @@ const positions = {
     { title: "Web Developer", isOpen: false },
     { title: "Historian", isOpen: false },
   ],
+  operations: [
+    { title: "Outreach Chair", isOpen: false },
+    { title: "Fundraising Chair", isOpen: false },
+  ]
 }
 
 const applicationUrl = "https://forms.gle/yourApplicationLink" // Replace with actual application link
@@ -159,6 +163,12 @@ export default function PositionsPage() {
             icon={<Megaphone className="w-6 h-6 text-[#cfc493]" />}
             description="Creative team managing brand, outreach, and digital presence"
             positions={positions.marketing}
+          />
+          <PositionSection
+            title="Operations Team"
+            icon={<Wrench className="w-6 h-6 text-[#cfc493]" />}
+            description="Team focused on outreach and fundraising efforts"
+            positions={positions.operations}
           />
 
           {/* Call to Action */}
