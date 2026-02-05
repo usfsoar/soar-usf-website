@@ -117,11 +117,11 @@ export default function EboardYearbook({ members }: { members: Member[] }) {
         {selected !== null && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
             <div className="absolute inset-0 bg-black/40 backdrop-blur-3xl" onClick={() => setSelected(null)} />
-            <div className="relative z-10 w-full max-w-5xl bg-zinc-900 border border-zinc-800 rounded-xl overflow-auto max-h-[90vh]">
+            <div className="relative z-10 w-full max-w-5xl bg-zinc-900 border border-zinc-800 rounded-xl overflow-auto max-h-[90vh] lg:overflow-visible lg:max-h-none">
               {/* Close button */}
               <button
                 onClick={() => setSelected(null)}
-                className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-zinc-800/80 hover:bg-zinc-700 flex items-center justify-center text-white transition-colors"
+                className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-zinc-800/80 hover:bg-zinc-700 flex items-center justify-center cursor-pointer text-white transition-colors"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -129,7 +129,7 @@ export default function EboardYearbook({ members }: { members: Member[] }) {
                 </svg>
               </button>
 
-              <div className="flex flex-col lg:flex-row gap-6 p-6 max-h-[80vh] overflow-auto">
+              <div className="flex flex-col lg:flex-row gap-6 p-6 max-h-[80vh] overflow-auto lg:overflow-visible lg:max-h-none">
                 {/* Left side - Image and buttons */}
                 <div className="lg:w-[280px] flex flex-col flex-shrink-0">
                   {/* Main image placeholder with overlaid thumbnails */}
@@ -292,7 +292,7 @@ export default function EboardYearbook({ members }: { members: Member[] }) {
                     <button
                       onClick={() => setSelected((s) => (s === null ? null : Math.max(0, s - 1)))}
                       disabled={selected === 0}
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors text-sm"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer transition-colors text-sm"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="15 18 9 12 15 6"></polyline>
@@ -302,7 +302,7 @@ export default function EboardYearbook({ members }: { members: Member[] }) {
                     <button
                       onClick={() => setSelected((s) => (s === null ? null : Math.min(members.length - 1, s + 1)))}
                       disabled={selected === members.length - 1}
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors text-sm"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer transition-colors text-sm"
                     >
                       Next
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
