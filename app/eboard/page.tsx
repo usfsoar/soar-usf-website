@@ -121,8 +121,33 @@ export default function EboardPage() {
         </div>
 
         <div className="mt-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#cfc493] mb-4">LEADS</h2>
-          <div className="text-zinc-500">(Leads section — content to be added)</div>
+          <h2 className="text-2xl md:text-3xl font-bold text-[#cfc493] mb-6">LEADS</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6">
+              <h3 className="text-xl font-semibold text-[#cfc493] mb-2">IREC</h3>
+              <p className="text-zinc-400">Team leads and responsibilities for IREC go here. Add member cards or links as needed.</p>
+            </div>
+
+            <div className="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6">
+              <h3 className="text-xl font-semibold text-[#cfc493] mb-2">Torito</h3>
+              <p className="text-zinc-400">Torito leads and role descriptions go here. Include contact or LinkedIn links where appropriate.</p>
+            </div>
+
+            <div className="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6">
+              <h3 className="text-xl font-semibold text-[#cfc493] mb-2">Marketing</h3>
+              <p className="text-zinc-400">Marketing leads (Chief of Marketing and team) information and responsibilities.</p>
+            </div>
+
+            <div className="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6">
+              <h3 className="text-xl font-semibold text-[#cfc493] mb-2">Operations</h3>
+              <p className="text-zinc-400">Operations leads and logistics contact details go here.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#006747] mb-4">HALL OF FAME</h2>
+          <div className="text-zinc-500">(Hall of Fame section — content to be added)</div>
         </div>
       </section>
 
