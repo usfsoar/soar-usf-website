@@ -153,7 +153,7 @@ export function Contact() {
             </div>
             <div className="flex-1">
               <div className="font-normal">@usfsoar</div>
-              <div className="text-xs text-muted-foreground">{formatCount(instagramCount)} Followers</div>
+              <div className="text-xs text-muted-foreground">{formatCount(instagramCount)}+ Followers</div>
             </div>
             <ExternalLink className="h-4 w-4" style={{ color: "#cfc493" }} />
           </a>
@@ -185,7 +185,7 @@ export function Contact() {
             </div>
             <div className="flex-1">
               <div className="font-normal">@USF SOAR</div>
-              <div className="text-xs text-muted-foreground">{formatCount(linkedinCount)} Followers</div>
+              <div className="text-xs text-muted-foreground">{formatCount(linkedinCount)}+ Followers</div>
             </div>
             <ExternalLink className="h-4 w-4" style={{ color: "#cfc493" }} />
           </a>
@@ -201,7 +201,7 @@ export function Contact() {
             </div>
             <div className="flex-1">
               <div className="font-normal">Bullsconnect</div>
-              <div className="text-xs text-muted-foreground">{formatCount(registeredCount)} Members</div>
+              <div className="text-xs text-muted-foreground">{formatCount(registeredCount)}+ Members</div>
             </div>
             <ExternalLink className="h-4 w-4" style={{ color: "#cfc493" }} />
           </a>

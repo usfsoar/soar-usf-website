@@ -52,8 +52,7 @@ export default function MediaPage() {
             {/* See More Button - Reduced spacing */}
             <div>
               <a
-                href="https://usfedu.sharepoint.com/teams/SocietyofAeronauticsandRocketryGRP/SitePages/Home.aspx"
-                target="_blank"
+                href="/media"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#cfc493] hover:bg-[#b8ad7a] text-zinc-900 font-semibold px-6 py-3 rounded-lg transition-colors"
               >
