@@ -14,7 +14,23 @@ type Member = {
   major?: string
 }
 
-export default function EboardYearbook({ members }: { members: Member[] }) {
+type YearbookProps = {
+  members: Member[]
+  /** Tailwind grid classes for responsive columns (defaults kept to original) */
+  gridClass?: string
+  /** Max width for card (as Tailwind friendly value like '18rem' used in inline style) */
+  cardMaxWidth?: string
+  /** width utility classes for the card element */
+  cardWidthClass?: string
+  /** image height classes for the card image container */
+  imageHeightClass?: string
+  /** outer card border color (CSS color string) */
+  outerBorderColor?: string
+  /** inner image container border color (CSS color string) */
+  innerBorderColor?: string
+}
+
+export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:grid-cols-2 md:grid-cols-4', cardMaxWidth = '18rem', cardWidthClass = 'sm:w-48 md:w-52', imageHeightClass = 'w-full h-72 sm:h-48', outerBorderColor = '#006747', innerBorderColor = '#cfc493' }: YearbookProps) {
   const [selected, setSelected] = useState<number | null>(null)
   const [selectedImage, setSelectedImage] = useState(0)
 
@@ -41,6 +57,8 @@ export default function EboardYearbook({ members }: { members: Member[] }) {
     "Cesar Briones": ["/cesar1.JPG", "/cesar2.JPG", "/cesar3.JPG"],
     "Kyle Shum": ["/kyle1.jpg", "/kyle2.jpg", "/kyle3.jpg"],
     "Sage Bundhund": ["/sage1.png", "/sage2.png", "/sage3.png"],
+    "Conner Schilaty": ["/conner1.jpg", "/conner2.jpg", "/conner3.jpg"],
+    "Daniel Misherky": ["/daniel1.jpg", "/daniel2.jpg", "/daniel3.jpg"]
   }
 
   // Define profile images for each member
@@ -51,12 +69,14 @@ export default function EboardYearbook({ members }: { members: Member[] }) {
     "Drew Brickell": "/drewheadshot.jpg",
     "Sage Bundhund": "/sageheadshot.jpg",
     "Conner Schilaty": "/connerheadshot.jpg"
+    ,
+    "Daniel Misherky": "/danielheadshot.jpg"
   }
 
   // Define custom object positions for specific members
   const profileImagePositions: { [key: string]: string } = {
     "Kyle Shum": "center 70%",
-    "Sage Bundhund": "0% center",
+    "Sage Bundhund": "25% center",
     "Conner Schilaty": "center 15%"
   }
 
@@ -70,6 +90,7 @@ export default function EboardYearbook({ members }: { members: Member[] }) {
     if (member.name === "Sage Bundhund" && imageIndex === 0) return { objectPosition: '70% center' }
     if (member.name === "Cesar Briones" && imageIndex === 2) return { objectPosition: '5% center' }
     if (member.name === "Emily Ho" && imageIndex === 2) return { objectPosition: '90% center' }
+    if (member.name === "Conner Schilaty" && imageIndex === 1) return { objectPosition: 'center 10%' }
     if (imageIndex === 1) return { objectPosition: '70% center' }
     if (imageIndex === 2) return { objectPosition: '70% center' }
     return undefined
@@ -78,7 +99,7 @@ export default function EboardYearbook({ members }: { members: Member[] }) {
   return (
     <div className="container mx-auto px-6 py-12">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className={`grid ${gridClass} gap-6`}>
           {members.map((m, i) => {
             const profileImage = profileImages[m.name] || null
             const profileImagePosition = profileImagePositions[m.name]
@@ -86,9 +107,10 @@ export default function EboardYearbook({ members }: { members: Member[] }) {
               <button
                 key={m.name + i}
                 onClick={() => setSelected(i)}
-                className="group bg-zinc-900 border-2 border-[#006747] rounded-2xl p-4 flex flex-col items-center gap-3 hover:scale-105 transition-all hover:border-[#005a3c] w-full max-w-[18rem] sm:w-48 md:w-52 mx-auto cursor-pointer"
+                className={`group bg-zinc-900 border-2 rounded-2xl p-4 flex flex-col items-center gap-3 hover:scale-105 transition-all hover:border-[#005a3c] w-full ${cardWidthClass} mx-auto cursor-pointer`}
+                  style={{ maxWidth: cardMaxWidth, borderColor: outerBorderColor }}
               >
-                <div className="w-full h-72 sm:h-48 rounded-lg overflow-hidden bg-zinc-800 flex items-center justify-center border-2 border-[#cfc493] relative p-0 sm:p-2">
+                  <div className={`${imageHeightClass} rounded-lg overflow-hidden bg-zinc-800 flex items-center justify-center border-2 relative p-0 sm:p-2 w-full`} style={{ borderColor: innerBorderColor }}> 
                   {profileImage ? (
                     <Image
                       src={profileImage}
