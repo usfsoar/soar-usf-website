@@ -75,9 +75,9 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
 
   // Define custom object positions for specific members
   const profileImagePositions: { [key: string]: string } = {
-    "Kyle Shum": "center 70%",
-    "Sage Bundhund": "25% center",
-    "Conner Schilaty": "center 15%"
+    "Kyle Shum": "50% 70%",
+    "Sage Bundhund": "25% 50%",
+    "Conner Schilaty": "50% 15%"
   }
 
   const getImages = (member: Member) => {
@@ -86,13 +86,13 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
   }
 
   const getMainImageObjectPosition = (member: Member, imageIndex: number) => {
-    if (member.name === "Kyle Shum" && imageIndex === 0) return { objectPosition: '70% center' }
-    if (member.name === "Sage Bundhund" && imageIndex === 0) return { objectPosition: '70% center' }
-    if (member.name === "Cesar Briones" && imageIndex === 2) return { objectPosition: '5% center' }
-    if (member.name === "Emily Ho" && imageIndex === 2) return { objectPosition: '90% center' }
-    if (member.name === "Conner Schilaty" && imageIndex === 1) return { objectPosition: 'center 10%' }
-    if (imageIndex === 1) return { objectPosition: '70% center' }
-    if (imageIndex === 2) return { objectPosition: '70% center' }
+    if (member.name === "Kyle Shum" && imageIndex === 0) return { objectPosition: '50% 70%' }
+    if (member.name === "Sage Bundhund" && imageIndex === 0) return { objectPosition: '50% 70%' }
+    if (member.name === "Cesar Briones" && imageIndex === 2) return { objectPosition: '5% 50%' }
+    if (member.name === "Emily Ho" && imageIndex === 2) return { objectPosition: '90% 50%' }
+    if (member.name === "Conner Schilaty" && imageIndex === 1) return { objectPosition: '50% 10%' }
+    if (imageIndex === 1) return { objectPosition: '50% 70%' }
+    if (imageIndex === 2) return { objectPosition: '50% 70%' }
     return undefined
   }
 
@@ -229,7 +229,7 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
                                     alt={`Thumbnail ${idx + 1}`}
                                     fill
                                     className="object-cover"
-                                    style={idx === 1 ? { objectPosition: '70% center' } : idx === 2 ? { objectPosition: '90% center' } : undefined}
+                                    style={idx === 1 ? { objectPosition: '50% 70%' } : idx === 2 ? { objectPosition: '90% 50%' } : undefined}
                                     sizes="80px"
                                     quality={60}
                                   />
