@@ -58,7 +58,8 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
     "Kyle Shum": ["/kyle1.jpg", "/kyle2.jpg", "/kyle3.jpg"],
     "Sage Bundhund": ["/sage1.png", "/sage2.png", "/sage3.png"],
     "Conner Schilaty": ["/conner1.jpg", "/conner2.jpg", "/conner3.jpg"],
-    "Daniel Misherky": ["/daniel1.jpg", "/daniel2.jpg", "/daniel3.jpg"]
+    "Daniel Misherky": ["/daniel1.jpg", "/daniel2.jpg", "/daniel3.jpg"],
+    "Joshua Garcia": ["/joshg1.jpg", "/joshg2.jpg", "/joshg3.jpg"]
   }
 
   // Define profile images for each member
