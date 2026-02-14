@@ -78,8 +78,8 @@
       description: "Serving as the Chief of Operations, Joshua is currently a Sophomore in Mechanical Engineering.",
       year: "Sophomore",
       major: "Mechanical Engineering",
-      dates: "August 2024 - Present",
-      involvement: "Joshua's involvement description will go here.",
+      dates: "October 2024 - Present",
+      involvement: "Hey my name is Joshua Garcia I got involved with SOAR around October of 2024. I quickly became friends with most of the leads in NSL and began to work wherever was needed. I would end up attending for the 2025 NSL Huntsville trip where I realized I wanted to join the E-board for next year and help out. I am now the Chief of Operations and try to stay involved with the IREC project as much as possible.",
       link: "https://www.linkedin.com/in/joshuagarciaeng/"
     },
     {
@@ -148,17 +148,17 @@
                       year: "Junior",
                       major: "Physics/Chemistry",
                       dates: "August 2024 - Present",
-                      involvement: "Pavan's involvement description will go here.",
+                      involvement: "Hello I am Pavan! I am a 3rd year majoring in BS Physics Dual Degree BA Chemistry and Minor in Math and Astrophysics Concentration, I was the NSL EECS Telemetry Lead last year, and I am the current Program Manager for the IREC team this year!",
                       link: "https://www.linkedin.com/in/pavan-moturi/",
                     },
                     {
                       name: "Alan Guyster",
                       title: "Telemetry Lead",
-                      description: "Serving as the Telemetry Lead, Alan is currently a Sophomore in Electrical Engineering.",
+                      description: "Serving as the Telemetry Lead, Alan is currently a Sophomore in Electrical Engineering/Physics.",
                       year: "Sophomore",
-                      major: "Electrical Engineering",
+                      major: "Electrical Engineering/Physics",
                       dates: "August 2024 - Present",
-                      involvement: "Alan's involvement description will go here.",
+                      involvement: "Hello everyone! I’m Alan and I’m a double major BS in both Electrical Engineering and Physics. This is my second year with SOAR and I am the telemetry lead for IREC. Feel free to talk to me anytime with any questions!",
                       link: "https://www.linkedin.com/in/alan-guyster-397112325/",
                     },
                     {
@@ -168,7 +168,7 @@
                       year: "Senior",
                       major: "Computer Science",
                       dates: "January 2024 - Present",
-                      involvement: "Chiara's involvement description will go here.",
+                      involvement: "Hello guys I’m Chiara, I’m a senior computer science victim and the IREC Payload EECS lead this year!🌱My favorite cereal is fruit loops and I am looking forward to building something that works exactly like it’s supposed to this semester 😀 🚀.",
                       link: "https://www.linkedin.com/in/chiara-deangelis-4a8961249/",
                     },
                     {
@@ -178,7 +178,7 @@
                       year: "Junior",
                       major: "Computer Science",
                       dates: "June 2025 - Present",
-                      involvement: "Christopher's involvement description will go here.",
+                      involvement: "Hello peoples! I am Chris and I'm majoring in computer science. I am this year's IREC Airbrakes EECS lead. Fih🐟",
                       link: "https://www.linkedin.com/in/chris-fernandez/",
                     },
                     {
@@ -188,7 +188,7 @@
                       year: "Sophomore",
                       major: "Mechanical Engineering",
                       dates: "August 2024 - Present",
-                      involvement: "Cooper's involvement description will go here.",
+                      involvement: "Hey guys I am Cooper and this is my second year with SOAR and I am the payload mechanical lead for IREC. Feel free to reach out with any questions.",
                       link: "https://www.linkedin.com/in/cooperkenney/",
                     },
                     {
@@ -228,7 +228,7 @@
                       year: "Senior",
                       major: "Computer Science",
                       dates: "August 2024 - Present",
-                      involvement: "Sama's involvement description will go here.",
+                      involvement: "Hi guys! My name is Sama and I'm a senior Computer Science major. This my second year with SOAR, and this year I'm the IREC Recovery & Flight Dynamics Lead✨🚀 Happy to meet all of you!",
                       link: "https://www.linkedin.com/in/sama-ahmed-28354625b/",
                     },
                   ]}
@@ -295,7 +295,7 @@
                       year: "Sophomore",
                       major: "Electrical Engineering",
                       dates: "August 2024 - Present",
-                      involvement: "Ethan's involvement description will go here.",
+                      involvement: "Hi guys, I am employed as an employee of the civil engineering department which is my employer. Employment. I am the student at one of the universities in the entire state of Florida, USF!! I would rather make a rocket that goes up really fast. My favorite cereal is honey bunches of oats, and I’m not an Aquarius.",
                       link: "https://www.linkedin.com/in/ethan-zylman/",
                     },
                     {
@@ -412,7 +412,7 @@
                       year: "Sophomore",
                       major: "Computer Science",
                       dates: "October 2025 - Present",
-                      involvement: "I'm a sophomore majoring in Computer Science, and I intend to pursue a career in software engineering or data science after graduation. I joined SOAR as a web developer in mid‑Fall 2025 — yes, to help build this very website. When I'm not coding, I enjoy playing basketball and staying active through workouts.",
+                      involvement: "I'm a sophomore majoring in Computer Science, and I joined SOAR in mid-Fall 2025 to create this very website. As the Web Developer, I am responsible for maintaining and updating the SOAR website to meet our needs. I enjoy playing basketball, working out, and of course coding 😂",
                       link: "https://www.linkedin.com/in/dmish13/",
                     },
                     {
@@ -446,8 +446,8 @@
                       description: "Serving as the Chief of Operations, Joshua is currently a Sophomore in Mechanical Engineering.",
                       year: "Sophomore",
                       major: "Mechanical Engineering",
-                      dates: "August 2024 - Present",
-                      involvement: "Joshua's involvement description will go here.",
+                      dates: "October 2024 - Present",
+                      involvement: "Hey my name is Joshua Garcia I got involved with SOAR around October of 2024. I quickly became friends with most of the leads in NSL and began to work wherever was needed. I would end up attending for the 2025 NSL Huntsville trip where I realized I wanted to join the E-board for next year and help out. I am now the Chief of Operations and try to stay involved with the IREC project as much as possible.",
                       link: "https://www.linkedin.com/in/joshuagarciaeng/"
                     },
                     {
