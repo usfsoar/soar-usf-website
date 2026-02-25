@@ -52,26 +52,49 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
 
   // Define images for members with galleries
   const memberImages: { [key: string]: string[] } = {
-    "Emily Ho": ["/emily1.jpg", "/emily2.jpg", "/emily3.png"],
+    "Emily Ho": ["/emily1.jpg", "/emily2.jpg", "/emily3.jpg"],
     "Drew Brickell": ["/drew1.jpg", "/drew2.jpg", "/drew3.jpg"],
-    "Cesar Briones": ["/cesar1.JPG", "/cesar2.JPG", "/cesar3.JPG"],
+    "Cesar Briones": ["/cesar1.jpg", "/cesar2.jpg", "/cesar3.jpg"],
     "Kyle Shum": ["/kyle1.jpg", "/kyle2.jpg", "/kyle3.jpg"],
-    "Sage Bundhund": ["/sage1.png", "/sage2.png", "/sage3.png"],
+    "Sage Bundhund": ["/sage1.jpg", "/sage2.jpg", "/sage3.jpg"],
     "Conner Schilaty": ["/conner1.jpg", "/conner2.jpg", "/conner3.jpg"],
     "Daniel Misherky": ["/daniel1.jpg", "/daniel2.jpg", "/daniel3.jpg"],
-    "Joshua Garcia": ["/joshg1.jpg", "/joshg2.jpg", "/joshg3.jpg"]
+    "Joshua Garcia": ["/joshg1.jpg", "/joshg2.jpg", "/joshg3.jpg"],
+    "Valeria Melendez": ["/valeria1.jpg", "/valeria2.jpg", ""]
   }
 
   // Define profile images for each member
   const profileImages: { [key: string]: string } = {
     "Emily Ho": "/emilyheadshot.jpg",
     "Cesar Briones": "/cesarheadshot.jpg",
-    "Kyle Shum": "/kyleheadshot.jpeg",
+    "Kyle Shum": "/kyleheadshot.jpg",
     "Drew Brickell": "/drewheadshot.jpg",
     "Sage Bundhund": "/sageheadshot.jpg",
-    "Conner Schilaty": "/connerheadshot.jpg"
-    ,
-    "Daniel Misherky": "/danielheadshot.jpg"
+    "Conner Schilaty": "/connerheadshot.jpg",
+    "Daniel Misherky": "/danielheadshot.jpg",
+    "Matthew Messing": "/matthewheadshot.jpg",
+    "Joshua Garcia": "/joshgheadshot.jpg",
+    "Pavan Moturi": "/pavanheadshot.jpg",
+    "Alan Guyster": "/alanheadshot.jpg",
+    "Chiara DeAngelis": "/chiaraheadshot.jpg",
+    "Christopher Fernandez": "/chrisheadshot.jpg",
+    "Cooper Kenney": "/cooperheadshot.jpg",
+    "Duc Nguyen": "/ducheadshot.jpg",
+    "Khôi Minh Tôn Thất": "/khoiheadshot.jpg",
+    "Ninh Vu Van": "/ninhheadshot.jpg",
+    "Sama Ahmed": "/samaheadshot.jpg",
+    "Krystal Walford": "/krystalheadshot.jpg",
+    "Ethan Zylman": "/ethanzheadshot.jpg",
+    "Joshua Hachmeister": "/joshhheadshot.jpg",
+    "Marwan Abdelwahab": "/marwanheadshot.jpg",
+    "Rylie Birkey": "/rylieheadshot.jpg",
+    "Hunter Hawkins": "/hunterheadshot.jpg",
+    "Lauren Carpenter": "/laurenheadshot.jpg",
+    "Angel Hernandez": "/angelheadshot.jpg",
+    "Janna Abdelghani": "/jannaheadshot.jpg",
+    "Stepan Jankowski": "/stepanheadshot.jpg",
+    "Shreya Bhatt": "/shreyaheadshot.jpg",
+    "Valeria Melendez": "/valeriaheadshot.jpg"
   }
 
   // Define custom object positions for specific members
