@@ -361,7 +361,7 @@
                       year: "Sophomore",
                       major: "Computer Science",
                       dates: "January 2025-Present",
-                      involvement: "Hunter's involvement description will go here.",
+                      involvement: "B.S. in Computer Science, 1 year involved in SOAR, as the Marketing Director I've had the honor of assisting the Chief of Marketing for two semesters and providing physical marketing materials like custom decals and liveries for the club!",
                       link: "https://www.linkedin.com/in/hhawki/",
                     },
                     {
@@ -461,14 +461,14 @@
                       link: "",
                     },
                     {
-                      name: "Valerie Melendez",
+                      name: "Valeria Melendez",
                       title: "Fundraising Chair",
-                      description: "Serving as the Fundraising Chair, Valerie is currently a Junior in Aerospace Engineering.",
-                      year: "Junior",
-                      major: "Cybersecurity",
-                      dates: "Unknown",
-                      involvement: "Valerie's involvement description will go here.",
-                      link: ""
+                      description: "Serving as the Fundraising Chair, Valeria is currently a Sophomore in Political Science/Cybersecurity.",
+                      year: "Sophomore",
+                      major: "Political Science/Cybersecurity",
+                      dates: "August 2025 - Present",
+                      involvement: "Hi, I’m Valeria Melendez and I’m the fundraising chair for the operations team at SOAR! Im currently a second year student studying political science and cybersecurity. I’ve been apart of soar for about a year now and it’s been a great experience helping out operationally and learning more about rockets.",
+                      link: "https://www.linkedin.com/in/valeria-melendez-680913362/"
                     },
                   ]}
                   gridClass="grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 justify-items-center"
