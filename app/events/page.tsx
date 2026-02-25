@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { MultiCalendar } from "@/components/multi-calendar"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -34,21 +35,7 @@ export default function EventsPage() {
       {/* Google Calendar Section */}
       <section className="container mx-auto px-6 pb-20">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-zinc-900/50 border-2 border-[#cfc493]/20 rounded-xl overflow-hidden">
-            <style jsx>{`
-              .calendar-container iframe {
-                filter: sepia(0.15) hue-rotate(15deg) brightness(0.95);
-              }
-            `}</style>
-            <div className="calendar-container">
-              <iframe
-                src="https://calendar.google.com/calendar/embed?src=942jatunguv08jrcr3ver7t9kc%40group.calendar.google.com&ctz=America%2FNew_York"
-                className="w-full h-[600px]"
-                frameBorder="0"
-                scrolling="no"
-              />
-            </div>
-          </div>
+          <MultiCalendar />
         </div>
       </section>
       <Footer />

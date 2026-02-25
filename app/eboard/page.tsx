@@ -376,14 +376,14 @@
                       link: "https://www.linkedin.com/in/conner-schilaty-474452337/"
                     },
                     {
-                      name: "Jayce Williams",
+                      name: "Lauren Carpenter",
                       title: "Public Relations Lead",
-                      description: "Serving as the Public Relations Lead, Jayce is currently a Sophomore in Aerospace Engineering.",
+                      description: "Serving as the Public Relations Lead, Lauren is currently a Sophomore in Aerospace Engineering.",
                       year: "Sophomore",
                       major: "Aerospace Engineering",
-                      dates: "August 2024 - Present",
-                      involvement: "Jayce's involvement description will go here.",
-                      link: "https://www.linkedin.com/in/jayce-williams-04a085353/",
+                      dates: "Febuary 2026 - Present",
+                      involvement: "Lauren's involvement description will go here.",
+                      link: "https://www.linkedin.com/in/lauren-carpenter-47b443353/",
                     },
                     {
                       name: "Angel Hernandez",

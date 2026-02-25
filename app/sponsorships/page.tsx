@@ -8,23 +8,7 @@ import { Rocket } from "lucide-react"
 import Image from "next/image"
 
 export default function SponsorshipsPage() {
-  const [showBenefits, setShowBenefits] = useState(false)
-
-  // Each sponsor has a custom width based on their logo's aspect ratio
-  const sponsors = [
-    { name: "Joe Register", logo: "/joeregister.png", url: "https://www.linkedin.com/in/joeregister/", width: 75 },
-    { name: "Aevex Aerospace", logo: "/aevex.png", url: "https://aevex.com/", width: 157 },
-    { name: "CAE", logo: "/cae.png", url: "https://www.cae.com/", width: 100 },
-    { name: "Monster Energy", logo: "/monster.png", url: "https://www.monsterenergy.com/", width: 47 },
-    { name: "Ansys", logo: "/ansys.png", url: "https://www.ansys.com/", width: 135 },
-    { name: "JBS", logo: "/jbs.png", url: "https://jimsbodyshop.com/", width: 100 },
-    { name: "EPSILON3", logo: "/epsilon3.png", url: "https://www.epsilon3.io/", width: 100 },
-    { name: "Kenesto", logo: "/Kenesto.png", url: "https://kenesto.com/", width: 130 },
-  ]
-
-  // Calculate total width for one set: sum of all widths + gaps
-  const gap = 40
-  const totalWidth = sponsors.reduce((sum, s) => sum + s.width, 0) + (sponsors.length * gap)
+  const [showBenefits, setShowBenefits] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
@@ -36,105 +20,12 @@ export default function SponsorshipsPage() {
 
       {/* Current Sponsors Section */}
       <section className="py-20 px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="mb-12 text-center">
-            <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-6">
-              <svg className="w-5 h-5 text-[#cfc493]" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/>
-              </svg>
-              <span className="text-sm font-medium tracking-wide text-[#cfc493]">Our Sponsors</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">CURRENT SPONSORS</h2>
-            <p className="text-zinc-400 text-lg max-w-4xl mx-auto">
-              SOAR cannot be where we are without the support of our sponsors and supporters. Our success is a product of our generous community!
-            </p>
-          </div>
-
-          {/* Scrolling sponsor logos */}
-          <div className="sponsor-slider-container">
-            <div className="sponsor-slider-track">
-              {/* First set */}
-              {sponsors.map((sponsor, index) => (
-                <a
-                  key={`first-${index}`}
-                  href={sponsor.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="sponsor-slide"
-                  style={{ width: sponsor.width, height: 65 }}
-                >
-                  <img src={sponsor.logo} alt={sponsor.name} />
-                </a>
-              ))}
-              {/* Second set for seamless loop */}
-              {sponsors.map((sponsor, index) => (
-                <a
-                  key={`second-${index}`}
-                  href={sponsor.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="sponsor-slide"
-                  style={{ width: sponsor.width, height: 65 }}
-                >
-                  <img src={sponsor.logo} alt={sponsor.name} />
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Let's Talk Business Section */}
-        <div className="container mx-auto max-w-6xl mt-20 px-4 md:px-6">
-          <div className="text-center mb-8 md:mb-12">
-            <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-6">
-              <Image src="/briefcase.png" alt="briefcase" width={20} height={20} className="w-5 h-5" style={{ filter: "brightness(0) saturate(100%) invert(82%) sepia(13%) saturate(743%) hue-rotate(3deg) brightness(92%) contrast(85%)" }} />
-              <span className="text-sm font-medium tracking-wide text-[#cfc493]">Sponsor Us</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-8">LET'S TALK BUSINESS</h2>
-          </div>
+        <div className="container mx-auto max-w-6xl mt-5 px-4 md:px-6">
 
           <div className="flex flex-col gap-6 md:gap-8">
-            <div className="flex flex-col lg:flex-row gap-6 md:gap-8 items-stretch">
-              {/* Image */}
-              <div className="lg:w-2/5 flex-shrink-0">
-                <img src="/sponsors.jpg" alt="SOAR Sponsorships" className="w-full h-full object-cover rounded-lg aspect-[4/3]" />
-              </div>
 
-              {/* Content */}
-              <div className="flex-1 flex flex-col justify-between gap-6">
-                <div>
-                  <div className="flex items-center gap-3 mb-4 md:mb-6">
-                    <Rocket className="h-5 w-5 md:h-6 md:w-6 text-[#cfc493]" />
-                    <h3 className="text-xl md:text-2xl font-bold">SOAR Sponsorships</h3>
-                  </div>
-
-                  <p className="text-sm md:text-base text-zinc-400 mb-4 md:mb-6 leading-relaxed">
-                    SOAR is a Registered Student Organization under USF Policy 6.0.17. With this, an account with the USF Foundation, the primary method of contributing money to specific causes at USF, has been set up as a form of payment for USF SOAR sponsorship. Sponsorship payments to the chapter are tax exempt through the USF Foundation, due to the USF Foundation being a 501(c)(3) non-profit.
-                  </p>
-                </div>
-
-                <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-4 md:p-6">
-                  <div className="grid grid-cols-3 gap-0 text-center divide-x divide-zinc-700">
-                    <div className="px-2 md:px-4">
-                      <div className="text-2xl md:text-3xl font-bold text-[#cfc493] mb-1 md:mb-2">4</div>
-                      <div className="text-xs md:text-sm text-zinc-400">Tiers</div>
-                    </div>
-                    <div className="px-2 md:px-4">
-                      <div className="text-sm md:text-lg font-bold text-[#cfc493] mb-1 md:mb-2">USF Foundations</div>
-                      <div className="text-xs md:text-sm text-zinc-400">501(c)(3) non-profit</div>
-                    </div>
-                    <div className="px-2 md:px-4">
-                      <div className="text-2xl md:text-3xl font-bold text-[#cfc493] mb-1 md:mb-2">Est.</div>
-                      <div className="text-xs md:text-sm text-zinc-400">2013</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* PDF Preview and Download Section */}
             <div className="space-y-6 mt-8">
-              {/* PDF Preview */}
+              {/* Canva Embed */}
               <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg overflow-hidden">
                 <div className="p-4 border-b border-zinc-800 flex items-center justify-between">
                   <h3 className="text-lg font-semibold">Sponsorship Packet Preview</h3>
@@ -149,11 +40,11 @@ export default function SponsorshipsPage() {
                     Download PDF
                   </a>
                 </div>
-                <iframe 
-                  src="/SOAR 2025-26 Sponsorship Packet.pdf#toolbar=0"
-                  className="w-full h-[600px] md:h-[800px]"
-                  title="Sponsorship Packet"
-                />
+                <div style={{position: 'relative', width: '100%', height: 0, paddingTop: '64.7059%', paddingBottom: 0, boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)', marginTop: '1.6em', marginBottom: '0.9em', overflow: 'hidden', borderRadius: '8px', willChange: 'transform'}}>
+                  <iframe loading="lazy" style={{position: 'absolute', width: '100%', height: '100%', top: 0, left: 0, border: 'none', padding: 0, margin: 0}}
+                    src="https://www.canva.com/design/DAGpJ3F9dUA/pbkvL8UbmSzuQtXHX-skdw/view?embed" allowFullScreen={true} allow="fullscreen">
+                  </iframe>
+                </div>
               </div>
 
               {/* Sponsor Button */}
@@ -624,68 +515,47 @@ export default function SponsorshipsPage() {
               </div>
             </div>
           )}
+          <div className="flex flex-col lg:flex-row gap-6 md:gap-8 items-stretch mt-20 md:mt-32 pt-16">
+              {/* Image */}
+              <div className="lg:w-2/5 flex-shrink-0">
+                <img src="/sponsors.jpg" alt="SOAR Sponsorships" className="w-full h-full object-cover rounded-lg aspect-[4/3]" />
+              </div>
+
+              {/* Content */}
+              <div className="flex-1 flex flex-col justify-between gap-6">
+                <div>
+                  <div className="flex items-center gap-3 mb-4 md:mb-6">
+                    <Rocket className="h-5 w-5 md:h-6 md:w-6 text-[#cfc493]" />
+                    <h3 className="text-xl md:text-2xl font-bold">SOAR Sponsorships</h3>
+                  </div>
+
+                  <p className="text-sm md:text-base text-zinc-400 mb-4 md:mb-6 leading-relaxed">
+                    SOAR is a Registered Student Organization under USF Policy 6.0.17. With this, an account with the USF Foundation, the primary method of contributing money to specific causes at USF, has been set up as a form of payment for USF SOAR sponsorship. Sponsorship payments to the chapter are tax exempt through the USF Foundation, due to the USF Foundation being a 501(c)(3) non-profit.
+                  </p>
+                </div>
+
+                <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-4 md:p-6">
+                  <div className="grid grid-cols-3 gap-0 text-center divide-x divide-zinc-700">
+                    <div className="px-2 md:px-4">
+                      <div className="text-2xl md:text-3xl font-bold text-[#cfc493] mb-1 md:mb-2">4</div>
+                      <div className="text-xs md:text-sm text-zinc-400">Tiers</div>
+                    </div>
+                    <div className="px-2 md:px-4">
+                      <div className="text-sm md:text-lg font-bold text-[#cfc493] mb-1 md:mb-2">USF Foundations</div>
+                      <div className="text-xs md:text-sm text-zinc-400">501(c)(3) non-profit</div>
+                    </div>
+                    <div className="px-2 md:px-4">
+                      <div className="text-2xl md:text-3xl font-bold text-[#cfc493] mb-1 md:mb-2">Est.</div>
+                      <div className="text-xs md:text-sm text-zinc-400">2013</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
       </section>
 
       <Footer />
-
-      <style jsx>{`
-        .sponsor-slider-container {
-          width: 100%;
-          height: 80px;
-          overflow: hidden;
-          position: relative;
-          display: flex;
-          align-items: center;
-          mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgb(0,0,0) 15%, rgb(0,0,0) 85%, rgba(0,0,0,0) 100%);
-          -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgb(0,0,0) 15%, rgb(0,0,0) 85%, rgba(0,0,0,0) 100%);
-        }
-        
-        .sponsor-slider-track {
-          display: flex;
-          gap: ${gap}px;
-          align-items: center;
-          animation: sponsorScroll 25s linear infinite;
-          will-change: transform;
-        }
-        
-        .sponsor-slider-track:hover {
-          animation-play-state: paused;
-        }
-        
-        .sponsor-slide {
-          flex-shrink: 0;
-          position: relative;
-          opacity: 0.9;
-          transition: opacity 300ms, transform 300ms;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        
-        .sponsor-slide:hover {
-          opacity: 1;
-          transform: scale(1.1);
-        }
-        
-        .sponsor-slide :global(img) {
-          display: block;
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          object-position: center;
-        }
-        
-        @keyframes sponsorScroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-${totalWidth}px);
-          }
-        }
-      `}</style>
     </div>
   )
 }
