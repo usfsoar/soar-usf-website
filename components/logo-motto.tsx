@@ -11,6 +11,8 @@ const sponsors = [
   { logo: "/monster.png", width: 47, url: "https://www.monsterenergy.com/" },
   { logo: "/ansys.png", width: 135, url: "https://www.ansys.com/" },
   { logo: "/jbs.png", width: 100, url: "https://jimsbodyshop.com/" },
+  { logo: "/epsilon3.png", width: 100, url: "https://www.epsilon3.io/" },
+  { logo: "/Kenesto.png", width: 130, url: "https://kenesto.com/" },
 ]
 
 export function LogoMotto() {
@@ -18,9 +20,9 @@ export function LogoMotto() {
   const totalWidth = useMemo(() => sponsors.reduce((sum, s) => sum + s.width, 0) + (sponsors.length * gap), [])
 
   return (
-    <section className="relative bg-[#0f0f0f] border-b border-white/10">
+    <section className="bg-zinc-950 border-b border-white/10">
       {/* Logo Section */}
-      <div className="bg-[#0f0f0f] py-12 md:py-16">
+      <div className="bg-zinc-950 py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="flex flex-col items-center md:items-start md:flex-row md:justify-between gap-6">
             {/* Left: Logo and sponsor slider */}

@@ -9,7 +9,7 @@ export function Sponsors() {
     { name: "Monster Energy", logo: "/monster.png", url: "https://www.monsterenergy.com/", width: 47 },
     { name: "Ansys", logo: "/ansys.png", url: "https://www.ansys.com/", width: 135 },
     { name: "JBS", logo: "/jbs.png", url: "https://jimsbodyshop.com/", width: 100 },
-    { name: "EPSILON3", logo: "/epsilon3.png", url: "https://www.epsilon3.io/", width: 100 },
+    { name: "EPSILON3", logo: "/epsilon3.png", url: "https://www.epsilon3.io/", width: 120 },
     { name: "Kenesto", logo: "/Kenesto.png", url: "https://kenesto.com/", width: 130 },
   ]
 
