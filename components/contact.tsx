@@ -11,10 +11,10 @@ import Image from "next/image"
 export function Contact() {
   const [result, setResult] = useState("")
   const [loading, setLoading] = useState(false)
-  const [instagramCount, setInstagramCount] = useState<number>(2100)
+  const [instagramCount, setInstagramCount] = useState<number>(2200)
   const [discordCount, setDiscordCount] = useState<number>(800)
-  const [linkedinCount, setLinkedinCount] = useState<number>(400)
-  const [registeredCount, setRegisteredCount] = useState<number>(450)
+  const [linkedinCount, setLinkedinCount] = useState<number>(750)
+  const [registeredCount, setRegisteredCount] = useState<number>(500)
 
   function formatCount(n: number) {
     if (!Number.isFinite(n) || n < 1000) return `${n}`

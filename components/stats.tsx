@@ -57,10 +57,11 @@ function Counter({ end, duration = 2000 }: { end: number; duration?: number }) {
 }
 
 export function Stats() {
-  const [instagramCount] = useState(2100)
+  const [instagramCount] = useState(2200)
   const [discordCount, setDiscordCount] = useState<number>(1000)
-  const [registeredCount] = useState(450)
-  const [linkedinCount] = useState(400)
+  const [linkedinCount] = useState(750)
+  const [registeredCount] = useState(500)
+  
 
   useEffect(() => {
     let mounted = true
@@ -98,18 +99,18 @@ export function Stats() {
             <Image src="/discord.png" alt="Discord" width={32} height={32} className="w-6 h-6 md:w-8 md:h-8 mx-auto" />
           </a>
 
+          {/* LinkedIn Stats */}
+          <a href="https://www.linkedin.com/in/usfsoaradmin/" target="_blank" rel="noopener noreferrer" className="block bg-zinc-900/50 border border-zinc-800 rounded-lg p-6 md:p-8 text-center hover:border-zinc-700 transition-colors">
+            <Counter end={linkedinCount} />
+            <p className="text-sm md:text-base text-zinc-400 mb-3 md:mb-4">LinkedIn Followers</p>
+            <Image src="/linkedin.png" alt="LinkedIn" width={32} height={32} className="w-6 h-6 md:w-8 md:h-8 mx-auto" />
+          </a>
+
           {/* Registered Members (BullsConnect) */}
           <a href="https://bullsconnect.usf.edu/feeds?type=club&type_id=58509&tab=about" target="_blank" rel="noopener noreferrer" className="block bg-zinc-900/50 border border-zinc-800 rounded-lg p-6 md:p-8 text-center hover:border-zinc-700 transition-colors">
             <Counter end={registeredCount} />
             <p className="text-sm md:text-base text-zinc-400 mb-3 md:mb-4">Registered Members</p>
             <Users className="w-6 h-6 md:w-8 md:h-8 mx-auto" style={{ color: "#D0C495" }} />
-          </a>
-
-          {/* LinkedIn Stats */}
-          <a href="https://www.linkedin.com/company/usfsoar/" target="_blank" rel="noopener noreferrer" className="block bg-zinc-900/50 border border-zinc-800 rounded-lg p-6 md:p-8 text-center hover:border-zinc-700 transition-colors">
-            <Counter end={linkedinCount} />
-            <p className="text-sm md:text-base text-zinc-400 mb-3 md:mb-4">LinkedIn Followers</p>
-            <Image src="/linkedin.png" alt="LinkedIn" width={32} height={32} className="w-6 h-6 md:w-8 md:h-8 mx-auto" />
           </a>
         </div>
       </div>
