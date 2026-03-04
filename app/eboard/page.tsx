@@ -228,7 +228,7 @@
                       year: "Senior",
                       major: "Computer Science",
                       dates: "August 2024 - Present",
-                      involvement: "Hi guys! My name is Sama and I'm a senior Computer Science major. This my second year with SOAR, and this year I'm the IREC Recovery & Flight Dynamics Lead✨🚀 Happy to meet all of you!",
+                      involvement: "I’m currently a senior in Computer Science. I joined SOAR in Fall 2024 as a Junior Engineer on the Payload System, and I had the opportunity to travel to Huntsville with the team that year, which was a really fun experience. This year, I stepped into the role of Recovery & Flight Dynamics Lead, which has been a really rewarding and developmental experience for me.",
                       link: "https://www.linkedin.com/in/sama-ahmed-28354625b/",
                     },
                   ]}
@@ -316,7 +316,7 @@
                       major: "Computer Engineering",
                       dates: "August 2024 - Present",
                       involvement: "Marwan's involvement description will go here.",
-                      link: "",
+                      link: "https://www.linkedin.com/in/marwan-abdelwahab/",
                     },
                     {
                       name: "Rylie Birkey",
