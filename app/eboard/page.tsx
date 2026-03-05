@@ -315,7 +315,7 @@
                       year: "Senior",
                       major: "Computer Engineering",
                       dates: "August 2024 - Present",
-                      involvement: "Marwan's involvement description will go here.",
+                      involvement: "I am a senior studying Computer Engineering at the University of South Florida. I serve as the Torito Data Acquisition (DAQ) Lead for SOAR, where I develop systems used to collect and transmit data during propulsion testing. My work focuses on integrating sensors, embedded systems, and telemetry to monitor engine performance and record test data for analysis. I joined SOAR in 2024 and have since been involved in building and improving the electronics infrastructure for the Torito propulsion subsystem.",
                       link: "https://www.linkedin.com/in/marwan-abdelwahab/",
                     },
                     {
