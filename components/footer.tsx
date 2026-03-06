@@ -50,11 +50,11 @@ export function Footer() {
                       Eboard
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="/sponsorships" className="hover:text-foreground transition-colors cursor-pointer">
                       Sponsorship
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link href="/media" className="hover:text-foreground transition-colors cursor-pointer">
                       Media + Pics
