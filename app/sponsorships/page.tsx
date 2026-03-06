@@ -1,29 +1,30 @@
+// /*
 // "use client"
-
+// 
 // import { Navbar } from "@/components/navbar"
 // import { Footer } from "@/components/footer"
 // import { PageHeader } from "@/components/page-header"
 // import { useState } from "react"
 // import { Rocket } from "lucide-react"
 // import Image from "next/image"
-
-// export default function SponsorshipsPage() {
+// 
+// function SponsorshipsPage_DISABLED() {
 //   const [showBenefits, setShowBenefits] = useState(false);
-
+// 
 //   return (
 //     <div className="min-h-screen bg-background">
 //       <div className="relative">
 //         <Navbar />
 //       </div>
-
+// 
 //       <PageHeader title="BECOME A SPONSOR" subtitle="Support the future of aerospace engineering and innovation." />
-
+// 
 //       {/* Current Sponsors Section */}
 //       <section className="py-20 px-6">
 //         <div className="container mx-auto max-w-6xl mt-5 px-4 md:px-6">
-
+// 
 //           <div className="flex flex-col gap-6 md:gap-8">
-
+// 
 //             <div className="space-y-6 mt-8">
 //               {/* Canva Embed */}
 //               <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg overflow-hidden">
@@ -46,7 +47,7 @@
 //                   </iframe>
 //                 </div>
 //               </div>
-
+// 
 //               {/* Sponsor Button */}
 //               <a href="https://giving.usf.edu/online/gift/f/220111/" target="_blank" rel="noopener noreferrer" className="w-full bg-zinc-900 hover:bg-zinc-800 text-white rounded-full py-3 md:py-4 px-4 md:px-6 flex items-center justify-center gap-2 transition-colors group cursor-pointer text-sm md:text-base">
 //                 <span className="font-medium text-center">Sponsor Us at USF Foundations</span>
@@ -64,7 +65,7 @@
 //           </div>
 //         </div>
 //       </section>
-
+// 
 //       {/* Sponsorship Tiers Section */}
 //       <section className="pb-16 md:pb-24 px-4 md:px-6 bg-background">
 //         <div className="container mx-auto max-w-7xl">
@@ -89,7 +90,7 @@
 //               </button>
 //             </div>
 //           </div>
-
+// 
 //           {/* Pricing Tiers */}
 //           {!showBenefits && (
 //             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -133,7 +134,7 @@
 //                   <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
 //                 </a>
 //               </div>
-
+// 
 //               {/* Silver */}
 //               <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col">
 //                 <h3 className="text-xl font-bold mb-3">Silver</h3>
@@ -180,7 +181,7 @@
 //                   <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
 //                 </a>
 //               </div>
-
+// 
 //               {/* Gold */}
 //               <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col">
 //                 <h3 className="text-xl font-bold mb-3">Gold</h3>
@@ -239,7 +240,7 @@
 //                   <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
 //                 </a>
 //               </div>
-
+// 
 //               {/* Platinum */}
 //               <div className="bg-zinc-900 border-2 border-[#cfc493] rounded-2xl p-6 flex flex-col">
 //                 <h3 className="text-xl font-bold mb-3">Platinum</h3>
@@ -300,7 +301,7 @@
 //               </div>
 //             </div>
 //           )}
-
+// 
 //           {/* Benefits View */}
 //           {showBenefits && (
 //             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -352,7 +353,7 @@
 //                   <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
 //                 </a>
 //               </div>
-
+// 
 //               {/* Silver Benefits */}
 //               <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col">
 //                 <h3 className="text-xl font-bold mb-4">Silver</h3>
@@ -403,7 +404,7 @@
 //                   <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
 //                 </a>
 //               </div>
-
+// 
 //               {/* Gold Benefits */}
 //               <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 flex flex-col">
 //                 <h3 className="text-xl font-bold mb-4">Gold</h3>
@@ -460,7 +461,7 @@
 //                   <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
 //                 </a>
 //               </div>
-
+// 
 //               {/* Platinum Benefits */}
 //               <div className="bg-zinc-900 border-2 border-[#cfc493] rounded-2xl p-6 flex flex-col">
 //                 <h3 className="text-xl font-bold mb-4">Platinum</h3>
@@ -526,7 +527,7 @@
 //               <div className="lg:w-2/5 flex-shrink-0">
 //                 <img src="/sponsors.jpg" alt="SOAR Sponsorships" className="w-full h-full object-cover rounded-lg aspect-[4/3]" />
 //               </div>
-
+// 
 //               {/* Content */}
 //               <div className="flex-1 flex flex-col justify-between gap-6">
 //                 <div>
@@ -534,12 +535,12 @@
 //                     <Rocket className="h-5 w-5 md:h-6 md:w-6 text-[#cfc493]" />
 //                     <h3 className="text-xl md:text-2xl font-bold">SOAR Sponsorships</h3>
 //                   </div>
-
+// 
 //                   <p className="text-sm md:text-base text-zinc-400 mb-4 md:mb-6 leading-relaxed">
 //                     SOAR is a Registered Student Organization under USF Policy 6.0.17. With this, an account with the USF Foundation, the primary method of contributing money to specific causes at USF, has been set up as a form of payment for USF SOAR sponsorship. Sponsorship payments to the chapter are tax exempt through the USF Foundation, due to the USF Foundation being a 501(c)(3) non-profit.
 //                   </p>
 //                 </div>
-
+// 
 //                 <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg p-4 md:p-6">
 //                   <div className="grid grid-cols-3 gap-0 text-center divide-x divide-zinc-700">
 //                     <div className="px-2 md:px-4">
@@ -560,8 +561,12 @@
 //             </div>
 //         </div>
 //       </section>
-
+// 
 //       <Footer />
 //     </div>
 //   )
-// }
+// 
+// Sponsorship page disabled pending further approval
+export default function SponsorshipsPage() {
+  return null;
+}
