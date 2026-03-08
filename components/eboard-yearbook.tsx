@@ -63,6 +63,7 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
     "Valeria Melendez": ["/valeria1.jpg", "/valeria2.jpg", ""],
     "Marwan Abdelwahab": ["/marwan1.jpg", "/marwan2.jpg", "/marwan3.jpg"],
     "Alan Guyster": ["/alan1.jpg", "/alan2.jpg", "/alan3.jpg"],
+    "Pavan Moturi": ["/pavan1.jpg", "/pavan2.jpg", ""],
   }
 
   // Define profile images for each member
@@ -122,6 +123,7 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
     if (member.name === "Marwan Abdelwahab" && imageIndex === 2) return { objectPosition: '100% 70%' }
     if (member.name === "Alan Guyster" && imageIndex === 1) return { objectPosition: '100% 70%' }
     if (member.name === "Alan Guyster" && imageIndex === 2) return { objectPosition: '100% 70%' }
+    if (member.name === "Pavan Moturi" && imageIndex === 1) return { objectPosition: '0% 70%' }
     if (imageIndex === 1) return { objectPosition: '50% 70%' }
     if (imageIndex === 2) return { objectPosition: '50% 70%' }
     return undefined

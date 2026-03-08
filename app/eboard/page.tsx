@@ -151,11 +151,11 @@
                     {
                       name: "Pavan Moturi",
                       title: "IREC Program Manager",
-                      description: "Serving as the IREC Program Manager, Pavan is currently a Junior in Physics/Chemistry.",
+                      description: "Serving as the IREC Program Manager, Pavan is currently a Junior in Physics/Chemistry with a minor in Mathematics.",
                       year: "Junior",
                       major: "Physics/Chemistry",
-                      dates: "August 2024 - Present",
-                      involvement: "Hello I am Pavan! I am a 3rd year majoring in BS Physics Dual Degree BA Chemistry and Minor in Math and Astrophysics Concentration, I was the NSL EECS Telemetry Lead last year, and I am the current Program Manager for the IREC team this year!",
+                      dates: "September 2023 - Present",
+                      involvement: "Hello I am Pavan! I am a 3rd year majoring in BS Physics Dual Degree BA Chemistry and Minor in Math and Astrophysics Concentration, I was an NSL Payload EECS Junior Engineer two years ago. Then, I was the NSL USLI Telemetry Lead last year, and I am the current Program Manager for the IREC team this year!",
                       link: "https://www.linkedin.com/in/pavan-moturi/",
                     },
                     {
