@@ -116,6 +116,13 @@
 
         {/* Yearbook Section */}
         <section className="container mx-auto px-6 pt-20 pb-20">
+          {/* Disclaimer */}
+          <div className="mb-8 p-4 bg-[#006747]/20 border border-[#cfc493]/50 rounded-lg">
+            <p className="text-sm md:text-base text-gray-300">
+              <span className="font-semibold text-[#cfc493]">Tip:</span> Click on any card to view more details about each member!
+            </p>
+          </div>
+
           <div className="mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-[#006747] mb-4">EBOARD</h2>
             <EboardYearbook members={eboardMembers} />
@@ -157,7 +164,7 @@
                       description: "Serving as the Telemetry Lead, Alan is currently a Sophomore in Electrical Engineering/Physics.",
                       year: "Sophomore",
                       major: "Electrical Engineering/Physics",
-                      dates: "August 2024 - Present",
+                      dates: "September 2024 - Present",
                       involvement: "Hello everyone! I’m Alan and I’m a double major BS in both Electrical Engineering and Physics. This is my second year with SOAR and I am the telemetry lead for IREC. Feel free to talk to me anytime with any questions!",
                       link: "https://www.linkedin.com/in/alan-guyster-397112325/",
                     },
