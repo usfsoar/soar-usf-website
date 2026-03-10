@@ -37,8 +37,8 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if (selected === null) return
-      if (e.key === "ArrowRight") setSelected((s) => (s === null ? null : Math.min(members.length - 1, s + 1)))
-      if (e.key === "ArrowLeft") setSelected((s) => (s === null ? null : Math.max(0, s - 1)))
+      if (e.key === "ArrowRight") setSelected((s: number | null) => (s === null ? null : Math.min(members.length - 1, s + 1)))
+      if (e.key === "ArrowLeft") setSelected((s: number | null) => (s === null ? null : Math.max(0, s - 1)))
       if (e.key === "Escape") setSelected(null)
     }
     window.addEventListener("keydown", onKey)
@@ -349,7 +349,7 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
                   {/* Navigation buttons */}
                   <div className="flex items-center justify-between pt-4 border-t border-zinc-800">
                     <button
-                      onClick={() => setSelected((s) => (s === null ? null : Math.max(0, s - 1)))}
+                      onClick={() => setSelected((s: number | null) => (s === null ? null : Math.max(0, s - 1)))}
                       disabled={selected === 0}
                       className="flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer transition-colors text-sm"
                     >
@@ -359,7 +359,7 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
                       Previous
                     </button>
                     <button
-                      onClick={() => setSelected((s) => (s === null ? null : Math.min(members.length - 1, s + 1)))}
+                      onClick={() => setSelected((s: number | null) => (s === null ? null : Math.min(members.length - 1, s + 1)))}
                       disabled={selected === members.length - 1}
                       className="flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer transition-colors text-sm"
                     >

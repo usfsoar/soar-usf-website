@@ -23,8 +23,11 @@ export default function IRECPage() {
               <p className="text-zinc-400 leading-relaxed mb-4">
                 The International Rocket Engineering Competition (IREC) is the world's largest rocket competition, held annually at Spaceport America in New Mexico until 2025.
               </p>
-              <p className="text-zinc-400 leading-relaxed">
+              <p className="text-zinc-400 leading-relaxed mb-4">
                 Teams from universities around the globe design, build, and launch high-powered rockets to achieve specific altitude targets and demonstrate successful recovery systems.
+              </p>
+              <p className="text-zinc-400 leading-relaxed">
+                This is our first year competing in IREC, ever since IREC got cancelled in 2020 due to COVID, and we are excited to showcase our engineering capabilities on this prestigious international stage.
               </p>
             </div>
 

@@ -13,6 +13,7 @@ const sponsors = [
   { logo: "/jbs.png", width: 100, url: "https://jimsbodyshop.com/" },
   { logo: "/epsilon3.png", width: 100, url: "https://www.epsilon3.io/" },
   { logo: "/Kenesto.png", width: 130, url: "https://kenesto.com/" },
+  { logo: "/5starpizza.webp", width: 100, url: "https://fivestarpizza.com/" }
 ]
 
 export function LogoMotto() {
