@@ -72,21 +72,31 @@
       involvement: "I am a sophomore Mechanical Engineering student, with an Aerospace Engineering minor, as I hope to pursue a career in Aerospace after graduation. I joined SOAR in Fall of 2024, during my first semester! As Chief of Marketing, I am responsible for promoting the club and gaining new student interest, as well as running our great marketing team. I love reading books, collecting records, and learning about space exploration.",
       link: "mailto:sbundhund@usf.edu"
     },
+    // {
+    //   name: "Joshua Garcia",
+    //   title: "Chief of Operations",
+    //   description: "Serving as the Chief of Operations, Joshua is currently a Sophomore in Mechanical Engineering.",
+    //   year: "Sophomore",
+    //   major: "Mechanical Engineering",
+    //   dates: "October 2024 - Present",
+    //   involvement: "Hey my name is Joshua Garcia I got involved with SOAR around October of 2024. I quickly became friends with most of the leads in NSL and began to work wherever was needed. I would end up attending for the 2025 NSL Huntsville trip where I realized I wanted to join the E-board for next year and help out. I am now the Chief of Operations and try to stay involved with the IREC project as much as possible.",
+    //   link: "https://www.linkedin.com/in/joshuagarciaeng/"
+    // },
     {
-      name: "Joshua Garcia",
+      name: "Valeria Melendez",
       title: "Chief of Operations",
-      description: "Serving as the Chief of Operations, Joshua is currently a Sophomore in Mechanical Engineering.",
+      description: "Serving as the Chief of Operations, Valeria is currently a Sophomore in Political Science/Cybersecurity.",
       year: "Sophomore",
-      major: "Mechanical Engineering",
-      dates: "October 2024 - Present",
-      involvement: "Hey my name is Joshua Garcia I got involved with SOAR around October of 2024. I quickly became friends with most of the leads in NSL and began to work wherever was needed. I would end up attending for the 2025 NSL Huntsville trip where I realized I wanted to join the E-board for next year and help out. I am now the Chief of Operations and try to stay involved with the IREC project as much as possible.",
-      link: "https://www.linkedin.com/in/joshuagarciaeng/"
+      major: "Political Science/Cybersecurity",
+      dates: "August 2025 - Present",
+      involvement: "Hi, I’m Valeria Melendez and I’m the Chief of Operations for the operations team at SOAR! Im currently a second year student studying political science and cybersecurity. I’ve been apart of soar for about a year now and it’s been a great experience helping out operationally and learning more about rockets.",
+      link: "https://www.linkedin.com/in/valeria-melendez-680913362/"
     },
     {
       name: "Matthew Messing",
       title: "Chief of Finance",
-      description: "Serving as the Chief of Finance, Matthew is currently a Sophomore in Mechanical Engineering.",
-      year: "Sophomore",
+      description: "Serving as the Chief of Finance, Matthew is currently a Senior in Mechanical Engineering.",
+      year: "Senior",
       major: "Mechanical Engineering",
       dates: "January 2024 - Present",
       involvement: "I am a Mechanical Engineering student at the University of South Florida and an active member of the Society of Aeronautics and Rocketry (SOAR). Within SOAR, I have been heavily involved in the design, assembly, and testing of the rocket, while also supporting the team through budgeting, procurement, and organizational operations. My involvement combines hands-on engineering work with leadership and financial coordination to help advance SOAR’s technical projects.",
@@ -450,31 +460,21 @@
                     {
                       name: "Joshua Garcia",
                       title: "Chief of Operations",
-                      description: "Serving as the Chief of Operations, Joshua is currently a Sophomore in Mechanical Engineering.",
-                      year: "Sophomore",
+                      description: "Serving as the Chief of Operations, Joshua is currently a Senior in Mechanical Engineering.",
+                      year: "Senior",
                       major: "Mechanical Engineering",
                       dates: "October 2024 - Present",
                       involvement: "Hey my name is Joshua Garcia I got involved with SOAR around October of 2024. I quickly became friends with most of the leads in NSL and began to work wherever was needed. I would end up attending for the 2025 NSL Huntsville trip where I realized I wanted to join the E-board for next year and help out. I am now the Chief of Operations and try to stay involved with the IREC project as much as possible.",
                       link: "https://www.linkedin.com/in/joshuagarciaeng/"
                     },
                     {
-                      name: "Shreya Bhatt",
-                      title: "Outreach Chair",
-                      description: "Serving as the Outreach Chair, Shreya is currently a Sophomore in Mechanical/Aerospace Engineering.",
-                      year: "Sophomore",
-                      major: "Mechanical/Aerospace Engineering",
-                      dates: "August 2025 - Present",
-                      involvement: "Shreya's involvement description will go here.",
-                      link: "",
-                    },
-                    {
                       name: "Valeria Melendez",
-                      title: "Fundraising Chair",
-                      description: "Serving as the Fundraising Chair, Valeria is currently a Sophomore in Political Science/Cybersecurity.",
+                      title: "Chief of Operations",
+                      description: "Serving as the Chief of Operations, Valeria is currently a Sophomore in Political Science/Cybersecurity.",
                       year: "Sophomore",
                       major: "Political Science/Cybersecurity",
                       dates: "August 2025 - Present",
-                      involvement: "Hi, I’m Valeria Melendez and I’m the fundraising chair for the operations team at SOAR! Im currently a second year student studying political science and cybersecurity. I’ve been apart of soar for about a year now and it’s been a great experience helping out operationally and learning more about rockets.",
+                      involvement: "Hi, I’m Valeria Melendez and I’m the Chief of Operations for the operations team at SOAR! Im currently a second year student studying political science and cybersecurity. I’ve been apart of soar for about a year now and it’s been a great experience helping out operationally and learning more about rockets.",
                       link: "https://www.linkedin.com/in/valeria-melendez-680913362/"
                     },
                   ]}
