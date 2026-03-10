@@ -59,11 +59,17 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
     "Sage Bundhund": ["/sage1.jpg", "/sage2.jpg", "/sage3.jpg"],
     "Conner Schilaty": ["/conner1.jpg", "/conner2.jpg", "/conner3.jpg"],
     "Daniel Misherky": ["/daniel1.jpg", "/daniel2.jpg", "/daniel3.jpg"],
-    "Joshua Garcia": ["/joshg1.jpg", "/joshg2.jpg", "/joshg3.jpg"],
     "Valeria Melendez": ["/valeria1.jpg", "/valeria2.jpg", ""],
     "Marwan Abdelwahab": ["/marwan1.jpg", "/marwan2.jpg", "/marwan3.jpg"],
     "Alan Guyster": ["/alan1.jpg", "/alan2.jpg", "/alan3.jpg"],
-    "Pavan Moturi": ["/pavan1.jpg", "/pavan2.jpg", ""],
+    "Pavan Moturi": ["/pavan1.jpg", "/pavan2.jpg", "/pavan3.jpg"],
+    "Cooper Kenney": ["/cooper1.jpg", "/cooper2.jpg", "/cooper3.jpg"],
+    "Duc Nguyen": ["/duc1.jpg", "/duc2.jpg", "/duc3.jpg"],
+    "Sama Ahmed": ["/sama1.jpg", "/sama2.jpg", "/sama3.jpg"],
+    "Ninh Vu Van": ["/ninh1.jpg", "/ninh2.jpg", "/ninh3.jpg"],
+    "Khôi Minh Tôn Thất": ["/khoi1.jpg", "/khoi2.jpg", "/khoi3.jpg"],
+    "Chiara DeAngelis": ["/chiara1.jpg", "/chiara2.jpg", "/chiara3.jpg"],
+    "Christopher Fernandez": ["/chris1.jpg", "/chris2.jpg", "/chris3.jpg"],
   }
 
   // Define profile images for each member
@@ -76,7 +82,6 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
     "Conner Schilaty": "/connerheadshot.jpg",
     "Daniel Misherky": "/danielheadshot.jpg",
     "Matthew Messing": "/matthewheadshot.jpg",
-    "Joshua Garcia": "/joshgheadshot.jpg",
     "Pavan Moturi": "/pavanheadshot.jpg",
     "Alan Guyster": "/alanheadshot.jpg",
     "Chiara DeAngelis": "/chiaraheadshot.jpg",
@@ -96,7 +101,6 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
     "Angel Hernandez": "/angelheadshot.jpg",
     "Janna Abdelghani": "/jannaheadshot.jpg",
     "Stepan Jankowski": "/stepanheadshot.jpg",
-    "Shreya Bhatt": "/shreyaheadshot.jpg",
     "Valeria Melendez": "/valeriaheadshot.jpg"
   }
 
@@ -115,7 +119,7 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
   const getMainImageObjectPosition = (member: Member, imageIndex: number) => {
     if (member.name === "Kyle Shum" && imageIndex === 0) return { objectPosition: '50% 70%' }
     if (member.name === "Sage Bundhund" && imageIndex === 0) return { objectPosition: '50% 70%' }
-    if (member.name === "Cesar Briones" && imageIndex === 2) return { objectPosition: '5% 50%' }
+    if (member.name === "Cesar Briones" && imageIndex === 1) return { objectPosition: '60% 70%' }
     if (member.name === "Emily Ho" && imageIndex === 2) return { objectPosition: '90% 50%' }
     if (member.name === "Conner Schilaty" && imageIndex === 1) return { objectPosition: '50% 10%' }
     if (member.name === "Marwan Abdelwahab" && imageIndex === 0) return { objectPosition: '25% 70%' }
