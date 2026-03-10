@@ -98,9 +98,9 @@ export function Footer() {
                 <h3 className="font-bold mb-4">Past Projects</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>
-                    <Link href="/past-projects/irec" className="hover:text-foreground transition-colors cursor-pointer">
+                    {/* <Link href="/past-projects/irec" className="hover:text-foreground transition-colors cursor-pointer">
                       IREC
-                    </Link>
+                    </Link> */}
                   </li>
                   <li>
                     <Link href="/past-projects/past-nsl" className="hover:text-foreground transition-colors cursor-pointer">
