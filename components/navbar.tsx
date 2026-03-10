@@ -151,12 +151,12 @@ export function Navbar() {
           </button>
           {pastProjectsOpen && (
             <div className="absolute top-full left-0 pt-0 bg-zinc-900 border border-white/10 rounded-md shadow-lg py-2 min-w-[160px]">
-              <Link
+              {/* <Link
                 href="/past-projects/irec"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
                 IREC
-              </Link>
+              </Link> */}
               <Link
                 href="/past-projects/past-nsl"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
@@ -273,13 +273,13 @@ export function Navbar() {
                   >
                     Eboard
                   </Link>
-                  <Link
+                  {/* <Link
                     href="/sponsorships"
                     className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Sponsorship
-                  </Link>
+                  </Link> */}
                   <Link
                     href="/media"
                     className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
@@ -364,13 +364,13 @@ export function Navbar() {
               </button>
               {mobilePastProjectsOpen && (
                 <div className="mt-3 space-y-3">
-                  <Link
+                  {/* <Link
                     href="/past-projects/irec"
                     className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     IREC
-                  </Link>
+                  </Link> */}
                   <Link
                     href="/past-projects/past-nsl"
                     className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
