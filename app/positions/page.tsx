@@ -47,8 +47,7 @@ const positions = {
     { title: "Historian", isOpen: false },
   ],
   operations: [
-    { title: "Outreach Chair", isOpen: false },
-    { title: "Fundraising Chair", isOpen: false },
+    { title: "Logistics Chair", isOpen: false },
   ]
 }
 
