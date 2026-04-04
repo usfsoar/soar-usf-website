@@ -59,25 +59,39 @@ function Counter({ end, duration = 2000 }: { end: number; duration?: number }) {
 export function Stats() {
   const [instagramCount] = useState(2200)
   const [discordCount, setDiscordCount] = useState<number>(1000)
-  const [registeredCount] = useState(500)
-  const [linkedinCount] = useState(400)
+  const [linkedinCount] = useState(750)
+  const [registeredCount, setRegisteredCount] = useState<number>(500)
   
 
   useEffect(() => {
     let mounted = true
-    async function loadDiscord() {
+
+    async function loadStats() {
       try {
-        const res = await fetch('/api/socials/discord')
-        if (!res.ok) return
-        const data = await res.json()
-        if (mounted && typeof data.members === 'number') {
-          setDiscordCount(data.members)
+        const [discordRes, soarRes] = await Promise.all([
+          fetch('/api/socials/discord'),
+          fetch('/api/soar-members'),
+        ])
+
+        if (discordRes.ok) {
+          const discordData = await discordRes.json()
+          if (mounted && typeof discordData.members === 'number') {
+            setDiscordCount(discordData.members)
+          }
         }
-      } catch (e) {
-        // ignore, keep fallback
+
+        if (soarRes.ok) {
+          const soarData = await soarRes.json()
+          if (mounted && typeof soarData.count === 'number') {
+            setRegisteredCount(soarData.count)
+          }
+        }
+      } catch {
+        // ignore, keep fallbacks
       }
     }
-    loadDiscord()
+
+    loadStats()
     return () => { mounted = false }
   }, [])
 

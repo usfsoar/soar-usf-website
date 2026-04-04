@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "bullsconnect:auth": "node scripts/bullsconnect-auth.mjs",
+    "bullsconnect:sync": "node scripts/bullsconnect-sync.mjs",
     "dev": "next dev",
     "lint": "eslint .",
     "start": "next start"
@@ -49,6 +51,7 @@
     "lucide-react": "^0.562.0",
     "next": "^16.1.6",
     "next-themes": "^0.4.6",
+    "playwright": "^1.58.2",
     "react": "19.2.0",
     "react-day-picker": "9.8.0",
     "react-dom": "19.2.0",
