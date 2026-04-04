@@ -59,7 +59,7 @@ function Counter({ end, duration = 2000 }: { end: number; duration?: number }) {
 export function Stats() {
   const [instagramCount] = useState(2200)
   const [discordCount, setDiscordCount] = useState<number>(1000)
-  const [linkedinCount] = useState(750)
+  const [linkedinCount] = useState(400)
   const [registeredCount, setRegisteredCount] = useState<number>(500)
   
 
@@ -69,8 +69,8 @@ export function Stats() {
     async function loadStats() {
       try {
         const [discordRes, soarRes] = await Promise.all([
-          fetch('/api/socials/discord'),
-          fetch('/api/soar-members'),
+          fetch('/api/socials/discord', { cache: 'no-store' }),
+          fetch('/api/soar-members', { cache: 'no-store' }),
         ])
 
         if (discordRes.ok) {
