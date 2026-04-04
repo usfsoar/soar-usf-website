@@ -32,8 +32,8 @@ export function Contact() {
     async function loadStats() {
       try {
         const [discordRes, soarRes] = await Promise.all([
-          fetch('/api/socials/discord'),
-          fetch('/api/soar-members'),
+          fetch('/api/socials/discord', { cache: 'no-store' }),
+          fetch('/api/soar-members', { cache: 'no-store' }),
         ])
 
         if (discordRes.ok) {

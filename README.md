@@ -139,3 +139,16 @@ git checkout -b feature/your-feature-name
 - Dependencies and devDependencies are managed in `package.json`. Keep versions consistent and update carefully because Next 16 and React 19 are used here.
 - The project intentionally sets TypeScript to ignore build-time errors; ensure types are corrected locally before merging.
 
+
+### Vercel deployment note
+
+`/api/soar-members` now prefers reading the latest `data/soar-member-count.json` from GitHub at request time, then falls back to local deployment file.
+
+Optional environment variables for overrides:
+
+- `BULLSCONNECT_GITHUB_OWNER`
+- `BULLSCONNECT_GITHUB_REPO`
+- `BULLSCONNECT_GITHUB_BRANCH` (default: `main`)
+
+If not set, Vercel repo metadata env vars are used when available.
+
