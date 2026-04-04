@@ -29,19 +29,32 @@ export function Contact() {
 
   useEffect(() => {
     let mounted = true
-    async function loadDiscord() {
+    async function loadStats() {
       try {
-        const res = await fetch('/api/socials/discord')
-        if (!res.ok) return
-        const data = await res.json()
-        if (mounted && typeof data.members === 'number') {
-          setDiscordCount(data.members)
+        const [discordRes, soarRes] = await Promise.all([
+          fetch('/api/socials/discord'),
+          fetch('/api/soar-members'),
+        ])
+
+        if (discordRes.ok) {
+          const discordData = await discordRes.json()
+          if (mounted && typeof discordData.members === 'number') {
+            setDiscordCount(discordData.members)
+          }
         }
-      } catch (err) {
+
+        if (soarRes.ok) {
+          const soarData = await soarRes.json()
+          if (mounted && typeof soarData.count === 'number') {
+            setRegisteredCount(soarData.count)
+          }
+        }
+      } catch {
         // keep fallback
       }
     }
-    loadDiscord()
+
+    loadStats()
     return () => { mounted = false }
   }, [])
 
