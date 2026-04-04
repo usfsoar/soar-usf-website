@@ -36,6 +36,8 @@ Available npm scripts (from `package.json`):
 - `build`: builds the app for production (`next build`)
 - `start`: runs the built app (`next start`)
 - `lint`: runs ESLint across the project
+- `bullsconnect:auth`: runs a script to authenticate with BullsConnect and save session state (used for the daily member count sync workflow)
+- `bullsconnect:sync`: runs a script to fetch the latest member count from BullsConnect and update `data/soar-member-count.json` (used by the daily sync workflow)
 
 ---
 
@@ -134,21 +136,46 @@ git checkout -b feature/your-feature-name
 3. Run `npm install` and `npm run dev`.
 5. Open a PR with a clear description.
 
-## Notes
+
+## Daily BullsConnect Sync with GitHub Actions
+
+This repo includes a workflow at `.github/workflows/bullsconnect-sync.yml` that runs once per day and updates `data/soar-member-count.json`.
+
+### 1) Create local auth session
+
+Run once on your machine:
+
+```bash
+npm run bullsconnect:auth
+```
+
+After login, this creates `.auth/bullsconnect-storage.json`.
+
+### 2) Add GitHub secret
+
+The workflow restores this auth state from a base64 secret named `BULLSCONNECT_STORAGE_STATE_B64`.
+
+PowerShell command to generate the secret value:
+
+```powershell
+[Convert]::ToBase64String([IO.File]::ReadAllBytes(".auth/bullsconnect-storage.json"))
+```
+
+Copy the output and add it in:
+
+`GitHub Repo -> Settings -> Secrets and variables -> Actions -> New repository secret`
+
+### 3) Push and run
+
+Push this branch, then run the workflow manually once from the Actions tab (`workflow_dispatch`) to verify it works.
+
+### Notes
+
+- Scheduled workflows run from the repository default branch only.
+- The workflow commits changes only when `data/soar-member-count.json` actually changes.
+- If SOAR login expires, refresh local auth and update `BULLSCONNECT_STORAGE_STATE_B64`.
 
 - Dependencies and devDependencies are managed in `package.json`. Keep versions consistent and update carefully because Next 16 and React 19 are used here.
 - The project intentionally sets TypeScript to ignore build-time errors; ensure types are corrected locally before merging.
 
-
-### Vercel deployment note
-
-`/api/soar-members` now prefers reading the latest `data/soar-member-count.json` from GitHub at request time, then falls back to local deployment file.
-
-Optional environment variables for overrides:
-
-- `BULLSCONNECT_GITHUB_OWNER`
-- `BULLSCONNECT_GITHUB_REPO`
-- `BULLSCONNECT_GITHUB_BRANCH` (default: `main`)
-
-If not set, Vercel repo metadata env vars are used when available.
 
