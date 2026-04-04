@@ -441,6 +441,40 @@
                   innerBorderColor="#006747"
                 />
               </div>
+              <div className="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6">
+                <h3 className="text-xl font-semibold text-[#cfc493] mb-2">Operations</h3>
+                <EboardYearbook
+                  members={[
+                    // Sage Bundhund - copy from eboardMembers
+                    {
+                      name: "Valeria Melendez",
+                      title: "Chief of Operations",
+                      description: "Serving as the Chief of Operations, Valeria is currently a Sophomore in Political Science/Cybersecurity.",
+                      year: "Sophomore",
+                      major: "Political Science/Cybersecurity",
+                      dates: "August 2025 - Present",
+                      involvement: "Hi, I’m Valeria Melendez and I’m the Chief of Operations for the operations team at SOAR! Im currently a second year student studying political science and cybersecurity. I’ve been apart of soar for about a year now and it’s been a great experience helping out operationally and learning more about rockets.",
+                      link: "https://www.linkedin.com/in/valeria-melendez-680913362/"
+                    },
+                    {
+                      name: "Zachary Tephford",
+                      title: "Logistics Chair",
+                      description: "Serving as the Logistics Chair, Zachary is currently a Sophomore in Mechanical Engineering.",
+                      year: "Sophomore",
+                      major: "Mechanical Engineering",
+                      dates: "August 2024 - Present",
+                      involvement: "I am a sophomore in Mechanical Engineering, and I joined SOAR in Fall 2024 but wasn't heavily involved until Fall 2025. My involvement has landed me as a Junior Engineer for our IREC Aerostructures Subsystem, along with the Logistics Chair for SOAR’s Operations Team. SOAR has benefited me in many ways, from making new friends to furthering my knowledge and experience in rockets & aerospace.",
+                      link: "https://www.linkedin.com/in/zacharytephford/",
+                    },
+                  ]}
+                  gridClass="grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-items-center"
+                  cardMaxWidth="20rem"
+                  cardWidthClass="sm:w-56 md:w-72 lg:w-72"
+                  imageHeightClass="w-full h-80 sm:h-64"
+                  outerBorderColor="#cfc493"
+                  innerBorderColor="#006747"
+                />
+              </div>
             </div>
           </div>
 

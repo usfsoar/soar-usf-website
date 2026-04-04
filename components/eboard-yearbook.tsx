@@ -59,7 +59,7 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
     "Sage Bundhund": ["/sage1.jpg", "/sage2.jpg", "/sage3.jpg"],
     "Conner Schilaty": ["/conner1.jpg", "/conner2.jpg", "/conner3.jpg"],
     "Daniel Misherky": ["/daniel1.jpg", "/daniel2.jpg", "/daniel3.jpg"],
-    "Valeria Melendez": ["/valeria1.jpg", "/valeria2.jpg", ""],
+    "Valeria Melendez": ["/valeria1.jpg", "/valeria2.jpg", "/valeria3.jpg"],
     "Marwan Abdelwahab": ["/marwan1.jpg", "/marwan2.jpg", "/marwan3.jpg"],
     "Alan Guyster": ["/alan1.jpg", "/alan2.jpg", "/alan3.jpg"],
     "Pavan Moturi": ["/pavan1.jpg", "/pavan2.jpg", "/pavan3.jpg"],
@@ -70,6 +70,7 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
     "Khôi Minh Tôn Thất": ["/khoi1.jpg", "/khoi2.jpg", "/khoi3.jpg"],
     "Chiara DeAngelis": ["/chiara1.jpg", "/chiara2.jpg", "/chiara3.jpg"],
     "Christopher Fernandez": ["/chris1.jpg", "/chris2.jpg", "/chris3.jpg"],
+    "Zachary Tephford": ["/zachary1.jpg", "/zachary2.jpg", "/zachary3.jpg"],
   }
 
   // Define profile images for each member
@@ -101,7 +102,8 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
     "Angel Hernandez": "/angelheadshot.jpg",
     "Janna Abdelghani": "/jannaheadshot.jpg",
     "Stepan Jankowski": "/stepanheadshot.jpg",
-    "Valeria Melendez": "/valeriaheadshot.jpg"
+    "Valeria Melendez": "/valeriaheadshot.jpg",
+    "Zachary Tephford": "/zacharyheadshot.jpg",
   }
 
   // Define custom object positions for specific members
