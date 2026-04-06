@@ -31,15 +31,21 @@ export function Contact() {
     let mounted = true
     async function loadStats() {
       try {
-        const [discordRes, soarRes] = await Promise.all([
-          fetch('/api/socials/discord', { cache: 'no-store' }),
+        const [socialRes, soarRes] = await Promise.all([
+          fetch('/api/socials/followers'),
           fetch('/api/soar-members', { cache: 'no-store' }),
         ])
 
-        if (discordRes.ok) {
-          const discordData = await discordRes.json()
-          if (mounted && typeof discordData.members === 'number') {
-            setDiscordCount(discordData.members)
+        if (socialRes.ok) {
+          const socialData = await socialRes.json()
+          if (mounted && typeof socialData.instagram === 'number') {
+            setInstagramCount(socialData.instagram)
+          }
+          if (mounted && typeof socialData.linkedin === 'number') {
+            setLinkedinCount(socialData.linkedin)
+          }
+          if (mounted && typeof socialData.discord === 'number') {
+            setDiscordCount(socialData.discord)
           }
         }
 

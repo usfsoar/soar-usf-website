@@ -9,7 +9,7 @@ const IREC = dynamic(() => import("@/components/irec").then(mod => ({ default: m
 const Torito = dynamic(() => import("@/components/torito").then(mod => ({ default: mod.Torito })), { ssr: true })
 const TRACertifications = dynamic(() => import("@/components/tra-certifications").then(mod => ({ default: mod.TRACertifications })), { ssr: true })
 const Blogs = dynamic(() => import("@/components/blogs").then(mod => ({ default: mod.Blogs })), { ssr: true })
-// const Sponsorships = dynamic(() => import("@/components/sponsorships").then(mod => ({ default: mod.Sponsorships })), { ssr: true })
+const Sponsorships = dynamic(() => import("@/components/sponsorships").then(mod => ({ default: mod.Sponsorships })), { ssr: true })
 const Contact = dynamic(() => import("@/components/contact").then(mod => ({ default: mod.Contact })), { ssr: true })
 const Footer = dynamic(() => import("@/components/footer").then(mod => ({ default: mod.Footer })), { ssr: true })
 
@@ -20,11 +20,11 @@ export default function Home() {
       <LogoMotto />
       <About />
       <Stats />
+      <Sponsorships />
       <IREC />
       <Torito />
       <TRACertifications />
       <Blogs />
-      {/* <Sponsorships /> */}
       <Contact />
       <Footer />
     </main>
