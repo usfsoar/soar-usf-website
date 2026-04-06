@@ -57,9 +57,9 @@ function Counter({ end, duration = 2000 }: { end: number; duration?: number }) {
 }
 
 export function Stats() {
-  const [instagramCount] = useState(2200)
+  const [instagramCount, setInstagramCount] = useState(2200)
   const [discordCount, setDiscordCount] = useState<number>(1000)
-  const [linkedinCount] = useState(400)
+  const [linkedinCount, setLinkedinCount] = useState(400)
   const [registeredCount, setRegisteredCount] = useState<number>(500)
   
 
@@ -68,15 +68,21 @@ export function Stats() {
 
     async function loadStats() {
       try {
-        const [discordRes, soarRes] = await Promise.all([
-          fetch('/api/socials/discord', { cache: 'no-store' }),
+        const [socialRes, soarRes] = await Promise.all([
+          fetch('/api/socials/followers'),
           fetch('/api/soar-members', { cache: 'no-store' }),
         ])
 
-        if (discordRes.ok) {
-          const discordData = await discordRes.json()
-          if (mounted && typeof discordData.members === 'number') {
-            setDiscordCount(discordData.members)
+        if (socialRes.ok) {
+          const socialData = await socialRes.json()
+          if (mounted && typeof socialData.instagram === 'number') {
+            setInstagramCount(socialData.instagram)
+          }
+          if (mounted && typeof socialData.linkedin === 'number') {
+            setLinkedinCount(socialData.linkedin)
+          }
+          if (mounted && typeof socialData.discord === 'number') {
+            setDiscordCount(socialData.discord)
           }
         }
 
@@ -121,7 +127,7 @@ export function Stats() {
           </a>
 
                     {/* LinkedIn Stats */}
-          <a href="https://www.linkedin.com/in/usfsoaradmin/" target="_blank" rel="noopener noreferrer" className="block bg-zinc-900/50 border border-zinc-800 rounded-lg p-6 md:p-8 text-center hover:border-zinc-700 transition-colors">
+          <a href="https://www.linkedin.com/company/usfsoar/" target="_blank" rel="noopener noreferrer" className="block bg-zinc-900/50 border border-zinc-800 rounded-lg p-6 md:p-8 text-center hover:border-zinc-700 transition-colors">
             <Counter end={linkedinCount} />
             <p className="text-sm md:text-base text-zinc-400 mb-3 md:mb-4">LinkedIn Followers</p>
             <Image src="/linkedin.png" alt="LinkedIn" width={32} height={32} className="w-6 h-6 md:w-8 md:h-8 mx-auto" />

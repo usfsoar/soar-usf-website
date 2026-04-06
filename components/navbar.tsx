@@ -81,12 +81,12 @@ export function Navbar() {
               >
                 Eboard
               </Link>
-              {/* <Link
+              <Link
                 href="/sponsorships"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
                 Sponsorship
-              </Link> */}
+              </Link>
               <Link
                 href="/media"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
@@ -273,13 +273,13 @@ export function Navbar() {
                   >
                     Eboard
                   </Link>
-                  {/* <Link
+                  <Link
                     href="/sponsorships"
                     className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Sponsorship
-                  </Link> */}
+                  </Link>
                   <Link
                     href="/media"
                     className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"

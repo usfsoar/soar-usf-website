@@ -6,7 +6,7 @@
     "build": "next build",
     "bullsconnect:auth": "node scripts/bullsconnect-auth.mjs",
     "bullsconnect:sync": "node scripts/bullsconnect-sync.mjs",
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "lint": "eslint .",
     "start": "next start"
   },

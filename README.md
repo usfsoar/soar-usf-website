@@ -30,6 +30,18 @@ npm run build
 npm start
 ```
 
+Environment variables used by social integrations (`.env.local`):
+
+- `ROWS_KEY` (or `ROWS_API_KEY`): server-side token used for Rows requests.
+- `ROWS_LINKEDIN_FIELD`: field name to read from the Rows payload (default `linkedin`).
+- `ROWS_SPREADSHEET_ID`: Rows spreadsheet id (used when `ROWS_LINKEDIN_URL` is not set).
+- `ROWS_TABLE_ID`: Rows table id for the current followers table.
+- `ROWS_RANGE`: A1 range to read from Rows (default `A1:E20`).
+- `INSTAGRAM_USERNAME`: Instagram username to scrape via Blastup (default `usfsoar`).
+
+The app now exposes `GET /api/socials/followers`, which powers both the homepage stats and contact social cards.
+It caches results for 24 hours and returns the last successful values if an upstream source fails.
+
 Available npm scripts (from `package.json`):
 
 - `dev`: starts Next.js in development mode (`next dev`)
@@ -66,6 +78,7 @@ Top-level folders
 		- `app/api/contact/` — contact form handler endpoints
 		- `app/api/soar-members/` — membership-related APIs
 		- `app/api/socials/discord/route.ts` — an example API route that forwards or handles Discord-related operations
+		- `app/api/socials/followers/route.ts` — API route that returns social media follower counts (LinkedIn, Instagram) by reading from the Rows data source and Instagram scraping results
 
 - `components/` — React components used across pages. Key components:
 	- `about.tsx` — About section component used on the About page
