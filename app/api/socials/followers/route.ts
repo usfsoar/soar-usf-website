@@ -153,6 +153,36 @@ async function fetchInstagramCountFromBlastup(username: string): Promise<number 
   return normalizeNumber(data?.followers)
 }
 
+async function fetchInstagramCountFromExportJson(): Promise<number | null> {
+  const exportUrl = process.env.INSTAGRAM_EXPORT_JSON_URL?.trim()
+  if (!exportUrl) return null
+
+  try {
+    const res = await fetch(exportUrl, {
+      headers: {
+        Accept: "application/json",
+      },
+    })
+
+    if (!res.ok) return null
+
+    const payload = await res.json()
+    const keyHints = [
+      "followers",
+      "follower_count",
+      "followerCount",
+      "instagram_followers",
+      "instagramFollowers",
+      "count",
+      "value",
+    ]
+
+    return findFirstNumericValue(payload, keyHints)
+  } catch {
+    return null
+  }
+}
+
 async function fetchLinkedinCountFromRows(): Promise<number | null> {
   const spreadsheetId = process.env.ROWS_SPREADSHEET_ID ?? "1qKB0cnHZzLZmU4mrwHQlm"
   const tableId = process.env.ROWS_TABLE_ID ?? "8451b1c8-9216-443d-8ed5-44cdb2f653e8"
@@ -198,13 +228,14 @@ async function loadFreshFollowers(): Promise<SocialFollowersResponse> {
   const instagramUsername = process.env.INSTAGRAM_USERNAME ?? "usfsoar"
   const instagramFallback = normalizeNumber(process.env.INSTAGRAM_FALLBACK_COUNT)
 
-  const [instagramLive, linkedin, discord] = await Promise.all([
+  const [instagramLive, instagramFromExport, linkedin, discord] = await Promise.all([
     fetchInstagramCountFromBlastup(instagramUsername),
+    fetchInstagramCountFromExportJson(),
     fetchLinkedinCountFromRows(),
     fetchDiscordCount(),
   ])
 
-  const instagram = instagramLive ?? instagramFallback
+  const instagram = instagramLive ?? instagramFromExport ?? instagramFallback
 
   return {
     instagram,
