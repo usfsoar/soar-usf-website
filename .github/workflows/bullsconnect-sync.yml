@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   sync-members:
@@ -39,9 +40,68 @@ jobs:
           echo "${{ secrets.BULLSCONNECT_STORAGE_STATE_B64 }}" | base64 -d > .auth/bullsconnect-storage.json
 
       - name: Sync SOAR member count
+        id: sync
+        continue-on-error: true
         run: npm run bullsconnect:sync
 
+      - name: Create or update issue on sync failure
+        if: steps.sync.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const title = "BullsConnect sync failed: refresh auth session";
+            const runUrl = `${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}`;
+            const body = [
+              "The scheduled BullsConnect sync failed.",
+              "",
+              "Most common cause: expired BullsConnect/USF SSO session state in `BULLSCONNECT_STORAGE_STATE_B64`.",
+              "",
+              "### Action items",
+              "1. Run `npm run bullsconnect:auth` locally.",
+              "2. Re-encode `.auth/bullsconnect-storage.json` to base64.",
+              "3. Update GitHub secret `BULLSCONNECT_STORAGE_STATE_B64`.",
+              "4. Re-run this workflow.",
+              "",
+              `Failed run: ${runUrl}`,
+              `Timestamp (UTC): ${new Date().toISOString()}`,
+            ].join("\n");
+
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: "open",
+              per_page: 100,
+            });
+
+            const existing = issues.find((issue) => issue.title === title);
+
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: existing.number,
+                body,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner,
+                repo,
+                title,
+                body,
+                labels: ["automation", "bug"],
+              });
+            }
+
+      - name: Fail workflow after alert
+        if: steps.sync.outcome == 'failure'
+        run: |
+          echo "BullsConnect sync failed; issue has been created/updated."
+          exit 1
+
       - name: Commit updated member count
+        if: steps.sync.outcome == 'success'
         run: |
           if git diff --quiet -- data/soar-member-count.json; then
             echo "No member count changes to commit."
