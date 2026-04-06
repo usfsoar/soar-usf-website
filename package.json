@@ -8,6 +8,8 @@
     "bullsconnect:sync": "node scripts/bullsconnect-sync.mjs",
     "dev": "next dev --webpack",
     "lint": "eslint .",
+    "socials:smoke": "node scripts/socials-smoke.mjs",
+    "socials:smoke:prod": "node -e \"process.env.SOCIALS_BASE_URL='https://usfsoar.vercel.app'; import('./scripts/socials-smoke.mjs')\"",
     "start": "next start"
   },
   "dependencies": {

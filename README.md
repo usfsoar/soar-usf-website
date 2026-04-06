@@ -38,6 +38,7 @@ Environment variables used by social integrations (`.env.local`):
 - `ROWS_TABLE_ID`: Rows table id for the current followers table.
 - `ROWS_RANGE`: A1 range to read from Rows (default `A1:E20`).
 - `INSTAGRAM_USERNAME`: Instagram username to scrape via Blastup (default `usfsoar`).
+- `INSTAGRAM_FALLBACK_COUNT`: optional numeric fallback used only when live Instagram scraping fails in deployment.
 
 The app now exposes `GET /api/socials/followers`, which powers both the homepage stats and contact social cards.
 It caches results for 24 hours and returns the last successful values if an upstream source fails.
@@ -48,6 +49,8 @@ Available npm scripts (from `package.json`):
 - `build`: builds the app for production (`next build`)
 - `start`: runs the built app (`next start`)
 - `lint`: runs ESLint across the project
+- `socials:smoke`: checks local `/api/socials/followers` and fails if Instagram/LinkedIn are missing
+- `socials:smoke:prod`: checks deployed `/api/socials/followers` on `https://usfsoar.vercel.app`
 - `bullsconnect:auth`: runs a script to authenticate with BullsConnect and save session state (used for the daily member count sync workflow)
 - `bullsconnect:sync`: runs a script to fetch the latest member count from BullsConnect and update `data/soar-member-count.json` (used by the daily sync workflow)
 

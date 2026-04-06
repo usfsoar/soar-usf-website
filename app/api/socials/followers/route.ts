@@ -196,12 +196,15 @@ async function fetchLinkedinCountFromRows(): Promise<number | null> {
 
 async function loadFreshFollowers(): Promise<SocialFollowersResponse> {
   const instagramUsername = process.env.INSTAGRAM_USERNAME ?? "usfsoar"
+  const instagramFallback = normalizeNumber(process.env.INSTAGRAM_FALLBACK_COUNT)
 
-  const [instagram, linkedin, discord] = await Promise.all([
+  const [instagramLive, linkedin, discord] = await Promise.all([
     fetchInstagramCountFromBlastup(instagramUsername),
     fetchLinkedinCountFromRows(),
     fetchDiscordCount(),
   ])
+
+  const instagram = instagramLive ?? instagramFallback
 
   return {
     instagram,
