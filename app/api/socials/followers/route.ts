@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server"
 
+export const runtime = "nodejs"
+
 type SocialFollowersResponse = {
   instagram: number | null
   linkedin: number | null
@@ -98,6 +100,21 @@ async function fetchDiscordCount(): Promise<number | null> {
   return normalizeNumber(data?.approximate_member_count)
 }
 
+function extractCookieHeader(headers: Headers): string {
+  const getSetCookie = (headers as Headers & { getSetCookie?: () => string[] }).getSetCookie
+  const cookieList = typeof getSetCookie === "function" ? getSetCookie.call(headers) : []
+
+  if (Array.isArray(cookieList) && cookieList.length > 0) {
+    return cookieList.map((cookie) => cookie.split(";")[0]).join("; ")
+  }
+
+  const raw = headers.get("set-cookie")
+  if (!raw) return ""
+
+  const parts = raw.split(/,(?=\s*[^;,=\s]+=[^;,]+)/g)
+  return parts.map((cookie) => cookie.split(";")[0].trim()).filter(Boolean).join("; ")
+}
+
 async function fetchInstagramCountFromBlastup(username: string): Promise<number | null> {
   const pageRes = await fetch(`https://blastup.com/instagram-follower-count?${encodeURIComponent(username)}`, {
     headers: {
@@ -113,8 +130,7 @@ async function fetchInstagramCountFromBlastup(username: string): Promise<number 
 
   if (!token) return null
 
-  const rawCookies = (pageRes.headers as Headers & { getSetCookie?: () => string[] }).getSetCookie?.() ?? []
-  const cookieHeader = rawCookies.map((cookie) => cookie.split(";")[0]).join("; ")
+  const cookieHeader = extractCookieHeader(pageRes.headers)
 
   const apiRes = await fetch("https://blastup.com/instagram-follower-count", {
     method: "POST",
