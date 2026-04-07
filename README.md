@@ -51,6 +51,7 @@ Available npm scripts (from `package.json`):
 - `lint`: runs ESLint across the project
 - `socials:smoke`: checks local `/api/socials/followers` and fails if Instagram/LinkedIn are missing
 - `socials:smoke:prod`: checks deployed `/api/socials/followers` on `https://usfsoar.vercel.app`
+- `instagram:sync`: uses Playwright to fetch Instagram followers from Blastup and writes `data/instagram-follower-count.json`
 - `bullsconnect:auth`: runs a script to authenticate with BullsConnect and save session state (used for the daily member count sync workflow)
 - `bullsconnect:sync`: runs a script to fetch the latest member count from BullsConnect and update `data/soar-member-count.json` (used by the daily sync workflow)
 
@@ -193,5 +194,13 @@ Push this branch, then run the workflow manually once from the Actions tab (`wor
 
 - Dependencies and devDependencies are managed in `package.json`. Keep versions consistent and update carefully because Next 16 and React 19 are used here.
 - The project intentionally sets TypeScript to ignore build-time errors; ensure types are corrected locally before merging.
+
+## Daily Instagram Sync with GitHub Actions
+
+This repo includes `.github/workflows/instagram-sync.yml` that runs once per day and updates `data/instagram-follower-count.json` using Playwright.
+
+- Trigger manually from Actions tab (`workflow_dispatch`) for first verification.
+- The workflow commits only when the Instagram count file changes.
+- The social API route uses this synced file as a production fallback when live scraping is blocked.
 
 
