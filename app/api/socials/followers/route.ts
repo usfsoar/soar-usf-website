@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server"
+import { readFile } from "node:fs/promises"
+import path from "node:path"
 
 export const runtime = "nodejs"
 
@@ -16,6 +18,12 @@ type CacheEntry = {
 }
 
 type RefreshResult = SocialFollowersResponse | null
+
+type StoredInstagramCount = {
+  count: number | null
+  updatedAt: string | null
+  source: string
+}
 
 const CACHE_TTL = 1000 * 60 * 60 * 24 // 24 hours
 const RESPONSE_CACHE_CONTROL = "public, max-age=300, stale-while-revalidate=86400"
@@ -87,6 +95,63 @@ function findFirstNumericValue(payload: unknown, keys: string[]): number | null 
   for (const value of Object.values(record)) {
     const nested = findFirstNumericValue(value, keys)
     if (nested != null) return nested
+  }
+
+  return null
+}
+
+function isValidInstagramPayload(payload: unknown): payload is StoredInstagramCount {
+  if (typeof payload !== "object" || payload == null) return false
+
+  const data = payload as Partial<StoredInstagramCount>
+  return (
+    (typeof data.count === "number" || data.count === null) &&
+    (typeof data.updatedAt === "string" || data.updatedAt === null) &&
+    typeof data.source === "string"
+  )
+}
+
+async function readLocalInstagramPayload(): Promise<StoredInstagramCount | null> {
+  const filePath = path.join(process.cwd(), "data", "instagram-follower-count.json")
+
+  try {
+    const fileText = await readFile(filePath, "utf-8")
+    const payload = JSON.parse(fileText)
+    return isValidInstagramPayload(payload) ? payload : null
+  } catch {
+    return null
+  }
+}
+
+async function readGithubInstagramPayload(): Promise<StoredInstagramCount | null> {
+  const owner = process.env.INSTAGRAM_GITHUB_OWNER ?? process.env.VERCEL_GIT_REPO_OWNER
+  const repo = process.env.INSTAGRAM_GITHUB_REPO ?? process.env.VERCEL_GIT_REPO_SLUG
+  const branch = process.env.INSTAGRAM_GITHUB_BRANCH ?? "main"
+
+  if (!owner || !repo) return null
+
+  const url = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/data/instagram-follower-count.json?ts=${Date.now()}`
+
+  try {
+    const response = await fetch(url, { cache: "no-store" })
+    if (!response.ok) return null
+
+    const payload = await response.json()
+    return isValidInstagramPayload(payload) ? payload : null
+  } catch {
+    return null
+  }
+}
+
+async function fetchInstagramCountFromSyncedSnapshot(): Promise<number | null> {
+  const githubPayload = await readGithubInstagramPayload()
+  if (githubPayload && typeof githubPayload.count === "number") {
+    return githubPayload.count
+  }
+
+  const localPayload = await readLocalInstagramPayload()
+  if (localPayload && typeof localPayload.count === "number") {
+    return localPayload.count
   }
 
   return null
@@ -228,14 +293,15 @@ async function loadFreshFollowers(): Promise<SocialFollowersResponse> {
   const instagramUsername = process.env.INSTAGRAM_USERNAME ?? "usfsoar"
   const instagramFallback = normalizeNumber(process.env.INSTAGRAM_FALLBACK_COUNT)
 
-  const [instagramLive, instagramFromExport, linkedin, discord] = await Promise.all([
+  const [instagramLive, instagramFromExport, instagramFromSnapshot, linkedin, discord] = await Promise.all([
     fetchInstagramCountFromBlastup(instagramUsername),
     fetchInstagramCountFromExportJson(),
+    fetchInstagramCountFromSyncedSnapshot(),
     fetchLinkedinCountFromRows(),
     fetchDiscordCount(),
   ])
 
-  const instagram = instagramLive ?? instagramFromExport ?? instagramFallback
+  const instagram = instagramLive ?? instagramFromExport ?? instagramFromSnapshot ?? instagramFallback
 
   return {
     instagram,
