@@ -71,6 +71,7 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
     "Chiara DeAngelis": ["/chiara1.jpg", "/chiara2.jpg", "/chiara3.jpg"],
     "Christopher Fernandez": ["/chris1.jpg", "/chris2.jpg", "/chris3.jpg"],
     "Zachary Tephford": ["/zachary1.jpg", "/zachary2.jpg", "/zachary3.jpg"],
+    "Lauren Carpenter": ["/lauren1.jpg", "/lauren2.jpg", "/lauren3.jpg"],
   }
 
   // Define profile images for each member

@@ -385,11 +385,11 @@
                     {
                       name: "Lauren Carpenter",
                       title: "Public Relations Lead",
-                      description: "Serving as the Public Relations Lead, Lauren is currently a Sophomore in Aerospace Engineering.",
+                      description: "Serving as the Public Relations Lead, Lauren is currently a Sophomore in Mechanical Engineering.",
                       year: "Sophomore",
-                      major: "Aerospace Engineering",
-                      dates: "Febuary 2026 - Present",
-                      involvement: "Lauren's involvement description will go here.",
+                      major: "Mechanical Engineering",
+                      dates: "August 2025 - Present",
+                      involvement: "I’m a sophomore Mechanical Engineering student with an Aerospace Engineering minor! I hope to be a test pilot one day, so I’m working on my student pilots license. I joined SOAR Last semester, and I’m excited to help share what SOAR does and the accomplishments the club’s made!",
                       link: "https://www.linkedin.com/in/lauren-carpenter-47b443353/",
                     },
                     {
