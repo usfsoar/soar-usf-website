@@ -1,6 +1,7 @@
 # SOAR USF Website
 
-<img width="1200" alt="SOAR USF site" src="https://github.com/user-attachments/assets/5b132a8d-a7a5-4cb8-b519-8e5f6ed02c2b" />
+<img width="1891" height="820" alt="image" src="https://github.com/user-attachments/assets/f176ef59-7518-4c94-817c-195c43ea0ac7" />
+
 
 [![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://usfsoar.vercel.app/)
 
