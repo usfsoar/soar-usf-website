@@ -153,6 +153,8 @@ git checkout -b feature/your-feature-name
 3. Run `npm install` and `npm run dev`.
 5. Open a PR with a clear description.
 
+Note: You can also add collaborators who have admin or write access for USF SOAR by going to `GitHub Repo -> Settings -> Collaborators and Teams -> Add People`.
+
 
 ## Daily BullsConnect Sync with GitHub Actions
 
