@@ -122,6 +122,7 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
 
   const getMainImageObjectPosition = (member: Member, imageIndex: number) => {
     if (member.name === "Kyle Shum" && imageIndex === 0) return { objectPosition: '50% 70%' }
+    if (member.name === "Sama Ahmed" && imageIndex === 1) return { objectPosition: '90% 50%' }
     if (member.name === "Sage Bundhund" && imageIndex === 0) return { objectPosition: '50% 70%' }
     if (member.name === "Cesar Briones" && imageIndex === 1) return { objectPosition: '60% 70%' }
     if (member.name === "Emily Ho" && imageIndex === 2) return { objectPosition: '90% 50%' }
