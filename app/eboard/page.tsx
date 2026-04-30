@@ -309,7 +309,7 @@
                       name: "Joshua Hachmeister",
                       title: "Test Stand Lead",
                       description: "Serving as the Test Stand Lead, Joshua is currently a Sophomore in Mechanical Engineering.",
-                      year: "Sophomore",
+                      year: "Junior",
                       major: "Mechanical Engineering",
                       dates: "August 2024 - Present",
                       involvement: "Joshua's involvement description will go here.",
