@@ -195,7 +195,7 @@
                       year: "Sophomore",
                       major: "Mechanical Engineering",
                       dates: "August 2024 - Present",
-                      involvement: "Hey guys I am Cooper and this is my second year with SOAR and I am the payload mechanical lead for IREC. Feel free to reach out with any questions.",
+                      involvement: "Hello everyone, my name is Cooper and I am a current second-year mechanical engineering student at the University of South Florida. I joined SOAR my first semester at USF and have worked my way up the ranks to now being the incoming president of the club. Please feel free to reach out with any questions you may have relating to high power rocketry!",
                       link: "https://www.linkedin.com/in/cooperkenney/",
                     },
                     {
