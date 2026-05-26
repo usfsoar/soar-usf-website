@@ -22,24 +22,25 @@
 
   const eboardMembers: EboardMember[] = [
     {
-      name: "Kyle Shum",
+      name: "Cooper Kenney",
       title: "President",
-      description: "Serving as the President, Kyle is currently a Senior in Mechanical Engineering.",
-      year: "Senior",
+      description: "Serving as the President, Cooper is currently a Sophomore in Mechanical Engineering.",
+      year: "Sophomore",
       major: "Mechanical Engineering",
-      dates: "October 2023 - Present",
-      involvement: "I am responsible for making sure SOAR and its rocketry team's have good representation and resources on campus in order to complete their missions and provide the next generation of passionate engineers. I am a massive star wars fan, collect jazz records, dance salsa, and love learning about aerospace and aviation history!",
-      link: "https://www.linkedin.com/in/kyle-shum-/"
+      dates: "August 2024 - Present",
+      involvement: "Hello everyone, my name is Cooper and I am a current second-year mechanical engineering student at the University of South Florida. I joined SOAR my first semester at USF and have worked my way up the ranks to now being the incoming president of the club. Please feel free to reach out with any questions you may have relating to high power rocketry!",
+      link: "https://www.linkedin.com/in/cooperkenney/",
     },
     {
-      name: "Emily Ho",
+      name: "Conner Schilaty",
       title: "Vice President",
-      description: "Serving as the Vice President, Emily is currently a Senior in Chemical Engineering.",
-      year: "Senior",
-      major: "Chemical Engineering",
-      dates: "May 2023 - Present",
-      involvement: "Starting Summer 2023, I joined Torito's Liquid Propulsion and Chemical Team to help researching propellants, injector designs, and P&ID. As a Torito Junior Engineer, I presented my propellant and chemical research alongside the Torito Leads in Spring 2024. With the help of the 2023-2024 Eboard, the role of Chief of Marketing was established, marking me as the first Chief of Marketing. Later, I would take a Lead position in Torito as a Safety Officer.",
-      link: "https://www.linkedin.com/in/emilyhoo/",
+      description: "Serving as the Vice President, Conner is currently a Junior in Aerospace Engineering.",
+      year: "Junior",
+      major: "Aerospace Engineering",
+      dates: "August 2025 - Present",
+      involvement:
+        "I'm a third-year Aerospace Engineering student, and joined SOAR last fall. As Secretary, it's my job to keep notes, keep tabs on what we need to get done, manage our calendars, monitor our BullsConnect page, and maintain the general organization of our files.",
+      link: "https://www.linkedin.com/in/conner-schilaty-474452337/"
     },
     {
       name: "Cesar Briones",
@@ -93,16 +94,15 @@
       link: "https://www.linkedin.com/in/matthew-messing-755930326/"
     },
     {
-      name: "Conner Schilaty",
-      title: "Secretary",
-      description: "Serving as the Secretary, Conner is currently a Junior in Aerospace Engineering.",
-      year: "Junior",
-      major: "Aerospace Engineering",
-      dates: "August 2025 - Present",
-      involvement:
-        "I'm a third-year Aerospace Engineering student, and joined SOAR last fall. As Secretary, it's my job to keep notes, keep tabs on what we need to get done, manage our calendars, monitor our BullsConnect page, and maintain the general organization of our files.",
-      link: "https://www.linkedin.com/in/conner-schilaty-474452337/"
-    }
+      name: "Zachary Tephford",
+      title: "Chief of Safety",
+      description: "Serving as the Chief of Safety, Zachary is currently a Sophomore in Mechanical Engineering.",
+      year: "Sophomore",
+      major: "Mechanical Engineering",
+      dates: "August 2024 - Present",
+      involvement: "I am a sophomore in Mechanical Engineering, and I joined SOAR in Fall 2024 but wasn't heavily involved until Fall 2025. My involvement has landed me as a Junior Engineer for our IREC Aerostructures Subsystem, along with the Logistics Chair for SOAR’s Operations Team. SOAR has benefited me in many ways, from making new friends to furthering my knowledge and experience in rockets & aerospace.",
+      link: "https://www.linkedin.com/in/zacharytephford/",
+    },
   ]
 
   export default function EboardPage() {
@@ -189,29 +189,19 @@
                       link: "https://www.linkedin.com/in/chris-fernandez/",
                     },
                     {
-                      name: "Cooper Kenney",
-                      title: "Payload Mech Lead",
-                      description: "Serving as the Payload Mech Lead, Cooper is currently a Sophomore in Mechanical Engineering.",
-                      year: "Sophomore",
-                      major: "Mechanical Engineering",
-                      dates: "August 2024 - Present",
-                      involvement: "Hello everyone, my name is Cooper and I am a current second-year mechanical engineering student at the University of South Florida. I joined SOAR my first semester at USF and have worked my way up the ranks to now being the incoming president of the club. Please feel free to reach out with any questions you may have relating to high power rocketry!",
-                      link: "https://www.linkedin.com/in/cooperkenney/",
-                    },
-                    {
                       name: "Duc Nguyen",
                       title: "Airbrakes Mech Lead",
                       description: "Serving as the Airbrakes Mech Lead, Duc is currently a Junior in Mechanical Engineering.",
                       year: "Junior",
                       major: "Mechanical Engineering",
-                      dates: "Jan 2023 - Present",
-                      involvement: "Duc's involvement description will go here.",
+                      dates: "Jan 2024 - Present",
+                      involvement: "Hi, I'm Duc, the Airbrakes Mechanical Lead for SOAR and a junior studying Mechanical Engineering. I joined SOAR in January 2024 and focus on designing, fabricating, and testing airbrake systems to improve vehicle stability and recovery, bringing a hands-on, performance-driven approach to every project.",
                       link: "https://www.linkedin.com/in/duc-nguyen-usf/",
                     },
                     {
                       name: "Khôi Minh Tôn Thất",
                       title: "Safety Lead",
-                      description: "Serving as theSafety Lead, Khoi is currently a Sophomore in Physics.",
+                      description: "Serving as the Safety Lead, Khoi is currently a Sophomore in Physics.",
                       year: "Sophomore",
                       major: "Physics",
                       dates: "August 2024 - Present",
@@ -225,7 +215,7 @@
                       year: "Sophomore",
                       major: "Mechanical Engineering",
                       dates: "August 2024 - Present",
-                      involvement: "Ninh's involvement description will go here.",
+                      involvement: "Hi, I'm Ninh, the Aerostructures Lead for SOAR and a sophomore studying Mechanical Engineering. I joined SOAR in Fall 2024 and have been focused on designing, fabricating, and testing structural components of our rockets to ensure they can withstand the stresses of flight, while also optimizing for weight and performance.",
                       link: "https://www.linkedin.com/in/ninh-vu-van-02a044236/",
                     },
                     {
@@ -458,8 +448,8 @@
                     },
                     {
                       name: "Zachary Tephford",
-                      title: "Logistics Chair",
-                      description: "Serving as the Logistics Chair, Zachary is currently a Sophomore in Mechanical Engineering.",
+                      title: "Chief of Safety",
+                      description: "Serving as the Chief of Safety, Zachary is currently a Sophomore in Mechanical Engineering.",
                       year: "Sophomore",
                       major: "Mechanical Engineering",
                       dates: "August 2024 - Present",
