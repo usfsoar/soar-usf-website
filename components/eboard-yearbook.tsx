@@ -112,7 +112,8 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
   const profileImagePositions: { [key: string]: string } = {
     "Kyle Shum": "50% 70%",
     "Sage Bundhund": "25% 50%",
-    "Conner Schilaty": "50% 15%"
+    "Conner Schilaty": "50% 15%",
+    "Valeria Melendez": "50% 80%",
   }
 
   const getImages = (member: Member) => {
