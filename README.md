@@ -145,14 +145,25 @@ This project is Vercel-friendly and uses Next.js defaults. The repository includ
 
 1. Fork the repo by typing:
 ```bash
-git clone https://github.com/Dmish13/soar-usf-website.git
+git clone https://github.com/usfsoar/soar-usf-website.git
 ```
+
 2. Create a feature branch.
 ```bash
 git checkout -b feature/your-feature-name
 ```
 3. Run `npm install` and `npm run dev`.
-5. Open a PR with a clear description.
+4. Make your changes, ensuring to test locally and fix any TypeScript errors (even though they won't block builds, we want to maintain type safety).
+```bash
+npm run build
+```
+5. Open a PR with a clear description, screenshots, and any relevant details.
+```bash
+git add .
+git commit -m "Add your message here"
+git push origin feature/your-feature-name
+```
+6. DO NOT MERGE YOUR OWN PRs. At least one other maintainer must review and merge your PR to ensure code quality and consistency.
 
 Note: You can also add collaborators who have admin or write access for USF SOAR by going to `GitHub Repo -> Settings -> Collaborators and Teams -> Add People`.
 
