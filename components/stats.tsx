@@ -69,20 +69,28 @@ export function Stats() {
     async function loadStats() {
       try {
         const [socialRes, soarRes] = await Promise.all([
-          fetch('/api/socials/followers'),
+          fetch('/api/socials/followers', { cache: 'no-store' }),
           fetch('/api/soar-members', { cache: 'no-store' }),
         ])
 
         if (socialRes.ok) {
           const socialData = await socialRes.json()
-          if (mounted && typeof socialData.instagram === 'number') {
-            setInstagramCount(socialData.instagram)
+          console.debug('socials API (client) ->', socialData)
+
+          const parseNum = (v: unknown) => {
+            const n = Number.parseInt(String(v ?? ""), 10)
+            return Number.isFinite(n) && n >= 0 ? n : null
           }
-          if (mounted && typeof socialData.linkedin === 'number') {
-            setLinkedinCount(socialData.linkedin)
-          }
-          if (mounted && typeof socialData.discord === 'number') {
-            setDiscordCount(socialData.discord)
+
+          if (mounted) {
+            const ig = parseNum(socialData.instagram)
+            if (ig != null) setInstagramCount(ig)
+
+            const ln = parseNum(socialData.linkedin)
+            if (ln != null) setLinkedinCount(ln)
+
+            const dc = parseNum(socialData.discord)
+            if (dc != null) setDiscordCount(dc)
           }
         }
 

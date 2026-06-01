@@ -76,8 +76,8 @@
     {
       name: "Valeria Melendez",
       title: "Chief of Operations",
-      description: "Serving as the Chief of Operations, Valeria is currently a Sophomore in Political Science/Cybersecurity.",
-      year: "Sophomore",
+      description: "Serving as the Chief of Operations, Valeria is currently a Senior in Political Science/Cybersecurity.",
+      year: "Senior",
       major: "Political Science/Cybersecurity",
       dates: "August 2025 - Present",
       involvement: "Hi, I’m Valeria Melendez and I’m the Chief of Operations for the operations team at SOAR! Im currently a second year student studying political science and cybersecurity. I’ve been apart of soar for about a year now and it’s been a great experience helping out operationally and learning more about rockets.",
