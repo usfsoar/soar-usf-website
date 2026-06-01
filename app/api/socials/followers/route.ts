@@ -157,6 +157,69 @@ async function fetchInstagramCountFromSyncedSnapshot(): Promise<number | null> {
   return null
 }
 
+type StoredLinkedinCount = {
+  count: number | null
+  updatedAt: string | null
+  source: string
+}
+
+function isValidLinkedinPayload(payload: unknown): payload is StoredLinkedinCount {
+  if (typeof payload !== "object" || payload == null) return false
+
+  const data = payload as Partial<StoredLinkedinCount>
+  return (
+    (typeof data.count === "number" || data.count === null) &&
+    (typeof data.updatedAt === "string" || data.updatedAt === null) &&
+    typeof data.source === "string"
+  )
+}
+
+async function readLocalLinkedinPayload(): Promise<StoredLinkedinCount | null> {
+  const filePath = path.join(process.cwd(), "data", "linkedin-follower-count.json")
+
+  try {
+    const fileText = await readFile(filePath, "utf-8")
+    const payload = JSON.parse(fileText)
+    return isValidLinkedinPayload(payload) ? payload : null
+  } catch {
+    return null
+  }
+}
+
+async function readGithubLinkedinPayload(): Promise<StoredLinkedinCount | null> {
+  const owner = process.env.LINKEDIN_GITHUB_OWNER ?? process.env.VERCEL_GIT_REPO_OWNER
+  const repo = process.env.LINKEDIN_GITHUB_REPO ?? process.env.VERCEL_GIT_REPO_SLUG
+  const branch = process.env.LINKEDIN_GITHUB_BRANCH ?? "main"
+
+  if (!owner || !repo) return null
+
+  const url = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/data/linkedin-follower-count.json?ts=${Date.now()}`
+
+  try {
+    const response = await fetch(url, { cache: "no-store" })
+    if (!response.ok) return null
+
+    const payload = await response.json()
+    return isValidLinkedinPayload(payload) ? payload : null
+  } catch {
+    return null
+  }
+}
+
+async function fetchLinkedinCountFromSyncedSnapshot(): Promise<number | null> {
+  const githubPayload = await readGithubLinkedinPayload()
+  if (githubPayload && typeof githubPayload.count === "number") {
+    return githubPayload.count
+  }
+
+  const localPayload = await readLocalLinkedinPayload()
+  if (localPayload && typeof localPayload.count === "number") {
+    return localPayload.count
+  }
+
+  return null
+}
+
 async function fetchDiscordCount(): Promise<number | null> {
   const res = await fetch("https://discord.com/api/invites/7qjAHzrnHz?with_counts=true")
   if (!res.ok) return null
@@ -293,15 +356,28 @@ async function loadFreshFollowers(): Promise<SocialFollowersResponse> {
   const instagramUsername = process.env.INSTAGRAM_USERNAME ?? "usfsoar"
   const instagramFallback = normalizeNumber(process.env.INSTAGRAM_FALLBACK_COUNT)
 
-  const [instagramLive, instagramFromExport, instagramFromSnapshot, linkedin, discord] = await Promise.all([
+  const [
+    instagramLive,
+    instagramFromExport,
+    instagramFromSnapshot,
+    linkedinFromRows,
+    linkedinFromSnapshot,
+    discord,
+  ] = await Promise.all([
     fetchInstagramCountFromBlastup(instagramUsername),
     fetchInstagramCountFromExportJson(),
     fetchInstagramCountFromSyncedSnapshot(),
     fetchLinkedinCountFromRows(),
+    fetchLinkedinCountFromSyncedSnapshot(),
     fetchDiscordCount(),
   ])
 
   const instagram = instagramLive ?? instagramFromExport ?? instagramFromSnapshot ?? instagramFallback
+
+  const linkedin =
+    linkedinFromSnapshot ??
+    linkedinFromRows ??
+    Number.parseInt(String(process.env.LINKEDIN_FALLBACK_COUNT ?? "400"), 10)
 
   return {
     instagram,
@@ -376,6 +452,22 @@ export async function GET() {
   const now = Date.now()
 
   if (existing && existing.expiresAt > now) {
+    try {
+      // If a local snapshot was updated after the cached value, refresh immediately
+      const localLinkedin = await readLocalLinkedinPayload()
+      if (
+        localLinkedin &&
+        typeof localLinkedin.updatedAt === "string" &&
+        existing.data.updatedAt &&
+        new Date(localLinkedin.updatedAt).getTime() > new Date(existing.data.updatedAt).getTime()
+      ) {
+        const fresh = await refreshCache(existing)
+        if (fresh) return jsonResponse(fresh)
+      }
+    } catch {
+      // ignore and fall back to cached value
+    }
+
     return jsonResponse(existing.data)
   }
 
