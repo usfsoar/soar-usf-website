@@ -55,6 +55,7 @@ Available npm scripts (from `package.json`):
 - `instagram:sync`: uses Playwright to fetch Instagram followers from Blastup and writes `data/instagram-follower-count.json`
 - `bullsconnect:auth`: runs a script to authenticate with BullsConnect and save session state (used for the daily member count sync workflow)
 - `bullsconnect:sync`: runs a script to fetch the latest member count from BullsConnect and update `data/soar-member-count.json` (used by the daily sync workflow)
+- `linkedin:sync`: runs a script to fetch the latest LinkedIn follower count from Rows and update `data/linkedin-follower-count.json` (used by the daily sync workflow)
 
 ---
 
@@ -83,7 +84,7 @@ Top-level folders
 		- `app/api/contact/` — contact form handler endpoints
 		- `app/api/soar-members/` — membership-related APIs
 		- `app/api/socials/discord/route.ts` — an example API route that forwards or handles Discord-related operations
-		- `app/api/socials/followers/route.ts` — API route that returns social media follower counts (LinkedIn, Instagram) by reading from the Rows data source and Instagram scraping results
+		- `app/api/socials/followers/route.ts` — API route that returns social media follower counts (LinkedIn, Instagram) by reading from the playwright and Instagram scraping results
 
 - `components/` — React components used across pages. Key components:
 	- `about.tsx` — About section component used on the About page
