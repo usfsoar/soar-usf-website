@@ -166,6 +166,11 @@ git push origin feature/your-feature-name
 ```
 6. DO NOT MERGE YOUR OWN PRs. At least one other maintainer must review and merge your PR to ensure code quality and consistency.
 
+7. Do not forget to pull the latest changes from the main branch before starting your work and before pushing your changes to avoid merge conflicts.
+```bash
+git pull origin main
+```
+
 Note: You can also add collaborators who have admin or write access for USF SOAR by going to `GitHub Repo -> Settings -> Collaborators and Teams -> Add People`.
 
 
