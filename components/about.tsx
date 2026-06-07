@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export function About() {
   return (
-    <section className="bg-zinc-950 py-24 px-6">
+    <section className="bg-zinc-950 py-10 px-6">
       <div className="max-w-3xl mx-auto text-center">
         <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-6">
           <Image src="/Color Logo.svg" alt="SOAR Logo" width={24} height={24} className="w-6 h-6" />
