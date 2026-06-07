@@ -78,12 +78,8 @@ export default function ToritoPage() {
                   <p className="text-zinc-400 text-sm">Engine design, injector development, and combustion analysis</p>
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-[#cfc493] mb-2">Fluids Team</h4>
-                  <p className="text-zinc-400 text-sm">Propellant feed systems, plumbing, and fluid dynamics</p>
-                </div>
-                <div>
-                  <h4 className="text-lg font-bold text-[#cfc493] mb-2">Safety Team</h4>
-                  <p className="text-zinc-400 text-sm">Safety protocols, hazard analysis, and test procedures</p>
+                  <h4 className="text-lg font-bold text-[#cfc493] mb-2">EECS Team</h4>
+                  <p className="text-zinc-400 text-sm">Electrical, electronic, and computer systems design</p>
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-[#cfc493] mb-2">Test Operations</h4>
