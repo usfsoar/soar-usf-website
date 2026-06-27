@@ -19,7 +19,7 @@ const sponsors = [
   { logo: "/valworx.png", width: 90, url: "https://www.valworx.com/" },
 ]
 
-export function LogoMotto() {
+export function SponsorSlideshow() {
   const gap = 40
   const totalWidth = useMemo(() => sponsors.reduce((sum, s) => sum + s.width, 0) + (sponsors.length * gap), [])
 
