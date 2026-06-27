@@ -15,6 +15,8 @@ const sponsors = [
   { logo: "/Kenesto.png", width: 130, url: "https://kenesto.com/" },
   { logo: "/5starpizza.webp", width: 100, url: "https://fivestarpizza.com/" },
   { logo: "/secoseals.webp", width: 90, url: "https://secoseals.com/" },
+  { logo: "/sendcutsend.svg", width: 100, url: "https://sendcutsend.com/" },
+  { logo: "/valworx.png", width: 90, url: "https://www.valworx.com/" },
 ]
 
 export function LogoMotto() {
