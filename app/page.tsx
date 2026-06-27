@@ -1,5 +1,5 @@
 import { Hero } from "@/components/hero"
-import { LogoMotto } from "@/components/logo-motto"
+import { SponsorSlideshow } from "@/components/sponsorslideshow"
 import { About } from "@/components/about"
 import dynamic from "next/dynamic"
 
@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background overflow-x-hidden">
       <Hero />
-      <LogoMotto />
+      <SponsorSlideshow />
       <About />
       <Stats />
       <Sponsorships />
