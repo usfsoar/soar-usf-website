@@ -17,19 +17,47 @@ This README documents the purpose of the repository's key files and folders so m
 
 Prerequisites: Node.js (18+ recommended), pnpm/yarn/npm.
 
-Install and run in development:
+Install Node.js: https://nodejs.org/en/download/
 
+Make sure you have npm installed (comes with Node.js). You can also use `yarn` or `pnpm` if you prefer.
+```bash
+npm --version
+```
+
+## Contributing
+
+1. Fork the repo by typing:
+```bash
+git clone https://github.com/usfsoar/soar-usf-website.git
+```
+
+2. Create a feature branch.
+```bash
+git checkout -b feature/your-feature-name
+```
+3. Run
 ```bash
 npm install
 npm run dev
 ```
-
-Build for production:
-
+4. Make your changes, ensuring to test locally and fix any TypeScript errors (even though they won't block builds, we want to maintain type safety).
 ```bash
 npm run build
-npm start
 ```
+5. Open a PR with a clear description, screenshots, and any relevant details.
+```bash
+git add .
+git commit -m "Add your message here"
+git push origin feature/your-feature-name
+```
+6. DO NOT MERGE YOUR OWN PRs. At least one other maintainer must review and merge your PR to ensure code quality and consistency.
+
+7. Do not forget to pull the latest changes from the main branch before starting your work and before pushing your changes to avoid merge conflicts.
+```bash
+git pull origin main
+```
+
+Note: You can also add collaborators who have admin or write access for USF SOAR by going to `GitHub Repo -> Settings -> Collaborators and Teams -> Add People`.
 
 Environment variables used by social integrations (`.env.local`):
 
@@ -79,6 +107,7 @@ Top-level folders
 	- `app/past-projects/*` — pages for past projects (PAST NSL, Hybrid)
 	- `app/positions/page.tsx` — officer positions
 	- `app/shop/page.tsx` and `app/success/` — shop and checkout flow pages
+	- `app/sponsorships/page.tsx` — sponsorship information page
 	- `app/api/` — Next.js route handlers; subfolders:
 		- `app/api/checkout/` — checkout API endpoints
 		- `app/api/contact/` — contact form handler endpoints
@@ -94,11 +123,11 @@ Top-level folders
 	- `footer.tsx` — site footer
 	- `hero.tsx` — homepage hero/banner
 	- `irec.tsx` — IREC project overview component
-	- `logo-motto.tsx` — brand logo and motto display
+	- `sponsorslideshow.tsx` — sponsor slideshow component
 	- `multi-calendar.tsx` — combined calendar UI used to show events
 	- `navbar.tsx` — the main navigation bar included in `layout.tsx`
 	- `page-header.tsx` — page header used across pages for consistent title/subtitle
-	- `sponsors.tsx` & `sponsorships.tsx` — sponsor listings and sponsorship information
+	- `sponsorships.tsx` — sponsorship information
 	- `stats.tsx` — site or membership statistics visualization (charts/metrics)
 	- `theme-provider.tsx` — theme context/provider for dark/light mode and persists selection
 	- `torito.tsx`, `tra-certifications.tsx` — project/certification components
@@ -142,38 +171,6 @@ Top-level folders
 
 This project is Vercel-friendly and uses Next.js defaults. The repository includes a Vercel-deployed instance at the top badge — deploys run `npm run build` and `npm start` in production.
 
-## Contributing
-
-1. Fork the repo by typing:
-```bash
-git clone https://github.com/usfsoar/soar-usf-website.git
-```
-
-2. Create a feature branch.
-```bash
-git checkout -b feature/your-feature-name
-```
-3. Run `npm install` and `npm run dev`.
-4. Make your changes, ensuring to test locally and fix any TypeScript errors (even though they won't block builds, we want to maintain type safety).
-```bash
-npm run build
-```
-5. Open a PR with a clear description, screenshots, and any relevant details.
-```bash
-git add .
-git commit -m "Add your message here"
-git push origin feature/your-feature-name
-```
-6. DO NOT MERGE YOUR OWN PRs. At least one other maintainer must review and merge your PR to ensure code quality and consistency.
-
-7. Do not forget to pull the latest changes from the main branch before starting your work and before pushing your changes to avoid merge conflicts.
-```bash
-git pull origin main
-```
-
-Note: You can also add collaborators who have admin or write access for USF SOAR by going to `GitHub Repo -> Settings -> Collaborators and Teams -> Add People`.
-
-
 ## Daily BullsConnect Sync with GitHub Actions
 
 This repo includes a workflow at `.github/workflows/bullsconnect-sync.yml` that runs once per day and updates `data/soar-member-count.json`.
@@ -184,6 +181,7 @@ Run once on your machine:
 
 ```bash
 npm run bullsconnect:auth
+npm run bullsconnect:sync
 ```
 
 After login, this creates `.auth/bullsconnect-storage.json`.
@@ -222,5 +220,11 @@ This repo includes `.github/workflows/instagram-sync.yml` that runs once per day
 - Trigger manually from Actions tab (`workflow_dispatch`) for first verification.
 - The workflow commits only when the Instagram count file changes.
 - The social API route uses this synced file as a production fallback when live scraping is blocked.
+
+If live scraping fails, the workflow will log the error and continue using the last successful count, but in development, you can run
+```bash
+npm run instagram:sync
+```
+to verify the scraping works locally.
 
 
