@@ -17,6 +17,12 @@ const sponsors = [
   { logo: "/secoseals.webp", width: 90, url: "https://secoseals.com/" },
   { logo: "/sendcutsend.svg", width: 100, url: "https://sendcutsend.com/" },
   { logo: "/valworx.png", width: 90, url: "https://www.valworx.com/" },
+  { logo: "/EasyEDA.png", width: 100, url: "https://easyeda.com/" },
+  { logo: "/JLCPCB.png", width: 100, url: "https://jlcpcb.com/" },
+  { logo: "/lanshack.png", width: 100, url: "https://lanshack.com/" },
+  { logo: "/Onshape.png", width: 100, url: "https://www.onshape.com/en/" },
+  { logo: "/quicktrex.webp", width: 100, url: "https://www.lanshack.com/QuickTreX-PRO-System-C321" },
+  { logo: "/swagelok.png", width: 100, url: "https://www.swagelok.com/en" },
 ]
 
 export function SponsorSlideshow() {
