@@ -23,6 +23,7 @@ const sponsors = [
   { logo: "/Onshape.png", width: 100, url: "https://www.onshape.com/en/" },
   { logo: "/quicktrex.webp", width: 100, url: "https://www.lanshack.com/QuickTreX-PRO-System-C321" },
   { logo: "/swagelok.png", width: 100, url: "https://www.swagelok.com/en" },
+  { logo: "/tba.png", width: 60, url: "https://tampabrass.com/" },
 ]
 
 export function SponsorSlideshow() {
@@ -138,7 +139,7 @@ export function SponsorSlideshow() {
           display: flex;
           gap: ${gap}px;
           align-items: center;
-          animation: sponsorScroll 25s linear infinite;
+          animation: sponsorScroll 30s linear infinite;
           will-change: transform;
         }
         .sponsor-slider-track:hover { animation-play-state: paused; }
