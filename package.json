@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "next build --webpack",
     "bullsconnect:auth": "node scripts/bullsconnect-auth.mjs",
     "bullsconnect:sync": "node scripts/bullsconnect-sync.mjs",
     "dev": "next dev --webpack",
