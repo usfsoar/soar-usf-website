@@ -364,12 +364,12 @@ async function loadFreshFollowers(): Promise<SocialFollowersResponse> {
     linkedinFromSnapshot,
     discord,
   ] = await Promise.all([
-    fetchInstagramCountFromBlastup(instagramUsername),
-    fetchInstagramCountFromExportJson(),
-    fetchInstagramCountFromSyncedSnapshot(),
-    fetchLinkedinCountFromRows(),
-    fetchLinkedinCountFromSyncedSnapshot(),
-    fetchDiscordCount(),
+    fetchInstagramCountFromBlastup(instagramUsername).catch(() => null),
+    fetchInstagramCountFromExportJson().catch(() => null),
+    fetchInstagramCountFromSyncedSnapshot().catch(() => null),
+    fetchLinkedinCountFromRows().catch(() => null),
+    fetchLinkedinCountFromSyncedSnapshot().catch(() => null),
+    fetchDiscordCount().catch(() => null),
   ])
 
   const instagram = instagramLive ?? instagramFromExport ?? instagramFromSnapshot ?? instagramFallback
