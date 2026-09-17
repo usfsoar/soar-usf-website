@@ -12,8 +12,8 @@ export function Contact() {
   const [result, setResult] = useState("")
   const [loading, setLoading] = useState(false)
   const [instagramCount, setInstagramCount] = useState<number>(2200)
-  const [discordCount, setDiscordCount] = useState<number>(800)
-  const [linkedinCount, setLinkedinCount] = useState<number>(750)
+  const [discordCount, setDiscordCount] = useState<number>(1000)
+  const [linkedinCount, setLinkedinCount] = useState<number>(400)
   const [registeredCount, setRegisteredCount] = useState<number>(500)
 
   function formatCount(n: number) {
@@ -32,7 +32,7 @@ export function Contact() {
     async function loadStats() {
       try {
         const [socialRes, soarRes] = await Promise.all([
-          fetch('/api/socials/followers'),
+          fetch('/api/socials/followers', { cache: 'no-store' }),
           fetch('/api/soar-members', { cache: 'no-store' }),
         ])
 
@@ -188,11 +188,25 @@ export function Contact() {
             </div>
             <div className="flex-1">
               <div className="font-normal">USF SOAR</div>
-              <div className="text-xs text-muted-foreground">{formatCount(discordCount)} Members</div>
+              <div className="text-xs text-muted-foreground">{formatCount(discordCount)}+ Members</div>
             </div>
             <ExternalLink className="h-4 w-4" style={{ color: "#cfc493" }} />
           </a>
-
+          <a
+            href="https://bullsconnect.usf.edu/feeds?type=club&type_id=58509&tab=about"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-start gap-3 p-4 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors group cursor-pointer"
+          >
+            <div className="w-10 h-10 bg-zinc-900 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Image src="/Color Logo.svg" alt="BullsConnect" width={20} height={20} className="h-5 w-5" />
+            </div>
+            <div className="flex-1">
+              <div className="font-normal">BullsConnect</div>
+              <div className="text-xs text-muted-foreground">{formatCount(registeredCount)}+ Members</div>
+            </div>
+            <ExternalLink className="h-4 w-4" style={{ color: "#cfc493" }} />
+          </a>
           <a
             href="https://www.linkedin.com/company/usfsoar/"
             target="_blank"
@@ -205,22 +219,6 @@ export function Contact() {
             <div className="flex-1">
               <div className="font-normal">@USF SOAR</div>
               <div className="text-xs text-muted-foreground">{formatCount(linkedinCount)}+ Followers</div>
-            </div>
-            <ExternalLink className="h-4 w-4" style={{ color: "#cfc493" }} />
-          </a>
-
-          <a
-            href="https://bullsconnect.usf.edu/feeds?type=club&type_id=58509&tab=about"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-start gap-3 p-4 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors group cursor-pointer"
-          >
-            <div className="w-10 h-10 bg-zinc-900 rounded-lg flex items-center justify-center flex-shrink-0">
-              <Image src="/Color Logo.svg" alt="BullsConnect" width={20} height={20} className="h-5 w-5" />
-            </div>
-            <div className="flex-1">
-              <div className="font-normal">Bullsconnect</div>
-              <div className="text-xs text-muted-foreground">{formatCount(registeredCount)}+ Members</div>
             </div>
             <ExternalLink className="h-4 w-4" style={{ color: "#cfc493" }} />
           </a>
