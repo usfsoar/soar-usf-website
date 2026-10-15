@@ -2,8 +2,8 @@
 
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import Image from "next/image"
 import { PageHeader } from "@/components/page-header"
+import Link from "next/link"
 
 export default function IRECPage() {
   return (
@@ -16,117 +16,115 @@ export default function IRECPage() {
 
       <section className="container mx-auto px-6 py-20">
         <div className="max-w-4xl mx-auto">
-
           <div className="space-y-8">
-            <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">About IREC</h3>
+            {/* Status / Under Development Banner */}
+            <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 relative overflow-hidden">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#cfc493]/10 border border-[#cfc493]/30 text-xs font-semibold text-[#cfc493] mb-4">
+                <span className="w-2 h-2 rounded-full bg-[#cfc493] animate-pulse" />
+                Next Season In Development
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Upcoming Cycle</h3>
               <p className="text-zinc-400 leading-relaxed mb-4">
-                The International Rocket Engineering Competition (IREC) is the world's largest rocket competition, held annually at Spaceport America in New Mexico until 2025.
-              </p>
-              <p className="text-zinc-400 leading-relaxed mb-4">
-                Teams from universities around the globe design, build, and launch high-powered rockets to achieve specific altitude targets and demonstrate successful recovery systems.
+                Our engineering teams are currently developing the architecture, mission objectives, and vehicle designs for the upcoming International Rocket Engineering Competition (IREC).
               </p>
               <p className="text-zinc-400 leading-relaxed">
-                This is our first year competing in IREC, ever since IREC got cancelled in 2020 due to COVID, and we are excited to showcase our engineering capabilities on this prestigious international stage.
+                Full vehicle specifications, CAD renders, subsystem breakdowns, and flight timelines will be announced as preliminary design reviews are finalized. Check back soon for updates!
               </p>
             </div>
 
+            {/* About the Competition */}
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">Rocket Specifications</h3>
+              <h3 className="text-2xl font-bold mb-4">About IREC</h3>
+              <p className="text-zinc-400 leading-relaxed mb-4">
+                The International Rocket Engineering Competition (IREC) is the world's premier collegiate rocketry competition hosted by the Experimental Sounding Rocket Association (ESRA).
+              </p>
+              <p className="text-zinc-400 leading-relaxed">
+                Student teams from hundreds of international universities design, manufacture, and fly high-powered rockets carrying scientific and technological payloads to target altitudes of 10,000 ft or 30,000 ft.
+              </p>
+            </div>
+
+            {/* Preliminary Specifications (Placeholder) */}
+            <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">
+              <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+                <h3 className="text-2xl font-bold">Rocket Specifications</h3>
+                <span className="text-xs font-medium text-zinc-500 uppercase tracking-wider">Preliminary / To Be Announced</span>
+              </div>
               <div className="overflow-x-auto">
                 <table className="w-full text-left">
                   <thead>
                     <tr className="border-b border-zinc-700">
                       <th className="py-3 px-4 font-semibold text-white">Specification</th>
-                      <th className="py-3 px-4 font-semibold text-white">Value</th>
+                      <th className="py-3 px-4 font-semibold text-white">Status / Value</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="border-b border-zinc-800">
-                      <td className="py-3 px-4 text-zinc-400">Mass</td>
-                      <td className="py-3 px-4 text-white">62.3 lb</td>
+                      <td className="py-3 px-4 text-zinc-400">Target Altitude</td>
+                      <td className="py-3 px-4 text-zinc-500 italic">To be announced</td>
                     </tr>
                     <tr className="border-b border-zinc-800">
-                      <td className="py-3 px-4 text-zinc-400">Height</td>
-                      <td className="py-3 px-4 text-white">114 in</td>
+                      <td className="py-3 px-4 text-zinc-400">Total Mass</td>
+                      <td className="py-3 px-4 text-zinc-500 italic">In design phase</td>
                     </tr>
                     <tr className="border-b border-zinc-800">
-                      <td className="py-3 px-4 text-zinc-400">Payload</td>
-                      <td className="py-3 px-4 text-white">Deployable Rover</td>
+                      <td className="py-3 px-4 text-zinc-400">Vehicle Length</td>
+                      <td className="py-3 px-4 text-zinc-500 italic">In design phase</td>
                     </tr>
                     <tr className="border-b border-zinc-800">
-                      <td className="py-3 px-4 text-zinc-400">Altitude</td>
-                      <td className="py-3 px-4 text-white">10,000 ft</td>
+                      <td className="py-3 px-4 text-zinc-400">Propulsion System</td>
+                      <td className="py-3 px-4 text-zinc-500 italic">Evaluating motor options</td>
+                    </tr>
+                    <tr className="border-b border-zinc-800">
+                      <td className="py-3 px-4 text-zinc-400">Payload Experiment</td>
+                      <td className="py-3 px-4 text-zinc-500 italic">Concept definition in progress</td>
                     </tr>
                     <tr>
-                      <td className="py-3 px-4 text-zinc-400">Max Velocity</td>
-                      <td className="py-3 px-4 text-white">0.92 Mach</td>
+                      <td className="py-3 px-4 text-zinc-400">Recovery System</td>
+                      <td className="py-3 px-4 text-zinc-500 italic">Dual deployment architecture</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
 
+            {/* Sub-Teams Working on This Project */}
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">Project Goals</h3>
+              <h3 className="text-2xl font-bold mb-4">Development Sub-Teams</h3>
+              <p className="text-zinc-400 leading-relaxed mb-6">
+                Our IREC development effort is organized into five specialized engineering branches:
+              </p>
               <div className="grid md:grid-cols-2 gap-4">
-                <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#cfc493] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <div>
-                    <h4 className="font-bold mb-1">Altitude Target</h4>
-                    <p className="text-sm text-zinc-400">Reach target apogee of 10,000 feet</p>
-                  </div>
+                <div className="p-4 bg-zinc-950/60 rounded-xl border border-zinc-800/80">
+                  <h4 className="font-bold text-white mb-1">Aerostructures</h4>
+                  <p className="text-sm text-zinc-400">Airframe optimization, fin flutter analysis, nose cone aerodynamics, and composite manufacturing.</p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#cfc493] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <div>
-                    <h4 className="font-bold mb-1">Recovery System</h4>
-                    <p className="text-sm text-zinc-400">Dual deployment parachute system</p>
-                  </div>
+                <div className="p-4 bg-zinc-950/60 rounded-xl border border-zinc-800/80">
+                  <h4 className="font-bold text-white mb-1">Avionics & Telemetry</h4>
+                  <p className="text-sm text-zinc-400">Flight computers, redundant sensor buses, long-range telemetry, and ground control integration.</p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#cfc493] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <div>
-                    <h4 className="font-bold mb-1">Payload</h4>
-                    <p className="text-sm text-zinc-400">Custom scientific payload integration</p>
-                  </div>
+                <div className="p-4 bg-zinc-950/60 rounded-xl border border-zinc-800/80">
+                  <h4 className="font-bold text-white mb-1">Payload EE/CS</h4>
+                  <p className="text-sm text-zinc-400">Autonomous science experiment and deployment payload design and firmware development.</p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#cfc493] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <div>
-                    <h4 className="font-bold mb-1">Data Acquisition</h4>
-                    <p className="text-sm text-zinc-400">Real-time telemetry and flight data</p>
-                  </div>
+                <div className="p-4 bg-zinc-950/60 rounded-xl border border-zinc-800/80">
+                  <h4 className="font-bold text-white mb-1">Recovery & Control</h4>
+                  <p className="text-sm text-zinc-400">Parachute sizing, dual deployment ejection systems, and trajectory/drag control systems.</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">Team Structure</h3>
-              <p className="text-zinc-400 leading-relaxed">
-                Our IREC team is divided into specialized sub-teams including Propulsion, Structures, Avionics, Recovery, and Payload. Each team works collaboratively to ensure mission success.
-              </p>
-            </div>
-
-            <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">Competition Schedule</h3>
-              <p className="text-zinc-400 leading-relaxed mb-2">
-                <strong className="text-white">Competition Date:</strong> June 2026
-              </p>
-              <p className="text-zinc-400 leading-relaxed mb-2">
-                <strong className="text-white">Location:</strong> Spaceport Midland, Texas
-              </p>
-              <p className="text-zinc-400 leading-relaxed">
-                <strong className="text-white">Launch Window:</strong> Multiple launch opportunities throughout competition week
-              </p>
+            {/* Past Competition Reference */}
+            <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <h4 className="text-lg font-bold text-white mb-1">Looking for previous IREC rockets?</h4>
+                <p className="text-sm text-zinc-400">Review specifications, technical highlights, and documentation from past seasons.</p>
+              </div>
+              <Link
+                href="/past-projects/past-irec"
+                className="px-5 py-2.5 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white text-sm font-medium transition-colors whitespace-nowrap cursor-pointer"
+              >
+                View Past IREC Project →
+              </Link>
             </div>
           </div>
         </div>

@@ -99,12 +99,12 @@ export function Navbar() {
               >
                 Branding
               </Link>
-              <Link
+              {/* <Link
                 href="/shop"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
                 The Shop
-              </Link>
+              </Link> */}
             </div>
           )}
         </div>
@@ -126,10 +126,10 @@ export function Navbar() {
                 IREC
               </Link>
               <Link
-                href="/current-projects/torito"
+                href="/current-projects/bel"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
-                Torito
+                BEL
               </Link>
               <Link
                 href="/current-projects/certifications"
@@ -151,24 +151,24 @@ export function Navbar() {
           </button>
           {pastProjectsOpen && (
             <div className="absolute top-full left-0 pt-0 bg-zinc-900 border border-white/10 rounded-md shadow-lg py-2 min-w-[160px]">
-              {/* <Link
-                href="/past-projects/irec"
+              <Link
+                href="/past-projects/past-irec"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
-                IREC
-              </Link> */}
+                IREC 25-26
+              </Link>
               <Link
                 href="/past-projects/past-nsl"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
                 Past NSL
               </Link>
-              <Link
+              {/* <Link
                 href="/past-projects/hybrid"
                 className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
               >
                 Hybrid
-              </Link>
+              </Link> */}
             </div>
           )}
         </div>
@@ -178,9 +178,9 @@ export function Navbar() {
         <Link href="/blogs" className={`text-sm font-medium transition-colors cursor-pointer pb-1 border-b-2 border-transparent ${isActive('/blogs') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
           Blogs
         </Link>
-        <Link href="/positions" className={`text-sm font-medium transition-colors cursor-pointer pb-1 border-b-2 border-transparent ${isActive('/positions') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
+        {/* <Link href="/positions" className={`text-sm font-medium transition-colors cursor-pointer pb-1 border-b-2 border-transparent ${isActive('/positions') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
           Positions
-        </Link>
+        </Link> */}
         <Link href="/#contact" className="cursor-pointer">
           <Button
             style={{ backgroundColor: "#D0C495", color: "#0f0f0f" }}
@@ -294,13 +294,13 @@ export function Navbar() {
                   >
                     Branding
                   </Link>
-                  <Link
+                  {/* <Link
                     href="/shop"
                     className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     The Shop
-                  </Link>
+                  </Link> */}
                 </div>
               )}
             </div>
@@ -330,11 +330,11 @@ export function Navbar() {
                     IREC
                   </Link>
                   <Link
-                    href="/current-projects/torito"
+                    href="/current-projects/bel"
                     className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Torito
+                    BEL
                   </Link>
                   <Link
                     href="/current-projects/certifications"
@@ -364,13 +364,13 @@ export function Navbar() {
               </button>
               {mobilePastProjectsOpen && (
                 <div className="mt-3 space-y-3">
-                  {/* <Link
-                    href="/past-projects/irec"
+                  <Link
+                    href="/past-projects/past-irec"
                     className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    IREC
-                  </Link> */}
+                    IREC 25-26
+                  </Link>
                   <Link
                     href="/past-projects/past-nsl"
                     className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
@@ -378,13 +378,13 @@ export function Navbar() {
                   >
                     Past NSL
                   </Link>
-                  <Link
+                  {/* <Link
                     href="/past-projects/hybrid"
                     className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Hybrid
-                  </Link>
+                  </Link> */}
                 </div>
               )}
             </div>
@@ -403,13 +403,13 @@ export function Navbar() {
             >
               Blogs
             </Link>
-            <Link
+            {/* <Link
               href="/positions"
               className={`text-sm font-normal transition-colors cursor-pointer ${isActive('/positions') ? 'text-[#cfc493]' : 'text-white hover:text-[#cfc493]'}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Positions
-            </Link>
+            </Link> */}
             
             {/* Contact Button - SOAR Gold */}
             <Link href="/#contact" className="mt-3" onClick={() => setMobileMenuOpen(false)}>

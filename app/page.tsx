@@ -6,7 +6,7 @@ import dynamic from "next/dynamic"
 // Lazy load components that are below the fold
 const Stats = dynamic(() => import("@/components/stats").then(mod => ({ default: mod.Stats })), { ssr: true })
 const IREC = dynamic(() => import("@/components/irec").then(mod => ({ default: mod.IREC })), { ssr: true })
-const Torito = dynamic(() => import("@/components/torito").then(mod => ({ default: mod.Torito })), { ssr: true })
+const BEL = dynamic(() => import("@/components/bel").then(mod => ({ default: mod.BEL })), { ssr: true })
 const TRACertifications = dynamic(() => import("@/components/tra-certifications").then(mod => ({ default: mod.TRACertifications })), { ssr: true })
 const Blogs = dynamic(() => import("@/components/blogs").then(mod => ({ default: mod.Blogs })), { ssr: true })
 const Sponsorships = dynamic(() => import("@/components/sponsorships").then(mod => ({ default: mod.Sponsorships })), { ssr: true })
@@ -22,7 +22,7 @@ export default function Home() {
       <Stats />
       <Sponsorships />
       <IREC />
-      <Torito />
+      <BEL />
       <TRACertifications />
       <Blogs />
       <Contact />

@@ -5,23 +5,23 @@ import { Footer } from "@/components/footer"
 import Image from "next/image"
 import { PageHeader } from "@/components/page-header"
 
-export default function ToritoPage() {
+export default function BELPage() {
   return (
     <div className="min-h-screen bg-background">
       <div className="relative">
         <Navbar />
       </div>
 
-      <PageHeader title="TORITO" subtitle="Liquid Propulsion Research Project" />
+      <PageHeader title="BEL" subtitle="Liquid Propulsion Research Project" />
 
       <section className="container mx-auto px-6 py-20">
         <div className="max-w-4xl mx-auto">
 
           <div className="space-y-8">
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">About Torito</h3>
+              <h3 className="text-2xl font-bold mb-4">About BEL</h3>
               <p className="text-zinc-400 leading-relaxed mb-4">
-                Torito is SOAR's ambitious liquid propulsion research project, focusing on the development of a liquid-fueled rocket engine and vehicle.
+                BEL is SOAR's ambitious liquid propulsion research project, focusing on the development of a liquid-fueled rocket engine and vehicle.
               </p>
               <p className="text-zinc-400 leading-relaxed">
                 This project pushes the boundaries of student rocketry by exploring advanced propulsion technologies and complex fluid systems.
