@@ -3,7 +3,7 @@ import { Rocket, Building, TestTube, Flame, Radio } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
-export function Torito() {
+export function BEL() {
   const teams = [
     {
       icon: Building,
@@ -37,7 +37,7 @@ export function Torito() {
             <span className="text-sm font-medium tracking-wide" style={{ color: "#cfc493" }}>Current Projects</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">LEARN ABOUT TORITO</h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">LEARN ABOUT BEL</h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             The goal of this team is to launch a liquid-propulsion rocket using nitrous oxide as high as possible. The
             engine of the propulsion rocket will be entirely student-researched and built.
@@ -89,12 +89,12 @@ export function Torito() {
                 </div>
               </div>
 
-              <Link href="/current-projects/torito" className="block">
+              <Link href="/current-projects/bel" className="block">
                 <Button
                   style={{ backgroundColor: "#303434", color: "#ffffff" }}
                   className="w-full gap-2 hover:opacity-90 rounded-full px-4 py-5 text-sm font-medium cursor-pointer group"
                 >
-                  Learn more about Torito
+                  Learn more about BEL
                   <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
                 </Button>
               </Link>

@@ -66,9 +66,9 @@ export function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/shop" className="hover:text-foreground transition-colors cursor-pointer">
+                    {/* <Link href="/shop" className="hover:text-foreground transition-colors cursor-pointer">
                       The Shop
-                    </Link>
+                    </Link> */}
                   </li>
                 </ul>
               </div>
@@ -82,8 +82,8 @@ export function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/current-projects/torito" className="hover:text-foreground transition-colors cursor-pointer">
-                      Torito
+                    <Link href="/current-projects/bel" className="hover:text-foreground transition-colors cursor-pointer">
+                      BEL
                     </Link>
                   </li>
                   <li>
@@ -108,8 +108,8 @@ export function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/past-projects/hybrid" className="hover:text-foreground transition-colors cursor-pointer">
-                      Hybrid
+                    <Link href="/past-projects/past-irec" className="hover:text-foreground transition-colors cursor-pointer">
+                      IREC 25-26
                     </Link>
                   </li>
                 </ul>
@@ -134,9 +134,9 @@ export function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/positions" className="hover:text-foreground transition-colors cursor-pointer">
+                    {/* <Link href="/positions" className="hover:text-foreground transition-colors cursor-pointer">
                       Positions
-                    </Link>
+                    </Link> */}
                   </li>
                   <li>
                     <Link href="/#contact" className="hover:text-foreground transition-colors cursor-pointer">

@@ -23,8 +23,8 @@ const calendars: CalendarConfig[] = [
     enabled: false,
   },
   {
-    id: "torito",
-    name: "Torito Calendar",
+    id: "bel",
+    name: "BEL Calendar",
     src: "https://calendar.google.com/calendar/u/0/embed?src=e65df5c4a3a837c50882865d7606807ec0c1b099c8e981a42d438ad013321e49%40group.calendar.google.com&ctz=America/New_York",
     enabled: false,
   },
