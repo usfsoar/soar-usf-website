@@ -1,11 +1,11 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
 import { PageHeader } from "@/components/page-header"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion"
 import { 
   Rocket, 
   Calendar, 
@@ -297,9 +297,9 @@ const SEASONS: SeasonData[] = [
     vehicleName: "145\" G10 Fiberglass Launch Vehicle",
     challenge: "Autonomous Steerable Landing Module & Real-Time Computer Vision Target ID",
     summary:
-      "SOAR's inaugural NASA Student Launch entry featured a 145-inch (12-ft) G10 fiberglass rocket powered by a Cesaroni L1115 motor targeting 5,280 ft AGL. The vehicle deployed an autonomous 9.4-lb landing module mid-flight with motorized steering arms, spring-actuated landing gear with ground wheels, and an onboard OpenCV vision processing system to identify and classify colored ground targets in real time.",
+      "SOAR's second NASA Student Launch entry featured a 145-inch (12-ft) G10 fiberglass rocket powered by a Cesaroni L1115 motor targeting 5,280 ft AGL. The vehicle deployed an autonomous 9.4-lb landing module mid-flight with motorized steering arms, spring-actuated landing gear with ground wheels, and an onboard OpenCV vision processing system to identify and classify colored ground targets in real time.",
     tags: [
-      "Founding Season",
+      "16-17 Campaign",
       "Target: 5,280 ft",
       "OpenCV Computer Vision",
       "Autonomous Landing Module",
@@ -339,9 +339,96 @@ const SEASONS: SeasonData[] = [
     ],
     teamLeadership: "Society of Aeronautics and Rocketry (SOAR) at the University of South Florida, mentored by Jim West (Tripoli Level 3, Tripoli Advisory Panel).",
   },
+  {
+    id: "season-15-16",
+    year: "2015–2016",
+    seasonLabel: "15-16 Season",
+    vehicleName: "Minotaur (138\" Mars Ascent Vehicle)",
+    challenge: "Centennial Challenge MAV & Autonomous Ground Support Equipment (AGSE) System",
+    summary:
+      "USF SOAR's inaugural year competing in the NASA Student Launch featured Minotaur—a 138-inch single-stage Mars Ascent Vehicle (MAV) powered by a Cesaroni L910s motor targeting 5,280 ft AGL. Competing in the Centennial Challenge MAV category, the launch vehicle was paired with an Autonomous Ground Support Equipment (AGSE) system: a 6-wheeled Rocker-Bogie retrieval rover equipped with a 5-DOF stainless-steel robotic arm that autonomously located a sample payload on the ground, loaded it into a motorized 24\" internal payload containment bay sealed flush with a linear actuator, erected the launch rail to 85° using a 100:1 non-backdrivable worm gear, and inserted the motor igniter—all completed in under 10 minutes.",
+    tags: [
+      "Inaugural Season",
+      "Minotaur MAV Vehicle",
+      "Autonomous AGSE Rover",
+      "5-DOF Robotic Arm",
+      "Kinect 3D Mapping",
+      "100:1 Worm-Gear Erector",
+      "Cesaroni L910s",
+      "Target: 5,280 ft",
+    ],
+    images: [
+      {
+        src: "/pic12.JPG",
+      },
+    ],
+    specs: {
+      targetApogee: "5,280 ft (5,000–5,400 ft window AGL)",
+      length: "138.0–138.6 in (11.5 ft)",
+      diameter: "4.00 in OD",
+      liftOffWeight: "14.2–17.1 lb empty / 22.82–23.2 lb loaded liftoff mass",
+      motor: "Cesaroni L910s APCP (75mm BATES grain, 2,856.1 N·s total impulse, 3.2s burn time, 8.93 T/W)",
+      payload:
+        "Autonomous Ground Support Equipment (AGSE) & MAV Payload Bay: 6-wheeled Rocker-Bogie rover with ROS differential drive, 5-DOF stainless-steel robotic arm with Kinect RGB-D vision and MATLAB 3D point-cloud mapping, radio-controlled internal L16 linear actuator sealing the 24\" containment bay, automated 100:1 worm gear 85° launch rail erector, and motorized friction-roller nozzle igniter insertion station.",
+      recovery:
+        "Dual deployment in 3 tethered sections (nose/payload, fore airframe, aft fin can) with 828\" paracord shock cords (3x vehicle length): SkyAngle Cert-3 drogue (6.3 sq ft) at apogee (63.04 ft/s descent) and SkyAngle Cert-3 Large main (57 sq ft) at 500 ft AGL (15.93 ft/s descent, landing KE 12.2–28.6 ft·lbf, well below 75 ft·lbf limit). Redundant Missile Works RRC3 altimeters with lockable turn switches + TeleGPS.",
+      innovation:
+        "Fully autonomous ground-to-launch sequence in under 10 minutes: Rocker-Bogie rover sample retrieval, motorized bay sealing with zero external protrusions, non-backdrivable 100:1 worm-gear rail erection to 85°, and automated igniter insertion without GPS, magnetic compasses, or pneumatics.",
+      airframe:
+        "Wildman G-12 fiberglass fore and aft body tubes, Kraft phenolic coupler/motor mount, PML HDPE ogive nose cone with structural foam/ballast compartment, Baltic birch bulkheads with 3,500 psi slow-cure epoxy, 75mm AeroPack retainer, and four PML G10 fiberglass through-the-wall trapezoidal fins with carbon-fiber/epoxy fillets (5.38 cal loaded stability margin).",
+      ballast:
+        "Loaded CG at 92.51\"–96.89\" and CP at 114.0\" from nose tip (5.38 cal loaded / 8.62 cal empty stability margin). 43.00 ft/s rail exit velocity with simulated apogee of 5,270–5,280 ft and Mach 0.67 max velocity.",
+    },
+    designEvolution: [
+      "Autonomous 6-Wheel Rocker-Bogie Rover: Modeled on NASA Mars rovers with 4-in steel-framed wheels; outer four wheels driven by optical-encoder DC motors via ROS navigation stack (amcl visual localization & costmaps), counterbalanced to prevent tipping.",
+      "5-DOF Stainless Steel Robotic Arm: 304 stainless steel arm with 7 Hitec servos, 18.3\" horizontal reach, 22.9\" vertical reach, and a liquid-rubber coated 4-tooth interlocking gripper with servo angle feedback for sample verification.",
+      "Kinect RGB-D Vision & Master PC: Onboard Raspberry Pi streaming Kinect 3D depth to an offboard MATLAB master PC for real-time sample color/shape identification and obstacle-avoidance trajectory calculation.",
+      "Mechanized Retracting Payload Bay: Radio-controlled Firgelli L16 linear actuator retracting the 24\" fiberglass containment bay flush with an O-ring seal to eliminate external aerodynamic protrusions once the sample is loaded.",
+      "Automated Worm-Gear Erector & Igniter Inserter: Electric motor driving a 100:1 non-backdrivable worm gear generating 2,087 in-lb torque to lift the rail from horizontal to 85° with ratchet backup, paired with motorized elastomer friction rollers inserting the motor igniter.",
+      "Subscale Flight Verification: 3:4-scale prototype (93.2\" length, 10.3 lb mass) successfully launched December 20, 2015, achieving 4,092 ft apogee (only 1.06% error vs. 4,136 ft OpenRocket prediction) with nominal dual deployment.",
+    ],
+    teamLeadership:
+      "Society of Aeronautics and Rocketry (SOAR) at the University of South Florida (Inaugural NSL Season), mentored by Rick Waters (Tripoli Level 3 #8543 / NAR Advisor). Student leadership included the Project Lead, Safety Officer (monitoring lab/pad safety, MSDS, PPE enforcement), and Education Engagement Officer (STEM outreach at Young Middle Magnet and USF Student Veterans).",
+  },
 ]
 
+const cardVariants = {
+  hidden: {
+    opacity: 0,
+    y: 28,
+    transition: { duration: 0.45, ease: "easeOut" },
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.85, ease: [0.16, 1, 0.3, 1] },
+  },
+}
+
 export default function PastNSLPage() {
+  const timelineRef = useRef<HTMLDivElement>(null)
+  const [hasScrolledPastTop, setHasScrolledPastTop] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolledPastTop(window.scrollY > 40)
+    }
+    handleScroll()
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const { scrollYProgress } = useScroll({
+    target: timelineRef,
+    offset: ["start 70%", "end 80%"],
+  })
+
+  const scaleY = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  })
+
   const [activeImageIndexes, setActiveImageIndexes] = useState<{ [seasonId: string]: number }>({
     "season-23-24": 0,
     "season-22-23": 0,
@@ -349,6 +436,7 @@ export default function PastNSLPage() {
     "season-18-19": 0,
     "season-17-18": 0,
     "season-16-17": 0,
+    "season-15-16": 0,
   })
 
   const [modalState, setModalState] = useState<{
@@ -427,7 +515,7 @@ export default function PastNSLPage() {
 
       <PageHeader
         title="PAST NSL"
-        subtitle="Our Journey Through NASA Student Launch: 2016 – 2024"
+        subtitle="Our Journey Through NASA Student Launch: 2015 – 2024"
       />
 
       {/* Fast-Navigation Bar (Static in place) */}
@@ -463,7 +551,7 @@ export default function PastNSLPage() {
                 NASA Student Launch Initiative
               </div>
               <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-3">
-                Eight Years of Collegiate Rocketry Heritage
+                Nine Years of Collegiate Rocketry Heritage
               </h2>
               <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
                 NASA Student Launch is an eight-month research-based challenge for university rocketry teams.
@@ -478,17 +566,18 @@ export default function PastNSLPage() {
               </div>
               <div className="flex items-center gap-2 bg-zinc-950/60 border border-zinc-800/80 px-4 py-2.5 rounded-xl">
                 <Award className="w-4 h-4 text-[#cfc493]" />
-                <span className="text-zinc-300">6 Competition Seasons</span>
+                <span className="text-zinc-300">7 Competition Seasons</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Timeline Container with Center/Left Spine */}
-        <div className="relative">
-          {/* Vertical Connecting Spine */}
-          <div 
-            className="absolute left-4 md:left-1/2 top-4 bottom-8 w-[2px] -translate-x-1/2 bg-gradient-to-b from-[#cfc493] via-[#cfc493]/60 to-zinc-800 hidden sm:block" 
+        <div ref={timelineRef} className="relative">
+          {/* Vertical Connecting Spine - Initially hidden, dynamically grows downwards on scroll */}
+          <motion.div 
+            style={{ scaleY }}
+            className="absolute left-4 md:left-1/2 top-5 bottom-8 w-[2px] -translate-x-1/2 bg-gradient-to-b from-[#cfc493] via-[#cfc493] to-[#cfc493]/80 hidden sm:block origin-top shadow-[0_0_12px_rgba(207,196,147,0.4)]" 
           />
 
           <div className="space-y-16 md:space-y-24">
@@ -499,22 +588,42 @@ export default function PastNSLPage() {
               const isEven = index % 2 === 0
 
               return (
-                <motion.div
+                <div
                   key={season.id}
                   id={season.id}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.6, ease: "easeOut" }}
                   className="relative scroll-mt-20"
                 >
                   {/* Timeline Node Icon on the Spine */}
-                  <div className="hidden sm:flex absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 rounded-full bg-zinc-950 border-2 border-[#cfc493] items-center justify-center shadow-lg shadow-[#cfc493]/10 z-10">
-                    <span className="w-3 h-3 rounded-full bg-[#cfc493] animate-pulse" />
-                  </div>
+                  {index === 0 ? (
+                    /* The first node is always visible when user lands on page */
+                    <div className="hidden sm:flex absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 rounded-full bg-zinc-950 border-2 border-[#cfc493] items-center justify-center shadow-lg shadow-[#cfc493]/20 z-10">
+                      <span className="w-3 h-3 rounded-full bg-[#cfc493] animate-pulse" />
+                    </div>
+                  ) : (
+                    /* Subsequent nodes fade in as scroll line reaches them */
+                    <motion.div
+                      variants={{
+                        hidden: { opacity: 0, scale: 0.6 },
+                        visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" } },
+                      }}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: false, amount: "some", margin: "-40px 0px -100px 0px" }}
+                      className="hidden sm:flex absolute left-4 md:left-1/2 -translate-x-1/2 top-0 w-10 h-10 rounded-full bg-zinc-950 border-2 border-[#cfc493] items-center justify-center shadow-lg shadow-[#cfc493]/20 z-10"
+                    >
+                      <span className="w-3 h-3 rounded-full bg-[#cfc493] animate-pulse" />
+                    </motion.div>
+                  )}
 
-                  {/* Main Content Card Container */}
-                  <div className={`sm:ml-12 md:ml-0 md:w-[calc(50%-3rem)] ${isEven ? "md:mr-auto" : "md:ml-auto"}`}>
+                  {/* Main Content Card Container - Animated Fade In & Fade Out on Scroll */}
+                  <motion.div
+                    variants={cardVariants}
+                    initial="hidden"
+                    animate={index === 0 && !hasScrolledPastTop ? "hidden" : undefined}
+                    whileInView="visible"
+                    viewport={{ once: false, amount: "some", margin: "-60px 0px -160px 0px" }}
+                    className={`sm:ml-12 md:ml-0 md:w-[calc(50%-3rem)] ${isEven ? "md:mr-auto" : "md:ml-auto"} will-change-[transform,opacity]`}
+                  >
                     <div className="bg-zinc-900/60 border border-zinc-800/90 hover:border-zinc-700 rounded-3xl p-6 sm:p-8 shadow-2xl transition-all duration-300 group">
                       
                       {/* Card Header */}
@@ -740,8 +849,8 @@ export default function PastNSLPage() {
                       </div>
 
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </div>
               )
             })}
           </div>
@@ -752,14 +861,14 @@ export default function PastNSLPage() {
           <ShieldCheck className="w-10 h-10 text-[#cfc493] mx-auto mb-4" />
           <h3 className="text-2xl font-bold mb-3">Legacy of Engineering Excellence</h3>
           <p className="text-zinc-400 leading-relaxed mb-6 max-w-2xl mx-auto">
-            From our founding 2016-17 campaign through the high-performance 2023-24 season, NASA Student Launch
+            From our founding 2015-16 campaign through the high-performance 2023-24 season, NASA Student Launch
             has trained generations of USF aerospace, mechanical, electrical, and computer engineers.
             The avionics telemetry, active airbrakes, and deployable payload systems designed here continue to inform
             our current flagship vehicles in IREC and liquid propulsion research.
           </p>
           <div className="inline-flex gap-4 flex-wrap justify-center text-sm text-zinc-400 font-medium">
             <span>• 100+ Student Engineers Trained</span>
-            <span>• 6 Full Competition Cycles</span>
+            <span>• 7 Full Competition Cycles</span>
             <span>• Real NASA PDR / CDR Reviews</span>
           </div>
         </div>
