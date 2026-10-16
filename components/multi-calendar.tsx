@@ -5,7 +5,13 @@ import { useState } from "react"
 interface CalendarConfig {
   id: string
   name: string
+  subtitle: string
+  colorName: string
   src: string
+  color: string // Google Calendar embed parameter (%23...)
+  uiColor: string // Badge and indicator color in UI
+  bgActive: string
+  borderActive: string
   enabled: boolean
 }
 
@@ -13,20 +19,38 @@ const calendars: CalendarConfig[] = [
   {
     id: "soar",
     name: "SOAR Calendar",
+    subtitle: "General Meetings & Club Events",
+    colorName: "Green",
+    color: "#006747",
+    uiColor: "#00965e",
+    bgActive: "bg-emerald-950/30",
+    borderActive: "border-emerald-600/70",
     src: "https://calendar.google.com/calendar/embed?src=942jatunguv08jrcr3ver7t9kc%40group.calendar.google.com&ctz=America%2FNew_York",
     enabled: true,
   },
   {
     id: "irec",
     name: "IREC Calendar",
+    subtitle: "Competition Rocketry & Subteams",
+    colorName: "Gold",
+    color: "#B8860B",
+    uiColor: "#cfc493",
+    bgActive: "bg-[#cfc493]/10",
+    borderActive: "border-[#cfc493]",
     src: "https://calendar.google.com/calendar/u/0/embed?src=650ae47f6c9515af0662d839d9d86e4db367e840c6f705a0fe6cb134aef4b0e8%40group.calendar.google.com&ctz=America/New_York",
-    enabled: false,
+    enabled: true,
   },
   {
     id: "bel",
     name: "BEL Calendar",
-    src: "https://calendar.google.com/calendar/u/0/embed?src=e65df5c4a3a837c50882865d7606807ec0c1b099c8e981a42d438ad013321e49%40group.calendar.google.com&ctz=America/New_York",
-    enabled: false,
+    subtitle: "Liquid Propulsion Research",
+    colorName: "Slate",
+    color: "#466069",
+    uiColor: "#7e96a0",
+    bgActive: "bg-slate-900/50",
+    borderActive: "border-slate-500/70",
+    src: "https://calendar.google.com/calendar/embed?src=318ed9be561b53eb43c55672f100636e6bfa145d7c77a32c1ff0a45e008ceecd%40group.calendar.google.com&ctz=America%2FNew_York",
+    enabled: true,
   },
 ]
 
@@ -51,19 +75,15 @@ export function MultiCalendar() {
     }
 
     const enabledCalendarConfigs = calendars.filter((c) => enabledCalendars.has(c.id))
-    const srcs = enabledCalendarConfigs.map((c) => {
+    const params = enabledCalendarConfigs.map((c) => {
       const url = new URL(c.src)
-      return url.searchParams.get("src")
+      const src = url.searchParams.get("src")
+      const color = encodeURIComponent(c.color)
+      return `&src=${src}&color=${color}`
     })
 
     const baseUrl = "https://calendar.google.com/calendar/embed?ctz=America%2FNew_York"
-    return (
-      baseUrl +
-      srcs
-        .filter((s) => s)
-        .map((s) => `&src=${s}`)
-        .join("")
-    )
+    return baseUrl + params.join("")
   }
 
   const embedUrl = getEmbedUrl()
@@ -71,40 +91,10 @@ export function MultiCalendar() {
   return (
     <div className="w-full">
       <style jsx>{`
-        :root {
-          font-family: sans-serif;
-          font-size: 12px;
-          --token-f625cd9c-eaf7-4830-9abe-885d260206dd: #fff;
-          --token-811502d1-0eed-443f-8478-80af7a468fd8: #cfc493;
-          --token-f5bc7a34-0c77-443b-b684-8cedb1c2c074: #cfc493;
-          --token-3e615b24-d9fc-4c54-b2ad-169116039064: #edebd1;
-          --token-228bd8b7-61e7-4bd9-9cd4-ea1fc74f8329: #f8fde7;
-          --token-c243089d-22fa-4f8f-8f22-cf56670552cd: #0f0f0f;
-          --token-d9454b2f-ce3c-4b90-86b5-27e17ad46d27: #141414;
-          --token-6947ca58-4a1b-4b95-ba60-8472824a92a1: #1a1a1a;
-          --token-04c52171-4de3-44b2-8dbe-ce34f70099a7: #1f1f1f;
-          --token-a1e15573-407a-4e05-aad1-ccea5b623206: #262626;
-          --token-e797afbf-7d45-44fe-9d79-b9d6850b7078: #2e2e2e;
-          --token-add9e850-86ea-475b-bee1-1fe2d98fb1fd: #404040;
-          --token-1ea94bb4-e366-48b2-a582-2a7d341cfb0a: #96979c;
-          --token-50b92554-c06b-4234-9dc3-b4fb95be4c7b: #b0b1b5;
-          --token-dd2900f6-9f5b-418d-8242-22e7260df7e5: #cacbce;
-          --token-d1a42c1e-80d4-439d-895a-21aa57395645: #e4e5e6;
-          --token-44907ccf-0ea5-4a3d-95f6-21bbb86df999: #f2f2f3;
-          --token-efc87095-b4a7-4589-8808-09a99b6bac39: #f7f7f8;
-          --token-cd9ad879-0340-4881-8da6-7efa110062d4: #cfc493;
-          --token-a888adc2-3d05-4d6f-88b7-8dab97418795: #a89a6b;
-          --token-4c7d257d-1d08-4035-ad20-8cb2bd0b1bf2: #cdf140;
-          --token-220e61a4-c2a0-4eef-ac6e-fe707380fbcf: #daf66f;
-          --framer-will-change-override: none;
-          --framer-will-change-filter-override: none;
-          --framer-aspect-ratio-supported: auto;
-        }
-
         .calendar-wrapper {
           box-sizing: border-box;
           -webkit-font-smoothing: inherit;
-          filter: hue-rotate(182deg) invert(1) sepia(1);
+          filter: invert(0.92) hue-rotate(180deg) contrast(1.05);
           flex: 0 0 auto;
           height: 800px;
           position: relative;
@@ -117,29 +107,78 @@ export function MultiCalendar() {
         }
       `}</style>
 
-      {/* Calendar Toggle Controls */}
-      <div className="mb-6 p-6 bg-zinc-900/50 border-2 border-[#cfc493]/30 rounded-xl">
-        <h3 className="text-lg font-semibold text-[#cfc493] mb-4">Select Calendars to Display</h3>
-        <div className="flex flex-wrap gap-6">
-          {calendars.map((calendar) => (
-            <label key={calendar.id} className="flex items-center gap-3 cursor-pointer group">
-              <input
-                type="checkbox"
-                checked={enabledCalendars.has(calendar.id)}
-                onChange={() => toggleCalendar(calendar.id)}
-                className="w-5 h-5 rounded border-2 border-[#cfc493] bg-zinc-800 checked:bg-[#cfc493] cursor-pointer accent-[#cfc493]"
-              />
-              <span className="text-[#cfc493] font-medium group-hover:text-[#edebd1] transition-colors">
-                {calendar.name}
-              </span>
-            </label>
-          ))}
+      {/* Calendar Toggle Controls & Color Legend */}
+      <div className="mb-6 p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl shadow-lg">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
+          <div>
+            <h3 className="text-lg font-bold text-white flex items-center gap-2">
+              <span>Select Calendars to Display</span>
+            </h3>
+            <p className="text-xs text-zinc-400 mt-0.5">
+              Filter schedules by subsystem. Each calendar is color-coded using official SOAR brand standards.
+            </p>
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setEnabledCalendars(new Set(calendars.map((c) => c.id)))}
+              className="text-xs font-medium text-zinc-400 hover:text-white px-2.5 py-1 rounded-md bg-zinc-800/60 hover:bg-zinc-800 transition-colors cursor-pointer"
+            >
+              Select All
+            </button>
+            <button
+              onClick={() => setEnabledCalendars(new Set())}
+              className="text-xs font-medium text-zinc-400 hover:text-white px-2.5 py-1 rounded-md bg-zinc-800/60 hover:bg-zinc-800 transition-colors cursor-pointer"
+            >
+              Clear All
+            </button>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {calendars.map((calendar) => {
+            const isEnabled = enabledCalendars.has(calendar.id)
+            return (
+              <label
+                key={calendar.id}
+                onClick={() => toggleCalendar(calendar.id)}
+                className={`flex items-start gap-3.5 p-4 rounded-xl border transition-all cursor-pointer select-none ${
+                  isEnabled
+                    ? `${calendar.bgActive} ${calendar.borderActive} shadow-md`
+                    : "bg-zinc-950/40 border-zinc-800/80 opacity-60 hover:opacity-90"
+                }`}
+              >
+                <input
+                  type="checkbox"
+                  checked={isEnabled}
+                  onChange={() => {}} // Handled by label click
+                  className="mt-1 w-4 h-4 rounded cursor-pointer shrink-0"
+                  style={{ accentColor: calendar.uiColor }}
+                />
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-1 flex-wrap">
+                    <span className="font-semibold text-sm text-white">{calendar.name}</span>
+                    <span
+                      className="text-[10px] font-bold px-2 py-0.5 rounded-full border shrink-0"
+                      style={{
+                        color: calendar.uiColor,
+                        borderColor: `${calendar.uiColor}40`,
+                        backgroundColor: `${calendar.uiColor}15`,
+                      }}
+                    >
+                      {calendar.colorName}
+                    </span>
+                  </div>
+                  <p className="text-xs text-zinc-400 leading-relaxed">{calendar.subtitle}</p>
+                </div>
+              </label>
+            )
+          })}
         </div>
       </div>
 
       {/* Calendar Display */}
       {embedUrl ? (
-        <div className="bg-zinc-900/50 border-2 border-[#cfc493]/20 rounded-xl overflow-hidden">
+        <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden shadow-2xl">
           <div className="calendar-wrapper">
             <iframe
               key={embedUrl}
@@ -152,8 +191,8 @@ export function MultiCalendar() {
           </div>
         </div>
       ) : (
-        <div className="bg-zinc-900/50 border-2 border-[#cfc493]/20 rounded-xl p-12 text-center">
-          <p className="text-[#cfc493] text-lg">Please select at least one calendar to display.</p>
+        <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-12 text-center shadow-lg">
+          <p className="text-[#cfc493] text-lg font-medium">Please select at least one calendar to display.</p>
         </div>
       )}
     </div>
