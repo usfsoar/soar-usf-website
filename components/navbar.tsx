@@ -53,151 +53,161 @@ export function Navbar() {
             <Image src="/White Logo.svg" alt="SOAR Logo" width={32} height={32} className="w-8 h-8" />
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center gap-8">
-        <Link href="/" className={`text-sm font-medium transition-colors cursor-pointer pb-1 border-b-2 border-transparent ${isActive('/') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
-          Home
-        </Link>
-        <div
-          className="relative"
-          onMouseEnter={() => setAboutOpen(true)}
-          onMouseLeave={() => setAboutOpen(false)}
-        >
-          <button className={`flex items-center gap-1 text-sm font-medium transition-colors pb-1 border-b-2 border-transparent ${isActive('/about') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
-            About
-            <ChevronDown className="w-4 h-4" />
-          </button>
-          {aboutOpen && (
-            <div className="absolute top-full left-0 pt-0 bg-zinc-900 border border-white/10 rounded-md shadow-lg py-2 min-w-[160px]">
-              <Link
-                href="/about"
-                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
-              >
-                About Us
-              </Link>
-              <Link
-                href="/eboard"
-                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
-              >
-                Eboard
-              </Link>
-              <Link
-                href="/sponsorships"
-                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
-              >
-                Sponsorship
-              </Link>
-              <Link
-                href="/media"
-                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
-              >
-                Media + Pics
-              </Link>
-              <Link
-                href="/branding"
-                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
-              >
-                Branding
-              </Link>
-              {/* <Link
-                href="/shop"
-                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
-              >
-                The Shop
-              </Link> */}
-            </div>
-          )}
-        </div>
-        <div
-          className="relative"
-          onMouseEnter={() => setCurrentProjectsOpen(true)}
-          onMouseLeave={() => setCurrentProjectsOpen(false)}
-        >
-          <button className={`flex items-center gap-1 text-sm font-medium transition-colors pb-1 border-b-2 border-transparent ${isActive('/current-projects') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
-            Current Projects
-            <ChevronDown className="w-4 h-4" />
-          </button>
-          {currentProjectsOpen && (
-            <div className="absolute top-full left-0 pt-0 bg-zinc-900 border border-white/10 rounded-md shadow-lg py-2 min-w-[160px]">
-              <Link
-                href="/current-projects/irec"
-                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
-              >
-                IREC
-              </Link>
-              <Link
-                href="/current-projects/bel"
-                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
-              >
-                BEL
-              </Link>
-              <Link
-                href="/current-projects/certifications"
-                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
-              >
-                Certifications
-              </Link>
-            </div>
-          )}
-        </div>
-        <div
-          className="relative"
-          onMouseEnter={() => setPastProjectsOpen(true)}
-          onMouseLeave={() => setPastProjectsOpen(false)}
-        >
-          <button className={`flex items-center gap-1 text-sm font-medium transition-colors pb-1 border-b-2 border-transparent ${isActive('/past-projects') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
-            Past Projects
-            <ChevronDown className="w-4 h-4" />
-          </button>
-          {pastProjectsOpen && (
-            <div className="absolute top-full left-0 pt-0 bg-zinc-900 border border-white/10 rounded-md shadow-lg py-2 min-w-[160px]">
-              <Link
-                href="/past-projects/past-irec"
-                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
-              >
-                IREC 25-26
-              </Link>
-              <Link
-                href="/past-projects/past-nsl"
-                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
-              >
-                Past NSL
-              </Link>
-              {/* <Link
-                href="/past-projects/hybrid"
-                className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
-              >
-                Hybrid
-              </Link> */}
-            </div>
-          )}
-        </div>
-        <Link href="/events" className={`text-sm font-medium transition-colors cursor-pointer pb-1 border-b-2 border-transparent ${isActive('/events') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
-          Events
-        </Link>
-        <Link href="/blogs" className={`text-sm font-medium transition-colors cursor-pointer pb-1 border-b-2 border-transparent ${isActive('/blogs') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
-          Blogs
-        </Link>
-        {/* <Link href="/positions" className={`text-sm font-medium transition-colors cursor-pointer pb-1 border-b-2 border-transparent ${isActive('/positions') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
-          Positions
-        </Link> */}
-        <Link href="/#contact" className="cursor-pointer">
-          <Button
-            style={{ backgroundColor: "#D0C495", color: "#0f0f0f" }}
-            className="hidden lg:flex relative z-10 font-medium px-8 py-2.5 rounded-full text-sm hover:opacity-100 cursor-pointer shadow-[0_10px_36px_rgba(207,196,149,0.30)] hover:shadow-[0_0_48px_rgba(207,196,149,0.65)] focus:shadow-[0_0_56px_rgba(207,196,149,0.75)] transition-shadow focus:outline-none focus:ring-4 focus:ring-[#D0C495]/30"
+          {/* Home */}
+          <Link href="/" className={`hidden lg:block text-sm font-medium transition-colors cursor-pointer pb-1 border-b-2 border-transparent ${isActive('/') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
+            Home
+          </Link>
+
+          {/* About */}
+          <div
+            className="hidden lg:block relative"
+            onMouseEnter={() => setAboutOpen(true)}
+            onMouseLeave={() => setAboutOpen(false)}
           >
-            Contact Us
-          </Button>
-        </Link>
-        <Link href="https://giving.usf.edu/online/gift/f/220111/" className="cursor-pointer">
-          <Button
-            style={{ backgroundColor: "#D0C495", color: "#0f0f0f" }}
-            className="hidden lg:flex relative z-10 font-medium px-8 py-2.5 rounded-full text-sm hover:opacity-100 cursor-pointer shadow-[0_10px_36px_rgba(207,196,149,0.30)] hover:shadow-[0_0_48px_rgba(207,196,149,0.65)] focus:shadow-[0_0_56px_rgba(207,196,149,0.75)] transition-shadow focus:outline-none focus:ring-4 focus:ring-[#D0C495]/30"
+            <button className={`flex items-center gap-1 text-sm font-medium transition-colors pb-1 border-b-2 border-transparent ${isActive('/about') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
+              About
+              <ChevronDown className="w-4 h-4" />
+            </button>
+            {aboutOpen && (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-0 bg-zinc-900 border border-white/10 rounded-md shadow-lg py-2 min-w-[160px] before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3">
+                <Link
+                  href="/about"
+                  className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="/eboard"
+                  className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+                >
+                  Eboard
+                </Link>
+                <Link
+                  href="/sponsorships"
+                  className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+                >
+                  Sponsorship
+                </Link>
+                <Link
+                  href="/media"
+                  className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+                >
+                  Media + Pics
+                </Link>
+                <Link
+                  href="/branding"
+                  className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+                >
+                  Branding
+                </Link>
+                {/* <Link
+                  href="/shop"
+                  className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+                >
+                  The Shop
+                </Link> */}
+              </div>
+            )}
+          </div>
+
+          {/* Current Projects */}
+          <div
+            className="hidden lg:block relative"
+            onMouseEnter={() => setCurrentProjectsOpen(true)}
+            onMouseLeave={() => setCurrentProjectsOpen(false)}
           >
-            Support Us
-          </Button>
-        </Link>
-      </div>
+            <button className={`flex items-center gap-1 text-sm font-medium transition-colors pb-1 border-b-2 border-transparent ${isActive('/current-projects') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
+              Current Projects
+              <ChevronDown className="w-4 h-4" />
+            </button>
+            {currentProjectsOpen && (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-0 bg-zinc-900 border border-white/10 rounded-md shadow-lg py-2 min-w-[160px] before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3">
+                <Link
+                  href="/current-projects/irec"
+                  className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+                >
+                  IREC
+                </Link>
+                <Link
+                  href="/current-projects/bel"
+                  className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+                >
+                  BEL
+                </Link>
+                <Link
+                  href="/current-projects/certifications"
+                  className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+                >
+                  Certifications
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* Past Projects */}
+          <div
+            className="hidden lg:block relative"
+            onMouseEnter={() => setPastProjectsOpen(true)}
+            onMouseLeave={() => setPastProjectsOpen(false)}
+          >
+            <button className={`flex items-center gap-1 text-sm font-medium transition-colors pb-1 border-b-2 border-transparent ${isActive('/past-projects') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
+              Past Projects
+              <ChevronDown className="w-4 h-4" />
+            </button>
+            {pastProjectsOpen && (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-0 bg-zinc-900 border border-white/10 rounded-md shadow-lg py-2 min-w-[160px] before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3">
+                <Link
+                  href="/past-projects/past-irec"
+                  className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+                >
+                  IREC 25-26
+                </Link>
+                <Link
+                  href="/past-projects/past-nsl"
+                  className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+                >
+                  Past NSL
+                </Link>
+                {/* <Link
+                  href="/past-projects/hybrid"
+                  className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
+                >
+                  Hybrid
+                </Link> */}
+              </div>
+            )}
+          </div>
+
+          {/* Events */}
+          <Link href="/events" className={`hidden lg:block text-sm font-medium transition-colors cursor-pointer pb-1 border-b-2 border-transparent ${isActive('/events') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
+            Events
+          </Link>
+          {/* <Link href="/blogs" className={`hidden lg:block text-sm font-medium transition-colors cursor-pointer pb-1 border-b-2 border-transparent ${isActive('/blogs') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
+            Blogs
+          </Link> */}
+          {/* <Link href="/positions" className={`hidden lg:block text-sm font-medium transition-colors cursor-pointer pb-1 border-b-2 border-transparent ${isActive('/positions') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
+            Positions
+          </Link> */}
+
+          {/* Right: CTA Action Buttons */}
+          <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
+            <Link href="/#contact" className="cursor-pointer">
+              <Button
+                style={{ backgroundColor: "#D0C495", color: "#0f0f0f" }}
+                className="relative z-10 font-medium px-6 py-2.5 rounded-full text-sm hover:opacity-100 cursor-pointer shadow-[0_10px_36px_rgba(207,196,149,0.30)] hover:shadow-[0_0_48px_rgba(207,196,149,0.65)] focus:shadow-[0_0_56px_rgba(207,196,149,0.75)] transition-shadow focus:outline-none focus:ring-4 focus:ring-[#D0C495]/30"
+              >
+                Contact Us
+              </Button>
+            </Link>
+            <Link href="https://giving.usf.edu/online/gift/f/220111/" className="cursor-pointer">
+              <Button
+                style={{ backgroundColor: "#D0C495", color: "#0f0f0f" }}
+                className="relative z-10 font-medium px-6 py-2.5 rounded-full text-sm hover:opacity-100 cursor-pointer shadow-[0_10px_36px_rgba(207,196,149,0.30)] hover:shadow-[0_0_48px_rgba(207,196,149,0.65)] focus:shadow-[0_0_56px_rgba(207,196,149,0.75)] transition-shadow focus:outline-none focus:ring-4 focus:ring-[#D0C495]/30"
+              >
+                Support Us
+              </Button>
+            </Link>
+          </div>
 
       {/* Mobile Menu Button */}
       <Button
@@ -243,9 +253,9 @@ export function Navbar() {
             </Link>
             
             {/* About Dropdown */}
-            <div className="text-center">
+            <div className="text-center w-full">
               <button
-                className="text-sm font-normal text-white hover:text-[#cfc493] transition-colors flex items-center gap-1"
+                className="text-sm font-normal text-white hover:text-[#cfc493] transition-colors flex items-center justify-center gap-1 mx-auto"
                 onClick={() => {
                   setMobileAboutOpen(!mobileAboutOpen)
                   if (!mobileAboutOpen) {
@@ -255,60 +265,70 @@ export function Navbar() {
                 }}
               >
                 About
-                <ChevronDown className={`w-3 h-3 transition-transform ${mobileAboutOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-500 ease-out ${mobileAboutOpen ? 'rotate-180 text-[#cfc493]' : ''}`} />
               </button>
-              {mobileAboutOpen && (
-                <div className="mt-3 space-y-3">
-                  <Link
-                    href="/about"
-                    className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
-                    onClick={() => setMobileMenuOpen(false)}
+              <AnimatePresence initial={false}>
+                {mobileAboutOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.28, ease: [0.04, 0.62, 0.23, 0.98] }}
+                    className="overflow-hidden"
                   >
-                    About Us
-                  </Link>
-                  <Link
-                    href="/eboard"
-                    className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Eboard
-                  </Link>
-                  <Link
-                    href="/sponsorships"
-                    className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Sponsorship
-                  </Link>
-                  <Link
-                    href="/media"
-                    className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Media + Pics
-                  </Link>
-                  <Link
-                    href="/branding"
-                    className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Branding
-                  </Link>
-                  {/* <Link
-                    href="/shop"
-                    className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    The Shop
-                  </Link> */}
-                </div>
-              )}
+                    <div className="pt-2.5 pb-1 space-y-2.5">
+                      <Link
+                        href="/about"
+                        className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        About Us
+                      </Link>
+                      <Link
+                        href="/eboard"
+                        className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Eboard
+                      </Link>
+                      <Link
+                        href="/sponsorships"
+                        className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Sponsorship
+                      </Link>
+                      <Link
+                        href="/media"
+                        className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Media + Pics
+                      </Link>
+                      <Link
+                        href="/branding"
+                        className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Branding
+                      </Link>
+                      {/* <Link
+                        href="/shop"
+                        className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        The Shop
+                      </Link> */}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
             {/* Current Projects Dropdown */}
-            <div className="text-center">
+            <div className="text-center w-full">
               <button
-                className="text-sm font-normal text-white hover:text-[#cfc493] transition-colors flex items-center gap-1"
+                className="text-sm font-normal text-white hover:text-[#cfc493] transition-colors flex items-center justify-center gap-1 mx-auto"
                 onClick={() => {
                   setMobileCurrentProjectsOpen(!mobileCurrentProjectsOpen)
                   if (!mobileCurrentProjectsOpen) {
@@ -318,39 +338,49 @@ export function Navbar() {
                 }}
               >
                 Current Projects
-                <ChevronDown className={`w-3 h-3 transition-transform ${mobileCurrentProjectsOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ease-out ${mobileCurrentProjectsOpen ? 'rotate-180 text-[#cfc493]' : ''}`} />
               </button>
-              {mobileCurrentProjectsOpen && (
-                <div className="mt-3 space-y-3">
-                  <Link
-                    href="/current-projects/irec"
-                    className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
-                    onClick={() => setMobileMenuOpen(false)}
+              <AnimatePresence initial={false}>
+                {mobileCurrentProjectsOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.28, ease: [0.04, 0.62, 0.23, 0.98] }}
+                    className="overflow-hidden"
                   >
-                    IREC
-                  </Link>
-                  <Link
-                    href="/current-projects/bel"
-                    className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    BEL
-                  </Link>
-                  <Link
-                    href="/current-projects/certifications"
-                    className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Certifications
-                  </Link>
-                </div>
-              )}
+                    <div className="pt-2.5 pb-1 space-y-2.5">
+                      <Link
+                        href="/current-projects/irec"
+                        className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        IREC
+                      </Link>
+                      <Link
+                        href="/current-projects/bel"
+                        className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        BEL
+                      </Link>
+                      <Link
+                        href="/current-projects/certifications"
+                        className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Certifications
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
             {/* Past Projects Dropdown */}
-            <div className="text-center">
+            <div className="text-center w-full">
               <button
-                className="text-sm font-normal text-white hover:text-[#cfc493] transition-colors flex items-center gap-1"
+                className="text-sm font-normal text-white hover:text-[#cfc493] transition-colors flex items-center justify-center gap-1 mx-auto"
                 onClick={() => {
                   setMobilePastProjectsOpen(!mobilePastProjectsOpen)
                   if (!mobilePastProjectsOpen) {
@@ -360,33 +390,43 @@ export function Navbar() {
                 }}
               >
                 Past Projects
-                <ChevronDown className={`w-3 h-3 transition-transform ${mobilePastProjectsOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ease-out ${mobilePastProjectsOpen ? 'rotate-180 text-[#cfc493]' : ''}`} />
               </button>
-              {mobilePastProjectsOpen && (
-                <div className="mt-3 space-y-3">
-                  <Link
-                    href="/past-projects/past-irec"
-                    className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
-                    onClick={() => setMobileMenuOpen(false)}
+              <AnimatePresence initial={false}>
+                {mobilePastProjectsOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.28, ease: [0.04, 0.62, 0.23, 0.98] }}
+                    className="overflow-hidden"
                   >
-                    IREC 25-26
-                  </Link>
-                  <Link
-                    href="/past-projects/past-nsl"
-                    className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Past NSL
-                  </Link>
-                  {/* <Link
-                    href="/past-projects/hybrid"
-                    className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Hybrid
-                  </Link> */}
-                </div>
-              )}
+                    <div className="pt-2.5 pb-1 space-y-2.5">
+                      <Link
+                        href="/past-projects/past-irec"
+                        className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        IREC 25-26
+                      </Link>
+                      <Link
+                        href="/past-projects/past-nsl"
+                        className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Past NSL
+                      </Link>
+                      {/* <Link
+                        href="/past-projects/hybrid"
+                        className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Hybrid
+                      </Link> */}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
             <Link
@@ -396,13 +436,13 @@ export function Navbar() {
             >
               Events
             </Link>
-            <Link
+            {/* <Link
               href="/blogs"
               className={`text-sm font-normal transition-colors cursor-pointer ${isActive('/blogs') ? 'text-[#cfc493]' : 'text-white hover:text-[#cfc493]'}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Blogs
-            </Link>
+            </Link> */}
             {/* <Link
               href="/positions"
               className={`text-sm font-normal transition-colors cursor-pointer ${isActive('/positions') ? 'text-[#cfc493]' : 'text-white hover:text-[#cfc493]'}`}

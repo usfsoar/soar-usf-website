@@ -129,9 +129,9 @@ export function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/blogs" className="hover:text-foreground transition-colors cursor-pointer">
+                    {/* <Link href="/blogs" className="hover:text-foreground transition-colors cursor-pointer">
                       Blogs
-                    </Link>
+                    </Link> */}
                   </li>
                   <li>
                     {/* <Link href="/positions" className="hover:text-foreground transition-colors cursor-pointer">
