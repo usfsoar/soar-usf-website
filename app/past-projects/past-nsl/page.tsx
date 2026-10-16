@@ -211,13 +211,9 @@ const SEASONS: SeasonData[] = [
     images: [
       {
         src: "/Full Assembly.PNG",
-        alt: "2018-2019 Full CAD Assembly Render",
-        caption: "Full CAD assembly model showing internal packaging, DAAS transition band, and rover bay",
       },
       {
         src: "/pic7.JPG",
-        alt: "2018-2019 Rocket build day",
-        caption: "SOAR vehicle team assembling the lower airframe, motor mount, and carbon fiber fins",
       },
     ],
     specs: {
@@ -314,13 +310,9 @@ const SEASONS: SeasonData[] = [
     images: [
       {
         src: "/pic10.JPG",
-        alt: "2016-2017 Founding team build",
-        caption: "Founding SOAR members assembling the 145-inch G10 fiberglass airframe and booster section",
       },
       {
         src: "/pic11.JPG",
-        alt: "2016-2017 Electronics testing",
-        caption: "Raspberry Pi vision system, GPS breakout, and dual Missile Works RRC3 altimeter bench testing",
       },
     ],
     specs: {
@@ -845,7 +837,7 @@ export default function PastNSLPage() {
                   <Image
                     key={modalImage.src}
                     src={modalImage.src}
-                    alt={modalImage.alt || `Season ${modalSeason.year} Image`}
+                    alt={`Season ${modalSeason.year} Image`}
                     fill
                     sizes="(max-width: 1200px) 100vw, 1100px"
                     className="object-contain transition-opacity duration-300"
@@ -856,7 +848,7 @@ export default function PastNSLPage() {
                 {/* Footer with Caption & Dots */}
                 <div className="p-4 sm:p-5 bg-zinc-950/90 border-t border-zinc-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                   <div className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
-                    {modalImage.caption || modalImage.alt}
+                    {`Season ${modalSeason.year} Image`}
                   </div>
 
                   {/* Dot Indicators */}
