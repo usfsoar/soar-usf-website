@@ -5,7 +5,7 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
 import { PageHeader } from "@/components/page-header"
-import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion"
+import { motion, AnimatePresence, useScroll, useSpring, type Variants } from "framer-motion"
 import { 
   Rocket, 
   Calendar, 
@@ -162,34 +162,6 @@ const SEASONS: SeasonData[] = [
       "Ground Ejection Verification: Scaled black powder separation charges to 2.0g to ensure high-margin separation under all flight dynamics.",
     ],
     teamLeadership: "Society of Aeronautics and Rocketry (SOAR) at the University of South Florida, mentored by Jonathan Fitzer (Tripoli Level III).",
-  },
-  {
-    id: "season-21-22",
-    year: "2021–2022",
-    seasonLabel: "21-22 Season",
-    vehicleName: "Bullseye II",
-    challenge: "Grid Localization & Autonomous Target Detection",
-    summary:
-      "Marking SOAR's triumphant return to national competition after the pandemic hiatus, the 2021-2022 team designed a redesigned modular avionics bay and grid location sensing suite capable of logging flight kinematics and determining landing coordinates without relying on external GPS.",
-    tags: ["Grid Localization", "IMU Logging", "Dual Deployment", "Post-COVID Return"],
-    images: [
-      {
-        src: "/pic5.JPG",
-      },
-      {
-        src: "/pic6.JPG",
-      },
-    ],
-    specs: {
-      targetApogee: "4,000 ft",
-      length: "96 in (8.0 ft)",
-      diameter: "5.5 in",
-      liftOffWeight: "35.8 lb",
-      motor: "Aerotech L1150 Solid Motor",
-      payload: "Grid localization beacon, atmospheric IMU logger, optical landing sensor",
-      recovery: "Dual deployment with dual altimeters & black powder separation charges",
-      innovation: "Modular 3D-printed avionics sled with external magnetic arming switches",
-    },
   },
   {
     id: "season-18-19",
@@ -392,7 +364,7 @@ const SEASONS: SeasonData[] = [
   },
 ]
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: {
     opacity: 0,
     y: 28,
@@ -432,7 +404,6 @@ export default function PastNSLPage() {
   const [activeImageIndexes, setActiveImageIndexes] = useState<{ [seasonId: string]: number }>({
     "season-23-24": 0,
     "season-22-23": 0,
-    "season-21-22": 0,
     "season-18-19": 0,
     "season-17-18": 0,
     "season-16-17": 0,
@@ -566,7 +537,7 @@ export default function PastNSLPage() {
               </div>
               <div className="flex items-center gap-2 bg-zinc-950/60 border border-zinc-800/80 px-4 py-2.5 rounded-xl">
                 <Award className="w-4 h-4 text-[#cfc493]" />
-                <span className="text-zinc-300">7 Competition Seasons</span>
+                <span className="text-zinc-300">6 Competition Seasons</span>
               </div>
             </div>
           </div>
@@ -868,7 +839,7 @@ export default function PastNSLPage() {
           </p>
           <div className="inline-flex gap-4 flex-wrap justify-center text-sm text-zinc-400 font-medium">
             <span>• 100+ Student Engineers Trained</span>
-            <span>• 7 Full Competition Cycles</span>
+            <span>• 6 Full Competition Cycles</span>
             <span>• Real NASA PDR / CDR Reviews</span>
           </div>
         </div>

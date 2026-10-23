@@ -74,9 +74,8 @@ export default function PastIRECPage() {
     { role: "Payload Mechanical Lead", name: "Cooper Kenney", detail: "3U CubeSat chassis, spring suspension landing legs, and motorized rack-and-pinion deployment." },
     { role: "Payload EECS Lead", name: "Chiara Alessandra Deangelis", detail: "Dual RGB Edge AI & NoIR camera payload, NDVI computer vision, and autonomous rover drive electronics." },
     { role: "Recovery Lead", name: "Sama Hosam Ahmed Moussa Ahmed", detail: "Triple-redundant RRC3+ altimeter bays, pyrotechnic sizing, and dual-deployment parachute rigging." },
-    { role: "Safety Officer Lead", name: "Austin Hunter Long", detail: "Hazard analysis, PPE compliance, launch-day pre-flight checklists, and range safety protocols." },
-    { role: "GSE Lead", name: "Kevin Tran", detail: "Ground Support Equipment, motorized pan/tilt tracking antenna mast, and launch pad hardware." },
-    { role: "Simulations Lead", name: "Alan Chen", detail: "OpenRocket flight simulations, Monte Carlo wind dispersion modeling, and trajectory analysis." },
+    { role: "Safety Officer Lead", name: "Khoi Ton", detail: "Hazard analysis, PPE compliance, launch-day pre-flight checklists, and range safety protocols." },
+    { role: "Telemetry Lead", name: "Alan Guyster", detail: "Live telemetry, "}
   ]
 
   return (
