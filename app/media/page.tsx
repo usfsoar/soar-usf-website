@@ -62,20 +62,6 @@ export default function MediaPage() {
                 <div className="slide"><Image src="/pic12.JPG" alt="Photo 12" width={300} height={200} /></div>
               </div>
             </div>
-            
-            {/* See More Button - Reduced spacing */}
-            <div>
-              <a
-                href="/media"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#cfc493] hover:bg-[#b8ad7a] text-zinc-900 font-semibold px-6 py-3 rounded-lg transition-colors"
-              >
-                See More
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </a>
-            </div>
           </div>
         </div>
       </section>

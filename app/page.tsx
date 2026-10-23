@@ -8,7 +8,6 @@ const Stats = dynamic(() => import("@/components/stats").then(mod => ({ default:
 const IREC = dynamic(() => import("@/components/irec").then(mod => ({ default: mod.IREC })), { ssr: true })
 const BEL = dynamic(() => import("@/components/bel").then(mod => ({ default: mod.BEL })), { ssr: true })
 const TRACertifications = dynamic(() => import("@/components/tra-certifications").then(mod => ({ default: mod.TRACertifications })), { ssr: true })
-const Blogs = dynamic(() => import("@/components/blogs").then(mod => ({ default: mod.Blogs })), { ssr: true })
 const Sponsorships = dynamic(() => import("@/components/sponsorships").then(mod => ({ default: mod.Sponsorships })), { ssr: true })
 const Contact = dynamic(() => import("@/components/contact").then(mod => ({ default: mod.Contact })), { ssr: true })
 const Footer = dynamic(() => import("@/components/footer").then(mod => ({ default: mod.Footer })), { ssr: true })
@@ -24,7 +23,6 @@ export default function Home() {
       <IREC />
       <BEL />
       <TRACertifications />
-      <Blogs />
       <Contact />
       <Footer />
     </main>

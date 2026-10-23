@@ -60,13 +60,15 @@ export function MultiCalendar() {
   )
 
   const toggleCalendar = (id: string) => {
-    const newEnabled = new Set(enabledCalendars)
-    if (newEnabled.has(id)) {
-      newEnabled.delete(id)
-    } else {
-      newEnabled.add(id)
-    }
-    setEnabledCalendars(newEnabled)
+    setEnabledCalendars((prev) => {
+      const newEnabled = new Set(prev)
+      if (newEnabled.has(id)) {
+        newEnabled.delete(id)
+      } else {
+        newEnabled.add(id)
+      }
+      return newEnabled
+    })
   }
 
   const getEmbedUrl = () => {
@@ -140,7 +142,7 @@ export function MultiCalendar() {
             return (
               <label
                 key={calendar.id}
-                onClick={() => toggleCalendar(calendar.id)}
+                htmlFor={`calendar-toggle-${calendar.id}`}
                 className={`flex items-start gap-3.5 p-4 rounded-xl border transition-all cursor-pointer select-none ${
                   isEnabled
                     ? `${calendar.bgActive} ${calendar.borderActive} shadow-md`
@@ -148,9 +150,10 @@ export function MultiCalendar() {
                 }`}
               >
                 <input
+                  id={`calendar-toggle-${calendar.id}`}
                   type="checkbox"
                   checked={isEnabled}
-                  onChange={() => {}} // Handled by label click
+                  onChange={() => toggleCalendar(calendar.id)}
                   className="mt-1 w-4 h-4 rounded cursor-pointer shrink-0"
                   style={{ accentColor: calendar.uiColor }}
                 />

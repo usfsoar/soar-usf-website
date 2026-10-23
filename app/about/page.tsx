@@ -21,21 +21,18 @@ export default function AboutPage() {
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">
               <h3 className="text-2xl font-bold mb-4">Who We Are</h3>
               <p className="text-zinc-400 leading-relaxed mb-4">
-                The Society of Aeronautics and Rocketry (SOAR) at USF promotes aerospace engineering education and academic performance through participation in projects and competitions dedicated to rocketry and aerospace technologies. SOAR provides an opportunity for students from all majors and fields to enhance their knowledge in research, engineering, and other tangential skills pertinent to the industry. 
+                The Society of Aeronautics and Rocketry (SOAR) at USF promotes aerospace engineering education and academic performance through projects and competitions dedicated to amateur rocketry & aerospace. SOAR provides an opportunity for students from all majors and fields to enhance their knowledge in research, engineering, and various tangential skills pertinent to the industry.
               </p>
               <p className="text-zinc-400 leading-relaxed mb-4">
-                Here at SOAR, we utilize engineering principles to solve challenging problems that occur in our projects. Through the use of engineering tools and machinery, SOAR strives to create an engineering environment that better prepares its members for the real world challenges that may occur when working in the job force. Develop your CAD software skills such as Solidworks and Siemens to further refine your design process in projects. Become familiar with hand tools and different machinery to increase your manufacturing capabilities. 
+                Here at SOAR, we utilize engineering principles to solve challenging problems that occur in our projects. Through the use of industry-level engineering principles, SOAR strives to create an environment that prepares members for the real world challenges that are faced in engineering. Develop your CAD software skills with SolidWorks, work with embedded systems, or even manufacture components with CNC machines, the sky is not the limit with what you can learn through SOAR.
               </p>
-              <p className="text-zinc-400 leading-relaxed">
-                Build your team working skills through current projects while optimizing your designing skills through feedback from team members and leaders. Apply for leadership roles when they are available and grow your knowledge of the field of engineering and computer science.
-              </p>
+              
             </div>
 
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
               <p className="text-zinc-400 leading-relaxed">
-                As an organization we seek to contribute to the development of new and innovative systems that further human deep space exploration efforts. We view ourselves as a professional research organization that produces data and innovations relevant to the aerospace industry. In the mindset of professional organization we adhere to strict timelines, budget restrictions, management, teamwork, and fostering collaborations between the academic, commercial and government space industries in mission technology design. And as is necessary for a professional organization to effectively operate, SOAR utilize the skills of members from a broad range of fields of study, from finance, to engineering, to graphic arts, and everything in between.
-              </p>
+                At the organizational level, we seek to contribute to the development of new and innovative systems that further human deep space exploration efforts. We view ourselves as a professional research & engineering organization that produces data and innovations relevant to the aerospace industry. To meet our goals, we employ management practices found in industry, robust leadership methods, systems engineering principles, and engaging our student members and the USF community. SOAR strives to foster a culture built on teamwork & collaboration not just inside the active member body, but inclusive of alumni, corporate sponsors, and competition officials. We value inclusivity, with the members of SOAR having a diverse academic background, ranging from finance, to engineering, graphic arts, and everything in between.              </p>
             </div>
 
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">
@@ -50,7 +47,7 @@ export default function AboutPage() {
                 <div>
                   <h4 className="text-lg font-bold text-[#cfc493] mb-2">Research & Development</h4>
                   <p className="text-zinc-400 text-sm">
-                    Our teams work on cutting-edge propulsion systems, avionics, recovery systems, and structural design.
+                    Our teams work on cutting-edge liquid propulsion systems, avionics, recovery systems, and structural design.
                   </p>
                 </div>
                 <div>
