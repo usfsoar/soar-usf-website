@@ -16,9 +16,11 @@ type Member = {
 
 type YearbookProps = {
   members: Member[]
-  /** Tailwind grid classes for responsive columns (defaults kept to original) */
+  /** Tailwind grid classes for responsive columns (defaults to balanced 3-column layout) */
   gridClass?: string
-  /** Max width for card (as Tailwind friendly value like '18rem' used in inline style) */
+  /** Container max width utility classes */
+  containerClass?: string
+  /** Max width for card (as Tailwind friendly value like '20rem' used in inline style) */
   cardMaxWidth?: string
   /** width utility classes for the card element */
   cardWidthClass?: string
@@ -30,7 +32,16 @@ type YearbookProps = {
   innerBorderColor?: string
 }
 
-export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:grid-cols-2 md:grid-cols-4', cardMaxWidth = '18rem', cardWidthClass = 'sm:w-48 md:w-52', imageHeightClass = 'w-full h-72 sm:h-48', outerBorderColor = '#006747', innerBorderColor = '#cfc493' }: YearbookProps) {
+export default function EboardYearbook({
+  members,
+  gridClass = 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3',
+  containerClass = 'max-w-5xl mx-auto',
+  cardMaxWidth = '20rem',
+  cardWidthClass = 'sm:w-56 md:w-60 lg:w-64',
+  imageHeightClass = 'w-full h-72 sm:h-56 md:h-60',
+  outerBorderColor = '#006747',
+  innerBorderColor = '#cfc493',
+}: YearbookProps) {
   const [selected, setSelected] = useState<number | null>(null)
   const [selectedImage, setSelectedImage] = useState(0)
 
@@ -84,7 +95,7 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
     "Sage Bundhund": "/sageheadshot.jpg",
     "Conner Schilaty": "/connerheadshot.jpg",
     "Daniel Misherky": "/danielheadshot.jpg",
-    "Matthew Messing": "/matthewheadshot.jpg",
+    "Matthew Raulerson": "/matthewheadshot.jpg",
     "Pavan Moturi": "/pavanheadshot.jpg",
     "Alan Guyster": "/alanheadshot.jpg",
     "Chiara DeAngelis": "/chiaraheadshot.jpg",
@@ -106,6 +117,18 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
     "Stepan Jankowski": "/stepanheadshot.jpg",
     "Valeria Melendez": "/valeriaheadshot.jpg",
     "Zachary Tephford": "/zacharyheadshot.jpg",
+    "Heloisa Medeiros Kazakevic": "/heloisaheadshot.jpg",
+    "Ella Ferguson": "/ellaheadshot.jpg",
+    "Logan Lavoy": "/loganheadshot.jpg",
+    "Kha Nguyen": "/khaheadshot.jpg",
+    "Matthew West": "/matthewwheadshot.jpg",
+    "Jonathan Koutin": "/jonathanheadshot.jpg",
+    "Alston Wang": "/alstonheadshot.jpg",
+    "Dereck Santiago": "/dereckheadshot.jpg",
+    "Om (Hari) Patel": "/omheadshot.jpg",
+    "Jacob Jenkins": "/jacobheadshot.jpg",
+    "Yeldana Zhamanova": "/yeldanaheadshot.jpg",
+    "Ethan Toro": "/ethantheadshot.jpg",
   }
 
   // Define custom object positions for specific members
@@ -141,19 +164,23 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
 
   return (
     <div className="container mx-auto px-6 py-12">
-      <div className="max-w-6xl mx-auto">
-        <div className={`grid ${gridClass} gap-6`}>
+      <div className={containerClass}>
+        <div className={`grid ${gridClass} gap-6 sm:gap-8`}>
           {members.map((m, i) => {
             const profileImage = profileImages[m.name] || null
             const profileImagePosition = profileImagePositions[m.name]
+            const isTwoColSm = gridClass.includes("sm:grid-cols-2")
+            const isLastOdd = isTwoColSm && i === members.length - 1 && members.length % 2 !== 0
             return (
               <button
                 key={m.name + i}
                 onClick={() => setSelected(i)}
-                className={`group bg-zinc-900 border-2 rounded-2xl p-4 flex flex-col items-center gap-3 hover:scale-105 transition-all hover:border-[#005a3c] w-full ${cardWidthClass} mx-auto cursor-pointer`}
-                  style={{ maxWidth: cardMaxWidth, borderColor: outerBorderColor }}
+                className={`group bg-zinc-900 border-2 rounded-2xl p-4 flex flex-col items-center gap-3 hover:scale-105 transition-all hover:border-[#005a3c] w-full ${cardWidthClass} mx-auto cursor-pointer ${
+                  isLastOdd ? "sm:col-span-2 md:col-span-1" : ""
+                }`}
+                style={{ maxWidth: cardMaxWidth, borderColor: outerBorderColor }}
               >
-                  <div className={`${imageHeightClass} rounded-lg overflow-hidden bg-zinc-800 flex items-center justify-center border-2 relative p-0 sm:p-2 w-full`} style={{ borderColor: innerBorderColor }}> 
+                <div className={`${imageHeightClass} rounded-lg overflow-hidden bg-zinc-800 flex items-center justify-center border-2 relative p-0 sm:p-2 w-full`} style={{ borderColor: innerBorderColor }}> 
                   {profileImage ? (
                     <Image
                       src={profileImage}
@@ -161,7 +188,7 @@ export default function EboardYearbook({ members, gridClass = 'grid-cols-1 sm:gr
                       fill
                       className="object-cover"
                       style={profileImagePosition ? { objectPosition: profileImagePosition } : undefined}
-                      sizes="128px"
+                      sizes="(max-width: 640px) 100vw, 320px"
                     />
                   ) : (
                     <span className="text-zinc-500">Profile</span>

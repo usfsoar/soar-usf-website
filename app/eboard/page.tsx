@@ -24,8 +24,8 @@
     {
       name: "Cooper Kenney",
       title: "President",
-      description: "Serving as the President, Cooper is currently a Sophomore in Mechanical Engineering.",
-      year: "Sophomore",
+      description: "Serving as the President, Cooper is currently a Junior in Mechanical Engineering.",
+      year: "Junior",
       major: "Mechanical Engineering",
       dates: "August 2024 - Present",
       involvement: "Hello everyone, my name is Cooper and I am a current second-year mechanical engineering student at the University of South Florida. I joined SOAR my first semester at USF and have worked my way up the ranks to now being the incoming president of the club. Please feel free to reach out with any questions you may have relating to high power rocketry!",
@@ -43,35 +43,34 @@
       link: "https://www.linkedin.com/in/conner-schilaty-474452337/"
     },
     {
-      name: "Cesar Briones",
+      name: "Ethan Zylman",
       title: "IREC Chief Engineer",
-      description: "Serving as the IREC Chief Engineer, Cesar is currently a Senior in Mechanical Engineering.",
+      description: "Serving as the IREC Chief Engineer, Ethan is currently a Senior in Electrical Engineering.",
+      year: "Senior",
+      major: "Electrical Engineering",
+      dates: "August 2024 - Present",
+      involvement: "Hi guys, I am employed as an employee of the civil engineering department which is my employer. Employment. I am the student at one of the universities in the entire state of Florida, USF!! I would rather make a rocket that goes up really fast. My favorite cereal is honey bunches of oats, and I’m not an Aquarius.",
+      link: "https://www.linkedin.com/in/ethan-zylman/"
+    },
+    {
+      name: "Joshua Hachmeister",
+      title: "BEL Chief Engineer",
+      description: "Serving as the BEL Chief Engineer, Joshua is currently a Sophomore in Mechanical Engineering.",
       year: "Senior",
       major: "Mechanical Engineering",
-      dates: "August 2022 - Present",
-      involvement: "I first joined SOAR in Fall 2022 and I have loved every single moment of it. I have been the Aerostructures Lead for the 2023 and 2024 season. I lead the design of the first airbrakes system, and pushed for more in house CNC metal manufacturing. Now I am the Chief Engineer for the IREC team. Additionally, I have been working on developing a bipropellant liquid engine.",
-      link: "https://www.linkedin.com/in/cesar-briones-aranda/"
-    },
-    {
-      name: "Drew Brickell",
-      title: "Torito Chief Engineer",
-      description: "Serving as the Torito Chief Engineer, Drew is currently a Sophomore in Mechanical Engineering.",
-      year: "Sophomore",
-      major: "Mechanical Engineering",
       dates: "August 2024 - Present",
-      involvement:
-        "I am currently a second year Mechanical Engineering student, with the goal of going into the field of aerospace after college.  I am a massive fan of all things rocketry, and have my Tripoli Level 1 and 2 high power rocketry certifications. I started out in SOAR as Aerostructures Lead for Torito, and now as Chief Engineer of Torito, it is my duty to oversee all design, build, and testing of all elements of a liquid propulsion system ranging from test stand to electronics.",
-      link: "https://www.linkedin.com/in/drewbrickell/",
+      involvement: "Joshua's involvement description will go here.",
+      link: "https://www.linkedin.com/in/joshua-hachmeister/",
     },
     {
-      name: "Sage Bundhund",
+      name: "Heloisa Medeiros Kazakevic",
       title: "Chief of Marketing",
-      description: "Serving as the Chief of Marketing, Sage is currently a Sophomore in Mechanical Engineering.",
+      description: "Serving as the Chief of Marketing, Heloisa is currently a Sophomore in Econometrics and Business Management.",
       year: "Sophomore",
-      major: "Mechanical Engineering",
-      dates: "August 2024 - Present",
-      involvement: "I am a sophomore Mechanical Engineering student, with an Aerospace Engineering minor, as I hope to pursue a career in Aerospace after graduation. I joined SOAR in Fall of 2024, during my first semester! As Chief of Marketing, I am responsible for promoting the club and gaining new student interest, as well as running our great marketing team. I love reading books, collecting records, and learning about space exploration.",
-      link: "mailto:sbundhund@usf.edu"
+      major: "Econometrics and Business Management",
+      dates: "August 2026 - Present",
+      involvement: "Heloisa's involvement description will go here.",
+      link: "https://www.linkedin.com/in/heloisa-medeiros-87350b303/"
     },
     {
       name: "Valeria Melendez",
@@ -84,25 +83,36 @@
       link: "https://www.linkedin.com/in/valeria-melendez-680913362/"
     },
     {
-      name: "Matthew Messing",
+      name: "Ella Ferguson",
       title: "Chief of Finance",
-      description: "Serving as the Chief of Finance, Matthew is currently a Senior in Mechanical Engineering.",
-      year: "Senior",
-      major: "Mechanical Engineering",
-      dates: "January 2024 - Present",
-      involvement: "I am a Mechanical Engineering student at the University of South Florida and an active member of the Society of Aeronautics and Rocketry (SOAR). Within SOAR, I have been heavily involved in the design, assembly, and testing of the rocket, while also supporting the team through budgeting, procurement, and organizational operations. My involvement combines hands-on engineering work with leadership and financial coordination to help advance SOAR’s technical projects.",
-      link: "https://www.linkedin.com/in/matthew-messing-755930326/"
+      description: "Serving as the Chief of Finance, Ella is currently a Junior in Accounting & Analytics.",
+      year: "Junior",
+      major: "Accounting & Analytics",
+      dates: "April 2026 - Present",
+      involvement: "Ella's involvement description will go here.",
+      link: "https://www.linkedin.com/in/ella-ferguson-/"
     },
     {
       name: "Zachary Tephford",
       title: "Chief of Safety",
-      description: "Serving as the Chief of Safety, Zachary is currently a Sophomore in Mechanical Engineering.",
-      year: "Sophomore",
+      description: "Serving as the Chief of Safety, Zachary is currently a Junior in Mechanical Engineering.",
+      year: "Junior",
       major: "Mechanical Engineering",
       dates: "August 2024 - Present",
       involvement: "I am a sophomore in Mechanical Engineering, and I joined SOAR in Fall 2024 but wasn't heavily involved until Fall 2025. My involvement has landed me as a Junior Engineer for our IREC Aerostructures Subsystem, along with the Logistics Chair for SOAR’s Operations Team. SOAR has benefited me in many ways, from making new friends to furthering my knowledge and experience in rockets & aerospace.",
       link: "https://www.linkedin.com/in/zacharytephford/",
     },
+    {
+      name: "Logan Lavoy",
+      title: "Secretary",
+      description: "Serving as the Secretary, Logan is currently a Sophomore in Aerospace Engineering.",
+      year: "Sophomore",
+      major: "Aerospace Engineering",
+      dates: "August 2025 - Present",
+      involvement: "Logan's involvement description will go here.",
+      link: "https://www.linkedin.com/in/loganjlavoy/",
+    },
+
   ]
 
   export default function EboardPage() {
@@ -125,7 +135,14 @@
 
           <div className="mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-[#006747] mb-4">EBOARD</h2>
-            <EboardYearbook members={eboardMembers} />
+            <EboardYearbook
+              members={eboardMembers}
+              gridClass="grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+              containerClass="max-w-5xl mx-auto"
+              cardMaxWidth="20rem"
+              cardWidthClass="sm:w-56 md:w-60 lg:w-64"
+              imageHeightClass="w-full h-72 sm:h-56 md:h-60"
+            />
           </div>
 
           <div className="mt-12">
@@ -138,15 +155,14 @@
                 <EboardYearbook
                   members={[
                     {
-                      name: "Cesar Briones",
+                      name: "Ethan Zylman",
                       title: "IREC Chief Engineer",
-                      description: "Serving as the IREC Chief Engineer, Cesar is currently a Senior in Mechanical Engineering.",
+                      description: "Serving as the IREC Chief Engineer, Ethan is currently a Senior in Electrical Engineering.",
                       year: "Senior",
-                      major: "Mechanical Engineering",
-                      dates: "August 2022 - Present",
-                      involvement:
-                        "I first joined SOAR in Fall 2022 and I have loved every single moment of it. I have been the Aerostructures Lead for the 2023 and 2024 season. I lead the design of the first airbrakes system, and pushed for more in house CNC metal manufacturing. Now I am the Chief Engineer for the IREC team. Additionally, I have been working on developing a bipropellant liquid engine.",
-                      link: "https://www.linkedin.com/in/cesar-briones-aranda/",
+                      major: "Electrical Engineering",
+                      dates: "August 2024 - Present",
+                      involvement: "Hi guys, I am employed as an employee of the civil engineering department which is my employer. Employment. I am the student at one of the universities in the entire state of Florida, USF!! I would rather make a rocket that goes up really fast. My favorite cereal is honey bunches of oats, and I’m not an Aquarius.",
+                      link: "https://www.linkedin.com/in/ethan-zylman/"
                     },
                     {
                       name: "Pavan Moturi",
@@ -160,74 +176,86 @@
                     },
                     {
                       name: "Alan Guyster",
-                      title: "Telemetry Lead",
-                      description: "Serving as the Telemetry Lead, Alan is currently a Sophomore in Electrical Engineering/Physics.",
+                      title: "SOAR Avionics Lead",
+                      description: "Serving as the Avionics Lead, Alan is currently a Sophomore in Electrical Engineering/Physics.",
                       year: "Sophomore",
-                      major: "Electrical Engineering/Physics",
+                      major: "Electrical Engineering & Physics",
                       dates: "September 2024 - Present",
                       involvement: "Hello everyone! I’m Alan and I’m a double major BS in both Electrical Engineering and Physics. This is my second year with SOAR and I am the telemetry lead for IREC. Feel free to talk to me anytime with any questions!",
                       link: "https://www.linkedin.com/in/alan-guyster-397112325/",
                     },
                     {
-                      name: "Chiara DeAngelis",
+                      name: "Matthew Raulerson",
+                      title: "IREC Avionics Lead",
+                      description: "Serving as the IRECAvionics Lead, Matthew is currently a Senior in Electrical Engineering/.",
+                      year: "Senior",
+                      major: "Electrical Engineering",
+                      dates: "September 2026 - Present",
+                      involvement: "Matthew's involvement description will go here.",
+                      link: "https://www.linkedin.com/in/matthew-raulerson-a10753343/",
+                    },
+                    {
+                      name: "Sage Bundhund",
+                      title: "IREC Aerostructures Lead",
+                      description: "Serving as the IREC Aerostructures Lead, Sage is a Sophomore in Mechanical Engineering.",
+                      year: "Junior",
+                      major: "Mechanical Engineering",
+                      dates: "August 2024 - Present",
+                      involvement:
+                        "I am a junior Mechanical Engineering student, with an Aerospace Engineering minor, as I hope to pursue a career in Aerospace after graduation. I joined SOAR in Fall of 2024, during my first semester! As Chief of Marketing, I am responsible for promoting the club and gaining new student interest, as well as running our great marketing team. I love reading books, collecting records, and learning about space exploration.",
+                      link: "https://www.linkedin.com/in/sage-b-8a3717333/",
+                    },
+                    {
+                      name: "Stepan Jankowski",
+                      title: "Controls Mechanical Lead",
+                      description: "Serving as the Controls Mechanical Lead, Stepan is currently a Junior in Mechanical Engineering.",
+                      year: "Junior",
+                      major: "Mechanical Engineering",
+                      dates: "August 2025 - Present",
+                      involvement: "Stepan's involvement description will go here.",
+                      link: "https://www.linkedin.com/in/stepanjankowski/",
+                    },
+                    {
+                      name: "Logan Burchfield",
+                      title: "Payload Mechanical Lead",
+                      description: "Serving as the Payload Mechanical Lead, Logan is currently a Junior in Mechanical Engineering.",
+                      year: "Junior",
+                      major: "Mechanical Engineering",
+                      dates: "September 2023 - Present",
+                      involvement: "Logan's involvement description will go here.",
+                      link: "https://www.linkedin.com/in/logantburchfield/",
+                    },
+                    {
+                      name: "Kha Nguyen",
                       title: "Payload EECS Lead",
-                      description: "Serving as the Payload EECS Lead, Chiara is currently a Senior in Computer Science.",
+                      description: "Serving as the Payload EECS Lead, Kha is currently a Senior in Computer Engineering.",
                       year: "Senior",
-                      major: "Computer Science",
-                      dates: "January 2024 - Present",
-                      involvement: "Hello guys I’m Chiara, I’m a senior computer science victim and the IREC Payload EECS lead this year!🌱My favorite cereal is fruit loops and I am looking forward to building something that works exactly like it’s supposed to this semester 😀 🚀.",
-                      link: "https://www.linkedin.com/in/chiara-deangelis-4a8961249/",
+                      major: "Computer Engineering",
+                      dates: "August 2025 - Present",
+                      involvement: "Kha's involvement description will go here.",
+                      link: "https://www.linkedin.com/in/nkha/",
                     },
                     {
-                      name: "Christopher Fernandez",
-                      title: "Airbrakes EECS Lead",
-                      description: "Serving as the Airbrakes EECS Lead, Christopher is currently a Junior in Computer Science.",
+                      name: "Matthew West",
+                      title: "Controls EECS Lead",
+                      description: "Serving as the Controls EECS Lead, Matthew is currently a Junior in Mathematics and Computer Science.",
                       year: "Junior",
-                      major: "Computer Science",
-                      dates: "June 2025 - Present",
-                      involvement: "Hello peoples! I am Chris and I'm majoring in computer science. I am this year's IREC Airbrakes EECS lead. Fih🐟",
-                      link: "https://www.linkedin.com/in/chris-fernandez/",
+                      major: "Mathematics and Computer Science",
+                      dates: "August 2025 - Present",
+                      involvement: "Matthew's involvement description will go here.",
+                      link: "https://www.linkedin.com/in/matthew-jwest/",
                     },
                     {
-                      name: "Duc Nguyen",
-                      title: "Airbrakes Mech Lead",
-                      description: "Serving as the Airbrakes Mech Lead, Duc is currently a Junior in Mechanical Engineering.",
+                      name: "Jonathan Koutin",
+                      title: "IREC Safety Lead",
+                      description: "Serving as the Safety Lead, Jonathan is currently a Junior in Industrial Engineering.",
                       year: "Junior",
-                      major: "Mechanical Engineering",
-                      dates: "Jan 2024 - Present",
-                      involvement: "Hi, I'm Duc, the Airbrakes Mechanical Lead for SOAR and a junior studying Mechanical Engineering. I joined SOAR in January 2024 and focus on designing, fabricating, and testing airbrake systems to improve vehicle stability and recovery, bringing a hands-on, performance-driven approach to every project.",
-                      link: "https://www.linkedin.com/in/duc-nguyen-usf/",
+                      major: "Industrial Engineering",
+                      dates: "August 2025 - Present",
+                      involvement: "Jonathan's involvement description will go here.",
+                      link: "https://www.linkedin.com/in/jonathan-koutin-9a94a6395/",
                     },
-                    {
-                      name: "Khôi Minh Tôn Thất",
-                      title: "Safety Lead",
-                      description: "Serving as the Safety Lead, Khoi is currently a Sophomore in Physics.",
-                      year: "Sophomore",
-                      major: "Physics",
-                      dates: "August 2024 - Present",
-                      involvement: "Khôi's involvement description will go here.",
-                      link: "https://www.linkedin.com/in/khoiton/",
-                    },
-                    {
-                      name: "Ninh Vu Van",
-                      title: "Aerostructures Lead",
-                      description: "Serving as the Aerostructures Lead, Ninh is currently a Sophomore in Mechanical Engineering.",
-                      year: "Sophomore",
-                      major: "Mechanical Engineering",
-                      dates: "August 2024 - Present",
-                      involvement: "Hi, I'm Ninh, the Aerostructures Lead for SOAR and a sophomore studying Mechanical Engineering. I joined SOAR in Fall 2024 and have been focused on designing, fabricating, and testing structural components of our rockets to ensure they can withstand the stresses of flight, while also optimizing for weight and performance.",
-                      link: "https://www.linkedin.com/in/ninh-vu-van-02a044236/",
-                    },
-                    {
-                      name: "Sama Ahmed",
-                      title: "Recovery and Flight Dynamics Lead",
-                      description: "Serving as the Recovery and Flight Dynamics Lead, Sama is currently a Senior in Computer Science.",
-                      year: "Senior",
-                      major: "Computer Science",
-                      dates: "August 2024 - Present",
-                      involvement: "I’m currently a senior in Computer Science. I joined SOAR in Fall 2024 as a Junior Engineer on the Payload System, and I had the opportunity to travel to Huntsville with the team that year, which was a really fun experience. This year, I stepped into the role of Recovery & Flight Dynamics Lead, which has been a really rewarding and developmental experience for me.",
-                      link: "https://www.linkedin.com/in/sama-ahmed-28354625b/",
-                    },
+                    
                   ]}
                   gridClass="grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-5"
                   cardMaxWidth="15rem"
@@ -239,96 +267,73 @@
               </div>
 
               <div className="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6">
-                <h3 className="text-xl font-semibold text-[#cfc493] mb-4">Torito</h3>
-                {/* Torito leads rendered with EboardYearbook so cards open detail modal and match lead styling */}
+                <h3 className="text-xl font-semibold text-[#cfc493] mb-4">BEL</h3>
                 <EboardYearbook
                   members={[
-                    // Drew Brickell - copy from eboardMembers
-                    {
-                      name: "Drew Brickell",
-                      title: "Torito Chief Engineer",
-                      description: "Serving as the Torito Chief Engineer, Drew is currently a Sophomore in Mechanical Engineering.",
-                      year: "Sophomore",
-                      major: "Mechanical Engineering",
-                      dates: "August 2024 - Present",
-                      involvement:
-                        "I am currently a second year Mechanical Engineering student, with the goal of going into the field of aerospace after college.  I am a massive fan of all things rocketry, and have my Tripoli Level 1 and 2 high power rocketry certifications. I started out in SOAR as Aerostructures Lead for Torito, and now as Chief Engineer of Torito, it is my duty to oversee all design, build, and testing of all elements of a liquid propulsion system ranging from test stand to electronics.",
-                      link: "https://www.linkedin.com/in/drewbrickell/",
-                    },
-                    {
-                      name: "Krystal Walford",
-                      title: "Torito Program Manager",
-                      description: "Serving as the Torito Program Manager, Krystal is currently a Junior in Mechanical Engineering.",
-                      year: "Junior",
-                      major: "Mechanical Engineering",
-                      dates: "August 2024 - Present",
-                      involvement: "Krystal's involvement description will go here.",
-                      link: "https://www.linkedin.com/in/krystalwalford/",
-                    },
-                    {
-                      name: "Alessandro M",
-                      title: "GSC Mech Lead",
-                      description: "Serving as the GSC Mech Lead, Alessandro is currently in Mechanical Engineering.",
-                      year: "Unknown",
-                      major: "Mechanical Engineering",
-                      dates: "Unknown",
-                      involvement: "Alessandro's involvement description will go here.",
-                      link: "",
-                    },
-                    {
-                      name: "Drew Kralovanec",
-                      title: "Tripoli Mentor",
-                      description: "Serving as the Tripoli Mentor, Drew is currently a Senior in Mechanical Engineering.",
-                      year: "Senior",
-                      major: "Mechanical Engineering",
-                      dates: "January 2023 - Present",
-                      involvement: "Drew's involvement description will go here.",
-                      link: "https://www.linkedin.com/in/drew-kralovanec-7a6153295/",
-                    },
-                    {
-                      name: "Ethan Zylman",
-                      title: "GSC EECS Lead",
-                      description: "Serving as the GSC EECS Lead, Ethan is currently a Sophomore in Electrical Engineering.",
-                      year: "Sophomore",
-                      major: "Electrical Engineering",
-                      dates: "August 2024 - Present",
-                      involvement: "Hi guys, I am employed as an employee of the civil engineering department which is my employer. Employment. I am the student at one of the universities in the entire state of Florida, USF!! I would rather make a rocket that goes up really fast. My favorite cereal is honey bunches of oats, and I’m not an Aquarius.",
-                      link: "https://www.linkedin.com/in/ethan-zylman/",
-                    },
                     {
                       name: "Joshua Hachmeister",
-                      title: "Test Stand Lead",
-                      description: "Serving as the Test Stand Lead, Joshua is currently a Sophomore in Mechanical Engineering.",
-                      year: "Junior",
+                      title: "BEL Chief Engineer",
+                      description: "Serving as the BEL Chief Engineer, Joshua is currently a Sophomore in Mechanical Engineering.",
+                      year: "Senior",
                       major: "Mechanical Engineering",
                       dates: "August 2024 - Present",
                       involvement: "Joshua's involvement description will go here.",
                       link: "https://www.linkedin.com/in/joshua-hachmeister/",
                     },
                     {
-                      name: "Marwan Abdelwahab",
-                      title: "Torito DAQ Lead",
-                      description: "Serving as the Torito DAQ Lead, Marwan is currently a Senior in Computer Engineering.",
+                      name: "Alston Wang",
+                      title: "BEL Program Manager",
+                      description: "Serving as the BEL Program Manager, Alston is currently a Senior in Mechanical Engineering.",
                       year: "Senior",
-                      major: "Computer Engineering",
-                      dates: "August 2024 - Present",
-                      involvement: "I am a senior studying Computer Engineering at the University of South Florida. I serve as the Torito Data Acquisition (DAQ) Lead for SOAR, where I develop systems used to collect and transmit data during propulsion testing. My work focuses on integrating sensors, embedded systems, and telemetry to monitor engine performance and record test data for analysis. I joined SOAR in 2024 and have since been involved in building and improving the electronics infrastructure for the Torito propulsion subsystem.",
-                      link: "https://www.linkedin.com/in/marwan-abdelwahab/",
+                      major: "Mechanical Engineering",
+                      dates: "July 2026 - Present",
+                      involvement: "Alston's involvement description will go here.",
+                      link: "https://www.linkedin.com/in/alston-wang-50963a277/",
                     },
                     {
-                      name: "Rylie Birkey",
-                      title: "Fire Suppression Lead",
-                      description: "Serving as the Fire Suppression Lead, Rylie is currently a Junior in Mechanical Engineering.",
-                      year: "Junior",
+                      name: "Dereck Santiago",
+                      title: "GS EECS Lead",
+                      description: "Serving as the GS EECS Lead, Dereck is currently a Senior in Computer Engineering.",
+                      year: "Senior",
+                      major: "Computer Engineering",
+                      dates: "September 2025 - Present",
+                      involvement: "Dereck's involvement description will go here.",
+                      link: "https://www.linkedin.com/in/derecksantiago/",
+                    },
+                    {
+                      name: "Om (Hari) Patel",
+                      title: "Propulsion Lead",
+                      description: "Serving as the Propulsion Lead, Om (Hari) is currently a Sophomore in Mechanical Engineering.",
+                      year: "Sophomore",
                       major: "Mechanical Engineering",
-                      dates: "June 2025 - Present",
-                      involvement: "Rylie's involvement description will go here.",
-                      link: "https://www.linkedin.com/in/ryliebirkey/",
+                      dates: "September 2025 - Present",
+                      involvement: "Om (Hari) Patel's involvement description will go here.",
+                      link: "https://www.linkedin.com/in/-hari-patel-/",
+                    },
+                    {
+                      name: "Duc Nguyen",
+                      title: "BEL Aerostructures Lead",
+                      description: "Serving as the BEL Aerostructures Lead, Duc is currently a Senior in Mechanical Engineering.",
+                      year: "Senior",
+                      major: "Mechanical Engineering",
+                      dates: "Jan 2024 - Present",
+                      involvement: "Hi, I'm Duc, the Aerostructures Lead for SOAR and a junior studying Mechanical Engineering. I joined SOAR in January 2024 and focus on designing, fabricating, and testing aerostructures to improve vehicle performance and efficiency, bringing a hands-on, performance-driven approach to every project.",
+                      link: "https://www.linkedin.com/in/duc-nguyen-usf/",
+                    },
+                    {
+                      name: "Ethan Toro",
+                      title: "BEL Safety Lead",
+                      description: "Serving as the BEL Safety Lead, Ethan is currently a Sophomore in Aerospace Engineering.",
+                      year: "Sophomore",
+                      major: "Aerospace Engineering",
+                      dates: "September 2026 - Present",
+                      involvement: "Ethan's involvement description will go here.",
+                      link: "https://www.linkedin.com/in/ethantoro/",
                     },
                   ]}
-                  gridClass="grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4"
+                  gridClass="grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3"
                   cardMaxWidth="16rem"
-                  cardWidthClass="sm:w-48 md:w-52 lg:w-52"
+                  cardWidthClass="sm:w-48 md:w-60 lg:w-60"
                   imageHeightClass="w-full h-64 sm:h-48"
                   outerBorderColor="#cfc493"
                   innerBorderColor="#006747"
@@ -339,17 +344,15 @@
                 <h3 className="text-xl font-semibold text-[#cfc493] mb-2">Marketing</h3>
                 <EboardYearbook
                   members={[
-                    // Sage Bundhund - copy from eboardMembers
                     {
-                      name: "Sage Bundhund",
+                      name: "Heloisa Medeiros Kazakevic",
                       title: "Chief of Marketing",
-                      description: "Serving as the Chief of Marketing, Sage is a Sophomore in Mechanical Engineering.",
+                      description: "Serving as the Chief of Marketing, Heloisa is currently a Sophomore in Econometrics and Business Management.",
                       year: "Sophomore",
-                      major: "Mechanical Engineering",
-                      dates: "August 2024 - Present",
-                      involvement:
-                        "I am a sophomore Mechanical Engineering student, with an Aerospace Engineering minor, as I hope to pursue a career in Aerospace after graduation. I joined SOAR in Fall of 2024, during my first semester! As Chief of Marketing, I am responsible for promoting the club and gaining new student interest, as well as running our great marketing team. I love reading books, collecting records, and learning about space exploration.",
-                      link: "mailto:sbundhund@usf.edu",
+                      major: "Econometrics and Business Management",
+                      dates: "August 2026 - Present",
+                      involvement: "Heloisa's involvement description will go here.",
+                      link: "https://www.linkedin.com/in/heloisa-medeiros-87350b303/"
                     },
                     {
                       name: "Hunter Hawkins",
@@ -412,15 +415,58 @@
                       involvement: "I'm a sophomore majoring in Computer Science, and I joined SOAR in mid-Fall 2025 to create this very website. As the Web Developer, I am responsible for maintaining and updating the SOAR website to meet our needs. I enjoy playing basketball, working out, and of course coding 😂",
                       link: "https://www.linkedin.com/in/dmish13/",
                     },
+                  ]}
+                  gridClass="grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4"
+                  cardMaxWidth="16rem"
+                  cardWidthClass="sm:w-48 md:w-52 lg:w-52"
+                  imageHeightClass="w-full h-64 sm:h-48"
+                  outerBorderColor="#cfc493"
+                  innerBorderColor="#006747"
+                />
+              </div>
+              <div className="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6">
+                <h3 className="text-xl font-semibold text-[#cfc493] mb-2">Operations</h3>
+                <EboardYearbook
+                  members={[
                     {
-                      name: "Stepan Jankowski",
-                      title: "Historian",
-                      description: "Serving as the Historian, Stepan is currently a Junior in Mechanical Engineering.",
+                      name: "Valeria Melendez",
+                      title: "Chief of Operations",
+                      description: "Serving as the Chief of Operations, Valeria is currently a Junior in Political Science/Cybersecurity.",
                       year: "Junior",
-                      major: "Mechanical Engineering",
+                      major: "Political Science/Cybersecurity",
                       dates: "August 2025 - Present",
-                      involvement: "Stepan's involvement description will go here.",
-                      link: "https://www.linkedin.com/in/stepanjankowski/",
+                      involvement: "Hi, I’m Valeria Melendez and I’m the Chief of Operations for the operations team at SOAR! Im currently a second year student studying political science and cybersecurity. I’ve been apart of soar for about a year now and it’s been a great experience helping out operationally and learning more about rockets.",
+                      link: "https://www.linkedin.com/in/valeria-melendez-680913362/"
+                    },
+                    {
+                      name: "Jacob Jenkins",
+                      title: "Fundraising Lead",
+                      description: "Serving as the Fundraising Lead, Jacob is currently a Freshman in Industrial Engineering.",
+                      year: "Freshman",
+                      major: "Industrial Engineering",
+                      dates: "August 2026 - Present",
+                      involvement: "Jacob's involvement description will go here.",
+                      link: "https://www.linkedin.com/in/jacobjenkins08/",
+                    },
+                    {
+                      name: "Hari Vatsa Harsha Sondur",
+                      title: "Fundraising Lead",
+                      description: "Serving as the Fundraising Lead, Hari is currently a Freshman in Aerospace Engineering.",
+                      year: "Freshman",
+                      major: "Aerospace Engineering",
+                      dates: "August 2026 - Present",
+                      involvement: "Hari's involvement description will go here.",
+                      link: "mailto:hharshasondur@usf.edu",
+                    },
+                    {
+                      name: "Yeldana Zhamanova",
+                      title: "Professional Development Lead",
+                      description: "Serving as the Professional Development Lead, Yeldana is currently a Sophomore in Mechanical Engineering.",
+                      year: "Sophomore",
+                      major: "Mechanical Engineering",
+                      dates: "August 2026 - Present",
+                      involvement: "Yeldana's involvement description will go here.",
+                      link: "https://www.linkedin.com/in/yeldana-zhamanova-a52971389/",
                     },
                   ]}
                   gridClass="grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4"
@@ -431,30 +477,6 @@
                   innerBorderColor="#006747"
                 />
               </div>
-              {/* <div className="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6">
-                <h3 className="text-xl font-semibold text-[#cfc493] mb-2">Operations</h3>
-                <EboardYearbook
-                  members={[
-                    // Sage Bundhund - copy from eboardMembers
-                    {
-                      name: "Valeria Melendez",
-                      title: "Chief of Operations",
-                      description: "Serving as the Chief of Operations, Valeria is currently a Sophomore in Political Science/Cybersecurity.",
-                      year: "Sophomore",
-                      major: "Political Science/Cybersecurity",
-                      dates: "August 2025 - Present",
-                      involvement: "Hi, I’m Valeria Melendez and I’m the Chief of Operations for the operations team at SOAR! Im currently a second year student studying political science and cybersecurity. I’ve been apart of soar for about a year now and it’s been a great experience helping out operationally and learning more about rockets.",
-                      link: "https://www.linkedin.com/in/valeria-melendez-680913362/"
-                    },
-                  ]}
-                  gridClass="grid-cols-1 sm:grid-cols-1 justify-items-center"
-                  cardMaxWidth="20rem"
-                  cardWidthClass="sm:w-56 md:w-72 lg:w-72"
-                  imageHeightClass="w-full h-80 sm:h-64"
-                  outerBorderColor="#cfc493"
-                  innerBorderColor="#006747"
-                />
-              </div> */}
             </div>
           </div>
 
