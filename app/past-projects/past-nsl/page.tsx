@@ -57,6 +57,65 @@ interface SeasonData {
 
 const SEASONS: SeasonData[] = [
   {
+    id: "season-24-25",
+    year: "2024–2025",
+    seasonLabel: "24-25 Season",
+    vehicleName: "98\" 6-Inch Launch Vehicle & G.O.S.T.",
+    challenge: "4,075 ft Target Apogee, G.O.S.T. Atmospheric APRS Transmitter & Dual Active Airbrakes",
+    summary:
+      "For the 2024–2025 NASA Student Launch competition, USF SOAR designed and manufactured a 97.77-inch, 6.17-inch OD high-power rocket powered by a Cesaroni L995 motor targeting a precise apogee of 4,075 ft AGL. The vehicle incorporates the Ground Observation Signal Transmitter (G.O.S.T.) primary payload—an atmospheric research laboratory inside the coupler featuring servo-actuated deployable doors that sample ambient pressure, temperature, and humidity with Adafruit BME280/BME680 sensors and broadcast live telemetry to NASA's ground station via 2M APRS (144–148 MHz). Flight performance is governed by dual active airbrake flaps driven by a Kalman filter and RK4 numerical apogee prediction loop, dual-deployment Fruity Chutes recovery (18\" drogue and 96\" main), a 3.0 lb adjustable ballast bay, and an onboard STEMnaut capsule carrying a Lego astronaut, Haribo gummy bear, and team mascot.",
+    tags: [
+      "Target: 4,075 ft",
+      "G.O.S.T. Atmospheric Payload",
+      "2M APRS Telemetry",
+      "Cesaroni L995 Motor",
+      "Active Airbrakes (RK4/PID)",
+      "STEMnaut Capsule",
+      "Fruity Chutes Dual Recovery",
+      "Huntsville, AL",
+    ],
+    images: [
+      {
+        src: "/pastnslhero.JPG",
+      },
+      {
+        src: "/nsl2425 pic2.JPG"
+      },
+      {
+        src: "/nsl2425 pic3.JPG"
+      },
+      {
+        src: "/nsl2425 pic4.JPG"
+      }
+    ],
+    specs: {
+      targetApogee: "4,075 ft AGL",
+      length: "97.77 in (8.15 ft) — Upper: 47.0\", Mid: 30.0\", Booster: 20.7\"",
+      diameter: "6.17 in OD (6.0 in nominal inner airframe)",
+      liftOffWeight: "29.4 lb dry (32.4 lb ballasted) / 40.35 lb loaded liftoff mass",
+      motor: "Cesaroni Technologies Inc. L995 (75mm Solid Motor, launches from 1515 rail)",
+      payload:
+        "Ground Observation Signal Transmitter (G.O.S.T.): Coupler-integrated atmospheric lab with 21g servo-driven doors sampling ambient pressure, temperature, and humidity (Adafruit BME280/BME680), transmitting via DRA818v APRS radio & Radioddity RA12 antenna on 2M band (144–148 MHz). Includes 3\"×3\" STEMnaut capsule (Lego minifigure, Haribo Gummy Bear, mascot).",
+      recovery:
+        "Dual deployment: 18\" Fruity Chutes Compact Toroidal drogue at apogee (Cd 1.55, Area 0.16 m², 105.05 ft/s descent), 96\" Fruity Chutes Ultralight Toroidal main at low altitude (Cd 2.20, Area 4.67 m², 16.53 ft/s descent velocity, landing KE well under 75 ft·lbf limit).",
+      innovation:
+        "Dual-flap autonomous airbrakes driven by RK4 numerical apogee integration, IMU/barometer fusion, and PID feedback; servo-actuated sealed-door atmospheric sampling coupler; and stackable 3.0 lb nose ballast system.",
+      airframe:
+        "Three modular fiberglass sections (47.0\" upper, 30.0\" mid, 20.7\" booster, 97.77\" total) with 1515 rail guides, precision bulkheads, and through-the-wall composite fins designed to withstand aerodynamic shear.",
+      ballast:
+        "3.0 lb internal ballast capacity (allowing dry mass expansion from 29.4 lb to 32.4 lb) to fine-tune stability and exact target apogee under launch-day ambient conditions.",
+    },
+    designEvolution: [
+      "G.O.S.T. Sealed Coupler Bay: Internal 21g servo mechanism opens bay doors mid-flight without compromising vehicle structural continuity, allowing ambient airflow over BME280/BME680 sensors before resealing.",
+      "2M APRS Ground Broadcasting: Custom DRA818v RF module paired with a Radioddity RA12 antenna transmits formatted AX.25 APRS telemetry packets (144–148 MHz) directly to NASA reception terminals.",
+      "Autonomous Dual-Flap Airbrakes: State machine utilizing a Kalman filter, IMU/barometric sensor fusion, and Runge-Kutta 4th order (RK4) trajectory forecasting continuously commands drag flaps to zero in on 4,075 ft.",
+      "STEMnaut Environmental Capsule: Compact 3\"×3\" cylindrical capsule securing a Lego astronaut, Haribo gummy bear, and team mascot against launch and deployment G-forces.",
+      "Subscale & Full-Scale Flight Milestones: Verified aerodynamic stability and dual deployment during December flight demonstrations at Varn Ranch (Plant City, FL), supported by snap-force simulations and tensile proof tests.",
+    ],
+    teamLeadership:
+      "Society of Aeronautics and Rocketry (USF SOAR), mentored by Enrique Hernandez (TRA #22521, Level 2 Certification). Student leadership featured Safety Officer Lucas Folio (overseeing FMEA, hazard analysis, and pad operation checklists) alongside vehicle, payload, and telemetry engineering teams.",
+  },
+  {
     id: "season-23-24",
     year: "2023–2024",
     seasonLabel: "23-24 Season",
@@ -85,6 +144,9 @@ const SEASONS: SeasonData[] = [
       },
       {
         src: "/nsl2324 pic4.JPG",
+      },
+      {
+        src: "/nsl2324 pic5.JPG",
       }
     ],
     specs: {
@@ -402,6 +464,7 @@ export default function PastNSLPage() {
   })
 
   const [activeImageIndexes, setActiveImageIndexes] = useState<{ [seasonId: string]: number }>({
+    "season-24-25": 0,
     "season-23-24": 0,
     "season-22-23": 0,
     "season-18-19": 0,
@@ -486,7 +549,7 @@ export default function PastNSLPage() {
 
       <PageHeader
         title="PAST NSL"
-        subtitle="Our Journey Through NASA Student Launch: 2015 – 2024"
+        subtitle="Our Journey Through NASA Student Launch: 2015 – 2025"
       />
 
       {/* Fast-Navigation Bar (Static in place) */}
@@ -522,7 +585,7 @@ export default function PastNSLPage() {
                 NASA Student Launch Initiative
               </div>
               <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-3">
-                Nine Years of Collegiate Rocketry Heritage
+                Ten Years of Collegiate Rocketry Heritage
               </h2>
               <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
                 NASA Student Launch is an eight-month research-based challenge for university rocketry teams.
@@ -537,7 +600,7 @@ export default function PastNSLPage() {
               </div>
               <div className="flex items-center gap-2 bg-zinc-950/60 border border-zinc-800/80 px-4 py-2.5 rounded-xl">
                 <Award className="w-4 h-4 text-[#cfc493]" />
-                <span className="text-zinc-300">6 Competition Seasons</span>
+                <span className="text-zinc-300">7 Competition Seasons</span>
               </div>
             </div>
           </div>
@@ -832,14 +895,14 @@ export default function PastNSLPage() {
           <ShieldCheck className="w-10 h-10 text-[#cfc493] mx-auto mb-4" />
           <h3 className="text-2xl font-bold mb-3">Legacy of Engineering Excellence</h3>
           <p className="text-zinc-400 leading-relaxed mb-6 max-w-2xl mx-auto">
-            From our founding 2015-16 campaign through the high-performance 2023-24 season, NASA Student Launch
+            From our founding 2015-16 campaign through the 2024-25 season, NASA Student Launch
             has trained generations of USF aerospace, mechanical, electrical, and computer engineers.
             The avionics telemetry, active airbrakes, and deployable payload systems designed here continue to inform
             our current flagship vehicles in IREC and liquid propulsion research.
           </p>
           <div className="inline-flex gap-4 flex-wrap justify-center text-sm text-zinc-400 font-medium">
             <span>• 100+ Student Engineers Trained</span>
-            <span>• 6 Full Competition Cycles</span>
+            <span>• 7 Full Competition Cycles</span>
             <span>• Real NASA PDR / CDR Reviews</span>
           </div>
         </div>
