@@ -82,10 +82,19 @@ const SEASONS: SeasonData[] = [
         src: "/nsl2425 pic2.JPG"
       },
       {
-        src: "/nsl2425 pic3.JPG"
+        src: "/nsl2425 pic5.JPG"
       },
       {
-        src: "/nsl2425 pic4.JPG"
+        src: "/nsl2425 pic8.JPG"
+      },
+      {
+        src: "/nsl2425 pic11.JPG"
+      },
+      {
+        src: "/nsl2425 pic12.JPG"
+      },
+      {
+        src: "/nsl2425 pic14.JPG"
       }
     ],
     specs: {
@@ -244,11 +253,8 @@ const SEASONS: SeasonData[] = [
     ],
     images: [
       {
-        src: "/Full Assembly.PNG",
-      },
-      {
-        src: "/pic7.JPG",
-      },
+        src: "/hero.png"
+      }
     ],
     specs: {
       targetApogee: "5,000 ft (±50 ft AGL)",
@@ -294,10 +300,7 @@ const SEASONS: SeasonData[] = [
     ],
     images: [
       {
-        src: "/pic8.JPG",
-      },
-      {
-        src: "/pic9.JPG",
+        src: "/hero.png"
       },
     ],
     specs: {
@@ -343,10 +346,7 @@ const SEASONS: SeasonData[] = [
     ],
     images: [
       {
-        src: "/pic10.JPG",
-      },
-      {
-        src: "/pic11.JPG",
+        src: "/hero.png"
       },
     ],
     specs: {
@@ -393,7 +393,7 @@ const SEASONS: SeasonData[] = [
     ],
     images: [
       {
-        src: "/pic12.JPG",
+        src: "/hero.png",
       },
     ],
     specs: {

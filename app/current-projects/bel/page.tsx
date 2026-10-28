@@ -78,12 +78,20 @@ export default function BELPage() {
                   <p className="text-zinc-400 text-sm">Engine design, injector development, and combustion analysis</p>
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-[#cfc493] mb-2">EECS Team</h4>
+                  <h4 className="text-lg font-bold text-[#cfc493] mb-2"> Ground Station EE/CS Team</h4>
                   <p className="text-zinc-400 text-sm">Electrical, electronic, and computer systems design</p>
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-[#cfc493] mb-2">Test Operations</h4>
-                  <p className="text-zinc-400 text-sm">Test stand design, data acquisition, and test execution</p>
+                  <h4 className="text-lg font-bold text-[#cfc493] mb-2">Ground Station Mechanical Team</h4>
+                  <p className="text-zinc-400 text-sm">Mechanical aspects of the ground station, including structural integrity, mechanical systems, and maintenance</p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-[#cfc493] mb-2">Avionics Team</h4>
+                  <p className="text-zinc-400 text-sm">Design, development, and maintenance of avionics systems for the rocket, including navigation, communication, and control systems</p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-[#cfc493] mb-2">Aerostructures Team</h4>
+                  <p className="text-zinc-400 text-sm">Design, development, and maintenance of the rocket's aerostructures, including structural integrity, aerodynamic performance, and material selection</p>
                 </div>
               </div>
             </div>

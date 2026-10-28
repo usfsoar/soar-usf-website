@@ -9,7 +9,7 @@ export function TRACertifications() {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-8 md:mb-12">
           <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-6">
-            <Image src="/Color Logo.svg" alt="SOAR Logo" width={20} height={20} className="w-5 h-5" style={{ filter: "brightness(0) saturate(100%) invert(82%) sepia(13%) saturate(743%) hue-rotate(3deg) brightness(92%) contrast(85%)" }} />
+            <Image src="/Color Logo.svg" alt="SOAR Logo" width={20} height={20} className="w-5 h-5" />
             <span className="text-sm font-medium tracking-wide" style={{ color: "#cfc493" }}>Current Projects</span>
           </div>
 

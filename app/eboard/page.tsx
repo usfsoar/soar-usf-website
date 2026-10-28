@@ -28,7 +28,7 @@
       year: "Junior",
       major: "Mechanical Engineering",
       dates: "August 2024 - Present",
-      involvement: "Hello everyone, my name is Cooper and I am a current second-year mechanical engineering student at the University of South Florida. I joined SOAR my first semester at USF and have worked my way up the ranks to now being the incoming president of the club. Please feel free to reach out with any questions you may have relating to high power rocketry!",
+      involvement: "Hello everyone, my name is Cooper and I am a current third-year mechanical engineering student at the University of South Florida. I joined SOAR my first semester at USF and have worked my way up the ranks to now being the incoming president of the club. Please feel free to reach out with any questions you may have relating to high power rocketry!",
       link: "https://www.linkedin.com/in/cooperkenney/",
     },
     {
@@ -69,7 +69,7 @@
       year: "Sophomore",
       major: "Econometrics and Business Management",
       dates: "August 2026 - Present",
-      involvement: "Heloisa's involvement description will go here.",
+      involvement: "Hi! I’m Heloisa, a sophomore from Brazil majoring in Business Management and Econometrics. I’m SOAR’s Chief of Marketing, and outside of aerospace, I love playing footvolley!",
       link: "https://www.linkedin.com/in/heloisa-medeiros-87350b303/"
     },
     {
@@ -79,7 +79,7 @@
       year: "Senior",
       major: "Political Science/Cybersecurity",
       dates: "August 2025 - Present",
-      involvement: "Hi, I’m Valeria Melendez and I’m the Chief of Operations for the operations team at SOAR! Im currently a second year student studying political science and cybersecurity. I’ve been apart of soar for about a year now and it’s been a great experience helping out operationally and learning more about rockets.",
+      involvement: "Hi, I’m Valeria Melendez and I’m the Chief of Operations for the operations team at SOAR! Im currently a third year student studying political science and cybersecurity. I’ve been apart of soar for about a year now and it’s been a great experience helping out operationally and learning more about rockets.",
       link: "https://www.linkedin.com/in/valeria-melendez-680913362/"
     },
     {
@@ -181,7 +181,7 @@
                       year: "Sophomore",
                       major: "Electrical Engineering & Physics",
                       dates: "September 2024 - Present",
-                      involvement: "Hello everyone! I’m Alan and I’m a double major BS in both Electrical Engineering and Physics. This is my second year with SOAR and I am the telemetry lead for IREC. Feel free to talk to me anytime with any questions!",
+                      involvement: "Hello everyone! I’m Alan and I’m a double major BS in both Electrical Engineering and Physics. This is my third year with SOAR and I am the telemetry lead for IREC. Feel free to talk to me anytime with any questions!",
                       link: "https://www.linkedin.com/in/alan-guyster-397112325/",
                     },
                     {
@@ -351,7 +351,7 @@
                       year: "Sophomore",
                       major: "Econometrics and Business Management",
                       dates: "August 2026 - Present",
-                      involvement: "Heloisa's involvement description will go here.",
+                      involvement: "Hi! I’m Heloisa, a sophomore from Brazil majoring in Business Management and Econometrics. I’m SOAR’s Chief of Marketing, and outside of aerospace, I love playing footvolley!",
                       link: "https://www.linkedin.com/in/heloisa-medeiros-87350b303/"
                     },
                     {

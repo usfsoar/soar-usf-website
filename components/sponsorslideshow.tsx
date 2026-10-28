@@ -10,7 +10,6 @@ const sponsors = [
   { logo: "/cae.png", width: 100, url: "https://www.cae.com/" },
   { logo: "/monster.png", width: 47, url: "https://www.monsterenergy.com/" },
   { logo: "/ansys.png", width: 135, url: "https://www.ansys.com/" },
-  { logo: "/jbs.png", width: 100, url: "https://jimsbodyshop.com/" },
   { logo: "/epsilon3.png", width: 100, url: "https://www.epsilon3.io/" },
   { logo: "/Kenesto.png", width: 130, url: "https://kenesto.com/" },
   { logo: "/5starpizza.webp", width: 100, url: "https://fivestarpizza.com/" },
@@ -24,6 +23,10 @@ const sponsors = [
   { logo: "/quicktrex.webp", width: 100, url: "https://www.lanshack.com/QuickTreX-PRO-System-C321" },
   { logo: "/swagelok.png", width: 100, url: "https://www.swagelok.com/en" },
   { logo: "/tba.png", width: 60, url: "https://tampabrass.com/" },
+  { logo: "/aquaenvironment.jpg", width: 100, url: "https://www.aquaenvironmentinc.com/" },
+  { logo: "/protospacemfg.png", width: 80, url: "https://protospacemfg.com/" },
+  { logo: "/karman.svg", width: 100, url: "https://karman-sd.com/" },
+  { logo: "/fibreglast.png", width: 100, url: "https://www.fibreglast.com/" }
 ]
 
 export function SponsorSlideshow() {
