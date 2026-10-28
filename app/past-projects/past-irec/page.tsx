@@ -75,7 +75,7 @@ export default function PastIRECPage() {
     { role: "Payload EECS Lead", name: "Chiara Alessandra Deangelis", detail: "Dual RGB Edge AI & NoIR camera payload, NDVI computer vision, and autonomous rover drive electronics." },
     { role: "Recovery Lead", name: "Sama Hosam Ahmed Moussa Ahmed", detail: "Triple-redundant RRC3+ altimeter bays, pyrotechnic sizing, and dual-deployment parachute rigging." },
     { role: "Safety Officer Lead", name: "Khoi Ton", detail: "Hazard analysis, PPE compliance, launch-day pre-flight checklists, and range safety protocols." },
-    { role: "Telemetry Lead", name: "Alan Guyster", detail: "Live telemetry, "}
+    { role: "Telemetry Lead", name: "Alan Guyster", detail: "Live telemetry, ground station integration, and data visualization." }
   ]
 
   return (
@@ -124,8 +124,8 @@ export default function PastIRECPage() {
                 <div className="relative w-full max-w-sm aspect-square rounded-2xl overflow-hidden bg-zinc-950/70 border border-zinc-800/80 p-6 flex items-center justify-center group shadow-xl shadow-black/40">
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#cfc493]/10 via-transparent to-transparent pointer-events-none" />
                   <Image
-                    src="/currirechero.png"
-                    alt="Project Aurora IREC 2025-2026 Competition Rocket"
+                    src="/irec2026.webp"
+                    alt="ESRA IREC 2026"
                     width={600}
                     height={600}
                     className="object-contain w-full h-full drop-shadow-[0_15px_30px_rgba(207,196,147,0.2)] transition-transform duration-500 group-hover:scale-105"

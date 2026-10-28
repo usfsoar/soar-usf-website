@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Rocket, Building, TestTube, Flame, Radio } from "lucide-react"
+import { Rocket, Building, TestTube, Flame, Radio, Cpu, Cog } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -11,20 +11,25 @@ export function BEL() {
       description: "Responsible for fabricating the rocket's airframe, nose cone, fins, and key structural interfaces.",
     },
     {
-      icon: TestTube,
-      title: "Test Stand Structures Team",
-      description: "Designs, builds, and maintains the ground support needed for static fire tests.",
-    },
-    {
       icon: Flame,
       title: "Propulsions Team",
       description:
         "Designs and implements the liquid propulsion system, including engine design, plumbing, propellant feed systems, and integration.",
     },
     {
-      icon: Radio,
-      title: "Ground Station Team",
-      description: "Oversees all remote-control systems and their operations.",
+      icon: Cpu,
+      title: "Ground Station EE/CS Team",
+      description: "Responsible for the electrical and computer systems of the ground station, including data acquisition, processing, and communication systems.",
+    },
+    {
+      icon: Cog,
+      title: "Ground Station Mechanical Team",
+      description: "Responsible for the mechanical aspects of the ground station, including structural integrity, mechanical systems, and maintenance.",
+    },
+    {
+      icon: Rocket,
+      title: "Avionics Team",
+      description: "Responsible for the design, development, and integration of the rocket's avionics systems, including navigation, guidance, and control systems.",
     },
   ]
 
@@ -61,7 +66,7 @@ export function BEL() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-sm font-medium">Learn How to Build a Rocket</span>
+                  <span className="text-sm font-medium">Learn How to Build a Rocket Engine</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#D0C495]/20 flex items-center justify-center">

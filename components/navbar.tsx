@@ -199,7 +199,7 @@ export function Navbar() {
                 Contact Us
               </Button>
             </Link>
-            <Link href="https://giving.usf.edu/online/gift/f/220111/" className="cursor-pointer">
+            <Link href="https://giving.usf.edu/online/gift/f/220111/" className="cursor-pointer" target="_blank" rel="noopener noreferrer"  >
               <Button
                 style={{ backgroundColor: "#D0C495", color: "#0f0f0f" }}
                 className="relative z-10 font-medium px-6 py-2.5 rounded-full text-sm hover:opacity-100 cursor-pointer shadow-[0_10px_36px_rgba(207,196,149,0.30)] hover:shadow-[0_0_48px_rgba(207,196,149,0.65)] focus:shadow-[0_0_56px_rgba(207,196,149,0.75)] transition-shadow focus:outline-none focus:ring-4 focus:ring-[#D0C495]/30"
@@ -461,7 +461,7 @@ export function Navbar() {
                 <span className="text-sm">↗</span>
               </Button>
             </Link>
-            <Link href="https://giving.usf.edu/online/gift/f/220111/" className="mt-3" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="https://giving.usf.edu/online/gift/f/220111/" className="mt-3" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
               <Button
                 style={{ backgroundColor: "#D0C495", color: "#0f0f0f" }}
                 className="rounded-full relative z-10 px-6 py-2 text-xs font-medium hover:opacity-100 cursor-pointer flex items-center gap-2 shadow-[0_10px_28px_rgba(207,196,149,0.22)] hover:shadow-[0_0_40px_rgba(207,196,149,0.50)] transition-shadow focus:outline-none focus:ring-4 focus:ring-[#D0C495]/22"
@@ -470,7 +470,7 @@ export function Navbar() {
                 <span className="text-sm">↗</span>
               </Button>
             </Link>
-            <Link href="https://giving.usf.edu/online/gift/f/220111/" className="cursor-pointer">
+            <Link href="https://giving.usf.edu/online/gift/f/220111/" className="cursor-pointer" target="_blank" rel="noopener noreferrer">
               <Button
                 style={{ backgroundColor: "#D0C495", color: "#0f0f0f" }}
                 className="hidden lg:flex font-medium px-6 py-2 rounded-full text-sm hover:opacity-95 cursor-pointer shadow-[0_6px_20px_rgba(208,196,149,0.12)] hover:shadow-[0_0_28px_rgba(207,196,149,0.35)] transition-shadow focus:outline-none focus:ring-4 focus:ring-[#D0C495]/25"

@@ -39,7 +39,7 @@ export default function IRECPage() {
                 The International Rocket Engineering Competition (IREC) is the world's premier collegiate rocketry competition hosted by the Experimental Sounding Rocket Association (ESRA).
               </p>
               <p className="text-zinc-400 leading-relaxed">
-                Student teams from hundreds of international universities design, manufacture, and fly high-powered rockets carrying scientific and technological payloads to target altitudes of 10,000 ft or 30,000 ft.
+                Student teams from hundreds of international universities design, manufacture, and fly high-powered rockets carrying scientific and technological payloads to target altitudes of 10,000, 30,000, or 45,000 ft using solid, liquid, and hybrid propulsion systems.
               </p>
             </div>
 
@@ -91,7 +91,7 @@ export default function IRECPage() {
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">
               <h3 className="text-2xl font-bold mb-4">Development Sub-Teams</h3>
               <p className="text-zinc-400 leading-relaxed mb-6">
-                Our IREC development effort is organized into five specialized engineering branches:
+                Our IREC development effort is organized into seven specialized engineering branches:
               </p>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="p-4 bg-zinc-950/60 rounded-xl border border-zinc-800/80">
@@ -107,8 +107,20 @@ export default function IRECPage() {
                   <p className="text-sm text-zinc-400">Autonomous science experiment and deployment payload design and firmware development.</p>
                 </div>
                 <div className="p-4 bg-zinc-950/60 rounded-xl border border-zinc-800/80">
-                  <h4 className="font-bold text-white mb-1">Recovery & Control</h4>
-                  <p className="text-sm text-zinc-400">Parachute sizing, dual deployment ejection systems, and trajectory/drag control systems.</p>
+                  <h4 className="font-bold text-white mb-1">Payload Mechanical</h4>
+                  <p className="text-sm text-zinc-400">Autonomous science experiment and deployment payload mechanical design and fabrication.</p>
+                </div>
+                <div className="p-4 bg-zinc-950/60 rounded-xl border border-zinc-800/80">
+                  <h4 className="font-bold text-white mb-1">Controls EE/CS</h4>
+                  <p className="text-sm text-zinc-400">Flight control systems, guidance, navigation, and control algorithms for rocket stability and maneuverability.</p>
+                </div>
+                <div className="p-4 bg-zinc-950/60 rounded-xl border border-zinc-800/80">
+                  <h4 className="font-bold text-white mb-1">Controls Mechanical</h4>
+                  <p className="text-sm text-zinc-400">Flight control systems, guidance, navigation, and control mechanisms for rocket stability and maneuverability.</p>
+                </div>
+                <div className="p-4 bg-zinc-950/60 rounded-xl border border-zinc-800/80">
+                  <h4 className="font-bold text-white mb-1">Safety</h4>
+                  <p className="text-sm text-zinc-400">Ensuring the safety of the team, the public, and the environment during all aspects of the project.</p>
                 </div>
               </div>
             </div>
