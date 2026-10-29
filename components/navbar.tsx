@@ -166,7 +166,7 @@ export function Navbar() {
                   href="/past-projects/past-nsl"
                   className="block px-4 py-2 text-sm text-white hover:bg-zinc-800 hover:text-[#cfc493] transition-colors cursor-pointer"
                 >
-                  Past NSL
+                  NSL
                 </Link>
                 {/* <Link
                   href="/past-projects/hybrid"
@@ -414,7 +414,7 @@ export function Navbar() {
                         className="block text-xs text-zinc-400 hover:text-[#cfc493] transition-colors cursor-pointer"
                         onClick={() => setMobileMenuOpen(false)}
                       >
-                        Past NSL
+                        NSL
                       </Link>
                       {/* <Link
                         href="/past-projects/hybrid"

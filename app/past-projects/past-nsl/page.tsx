@@ -548,7 +548,7 @@ export default function PastNSLPage() {
       </div>
 
       <PageHeader
-        title="PAST NSL"
+        title="NSL"
         subtitle="Our Journey Through NASA Student Launch: 2015 – 2025"
       />
 

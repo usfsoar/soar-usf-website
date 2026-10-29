@@ -26,7 +26,7 @@ const sponsors = [
   { logo: "/aquaenvironment.jpg", width: 100, url: "https://www.aquaenvironmentinc.com/" },
   { logo: "/protospacemfg.png", width: 80, url: "https://protospacemfg.com/" },
   { logo: "/karman.svg", width: 100, url: "https://karman-sd.com/" },
-  { logo: "/fibreglast.png", width: 100, url: "https://www.fibreglast.com/" }
+  { logo: "/fibreglast.webp", width: 100, url: "https://www.fibreglast.com/" }
 ]
 
 export function SponsorSlideshow() {
