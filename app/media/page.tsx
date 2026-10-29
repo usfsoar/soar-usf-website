@@ -68,7 +68,7 @@ export default function MediaPage() {
 
       {/* Social Media Sections */}
       <section className="container mx-auto px-6 pb-20">
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {/* Instagram Section */}
           <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-center">
             <div className="mb-6">
@@ -107,6 +107,29 @@ export default function MediaPage() {
             </p>
             <a
               href="https://www.tiktok.com/@usf.soar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#cfc493] hover:bg-[#b8ad7a] text-zinc-900 font-semibold px-6 py-3 rounded-lg transition-colors"
+            >
+              See More
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+          </div>
+          {/* YouTube Section */}
+          <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-center">
+            <div className="mb-6">
+              <svg className="w-16 h-16 mx-auto text-[#cfc493]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </div>
+            <h3 className="text-2xl font-bold mb-3">YouTube Videos</h3>
+            <p className="text-zinc-400 mb-6">
+              Watch our long-form videos and live streams.
+            </p>
+            <a
+              href="https://www.youtube.com/channel/UCUYj5Gy1M1UwwZYzC5QRLHQ"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#cfc493] hover:bg-[#b8ad7a] text-zinc-900 font-semibold px-6 py-3 rounded-lg transition-colors"
