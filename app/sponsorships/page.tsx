@@ -32,8 +32,8 @@ export default function SponsorshipsPage() {
 
                   <div className="flex w-full flex-col gap-2 sm:flex-row md:w-auto md:items-center md:justify-end">
                     <a
-                      href="/SOAR 2025-26 Sponsorship Packet.pdf"
-                      download="SOAR 2025-26 Sponsorship Packet.pdf"
+                      href="/26-27 sponsorship packet.pdf"
+                      download="SOAR 2026-27 Sponsorship Packet.pdf"
                       aria-label="Download sponsorship packet PDF"
                       className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#d8ce9f] bg-[#cfc493] px-4 py-2.5 text-sm font-semibold text-black shadow-[0_6px_18px_rgba(207,196,147,0.28)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#ddd3a8] hover:shadow-[0_10px_24px_rgba(207,196,147,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d8ce9f] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900"
                     >
@@ -42,8 +42,8 @@ export default function SponsorshipsPage() {
                     </a>
 
                     <a
-                      href="/SOAR 2025-26 Sponsorship Form.pdf"
-                      download="SOAR 2025-26 Sponsorship Form.pdf"
+                      href="/26-27 sponsorship form.pdf"
+                      download="SOAR 2026-27 Sponsorship Form.pdf"
                       aria-label="Download sponsorship form PDF"
                       className="inline-flex items-center justify-center gap-2 rounded-xl border border-zinc-600 bg-zinc-800/80 px-4 py-2.5 text-sm font-semibold text-zinc-100 transition-all duration-200 hover:-translate-y-0.5 hover:border-zinc-500 hover:bg-zinc-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d8ce9f] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900"
                     >
@@ -54,7 +54,7 @@ export default function SponsorshipsPage() {
                 </div>
                 <div style={{position: 'relative', width: '100%', height: 0, paddingTop: '64.7059%', paddingBottom: 0, boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)', marginTop: '1.6em', marginBottom: '0.9em', overflow: 'hidden', borderRadius: '8px', willChange: 'transform'}}>
                   <iframe loading="lazy" style={{position: 'absolute', width: '100%', height: '100%', top: 0, left: 0, border: 'none', padding: 0, margin: 0}}
-                    src="https://www.canva.com/design/DAGpJ3F9dUA/pbkvL8UbmSzuQtXHX-skdw/view?embed" allowFullScreen={true} allow="fullscreen">
+                    src="/26-27 sponsorship packet.pdf" allowFullScreen={true} allow="fullscreen">
                   </iframe>
                 </div>
               </div>

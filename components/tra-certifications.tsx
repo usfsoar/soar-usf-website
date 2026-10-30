@@ -40,16 +40,10 @@ export function TRACertifications() {
               organization and to transmitting knowledge that might otherwise be lost as members graduate.
             </p>
 
-            <div className="grid grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-8">
+            <div className="grid grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
               <div>
                 <div className="text-2xl md:text-3xl font-bold mb-1" style={{ color: "#D0C495" }}>
-                  100%
-                </div>
-                <div className="text-xs md:text-sm text-muted-foreground">Graduation</div>
-              </div>
-              <div>
-                <div className="text-2xl md:text-3xl font-bold mb-1" style={{ color: "#D0C495" }}>
-                  60+
+                  25+
                 </div>
                 <div className="text-xs md:text-sm text-muted-foreground">Certifications Attained</div>
               </div>
