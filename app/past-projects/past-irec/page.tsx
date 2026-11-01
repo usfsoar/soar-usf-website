@@ -20,6 +20,26 @@ export default function PastIRECPage() {
       title: "IREC International Gathering — Spaceport Midland, TX",
       caption: "Panoramic view of collegiate rocketry teams from across the globe assembled at the International Rocket Engineering Competition.",
     },
+    {
+      src: "/irec2526 pic3.jpg",
+      title: "Project Aurora at Spaceport Midland",
+      caption: "The SOAR team and Project Aurora during the 2025–26 IREC competition.",
+    },
+    {
+      src: "/irec2526 pic4.jpg",
+      title: "Aurora Launch Vehicle",
+      caption: "Project Aurora prepared for competition operations at Spaceport Midland.",
+    },
+    {
+      src: "/irec2526 pic5.jpg",
+      title: "Team 24 Competition Operations",
+      caption: "SOAR students working through launch-day preparations and vehicle integration.",
+    },
+    {
+      src: "/irec2526 pic6.jpg",
+      title: "IREC Launch-Day Preparations",
+      caption: "The Project Aurora team preparing the vehicle and its systems for flight.",
+    },
   ]
 
   // Lightbox keyboard navigation
@@ -179,6 +199,29 @@ export default function PastIRECPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Launch Video */}
+          <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-6 sm:p-8">
+            <div className="mb-6">
+              <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-[#cfc493]">Flight footage</p>
+              <h3 className="text-2xl font-bold text-white">Project Aurora Launch</h3>
+              <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                Watch Project Aurora take flight during the 2025–26 IREC season.
+              </p>
+            </div>
+            <div className="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950">
+              <video
+                className="aspect-video w-full object-cover"
+                controls
+                preload="metadata"
+                playsInline
+                aria-label="Project Aurora IREC launch video"
+              >
+                <source src="/ireclaunch.MP4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
 

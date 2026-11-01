@@ -21,13 +21,33 @@ export default function BELPage() {
 
             {/* About BEL */}
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-6 sm:p-8">
-              <h3 className="text-2xl font-bold mb-4">About BEL</h3>
+              <div className="flex flex-wrap items-start justify-between gap-4 mb-5">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#cfc493] mb-2">Vertical Static Fire System</p>
+                  <h3 className="text-2xl font-bold">About BEL</h3>
+                </div>
+                
+              </div>
               <p className="text-zinc-400 leading-relaxed mb-4">
-                BEL (Bulls Experimental Liquids Team) is SOAR's ambitious liquid propulsion research project, focusing on the development of a liquid-fueled rocket engine and vehicle.
+                BEL (Bulls Experimental Liquids Team) is developing the Stoic I liquid bi-propellant engine and its vertical static fire test stand for the Society of Aeronautics and Rocketry at the University of South Florida.
               </p>
-              <p className="text-zinc-400 leading-relaxed">
-                This project pushes the boundaries of student rocketry by exploring advanced propulsion technologies and complex fluid systems.
+              <p className="text-zinc-400 leading-relaxed mb-6">
+                The system uses nitrous oxide and ethanol to target 4.9 kN (1,100 lbf) of nominal thrust for at least 16 seconds at a 4 MPa chamber pressure. Its fuel-rich 3.5 O/F mixture ratio is designed to reduce combustion instability and flame temperature while preserving performance.
               </p>
+              <div className="grid gap-3 sm:grid-cols-3">
+                <div className="bg-zinc-950/70 border border-zinc-800/80 p-4 rounded-xl">
+                  <span className="text-xs text-zinc-500 block mb-1">Nominal thrust</span>
+                  <span className="text-lg font-bold text-white">4.9 kN</span>
+                </div>
+                <div className="bg-zinc-950/70 border border-zinc-800/80 p-4 rounded-xl">
+                  <span className="text-xs text-zinc-500 block mb-1">Burn duration</span>
+                  <span className="text-lg font-bold text-white">≥ 16 seconds</span>
+                </div>
+                <div className="bg-zinc-950/70 border border-zinc-800/80 p-4 rounded-xl">
+                  <span className="text-xs text-zinc-500 block mb-1">Chamber pressure</span>
+                  <span className="text-lg font-bold text-white">4 MPa</span>
+                </div>
+              </div>
             </div>
 
             {/* Recent Static Fire Milestone Banner */}
@@ -83,33 +103,43 @@ export default function BELPage() {
             {/* Project Objectives */}
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-6 sm:p-8">
               <h3 className="text-2xl font-bold mb-4">Project Objectives</h3>
+              <p className="text-zinc-400 leading-relaxed mb-6">
+                The CDR-defined objectives cover the Stoic I engine, propellant feed system, vertical test stand, and controls architecture required for safe, repeatable hot-fire testing.
+              </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-[#cfc493] flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-bold mb-1">Liquid Engine Development</h4>
-                    <p className="text-sm text-zinc-400">Design and test a liquid bipropellant rocket engine</p>
+                    <h4 className="font-bold mb-1">Stoic I Engine Performance</h4>
+                    <p className="text-sm text-zinc-400">Develop a nitrous oxide and ethanol engine targeting 4.9 kN nominal thrust, at least 16 seconds of continuous burn, and a 4 MPa chamber pressure.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-[#cfc493] flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-bold mb-1">Propellant Research</h4>
-                    <p className="text-sm text-zinc-400">Study and optimize fuel-oxidizer combinations</p>
+                    <h4 className="font-bold mb-1">Injector, Chamber & Nozzle Integration</h4>
+                    <p className="text-sm text-zinc-400">Validate the triple-impinging injector, C-C ablative liner and nozzle, 15° conical nozzle, and 7.013 expansion ratio for efficient and thermally protected combustion.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-[#cfc493] flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-bold mb-1">Feed System Design</h4>
-                    <p className="text-sm text-zinc-400">Develop pressurized propellant delivery systems</p>
+                    <h4 className="font-bold mb-1">Pressurized Feed System</h4>
+                    <p className="text-sm text-zinc-400">Integrate the concentric nitrous oxide and ethanol tanks, EPDM pistons, Valworx solenoid valves, stainless tubing, pneumatic actuators, and fill, vent, and run-line quick disconnects.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-[#cfc493] flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-bold mb-1">Test Stand Operations</h4>
-                    <p className="text-sm text-zinc-400">Build and operate static test infrastructure</p>
+                    <h4 className="font-bold mb-1">Vertical Test Stand & EECS</h4>
+                    <p className="text-sm text-zinc-400">Build a 17-foot guided-sled stand rated above 1,100 lbf and operate it with LabJack T7 data acquisition, Teensy 4.1 controls, fiber or Ethernet UDP communication, and redundant ignition.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#cfc493] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="font-bold mb-1">Safe, Repeatable Test Operations</h4>
+                    <p className="text-sm text-zinc-400">Use FMEA, SOPs, emergency action plans, pre-test checklists, pressure relief, dual-operator verification, software arming controls, and an emergency stop sequence.</p>
                   </div>
                 </div>
               </div>
@@ -144,9 +174,18 @@ export default function BELPage() {
 
             {/* Current Development Phase */}
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-6 sm:p-8">
-              <h3 className="text-2xl font-bold mb-4">Current Development Phase</h3>
+              <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+                <h3 className="text-2xl font-bold">Current Development Phase</h3>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold text-[#cfc493] bg-[#cfc493]/10 border border-[#cfc493]/30 px-3 py-1 rounded-full">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#cfc493]" />
+                  Critical Design Review complete
+                </span>
+              </div>
               <p className="text-zinc-400 leading-relaxed">
-                Following the successful static fire test on October 18th, the team continues hot-fire data reduction, refining injector geometry, and performing structural validation on the ground support and feed systems as preparation begins for subsequent test campaigns and full-scale vehicle integration.
+                As of the October 23, 2026 Critical Design Review, BEL has defined the Stoic I engine and Vertical Static Fire System architecture. Current work is focused on finalizing the 17-foot test stand, validating the concentric tank and valve network, and integrating the EECS controls and data pipeline ahead of hot-fire testing.
+              </p>
+              <p className="text-zinc-400 leading-relaxed mt-4">
+                The control interface is being developed around a LabJack T7 with at least 50 Hz sampling and a Teensy 4.1 controller for six solenoid valves and dual-redundant ignition. The operator GUI will provide P&amp;ID visualization, 10-second rolling charts, look-but-don&apos;t-touch safeguards, dual-key confirmations, and a spacebar emergency stop.
               </p>
             </div>
           </div>

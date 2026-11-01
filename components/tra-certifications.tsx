@@ -45,7 +45,7 @@ export function TRACertifications() {
                 <div className="text-2xl md:text-3xl font-bold mb-1" style={{ color: "#D0C495" }}>
                   25+
                 </div>
-                <div className="text-xs md:text-sm text-muted-foreground">Certifications Attained</div>
+                <div className="text-xs md:text-sm text-muted-foreground">Current Members Certified</div>
               </div>
               <div>
                 <div className="text-2xl md:text-3xl font-bold mb-1" style={{ color: "#D0C495" }}>

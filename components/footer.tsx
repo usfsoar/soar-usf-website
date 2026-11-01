@@ -103,13 +103,13 @@ export function Footer() {
                     </Link> */}
                   </li>
                   <li>
-                    <Link href="/past-projects/past-nsl" className="hover:text-foreground transition-colors cursor-pointer">
-                      Past NSL
+                    <Link href="/past-projects/past-irec" className="hover:text-foreground transition-colors cursor-pointer">
+                      IREC 25-26
                     </Link>
                   </li>
                   <li>
-                    <Link href="/past-projects/past-irec" className="hover:text-foreground transition-colors cursor-pointer">
-                      IREC 25-26
+                    <Link href="/past-projects/past-nsl" className="hover:text-foreground transition-colors cursor-pointer">
+                      NSL
                     </Link>
                   </li>
                 </ul>
@@ -144,7 +144,7 @@ export function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="https://giving.usf.edu/online/gift/f/220111/" className="hover:text-foreground transition-colors cursor-pointer">
+                    <Link href="https://giving.usf.edu/online/gift/f/220111/" className="hover:text-foreground transition-colors cursor-pointer" target="_blank" rel="noopener noreferrer">
                       Donate
                     </Link>
                   </li>

@@ -116,11 +116,9 @@ export default function AboutPage() {
                   Pushing the Boundaries of Deep Space Exploration
                 </h3>
                 <p className="text-zinc-400 leading-relaxed mb-4 text-sm sm:text-base">
-                  At the organizational level, we seek to contribute to the development of new and innovative systems that further human deep space exploration efforts. We view ourselves as a professional research & engineering organization that produces data and innovations relevant to the aerospace industry.
+                  At the organizational level, we seek to contribute to the development of new and innovative systems that further human deep space exploration efforts. We view ourselves as a professional research & engineering organization that produces data and innovations relevant to the aerospace industry. To meet our goals, we employ management practices found in industry, robust leadership methods, systems engineering principles, and engaging our student members and the USF community. SOAR strives to foster a culture built on teamwork & collaboration not just inside the active member body, but inclusive of alumni, corporate sponsors, and competition officials. We value inclusivity, with the members of SOAR having a diverse academic background, ranging from finance, to engineering, graphic arts, and everything in between.
                 </p>
-                <p className="text-zinc-400 leading-relaxed text-sm sm:text-base">
-                  To meet our goals, we employ management practices found in industry, robust leadership methods, systems engineering principles, and active engagement with our student members and the USF community. SOAR strives to foster a culture built on teamwork & collaboration, not just inside the active member body, but inclusive of alumni, corporate sponsors, and competition officials. We value inclusivity, with members representing a diverse academic spectrum ranging from finance and business to engineering, computer science, and graphic arts.
-                </p>
+
               </div>
 
               {/* Core Values Badges */}
@@ -191,7 +189,7 @@ export default function AboutPage() {
                 </div>
                 <h4 className="text-lg font-bold text-white mb-2">Research & Development</h4>
                 <p className="text-zinc-400 text-sm leading-relaxed">
-                  Our teams work on cutting-edge liquid bipropellant propulsion (Bulls Engine Laboratory - BEL), autonomous airbrake drag modulation, SRAD avionics telemetry, and deployable atmospheric payloads.
+                  Our teams work on cutting-edge liquid bipropellant propulsion (Bulls Experimental Liquids Team - BEL), autonomous airbrake drag modulation, SRAD avionics telemetry, and deployable atmospheric payloads.
                 </p>
               </div>
 
