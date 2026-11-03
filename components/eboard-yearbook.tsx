@@ -30,6 +30,8 @@ type YearbookProps = {
   outerBorderColor?: string
   /** inner image container border color (CSS color string) */
   innerBorderColor?: string
+  /** Center cards in incomplete final rows instead of leaving them left-aligned */
+  centerLastRow?: boolean
 }
 
 export default function EboardYearbook({
@@ -41,6 +43,7 @@ export default function EboardYearbook({
   imageHeightClass = 'w-full h-72 sm:h-56 md:h-60',
   outerBorderColor = '#006747',
   innerBorderColor = '#cfc493',
+  centerLastRow = false,
 }: YearbookProps) {
   const [selected, setSelected] = useState<number | null>(null)
   const [selectedImage, setSelectedImage] = useState(0)
@@ -129,6 +132,9 @@ export default function EboardYearbook({
     "Jacob Jenkins": "/jacobheadshot.jpg",
     "Yeldana Zhamanova": "/yeldanaheadshot.jpg",
     "Ethan Toro": "/ethantheadshot.jpg",
+    "Connor Clay Johnson": "/connorheadshot.jpg",
+    "Harry (Charalampos) Georgiadis": "/harryheadshot.jpg",
+    "Amanda (Mandi) Chesney": "/amandaheadshot.jpg",
   }
 
   // Define custom object positions for specific members
@@ -165,7 +171,7 @@ export default function EboardYearbook({
   return (
     <div className="container mx-auto px-6 py-12">
       <div className={containerClass}>
-        <div className={`grid ${gridClass} gap-6 sm:gap-8`}>
+        <div className={`${centerLastRow ? "flex flex-wrap justify-center" : `grid ${gridClass}`} gap-6 sm:gap-8`}>
           {members.map((m, i) => {
             const profileImage = profileImages[m.name] || null
             const profileImagePosition = profileImagePositions[m.name]
