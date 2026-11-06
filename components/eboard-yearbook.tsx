@@ -135,6 +135,7 @@ export default function EboardYearbook({
     "Connor Clay Johnson": "/connorheadshot.jpg",
     "Harry (Charalampos) Georgiadis": "/harryheadshot.jpg",
     "Amanda (Mandi) Chesney": "/amandaheadshot.jpg",
+    "Brandon Remedios": "/brandonheadshot.jpg",
   }
 
   // Define custom object positions for specific members

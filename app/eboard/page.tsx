@@ -395,6 +395,16 @@
                       involvement: "Connor's involvement description will go here.",
                       link: "https://www.linkedin.com/in/connor-johnson-b12529261/",
                     },
+                    {
+                      name: "Brandon Remedios",
+                      title: "Historian",
+                      description: "Serving as the Historian, Brandon is currently a Senior in Mechanical Engineering.",
+                      year: "Senior",
+                      major: "Mechanical Engineering",
+                      dates: "August 2026 - Present",
+                      involvement: "Brandon's involvement description will go here.",
+                      link: "https://www.linkedin.com/in/brandon-remedios-0a8331289/",
+                    }
 
                   ]}
                   gridClass="grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4"
