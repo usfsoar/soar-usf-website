@@ -9,7 +9,7 @@ export function TRACertifications() {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-8 md:mb-12">
           <div className="inline-flex items-center gap-3 bg-zinc-900 rounded-full px-6 py-3 mb-6">
-            <Image src="/Color Logo.svg" alt="SOAR Logo" width={20} height={20} className="w-5 h-5" style={{ filter: "brightness(0) saturate(100%) invert(82%) sepia(13%) saturate(743%) hue-rotate(3deg) brightness(92%) contrast(85%)" }} />
+            <Image src="/Color Logo.svg" alt="SOAR Logo" width={20} height={20} className="w-5 h-5" />
             <span className="text-sm font-medium tracking-wide" style={{ color: "#cfc493" }}>Current Projects</span>
           </div>
 
@@ -40,18 +40,12 @@ export function TRACertifications() {
               organization and to transmitting knowledge that might otherwise be lost as members graduate.
             </p>
 
-            <div className="grid grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-8">
+            <div className="grid grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
               <div>
                 <div className="text-2xl md:text-3xl font-bold mb-1" style={{ color: "#D0C495" }}>
-                  100%
+                  25+
                 </div>
-                <div className="text-xs md:text-sm text-muted-foreground">Graduation</div>
-              </div>
-              <div>
-                <div className="text-2xl md:text-3xl font-bold mb-1" style={{ color: "#D0C495" }}>
-                  60+
-                </div>
-                <div className="text-xs md:text-sm text-muted-foreground">Certifications Attained</div>
+                <div className="text-xs md:text-sm text-muted-foreground">Current Members Certified</div>
               </div>
               <div>
                 <div className="text-2xl md:text-3xl font-bold mb-1" style={{ color: "#D0C495" }}>
