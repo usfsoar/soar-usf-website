@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Rocket, Building, PackageOpen } from "lucide-react"
+import { Rocket, Building, PackageOpen, Cog, Cpu, ShieldCheck } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -12,21 +12,33 @@ export function IREC() {
         "Responsible for designing, manufacturing and assembling the rocket's main structural components, including the body tube, nose cone, fins, and couplers.",
     },
     {
+      icon: Rocket,
+      title: "Avionics and Telemetry Team",
+      description: "Responsible for designing, implementing, and managing the rocket's avionics and telemetry systems, ensuring real-time data transmission and system reliability.",
+    },
+    {
+      icon: PackageOpen,
+      title: "Payload Mechanical Team",
+      description:
+        "Responsible for designing, manufacturing, and assembling the rocket's payload mechanical systems, ensuring proper integration with the overall rocket structure and functionality.",
+    },
+    {
       icon: PackageOpen,
       title: "Payload EE/CS Team",
-      description: "Integrates all electrical systems, sensors, and onboard payloads inside the rocket.",
+      description:
+        "Responsible for designing, implementing, and managing the rocket's payload electrical and computer systems, ensuring proper integration with the overall rocket structure and functionality.",
     },
     {
-      icon: Building,
-      title: "Vehicle MECH/EE Team",
+      icon: Cog,
+      title: "Controls Mechanical Team",
       description:
-        "Focuses on integrating the rocket's propulsion, deployment, and mechanical systems alongside the necessary electrical wiring, circuits, and power management.",
+        "Responsible for designing, implementing, and managing the rocket's controls mechanical systems, ensuring proper integration with the overall rocket structure and functionality.",
     },
     {
-      icon: Rocket,
-      title: "Telemetry Team",
+      icon: Cpu,
+      title: "Controls EE/CS Team",
       description:
-        "Designs and manages the real-time communication systems that relay flight data from the rocket to the ground.",
+        "Responsible for designing, implementing, and managing the rocket's controls electrical and computer systems, ensuring proper integration with the overall rocket structure and functionality.",
     },
   ]
 
@@ -49,7 +61,7 @@ export function IREC() {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-8">
           {/* Join Card - Left Side on Desktop */}
           <div className="lg:w-[380px] flex-shrink-0">
-            <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 sticky top-24">
+            <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-8 sticky top-24">
               <h3 className="text-xl font-bold mb-4">Join our teams!</h3>
               <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
               This team designs, builds, and launches high‑powered rockets to meet altitude targets and demonstrate reliable recovery systems.
@@ -108,23 +120,23 @@ export function IREC() {
             {mainTeams.map((team, index) => (
                 <div
                   key={index}
-                  className="border border-zinc-800 rounded-xl p-6 hover:border-[#cfc493] transition-colors"
+                  className="border border-zinc-800 rounded-xl p-4 hover:border-[#cfc493] transition-colors"
                 >
-                  <div className="w-14 h-14 bg-zinc-900 rounded-xl flex items-center justify-center mb-4">
-                    <team.icon className="h-7 w-7 text-[#cfc493]" />
+                  <div className="w-12 h-12 bg-zinc-900 rounded-xl flex items-center justify-center mb-3">
+                    <team.icon className="h-6 w-6 text-[#cfc493]" />
                   </div>
                   <h4 className="text-lg font-bold mb-3">{team.title}</h4>
                   <p className="text-sm text-muted-foreground leading-relaxed">{team.description}</p>
                 </div>
               ))}
 
-            <div className="border border-zinc-800 rounded-xl p-6 hover:border-[#cfc493] transition-colors">
-              <div className="w-14 h-14 bg-zinc-900 rounded-xl flex items-center justify-center mb-4">
-                <PackageOpen className="h-7 w-7 text-[#cfc493]" />
+            <div className="border border-zinc-800 rounded-xl p-4 hover:border-[#cfc493] transition-colors">
+              <div className="w-12 h-12 bg-zinc-900 rounded-xl flex items-center justify-center mb-3">
+                <ShieldCheck className="h-6 w-6 text-[#cfc493]" />
               </div>
-              <h4 className="text-lg font-bold mb-3">Recovery Team</h4>
+              <h4 className="text-lg font-bold mb-3">Safety Team</h4>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Responsible for the recovery of the rocket in its entirety including payload.
+                Responsible for ensuring the safety of the team and the public during all phases of the rocket's operation, including launch, flight, and recovery.
               </p>
             </div>
           </div>

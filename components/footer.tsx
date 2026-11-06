@@ -66,9 +66,9 @@ export function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/shop" className="hover:text-foreground transition-colors cursor-pointer">
+                    {/* <Link href="/shop" className="hover:text-foreground transition-colors cursor-pointer">
                       The Shop
-                    </Link>
+                    </Link> */}
                   </li>
                 </ul>
               </div>
@@ -82,8 +82,8 @@ export function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/current-projects/torito" className="hover:text-foreground transition-colors cursor-pointer">
-                      Torito
+                    <Link href="/current-projects/bel" className="hover:text-foreground transition-colors cursor-pointer">
+                      BEL
                     </Link>
                   </li>
                   <li>
@@ -103,13 +103,13 @@ export function Footer() {
                     </Link> */}
                   </li>
                   <li>
-                    <Link href="/past-projects/past-nsl" className="hover:text-foreground transition-colors cursor-pointer">
-                      Past NSL
+                    <Link href="/past-projects/past-irec" className="hover:text-foreground transition-colors cursor-pointer">
+                      IREC 25-26
                     </Link>
                   </li>
                   <li>
-                    <Link href="/past-projects/hybrid" className="hover:text-foreground transition-colors cursor-pointer">
-                      Hybrid
+                    <Link href="/past-projects/past-nsl" className="hover:text-foreground transition-colors cursor-pointer">
+                      NSL
                     </Link>
                   </li>
                 </ul>
@@ -129,9 +129,9 @@ export function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/blogs" className="hover:text-foreground transition-colors cursor-pointer">
+                    {/* <Link href="/blogs" className="hover:text-foreground transition-colors cursor-pointer">
                       Blogs
-                    </Link>
+                    </Link> */}
                   </li>
                   <li>
                     <Link href="/positions" className="hover:text-foreground transition-colors cursor-pointer">
@@ -144,7 +144,7 @@ export function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="https://giving.usf.edu/online/gift/f/220111/" className="hover:text-foreground transition-colors cursor-pointer">
+                    <Link href="https://giving.usf.edu/online/gift/f/220111/" className="hover:text-foreground transition-colors cursor-pointer" target="_blank" rel="noopener noreferrer">
                       Donate
                     </Link>
                   </li>
