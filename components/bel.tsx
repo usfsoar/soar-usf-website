@@ -52,7 +52,7 @@ export function BEL() {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-8">
           {/* Join Card - Left Side on Desktop */}
           <div className="lg:w-[380px] flex-shrink-0">
-            <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 sticky top-24">
+            <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-8 sticky top-24">
               <h3 className="text-xl font-bold mb-4">Join our teams!</h3>
               <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
                 So far, this team has focused on propulsion system development, ground test systems, and developed an
@@ -112,10 +112,10 @@ export function BEL() {
             {teams.map((team, index) => (
               <div
                 key={index}
-                className="border border-zinc-800 rounded-xl p-6 hover:border-[#D0C495] transition-colors"
+                className="border border-zinc-800 rounded-xl p-4 hover:border-[#D0C495] transition-colors"
               >
-                <div className="w-14 h-14 bg-zinc-900 rounded-xl flex items-center justify-center mb-4">
-                  <team.icon className="h-7 w-7 text-[#D0C495]" />
+                <div className="w-12 h-12 bg-zinc-900 rounded-xl flex items-center justify-center mb-3">
+                  <team.icon className="h-6 w-6 text-[#D0C495]" />
                 </div>
                 <h4 className="text-lg font-bold mb-3">{team.title}</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed">{team.description}</p>

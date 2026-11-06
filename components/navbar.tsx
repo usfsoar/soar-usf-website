@@ -185,9 +185,9 @@ export function Navbar() {
           {/* <Link href="/blogs" className={`hidden lg:block text-sm font-medium transition-colors cursor-pointer pb-1 border-b-2 border-transparent ${isActive('/blogs') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
             Blogs
           </Link> */}
-          {/* <Link href="/positions" className={`hidden lg:block text-sm font-medium transition-colors cursor-pointer pb-1 border-b-2 border-transparent ${isActive('/positions') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
+          <Link href="/positions" className={`hidden lg:block text-sm font-medium transition-colors cursor-pointer pb-1 border-b-2 border-transparent ${isActive('/positions') ? 'text-[#cfc493] border-[#cfc493]' : 'text-white hover:text-[#cfc493] hover:border-zinc-700'}`}>
             Positions
-          </Link> */}
+          </Link>
 
           {/* Right: CTA Action Buttons */}
           <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
@@ -443,13 +443,13 @@ export function Navbar() {
             >
               Blogs
             </Link> */}
-            {/* <Link
+            <Link
               href="/positions"
               className={`text-sm font-normal transition-colors cursor-pointer ${isActive('/positions') ? 'text-[#cfc493]' : 'text-white hover:text-[#cfc493]'}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Positions
-            </Link> */}
+            </Link>
             
             {/* Contact Button - SOAR Gold */}
             <Link href="/#contact" className="mt-3" onClick={() => setMobileMenuOpen(false)}>

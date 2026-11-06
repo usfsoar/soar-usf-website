@@ -134,9 +134,9 @@ export function Footer() {
                     </Link> */}
                   </li>
                   <li>
-                    {/* <Link href="/positions" className="hover:text-foreground transition-colors cursor-pointer">
+                    <Link href="/positions" className="hover:text-foreground transition-colors cursor-pointer">
                       Positions
-                    </Link> */}
+                    </Link>
                   </li>
                   <li>
                     <Link href="/#contact" className="hover:text-foreground transition-colors cursor-pointer">
