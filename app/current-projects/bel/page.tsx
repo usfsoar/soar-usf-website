@@ -118,7 +118,7 @@ export default function BELPage() {
                   <CheckCircle2 className="w-5 h-5 text-[#cfc493] flex-shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-bold mb-1">Injector, Chamber & Nozzle Integration</h4>
-                    <p className="text-sm text-zinc-400">Validate the triple-impinging injector, C-C ablative liner and nozzle, 15° conical nozzle, and 7.013 expansion ratio for efficient and thermally protected combustion.</p>
+                    <p className="text-sm text-zinc-400">Validate the triple-impinging injector, C-C ablative liner and nozzle, and 15° conical nozzle for efficient and thermally protected combustion.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">

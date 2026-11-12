@@ -49,7 +49,7 @@
       year: "Junior",
       major: "Electrical Engineering",
       dates: "August 2024 - Present",
-      involvement: "Hi guys, I am employed as an employee of the civil engineering department which is my employer. Employment. I am the student at one of the universities in the entire state of Florida, USF!! I would rather make a rocket that goes up really fast. My favorite cereal is honey bunches of oats, and I’m not an Aquarius.",
+      involvement: "I am Ethan, and I am the Chief Engineer for the IREC Team. I'm a 3rd-year majoring in Electrical Engineering, and right now I am doing an internship at NASA over at the Kennedy Space Center. In SOAR, I've been able to get experience in Electrical, Process, and Systems Engineering. I have been a Junior Engineer on the Payload Team, moving to the Electrical Controls lead for the liquid propulsion team (BEL) and am now the chief engineer this year for the IREC Team! Looking forward to a great year and an amazing performance at IREC.",
       link: "https://www.linkedin.com/in/ethan-zylman/"
     },
     {
@@ -161,7 +161,7 @@
                       year: "Junior",
                       major: "Electrical Engineering",
                       dates: "August 2024 - Present",
-                      involvement: "Hi guys, I am employed as an employee of the civil engineering department which is my employer. Employment. I am the student at one of the universities in the entire state of Florida, USF!! I would rather make a rocket that goes up really fast. My favorite cereal is honey bunches of oats, and I’m not an Aquarius.",
+                      involvement: "I am Ethan, and I am the Chief Engineer for the IREC Team. I'm a 3rd-year majoring in Electrical Engineering, and right now I am doing an internship at NASA over at the Kennedy Space Center. In SOAR, I've been able to get experience in Electrical, Process, and Systems Engineering. I have been a Junior Engineer on the Payload Team, moving to the Electrical Controls lead for the liquid propulsion team (BEL) and am now the chief engineer this year for the IREC Team! Looking forward to a great year and an amazing performance at IREC.",
                       link: "https://www.linkedin.com/in/ethan-zylman/"
                     },
                     {
@@ -185,16 +185,6 @@
                       link: "https://www.linkedin.com/in/alan-guyster-397112325/",
                     },
                     {
-                      name: "Matthew Raulerson",
-                      title: "IREC Avionics Lead",
-                      description: "Serving as the IREC Avionics Lead, Matthew is currently a Senior in Electrical Engineering/.",
-                      year: "Senior",
-                      major: "Electrical Engineering",
-                      dates: "September 2026 - Present",
-                      involvement: "Matthew's involvement description will go here.",
-                      link: "https://www.linkedin.com/in/matthew-raulerson-a10753343/",
-                    },
-                    {
                       name: "Sage Bundhund",
                       title: "IREC Aerostructures Lead",
                       description: "Serving as the IREC Aerostructures Lead, Sage is a Sophomore in Mechanical Engineering.",
@@ -212,7 +202,7 @@
                       year: "Junior",
                       major: "Mechanical Engineering",
                       dates: "August 2025 - Present",
-                      involvement: "Stepan's involvement description will go here.",
+                      involvement: "Hi! Im Stepan Jankowski, and I'm this years GNC (Controls) Mechanical Lead! I like all things that go fast, far or high. This year I want to ensure that my subsystem works as designed so well that it stands as inspiration for future Controls designs! My favorite memory with SOAR are the late night lack of sleep induced laughing fits getting ready for launch days!",
                       link: "https://www.linkedin.com/in/stepanjankowski/",
                     },
                     {
@@ -312,13 +302,13 @@
                       link: "https://www.linkedin.com/in/derecksantiago/",
                     },
                     {
-                      name: "Om (Hari) Patel",
+                      name: "Hari Patel",
                       title: "Propulsion Lead",
                       description: "Serving as the Propulsion Lead, Om (Hari) is currently a Sophomore in Mechanical Engineering.",
                       year: "Sophomore",
                       major: "Mechanical Engineering",
                       dates: "September 2025 - Present",
-                      involvement: "Om (Hari) Patel's involvement description will go here.",
+                      involvement: "Hari Patel's involvement description will go here.",
                       link: "https://www.linkedin.com/in/-hari-patel-/",
                     },
                     {

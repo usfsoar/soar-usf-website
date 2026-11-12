@@ -87,6 +87,8 @@ export default function EboardYearbook({
     "Zachary Tephford": ["/zachary1.jpg", "/zachary2.jpg", "/zachary3.jpg"],
     "Lauren Carpenter": ["/lauren1.jpg", "/lauren2.jpg", "/lauren3.jpg"],
     "Hunter Hawkins": ["/hunter1.jpg", "/hunter2.jpg", "/hunter3.jpg"],
+    "Stepan Jankowski": ["/stepan1.jpg", "/stepan2.jpg", "/stepan3.jpg"],
+    "Ethan Zylman": ["/ethanz1.jpg", "/ethanz2.jpg", "/ethanz3.jpg"],
   }
 
   // Define profile images for each member
@@ -128,7 +130,7 @@ export default function EboardYearbook({
     "Jonathan Koutin": "/jonathanheadshot.jpg",
     "Alston Wang": "/alstonheadshot.jpg",
     "Dereck Santiago": "/dereckheadshot.jpg",
-    "Om (Hari) Patel": "/omheadshot.jpg",
+    "Hari Patel": "/omheadshot.jpg",
     "Jacob Jenkins": "/jacobheadshot.jpg",
     "Yeldana Zhamanova": "/yeldanaheadshot.jpg",
     "Ethan Toro": "/ethantheadshot.jpg",

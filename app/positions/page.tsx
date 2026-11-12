@@ -11,7 +11,7 @@ const positions = {
   eboard: [
     { title: "President", isOpen: false },
     { title: "Vice President", isOpen: false },
-    { title: "Torito Chief Engineer", isOpen: false },
+    { title: "BEL Chief Engineer", isOpen: false },
     { title: "IREC Chief Engineer", isOpen: false },
     { title: "Chief of Marketing", isOpen: false },
     { title: "Chief of Operations", isOpen: false },
@@ -19,36 +19,35 @@ const positions = {
     { title: "Secretary", isOpen: false },
   ],
   irec: [
-    { title: "Project Manager", isOpen: false },
-    { title: "Vehicle Mechanical Lead", isOpen: false },
-    { title: "Vehicle EE/CS Lead", isOpen: false },
+    { title: "Program Manager", isOpen: false },
+    { title: "Project Coordinator", isOpen: false },
+    { title: "Avionics Lead", isOpen: false },
     { title: "Aerostructures Lead", isOpen: false },
     { title: "Payload Mechanical Lead", isOpen: false },
     { title: "Payload EE/CS Lead", isOpen: false },
-    { title: "Telemetry Lead", isOpen: false },
-    { title: "Recovery/Flight Dynamics", isOpen: false },
+    { title: "Guidance Navigation & Controls Mechanical Lead", isOpen: false },
+    { title: "Guidance Navigation & Controls EE/CS Lead", isOpen: false },
+    { title: "Safety Lead", isOpen: false },
   ],
   torito: [
-    { title: "Project Manager", isOpen: false },
-    { title: "Data Acquisition Lead", isOpen: false },
+    { title: "Program Manager", isOpen: false },
     { title: "Aerostructures Lead", isOpen: false },
+    { title: "Ground Stations EE/CS Lead", isOpen: false },
+    { title: "Ground Station Mechanical Lead", isOpen: false },
     { title: "Propulsion Lead", isOpen: false },
-    { title: "Test Stand Lead", isOpen: false },
-    { title: "Safety Officer", isOpen: false },
-    { title: "Ground Station Control Mechanical Lead", isOpen: false },
-    { title: "Ground Station Control Electrical Lead", isOpen: false },
-    { title: "Electronics Researcher", isOpen: false },
+    { title: "Safety Lead", isOpen: false },
   ],
   marketing: [
     { title: "Marketing Officer", isOpen: false },
-    { title: "Public Relations", isOpen: false },
-    { title: "Multimedia Chair", isOpen: false },
     { title: "Web Developer", isOpen: false },
     { title: "Historian", isOpen: false },
     { title: "IREC Marketing Lead", isOpen: true}
   ],
   operations: [
-    { title: "Logistics Chair", isOpen: false },
+    { title: "Fundraising Lead 1", isOpen: false },
+    { title: "Fundraising Lead 2", isOpen: false },
+    { title: "Professional Development Lead", isOpen: false },
+
   ]
 }
 
