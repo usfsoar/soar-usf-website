@@ -109,7 +109,7 @@
       year: "Sophomore",
       major: "Aerospace Engineering",
       dates: "August 2025 - Present",
-      involvement: "Logan's involvement description will go here.",
+      involvement: "Hi my name is Logan Lavoy, I am a sophomore Aerospace Engineering student with a minor in entrepreneurship and am the current secretary of SOAR and I've been with the club for 2 years. Outside of school I am training to be a private pilot and have various other hobbies that I do in my free time. I intent to stay in SOAR all 4 years and am excited to see how high we fly!!",
       link: "https://www.linkedin.com/in/loganjlavoy/",
     },
 
@@ -232,7 +232,7 @@
                       year: "Junior",
                       major: "Mathematics and Computer Science",
                       dates: "August 2025 - Present",
-                      involvement: "Matthew's involvement description will go here.",
+                      involvement: "I'm Matthew the Guidance, Navigation, and Control (GNC) Electrical & Computer Science (EE/CS) Lead for SOAR's 2027 IREC Competition team. I am a junior double majoring in Mathematics and Computer Science and have completed two summer software engineering internships at Raytheon. I joined SOAR in the fall of 2025 as part of the Payload EE/CS team, where I became a Junior Engineer and worked on the team's deployable rover, EVE, creating a multithreaded software architecture and computer vision algorithms. Outside of SOAR, I also do research in algebraic knot theory.",
                       link: "https://www.linkedin.com/in/matthew-jwest/",
                     },
                     {

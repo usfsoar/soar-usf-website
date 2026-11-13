@@ -89,6 +89,8 @@ export default function EboardYearbook({
     "Hunter Hawkins": ["/hunter1.jpg", "/hunter2.jpg", "/hunter3.jpg"],
     "Stepan Jankowski": ["/stepan1.jpg", "/stepan2.jpg", "/stepan3.jpg"],
     "Ethan Zylman": ["/ethanz1.jpg", "/ethanz2.jpg", "/ethanz3.jpg"],
+    "Heloisa Medeiros Kazakevic": ["/heloisa1.jpg", "/heloisa2.jpg", "/heloisa3.jpg"],
+    "Logan Lavoy": ["/logan1.jpg", "/logan2.jpg", "/logan3.jpg"],
   }
 
   // Define profile images for each member
