@@ -91,6 +91,7 @@ export default function EboardYearbook({
     "Ethan Zylman": ["/ethanz1.jpg", "/ethanz2.jpg", "/ethanz3.jpg"],
     "Heloisa Medeiros Kazakevic": ["/heloisa1.jpg", "/heloisa2.jpg", "/heloisa3.jpg"],
     "Logan Lavoy": ["/logan1.jpg", "/logan2.jpg", "/logan3.jpg"],
+    "Matthew West": ["/mattheww1.jpg", "/mattheww2.jpg", "/mattheww3.jpg"],
   }
 
   // Define profile images for each member
@@ -168,6 +169,8 @@ export default function EboardYearbook({
     if (member.name === "Alan Guyster" && imageIndex === 1) return { objectPosition: '100% 70%' }
     if (member.name === "Alan Guyster" && imageIndex === 2) return { objectPosition: '100% 70%' }
     if (member.name === "Pavan Moturi" && imageIndex === 1) return { objectPosition: '0% 70%' }
+    if (member.name === "Matthew West" && imageIndex === 0) return { objectPosition: '80% 70%' }
+    if (member.name === "Matthew West" && imageIndex === 2) return { objectPosition: '20% 70%' }
     if (imageIndex === 1) return { objectPosition: '50% 70%' }
     if (imageIndex === 2) return { objectPosition: '50% 70%' }
     return undefined
