@@ -59,7 +59,7 @@
       year: "Senior",
       major: "Mechanical Engineering",
       dates: "August 2024 - Present",
-      involvement: "Joshua's involvement description will go here.",
+      involvement: "Hello, my name is Joshua Hachmeister, and I am the chief engineer of the liquid propulsion team. I have a passion for experimental rocket development, and I really like building Legos. I am also very excited to see what our amazing team can do!",
       link: "https://www.linkedin.com/in/joshua-hachmeister/",
     },
     {
@@ -278,7 +278,7 @@
                       year: "Senior",
                       major: "Mechanical Engineering",
                       dates: "August 2024 - Present",
-                      involvement: "Joshua's involvement description will go here.",
+                      involvement: "Hello, my name is Joshua Hachmeister, and I am the chief engineer of the liquid propulsion team. I have a passion for experimental rocket development, and I really like building Legos. I am also very excited to see what our amazing team can do!",
                       link: "https://www.linkedin.com/in/joshua-hachmeister/",
                     },
                     {
@@ -288,7 +288,7 @@
                       year: "Senior",
                       major: "Mechanical Engineering",
                       dates: "July 2026 - Present",
-                      involvement: "Alston's involvement description will go here.",
+                      involvement: "Hello!! I’m Alston, the chief babysitter for BEL. I coordinate work across all our subsystems to keep everything on track. I really really definitely enjoy my time at SOAR.",
                       link: "https://www.linkedin.com/in/alston-wang-50963a277/",
                     },
                     {
@@ -298,27 +298,27 @@
                       year: "Senior",
                       major: "Computer Engineering",
                       dates: "September 2025 - Present",
-                      involvement: "Dereck's involvement description will go here.",
+                      involvement: "Hey everyone! I am a Senior majoring in Computer Engineering and this years BEL Ground Structures EECS lead. This is my second year in SOAR and have enjoyed every moment of it! Feel free to ask any questions.",
                       link: "https://www.linkedin.com/in/derecksantiago/",
                     },
                     {
                       name: "Hari Patel",
                       title: "Propulsion Lead",
-                      description: "Serving as the Propulsion Lead, Om (Hari) is currently a Sophomore in Mechanical Engineering.",
+                      description: "Serving as the Propulsion Lead, Hariis currently a Sophomore in Mechanical Engineering.",
                       year: "Sophomore",
                       major: "Mechanical Engineering",
                       dates: "September 2025 - Present",
-                      involvement: "Hari Patel's involvement description will go here.",
+                      involvement: "Hi guys, I am employed as an employee of the civil engineering department which is my employer. Employment. I am a student at one of the universities in the state of Florida, on the south side. I believe chickens cross the road for a reason. My favorite cereal is Cinnamon Toast Crunch, and I’m not an Aquarius.",
                       link: "https://www.linkedin.com/in/-hari-patel-/",
                     },
                     {
-                      name: "Harry (Charalampos) Georgiadis",
+                      name: "Harry Georgiadis",
                       title: "Ground Stations Mechanical Lead",
                       description: "Serving as the Ground Stations Mechanical Lead, Harry is currently a Junior in Mechanical and Aerospace Engineering.",
                       year: "Junior",
                       major: "Mechanical and Aerospace Engineering",
                       dates: "August 2024 - Present",
-                      involvement: "Harry's involvement description will go here.",
+                      involvement: "My name is Harry Georgiadis, I am from Greece and I am this years Ground Structures Mechanical lead!! I’ve been in SOAR for 3 years now, and it’s been a very fun time making projects and friends along the way. Some of the coolest stuff I have been a part of is helping make the horizontal test stand, and right now designing and planning the steps to create the vertical test stand!",
                       link: "https://www.linkedin.com/in/charalampos-georgiadis-463473275/",
                     },
                     {
@@ -328,7 +328,7 @@
                       year: "Sophomore",
                       major: "Aerospace Engineering",
                       dates: "September 2026 - Present",
-                      involvement: "Ethan's involvement description will go here.",
+                      involvement: "Hello I am currently a Mech E undergraduate I really like cookies and cream ice cream and really like Interstellar and really like nature and really like the mysteries of space. Also I really like liquid engines.",
                       link: "https://www.linkedin.com/in/ethantoro/",
                     },
                     {
@@ -338,7 +338,7 @@
                       year: "Senior",
                       major: "Mechanical Engineering",
                       dates: "January 2024 - Present",
-                      involvement: "Hi I'm Duc, a senior in Mechanical Engineering. I joined SOAR in second semester of my freshman year previously on IREC, and now I am the Aerostructures Lead for BEL. I enjoy working on rockets and learning about aerospace engineering, and I also enjoy playing basketball and video games.",
+                      involvement: "Hi I'm Duc, a senior in Mechanical Engineering. I joined SOAR in second semester of my freshman year previously on IREC, and now I am the Aerostructures Lead for BEL.",
                       link: "https://www.linkedin.com/in/duc-nguyen-usf/",
                     }
                   ]}
@@ -382,7 +382,7 @@
                       year: "Senior",
                       major: "Marketing",
                       dates: "August 2026 - Present",
-                      involvement: "Connor's involvement description will go here.",
+                      involvement: "I'm Connor Johnson, a senior at the University of South Florida majoring in Marketing and serving as a Marketing Officer for the Society of Aeronautics and Rocketry (SOAR). I am passionate about creative marketing, brand development, and increasing student engagement. Through my role, I hope to expand SOAR's presence on campus and connect more students with the organization.",
                       link: "https://www.linkedin.com/in/connor-johnson-b12529261/",
                     },
                     {

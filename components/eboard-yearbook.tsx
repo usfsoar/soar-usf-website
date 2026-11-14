@@ -92,6 +92,13 @@ export default function EboardYearbook({
     "Heloisa Medeiros Kazakevic": ["/heloisa1.jpg", "/heloisa2.jpg", "/heloisa3.jpg"],
     "Logan Lavoy": ["/logan1.jpg", "/logan2.jpg", "/logan3.jpg"],
     "Matthew West": ["/mattheww1.jpg", "/mattheww2.jpg", "/mattheww3.jpg"],
+    "Hari Patel": ["/hari1.jpg", "/hari2.jpg", "/hari3.jpg"],
+    "Alston Wang": ["/alston1.jpg", "/alston2.jpg", "/alston3.jpg"],
+    "Dereck Santiago": ["/dereck1.jpg", "/dereck2.jpg", "/dereck3.jpg"],
+    "Harry Georgiadis": ["/harry1.jpg", "/harry2.jpg", "/harry3.jpg"],
+    "Ethan Toro": ["/ethant1.jpg", "/ethant2.jpg", "/ethant3.jpg"],
+    "Joshua Hachmeister": ["/joshh1.jpg", "/joshh2.jpg", "/joshh3.jpg"],
+    "Connor Clay Johnson": ["/connor1.jpg", "/connor2.jpg", "/connor3.jpg"],
   }
 
   // Define profile images for each member
@@ -138,7 +145,7 @@ export default function EboardYearbook({
     "Yeldana Zhamanova": "/yeldanaheadshot.jpg",
     "Ethan Toro": "/ethantheadshot.jpg",
     "Connor Clay Johnson": "/connorheadshot.jpg",
-    "Harry (Charalampos) Georgiadis": "/harryheadshot.jpg",
+    "Harry Georgiadis": "/harryheadshot.jpg",
     "Amanda (Mandi) Chesney": "/amandaheadshot.jpg",
     "Brandon Remedios": "/brandonheadshot.jpg",
   }
@@ -171,6 +178,8 @@ export default function EboardYearbook({
     if (member.name === "Pavan Moturi" && imageIndex === 1) return { objectPosition: '0% 70%' }
     if (member.name === "Matthew West" && imageIndex === 0) return { objectPosition: '80% 70%' }
     if (member.name === "Matthew West" && imageIndex === 2) return { objectPosition: '20% 70%' }
+    if (member.name === "Alston Wang" && imageIndex === 0) return { objectPosition: '40% 70%' }
+    if (member.name === "Dereck Santiago" && imageIndex === 0) return { objectPosition: '20% 70%' }
     if (imageIndex === 1) return { objectPosition: '50% 70%' }
     if (imageIndex === 2) return { objectPosition: '50% 70%' }
     return undefined
@@ -347,7 +356,7 @@ export default function EboardYearbook({
                 </div>
 
                 {/* Right side - Info */}
-                <div className="flex-1 min-w-0">
+                <div className="flex-1 min-w-0 flex flex-col lg:min-h-[429px]">
                   {/* Header with profile picture */}
                   <div className="flex items-start gap-3 mb-4">
                     {(() => {
@@ -381,11 +390,11 @@ export default function EboardYearbook({
                   </div>
 
 
-                      <div className="inline-flex items-center gap-2 bg-zinc-800 rounded-full px-4 py-2 mb-6">
+                      <div className="self-start inline-flex items-center gap-2 bg-zinc-800 rounded-full px-4 py-2 mb-6">
                         <svg className="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span className="text-sm text-zinc-300">{members[selected].dates}</span>
+                        <div className="text-sm text-zinc-300">{members[selected].dates}</div>
                       </div>
 
                   <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4 mb-6">
@@ -394,7 +403,7 @@ export default function EboardYearbook({
                   </div>
 
                   {/* Navigation buttons */}
-                  <div className="flex items-center justify-between pt-4 border-t border-zinc-800">
+                  <div className="mt-auto flex items-center justify-between pt-4 border-t border-zinc-800">
                     <button
                       onClick={() => setSelected((s: number | null) => (s === null ? null : Math.max(0, s - 1)))}
                       disabled={selected === 0}
