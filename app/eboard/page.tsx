@@ -242,7 +242,7 @@
                       year: "Junior",
                       major: "Industrial Engineering",
                       dates: "August 2025 - Present",
-                      involvement: "Jonathan's involvement description will go here.",
+                      involvement: "Hey! I’m Jonathan and I couldn’t be more excited to be apart of this team! Out of school I love to work with my hands on anything automotive and expanding my knowledge on 3D design.",
                       link: "https://www.linkedin.com/in/jonathan-koutin-9a94a6395/",
                     },
                     {

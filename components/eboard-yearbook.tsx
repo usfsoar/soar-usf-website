@@ -99,6 +99,7 @@ export default function EboardYearbook({
     "Ethan Toro": ["/ethant1.jpg", "/ethant2.jpg", "/ethant3.jpg"],
     "Joshua Hachmeister": ["/joshh1.jpg", "/joshh2.jpg", "/joshh3.jpg"],
     "Connor Clay Johnson": ["/connor1.jpg", "/connor2.jpg", "/connor3.jpg"],
+    "Jonathan Koutin": ["/jonathan1.jpg", "/jonathan2.jpg", "/jonathan3.jpg"],
   }
 
   // Define profile images for each member
