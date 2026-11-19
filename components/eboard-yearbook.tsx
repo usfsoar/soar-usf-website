@@ -100,6 +100,8 @@ export default function EboardYearbook({
     "Joshua Hachmeister": ["/joshh1.jpg", "/joshh2.jpg", "/joshh3.jpg"],
     "Connor Clay Johnson": ["/connor1.jpg", "/connor2.jpg", "/connor3.jpg"],
     "Jonathan Koutin": ["/jonathan1.jpg", "/jonathan2.jpg", "/jonathan3.jpg"],
+    "Logan Burchfield": ["/loganb1.jpg", "/loganb2.jpg", "/loganb3.jpg"],
+    "Kha Nguyen": ["/kha1.jpg", "/kha2.jpg", "/kha3.jpg"],
   }
 
   // Define profile images for each member
@@ -149,6 +151,7 @@ export default function EboardYearbook({
     "Harry Georgiadis": "/harryheadshot.jpg",
     "Amanda (Mandi) Chesney": "/amandaheadshot.jpg",
     "Brandon Remedios": "/brandonheadshot.jpg",
+    "Logan Burchfield": "/loganbheadshot.jpg",
   }
 
   // Define custom object positions for specific members
@@ -181,6 +184,9 @@ export default function EboardYearbook({
     if (member.name === "Matthew West" && imageIndex === 2) return { objectPosition: '20% 70%' }
     if (member.name === "Alston Wang" && imageIndex === 0) return { objectPosition: '40% 70%' }
     if (member.name === "Dereck Santiago" && imageIndex === 0) return { objectPosition: '20% 70%' }
+    if (member.name === "Logan Burchfield" && imageIndex === 0) return { objectPosition: '70% 100%' }
+    if (member.name === "Kha Nguyen" && imageIndex === 1) return { objectPosition: '70% 70%' }
+    if (member.name === "Kha Nguyen" && imageIndex === 0) return { objectPosition: '90% 70%' }
     if (imageIndex === 1) return { objectPosition: '50% 70%' }
     if (imageIndex === 2) return { objectPosition: '50% 70%' }
     return undefined

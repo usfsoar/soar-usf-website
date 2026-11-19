@@ -208,11 +208,11 @@
                     {
                       name: "Logan Burchfield",
                       title: "Payload Mechanical Lead",
-                      description: "Serving as the Payload Mechanical Lead, Logan is currently a Junior in Mechanical Engineering.",
-                      year: "Junior",
+                      description: "Serving as the Payload Mechanical Lead, Logan is currently a Senior in Mechanical Engineering.",
+                      year: "Senior",
                       major: "Mechanical Engineering",
                       dates: "September 2023 - Present",
-                      involvement: "Logan's involvement description will go here.",
+                      involvement: "I'm a senior mechanical engineering major with a passion for space and spaceflight. I joined SOAR in my sophomore year and wish I joined sooner! I have spent my time in SOAR within the Payload Mechanical subsystem and from that learned that I would like to build payloads as a career, from rovers to deep space probes! I enjoy playing video game, listening to music, and watch Sci-Fi movies!",
                       link: "https://www.linkedin.com/in/logantburchfield/",
                     },
                     {
