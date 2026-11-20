@@ -49,7 +49,7 @@
       year: "Junior",
       major: "Electrical Engineering",
       dates: "August 2024 - Present",
-      involvement: "Hi guys, I am employed as an employee of the civil engineering department which is my employer. Employment. I am the student at one of the universities in the entire state of Florida, USF!! I would rather make a rocket that goes up really fast. My favorite cereal is honey bunches of oats, and I’m not an Aquarius.",
+      involvement: "I am Ethan, and I am the Chief Engineer for the IREC Team. I'm a 3rd-year majoring in Electrical Engineering, and right now I am doing an internship at NASA over at the Kennedy Space Center. In SOAR, I've been able to get experience in Electrical, Process, and Systems Engineering. I have been a Junior Engineer on the Payload Team, moving to the Electrical Controls lead for the liquid propulsion team (BEL) and am now the chief engineer this year for the IREC Team! Looking forward to a great year and an amazing performance at IREC.",
       link: "https://www.linkedin.com/in/ethan-zylman/"
     },
     {
@@ -59,7 +59,7 @@
       year: "Senior",
       major: "Mechanical Engineering",
       dates: "August 2024 - Present",
-      involvement: "Joshua's involvement description will go here.",
+      involvement: "Hello, my name is Joshua Hachmeister, and I am the chief engineer of the liquid propulsion team. I have a passion for experimental rocket development, and I really like building Legos. I am also very excited to see what our amazing team can do!",
       link: "https://www.linkedin.com/in/joshua-hachmeister/",
     },
     {
@@ -109,7 +109,7 @@
       year: "Sophomore",
       major: "Aerospace Engineering",
       dates: "August 2025 - Present",
-      involvement: "Logan's involvement description will go here.",
+      involvement: "Hi my name is Logan Lavoy, I am a sophomore Aerospace Engineering student with a minor in entrepreneurship and am the current secretary of SOAR and I've been with the club for 2 years. Outside of school I am training to be a private pilot and have various other hobbies that I do in my free time. I intent to stay in SOAR all 4 years and am excited to see how high we fly!!",
       link: "https://www.linkedin.com/in/loganjlavoy/",
     },
 
@@ -161,7 +161,7 @@
                       year: "Junior",
                       major: "Electrical Engineering",
                       dates: "August 2024 - Present",
-                      involvement: "Hi guys, I am employed as an employee of the civil engineering department which is my employer. Employment. I am the student at one of the universities in the entire state of Florida, USF!! I would rather make a rocket that goes up really fast. My favorite cereal is honey bunches of oats, and I’m not an Aquarius.",
+                      involvement: "I am Ethan, and I am the Chief Engineer for the IREC Team. I'm a 3rd-year majoring in Electrical Engineering, and right now I am doing an internship at NASA over at the Kennedy Space Center. In SOAR, I've been able to get experience in Electrical, Process, and Systems Engineering. I have been a Junior Engineer on the Payload Team, moving to the Electrical Controls lead for the liquid propulsion team (BEL) and am now the chief engineer this year for the IREC Team! Looking forward to a great year and an amazing performance at IREC.",
                       link: "https://www.linkedin.com/in/ethan-zylman/"
                     },
                     {
@@ -185,16 +185,6 @@
                       link: "https://www.linkedin.com/in/alan-guyster-397112325/",
                     },
                     {
-                      name: "Matthew Raulerson",
-                      title: "IREC Avionics Lead",
-                      description: "Serving as the IREC Avionics Lead, Matthew is currently a Senior in Electrical Engineering/.",
-                      year: "Senior",
-                      major: "Electrical Engineering",
-                      dates: "September 2026 - Present",
-                      involvement: "Matthew's involvement description will go here.",
-                      link: "https://www.linkedin.com/in/matthew-raulerson-a10753343/",
-                    },
-                    {
                       name: "Sage Bundhund",
                       title: "IREC Aerostructures Lead",
                       description: "Serving as the IREC Aerostructures Lead, Sage is a Sophomore in Mechanical Engineering.",
@@ -212,17 +202,17 @@
                       year: "Junior",
                       major: "Mechanical Engineering",
                       dates: "August 2025 - Present",
-                      involvement: "Stepan's involvement description will go here.",
+                      involvement: "Hi! Im Stepan Jankowski, and I'm this years GNC (Controls) Mechanical Lead! I like all things that go fast, far or high. This year I want to ensure that my subsystem works as designed so well that it stands as inspiration for future Controls designs! My favorite memory with SOAR are the late night lack of sleep induced laughing fits getting ready for launch days!",
                       link: "https://www.linkedin.com/in/stepanjankowski/",
                     },
                     {
                       name: "Logan Burchfield",
                       title: "Payload Mechanical Lead",
-                      description: "Serving as the Payload Mechanical Lead, Logan is currently a Junior in Mechanical Engineering.",
-                      year: "Junior",
+                      description: "Serving as the Payload Mechanical Lead, Logan is currently a Senior in Mechanical Engineering.",
+                      year: "Senior",
                       major: "Mechanical Engineering",
                       dates: "September 2023 - Present",
-                      involvement: "Logan's involvement description will go here.",
+                      involvement: "I'm a senior mechanical engineering major with a passion for space and spaceflight. I joined SOAR in my sophomore year and wish I joined sooner! I have spent my time in SOAR within the Payload Mechanical subsystem and from that learned that I would like to build payloads as a career, from rovers to deep space probes! I enjoy playing video game, listening to music, and watch Sci-Fi movies!",
                       link: "https://www.linkedin.com/in/logantburchfield/",
                     },
                     {
@@ -242,7 +232,7 @@
                       year: "Junior",
                       major: "Mathematics and Computer Science",
                       dates: "August 2025 - Present",
-                      involvement: "Matthew's involvement description will go here.",
+                      involvement: "I'm Matthew the Guidance, Navigation, and Control (GNC) Electrical & Computer Science (EE/CS) Lead for SOAR's 2027 IREC Competition team. I am a junior double majoring in Mathematics and Computer Science and have completed two summer software engineering internships at Raytheon. I joined SOAR in the fall of 2025 as part of the Payload EE/CS team, where I became a Junior Engineer and worked on the team's deployable rover, EVE, creating a multithreaded software architecture and computer vision algorithms. Outside of SOAR, I also do research in algebraic knot theory.",
                       link: "https://www.linkedin.com/in/matthew-jwest/",
                     },
                     {
@@ -252,7 +242,7 @@
                       year: "Junior",
                       major: "Industrial Engineering",
                       dates: "August 2025 - Present",
-                      involvement: "Jonathan's involvement description will go here.",
+                      involvement: "Hey! I’m Jonathan and I couldn’t be more excited to be apart of this team! Out of school I love to work with my hands on anything automotive and expanding my knowledge on 3D design.",
                       link: "https://www.linkedin.com/in/jonathan-koutin-9a94a6395/",
                     },
                     {
@@ -288,7 +278,7 @@
                       year: "Senior",
                       major: "Mechanical Engineering",
                       dates: "August 2024 - Present",
-                      involvement: "Joshua's involvement description will go here.",
+                      involvement: "Hello, my name is Joshua Hachmeister, and I am the chief engineer of the liquid propulsion team. I have a passion for experimental rocket development, and I really like building Legos. I am also very excited to see what our amazing team can do!",
                       link: "https://www.linkedin.com/in/joshua-hachmeister/",
                     },
                     {
@@ -298,7 +288,7 @@
                       year: "Senior",
                       major: "Mechanical Engineering",
                       dates: "July 2026 - Present",
-                      involvement: "Alston's involvement description will go here.",
+                      involvement: "Hello!! I’m Alston, the chief babysitter for BEL. I coordinate work across all our subsystems to keep everything on track. I really really definitely enjoy my time at SOAR.",
                       link: "https://www.linkedin.com/in/alston-wang-50963a277/",
                     },
                     {
@@ -308,27 +298,27 @@
                       year: "Senior",
                       major: "Computer Engineering",
                       dates: "September 2025 - Present",
-                      involvement: "Dereck's involvement description will go here.",
+                      involvement: "Hey everyone! I am a Senior majoring in Computer Engineering and this years BEL Ground Structures EECS lead. This is my second year in SOAR and have enjoyed every moment of it! Feel free to ask any questions.",
                       link: "https://www.linkedin.com/in/derecksantiago/",
                     },
                     {
-                      name: "Om (Hari) Patel",
+                      name: "Hari Patel",
                       title: "Propulsion Lead",
-                      description: "Serving as the Propulsion Lead, Om (Hari) is currently a Sophomore in Mechanical Engineering.",
+                      description: "Serving as the Propulsion Lead, Hariis currently a Sophomore in Mechanical Engineering.",
                       year: "Sophomore",
                       major: "Mechanical Engineering",
                       dates: "September 2025 - Present",
-                      involvement: "Om (Hari) Patel's involvement description will go here.",
+                      involvement: "Hi guys, I am employed as an employee of the civil engineering department which is my employer. Employment. I am a student at one of the universities in the state of Florida, on the south side. I believe chickens cross the road for a reason. My favorite cereal is Cinnamon Toast Crunch, and I’m not an Aquarius.",
                       link: "https://www.linkedin.com/in/-hari-patel-/",
                     },
                     {
-                      name: "Harry (Charalampos) Georgiadis",
+                      name: "Harry Georgiadis",
                       title: "Ground Stations Mechanical Lead",
                       description: "Serving as the Ground Stations Mechanical Lead, Harry is currently a Junior in Mechanical and Aerospace Engineering.",
                       year: "Junior",
                       major: "Mechanical and Aerospace Engineering",
                       dates: "August 2024 - Present",
-                      involvement: "Harry's involvement description will go here.",
+                      involvement: "My name is Harry Georgiadis, I am from Greece and I am this years Ground Structures Mechanical lead!! I’ve been in SOAR for 3 years now, and it’s been a very fun time making projects and friends along the way. Some of the coolest stuff I have been a part of is helping make the horizontal test stand, and right now designing and planning the steps to create the vertical test stand!",
                       link: "https://www.linkedin.com/in/charalampos-georgiadis-463473275/",
                     },
                     {
@@ -338,7 +328,7 @@
                       year: "Sophomore",
                       major: "Aerospace Engineering",
                       dates: "September 2026 - Present",
-                      involvement: "Ethan's involvement description will go here.",
+                      involvement: "Hello I am currently a Mech E undergraduate I really like cookies and cream ice cream and really like Interstellar and really like nature and really like the mysteries of space. Also I really like liquid engines.",
                       link: "https://www.linkedin.com/in/ethantoro/",
                     },
                     {
@@ -348,7 +338,7 @@
                       year: "Senior",
                       major: "Mechanical Engineering",
                       dates: "January 2024 - Present",
-                      involvement: "Hi I'm Duc, a senior in Mechanical Engineering. I joined SOAR in second semester of my freshman year previously on IREC, and now I am the Aerostructures Lead for BEL. I enjoy working on rockets and learning about aerospace engineering, and I also enjoy playing basketball and video games.",
+                      involvement: "Hi I'm Duc, a senior in Mechanical Engineering. I joined SOAR in second semester of my freshman year previously on IREC, and now I am the Aerostructures Lead for BEL.",
                       link: "https://www.linkedin.com/in/duc-nguyen-usf/",
                     }
                   ]}
@@ -392,7 +382,7 @@
                       year: "Senior",
                       major: "Marketing",
                       dates: "August 2026 - Present",
-                      involvement: "Connor's involvement description will go here.",
+                      involvement: "I'm Connor Johnson, a senior at the University of South Florida majoring in Marketing and serving as a Marketing Officer for the Society of Aeronautics and Rocketry (SOAR). I am passionate about creative marketing, brand development, and increasing student engagement. Through my role, I hope to expand SOAR's presence on campus and connect more students with the organization.",
                       link: "https://www.linkedin.com/in/connor-johnson-b12529261/",
                     },
                     {
