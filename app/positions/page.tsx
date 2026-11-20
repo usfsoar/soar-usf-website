@@ -45,14 +45,13 @@ const positions = {
     { title: "Multimedia Chair", isOpen: false },
     { title: "Web Developer", isOpen: false },
     { title: "Historian", isOpen: false },
-    { title: "IREC Marketing Lead", isOpen: true}
   ],
   operations: [
     { title: "Logistics Chair", isOpen: false },
   ]
 }
 
-const applicationUrl = "https://docs.google.com/forms/d/e/1FAIpQLSciLyKS2Od3-UtgxDr1xXFQx_CUaCZP2aSCQEnzCH6aXVe7ZA/viewform?usp=dialog" // Replace with actual application link
+const applicationUrl = "" // Replace with actual application link
 
 function PositionCard({ title, isOpen }: { title: string; isOpen: boolean }) {
   return (
