@@ -426,7 +426,7 @@
                       year: "Freshman",
                       major: "Industrial Engineering",
                       dates: "August 2026 - Present",
-                      involvement: "Jacob's involvement description will go here.",
+                      involvement: "Hi! I’m Jacob and I’m a freshman in industrial engineering at USF. I became the fundraising lead for SOAR in my first semester here at USF and I’m so excited to keep growing through the power of engineering and rocketry!",
                       link: "https://www.linkedin.com/in/jacobjenkins08/",
                     },
                     {
@@ -446,7 +446,7 @@
                       year: "Sophomore",
                       major: "Mechanical Engineering",
                       dates: "August 2026 - Present",
-                      involvement: "Yeldana's involvement description will go here.",
+                      involvement: "Hi everyone! My name is Yeldana Zhamanova, and I am an Operations - Professional Development Lead at SOAR! I am a second-year student majoring in Mechanical Engineering. I am also an international student from Kazakhstan. I enjoy kayaking and travelling.",
                       link: "https://www.linkedin.com/in/yeldana-zhamanova-a52971389/",
                     },
                   ]}

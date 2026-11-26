@@ -102,6 +102,8 @@ export default function EboardYearbook({
     "Jonathan Koutin": ["/jonathan1.jpg", "/jonathan2.jpg", "/jonathan3.jpg"],
     "Logan Burchfield": ["/loganb1.jpg", "/loganb2.jpg", "/loganb3.jpg"],
     "Kha Nguyen": ["/kha1.jpg", "/kha2.jpg", "/kha3.jpg"],
+    "Yeldana Zhamanova": ["/yeldana1.jpg", "/yeldana2.jpg", "/yeldana3.jpg"],
+    "Jacob Jenkins": ["/jacob1.jpg", "/jacob2.jpg", "/jacob3.jpg"],
   }
 
   // Define profile images for each member
