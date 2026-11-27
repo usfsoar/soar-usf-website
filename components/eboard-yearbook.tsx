@@ -104,6 +104,7 @@ export default function EboardYearbook({
     "Kha Nguyen": ["/kha1.jpg", "/kha2.jpg", "/kha3.jpg"],
     "Yeldana Zhamanova": ["/yeldana1.jpg", "/yeldana2.jpg", "/yeldana3.jpg"],
     "Jacob Jenkins": ["/jacob1.jpg", "/jacob2.jpg", "/jacob3.jpg"],
+    "Mandi Chesney": ["/amanda1.jpg", "/amanda2.jpg", "/amanda3.jpg"],
   }
 
   // Define profile images for each member
@@ -151,7 +152,7 @@ export default function EboardYearbook({
     "Ethan Toro": "/ethantheadshot.jpg",
     "Connor Clay Johnson": "/connorheadshot.jpg",
     "Harry Georgiadis": "/harryheadshot.jpg",
-    "Amanda (Mandi) Chesney": "/amandaheadshot.jpg",
+    "Mandi Chesney": "/amandaheadshot.jpg",
     "Brandon Remedios": "/brandonheadshot.jpg",
     "Logan Burchfield": "/loganbheadshot.jpg",
   }
