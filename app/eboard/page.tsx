@@ -222,7 +222,7 @@
                       year: "Senior",
                       major: "Computer Engineering",
                       dates: "August 2025 - Present",
-                      involvement: "Kha's involvement description will go here.",
+                      involvement: "Hi! I'm Kha and I'm currently Payload EECS Lead for SOAR's IREC team. I am an embedded system engineer and SOAR has helped me shape a big picture of engineering design. I'm looking forward to building one of the payload designs of SOAR for many years to come. Feel free to reach out for chat!",
                       link: "https://www.linkedin.com/in/nkha/",
                     },
                     {
@@ -246,13 +246,13 @@
                       link: "https://www.linkedin.com/in/jonathan-koutin-9a94a6395/",
                     },
                     {
-                      name: "Amanda (Mandi) Chesney",
+                      name: "Mandi Chesney",
                       title: "Project Coordinator",
-                      description: "Serving as the Project Coordinator, Amanda is currently a Sophomore in Aerospace Engineering.",
+                      description: "Serving as the Project Coordinator, Amanda is currently a Sophomore in Statistics.",
                       year: "Sophomore",
-                      major: "Aerospace Engineering",
+                      major: "Statistics",
                       dates: "September 2025 - Present",
-                      involvement: "Amanda's involvement description will go here.",
+                      involvement: "Hello, I'm Mandi, 2026-27 IREC's Project Coordinator! This is my second year both at USF and in SOAR. I'm pursuing a BA in Statistics and an Aerospace Engineering Minor and plan to go into the aerospace industry as a data analyst. For 2025-26 IREC, I was a JE for the Recovery team. Outside of SOAR, I am a novelist and enjoy all kinds of games, books, music, and art. I'm looking forward to a great IREC season and an amazing rocket!",
                       link: "https://www.linkedin.com/in/amanda-chesney/",
                     },
                     
